@@ -1,10 +1,8 @@
-# Sprint Challenge Instructions Template
-
-> Text like this that uses the `>` character (quoted block in Markdown) is commentary and instructions for you (the curriculum developer) to replace. They should not be left in your final result. Conversely, text not in a quote block is either a example for you to modify, or text that will usually be left as-is for most if not all sprint challenges.
+# Intro to React Sprint Challenge
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
-This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a concrete project. This sprint explored **`<Sprint Subject Here>`**. During this sprint, you studied **`<High-level sprint topics here>`**. In your challenge this week, you will demonstrate your mastery of these skills by creating **`<describe project here>`**.
+This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a concrete project. This sprint explored **introductory React**. During this sprint, you studied **React components and advanced styling**. In your challenge this week, you will demonstrate your mastery of these skills by creating **a web page with character components**.
 
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
 
@@ -15,9 +13,7 @@ _You have **three hours** to complete this challenge. Plan your time accordingly
 
 ## Introduction
 
-> In this section, introduce the challenge,  with a high level explanation of the components of the project.
-> 
-> This section should include examples in the form of screenshots, screen recording GIFs, and/or links to an example.
+In this challenge, create a web page that presents a styled list of characters obtained from an API. Being able to render out data to a web page is a large part of what JavaScript developers do, this challenge assesses your ability to achieve such a task.
 
 In meeting the minimum viable product (MVP) specifications listed below, your project should look like the solution examples below:
 
@@ -57,39 +53,48 @@ You are expected to be able to answer questions in these areas. Your responses c
 - [ ] Add your team lead as collaborator on Github
 - [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
 - [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [ ] Change directories into `./starwars` (`cd starwars`) and run `npm install` to retrieve all needed dependencies.
+- [ ] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
+- [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
+- [ ] Push commits: `git push origin <firstName-lastName>`
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
 - [ ] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2: Project Requirements
 
-> This section should include requirements for the sprint challenge itself. The idea is to be explicit with the student about the things their project solution needs to implement, without telling them **how** to do any of these things. Be sure all learning objectives in your sprint challenge list are covered. 
-
 Your finished project must include all of the following requirements:
 
-> (The following is an example):
+- [ ] Use ONE of the following APIs:
+  - [Star Wars API](https://swapi.py4e.com/)
+  - [The Rick and Morty API](https://rickandmortyapi.com/)
+  - [The RESTful Pokémon API](https://pokeapi.co/) (**harder**)
+- [ ] Use the documentation and Google to learn how to fetch characters from your API.
+- [ ] Obtain a list of characters. One or several requests might be needed, depending on the API.
+- [ ] Set the list of characters into state.
+- [ ] Render your characters to the screen:
+  - Build a React component named 'Character' to render an individual character.
+  - Map over the list in state, and for each character render a Character to the page.
+  - You must display at least one element for each character in the data set.
+  - The elements must be styled with either Reactstrap or styled-components - don't rely on browser default styles.
 
-#### Home Page
+### Required best practices
 
-[Review the provided design file for the home page](design/home.png).  Notice the navigation and header images are missing.
+- [ ] Consistent naming. Examples: variables, functions, Components, and file/folder organization.
+- [ ] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
+- [ ] Consistent quotation usage.
+- [ ] Spell-check.
+- [ ] Schedule time to review, refine and reassess your work.
 
-* [ ] Uses Semantic HTML and CSS to create the missing navigation and header
-* [ ] The `About` navigation item must be linked to the [about.html](about.html) page
-* [ ] Your design must be responsive such that it is accessible on mobile(500px) and tablet(800 px) and matches the [mobile](design/mobile.png) wireframe. This functionality must be implemented using flexbox.
-* [ ] Uses all box model properties so that margins, borders, and padding match the wireframes
-* [ ] You must add responsive breakpoints to your code by using media queries
-* [ ] All 10 boxes on the home page are correctly styled with background colors using the guide below:
+It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.
 
+### Tips and Gotchas
 
-* [ ] box1: `teal`
-* [ ] box2: `gold`
-* [ ] box3: `cadetblue`
-* [ ] box4: `coral`
-* [ ] box5: `crimson`
-* [ ] box6: `forestgreen`
-* [ ] box7: `darkorchid`
-* [ ] box8: `hotpink`
-* [ ] box9: `indigo`
-* [ ] box10: `dodgerblue`
+- [ ] Test your API and inspect the data in Chrome, _before_ writing the code for the request(s). See screenshots at the root of the project.
+- [ ] Try not to hammer your API while developing. Infinite loops in your code might trigger hundreds of requests!
+- [ ] The Pokemon API is a slightly harder challenge because a single network request might not be enough to get all the data you want.
+- [ ] Running `npm` commands in the wrong folder will not work. **Be aware of what folder you're in** when working in the command line.
+- [ ] The `start` process can sometimes choke after adding new dependencies and may need to be restarted.
+
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
