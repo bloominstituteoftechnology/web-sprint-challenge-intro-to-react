@@ -68,7 +68,7 @@ Your finished project must include all of the following requirements:
   - Build a React component named 'Character' to render an individual character.
   - Map over the list in state, and for each character render a Character to the page.
   - You must display at least one element for each character in the data set.
-  - The elements must be styled with either Reactstrap or styled-components - don't rely on browser default styles.
+  - The elements must be styled with styled-components - don't rely on browser default styles.
 
 ### Required best practices
 
@@ -94,9 +94,10 @@ In your solution, it is essential that you follow best practices and produce cle
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-- [ ] Build a page of your choosing from the navigation items.  Come up with content and images that fit the theme.  
-- [ ] Introduce CSS animations to your site.
-- [ ] Build a contact page and create a form with several inputs of your choosing
+- [ ] Make the Character component more complex and break it into several subcomponents.
+- [ ] Use a helper function in separate module to remove unneeded information from the API data, before putting it in state.
+- [ ] Use Promise.all to resolve an array of promises.
+- [ ] Introduce transitions or animations with styled-components.
 
 ## Submission format
 
