@@ -14,11 +14,11 @@ _You have **three hours** to complete this challenge. Plan your time accordingly
 
 In this challenge, create a web page that presents a styled list of characters obtained from an API. Being able to render out data to a web page is a large part of what JavaScript developers do, this challenge assesses your ability to achieve such a task.
 
-In meeting the minimum viable product (MVP) specifications listed below, your project should look like the solution examples below:
+In meeting the minimum viable product (MVP) specifications listed below, your project might look similar to the solution examples below:
 
- [Sample Screenshot](https://tk-assets.lambdaschool.com/39a49225-8ac9-43da-aa90-514fd60ae99a_sprint-challenge-ui-home-example.png)
+[Example](https://tk-assets.lambdaschool.com/b011a132-0916-4ed2-8955-14192de03a75_sample-screenshot.png)
 
-[Sample mobile example](https://tk-assets.lambdaschool.com/fbe7ebfc-a4c2-4a32-8929-bbd41fbc4f67_ScreenShot2020-03-25at11.03.41AM.png)
+[Another example](https://tk-assets.lambdaschool.com/3b82c793-2352-4d4d-a81d-e55bf350f7bd_sample-screenshot2.png)
 
 ### Commits
 
@@ -41,8 +41,6 @@ You are expected to be able to answer questions in these areas. Your responses c
 ## Instructions
 
 ### Task 1: Project Set Up
-
-> This section should include instruction for the sprint challenge. These should only cover things that are _not_ being evaluated by the challenge itself, e.g. environment/project setup, link to a starter project, etc. In general, this will be the following Git fork, clone, branch, commit, push, create pull request flow, though may need to be adapted for some specific challenges.
 
 - [ ] Create a forked copy of this project
 - [ ] Add your team lead as collaborator on Github
@@ -94,15 +92,11 @@ In your solution, it is essential that you follow best practices and produce cle
 
 ### Task 3: Stretch Goals
 
-> Include stretch goals in this section. These are additional things the student can do go beyond basic proficiency, and push their scores on the challenge up to a 3. Be clear that these are *not* required. Completing all of the tasks in the required section must be sufficient to  demonstrate proficiency of all sprint objectives, and earn a score of '2. 
-
-> Example stretch goals below:
-
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-* [ ] Build a page of your choosing from the navigation items.  Come up with content and images that fit the theme.  
-* [ ] Introduce CSS animations to your site.
-* [ ] Build a contact page and create a form with several inputs of your choosing
+- [ ] Build a page of your choosing from the navigation items.  Come up with content and images that fit the theme.  
+- [ ] Introduce CSS animations to your site.
+- [ ] Build a contact page and create a form with several inputs of your choosing
 
 ## Submission format
 
