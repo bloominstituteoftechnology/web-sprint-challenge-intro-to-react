@@ -14,7 +14,7 @@ _You have **three hours** to complete this challenge. Plan your time accordingly
 
 In this challenge, create a web page that presents a styled list of characters obtained from an API. Being able to render out data to a web page is a large part of what JavaScript developers do, this challenge assesses your ability to achieve such a task.
 
-In meeting the minimum viable product (MVP) specifications listed below, your project might look similar to the solution examples below:
+In meeting the minimum viable product (MVP) specifications listed below, your project might look somewhat similar to the solution examples below:
 
 [Example](https://tk-assets.lambdaschool.com/b011a132-0916-4ed2-8955-14192de03a75_sample-screenshot.png)
 
@@ -58,7 +58,8 @@ You are expected to be able to answer questions in these areas. Your responses c
 Your finished project must include all of the following requirements:
 
 - [ ] Use ONE of the following APIs:
-  - [Star Wars API](https://swapi.py4e.com/)
+  - [Star Wars API](https://swapi.dev/)
+  - [Alternate Star Wars API](https://swapi.py4e.com/)
   - [The Rick and Morty API](https://rickandmortyapi.com/)
   - [The RESTful Pokémon API](https://pokeapi.co/) (**harder**)
 - [ ] Use the documentation and Google to learn how to fetch characters from your API.
