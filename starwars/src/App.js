@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
-import Character from './components/Character'
+import Character from './components/Character';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -29,7 +29,7 @@ const [data, setData] = useState([])
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">Star Wars Characters</h1>
     </div>
   );
 }
