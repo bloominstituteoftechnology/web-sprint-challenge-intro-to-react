@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import Character from './components/Character';
 
+
 const App = () => {
 
   const [ StarWarsData, setStarWarsData ] = useState([]);
@@ -21,12 +22,14 @@ const App = () => {
 
   return (
     <div>
+      <h1 style={{color:'white', textAlign:'center'}}>Star Wars Characters</h1>
       {StarWarsData.map(people => {
         return (
           <Character
             key={people.id}
+            height={people.height}
             name={people.name}
-            mass={people.mass}
+            birthYear={people.birth_year}
             hairColor={people.hair_color}
             skinColor={people.skin_color}
           />
