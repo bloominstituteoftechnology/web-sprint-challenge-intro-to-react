@@ -1,17 +1,21 @@
 // Write your Character component here
 import React from 'react';
+import { Button} from 'reactstrap'
 
 
-const Profile = (props) => {
- let {data} = props;
+const Character = props => {
+let {data} = props;
     return(
         <div>
-            {data.map(item =>{
+            {data.map(starWars =>{
                 return(
             <div>
-            <h3>Name:{item.name}</h3>
-            <h3>Gender:{item.gender}</h3>
-            <h3>Birth Year:{item.birth_year}</h3>
+                <Button  outline color = "primary"
+                size="sm" block>
+            <h3>Name:{starWars.name}</h3>
+            <h3>Gender:{starWars.gender}</h3>
+            <h3>Birth Year:{starWars.birth_year}</h3>
+            </Button>{''}
         </div>
 
 
@@ -20,4 +24,4 @@ const Profile = (props) => {
 </div>
     )
 }
-export default Profile;
+export default Character;
