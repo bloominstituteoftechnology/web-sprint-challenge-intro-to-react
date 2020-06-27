@@ -30,11 +30,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+      React Js makes it easier to build responsive and reusable code for UI. React makes it possible to pull through random data to a web-page.
+
 1. Describe component state.
+
+    Set state is the update the component will be making when the data starts re-rendering.
 
 1. Describe props.
 
+    Props is the 'property' of the array/object you are working with.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+    Side effect is anything the function effects outside of the scope of that function.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
