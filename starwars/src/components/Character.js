@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Character({name, height, mass, hairColor, skinColor}) {
+function Character({name,height,mass,hairColor,skinColor}) {
     return (
         <div>
             <h2>{name}</h2>

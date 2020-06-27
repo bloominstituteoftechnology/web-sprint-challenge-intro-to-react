@@ -12,7 +12,7 @@ const App = () => {
       .get('https://swapi.py4e.com/api/people/')
       .then(res =>{
         console.log("Star Wars Data:",res)
-        setStarWarsData(res.data);
+        setStarWarsData(res.data.results);
       })
       .catch(err=> {
         console.log('Error:',err)
@@ -20,18 +20,18 @@ const App = () => {
   },[])
 
   return (
-    <div className="App">
-      {StarWarsData.map(ppl => {
+    <div>
+      {StarWarsData.map(people => {
         return (
           <Character
-            key={ppl.id}
-            name={ppl.title}
-            height={ppl.height}
-            mass={ppl.mass}
-            hairColor={ppl.hair_color} />
+            key={people.id}
+            name={people.name}
+            mass={people.mass}
+            hairColor={people.hair_color}
+            skinColor={people.skin_color}
+          />
         );
       })}
-
     </div>
   );
 }
