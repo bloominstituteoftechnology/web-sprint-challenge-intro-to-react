@@ -1,17 +1,23 @@
 // Write your Character component here
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 
 
-const Character = () => {
-
+const Profile = (props) => {
+ let {data} = props;
     return(
         <div>
-            <h3>Name:{name}</h3>
-            <h3>Gender:{gender}</h3>
-            <h3>Birth Year:{birth_year}</h3>
+            {data.map(item =>{
+                return(
+            <div>
+            <h3>Name:{item.name}</h3>
+            <h3>Gender:{item.gender}</h3>
+            <h3>Birth Year:{item.birth_year}</h3>
         </div>
 
 
     )
+})}
+</div>
+    )
 }
-export default Character;
+export default Profile;
