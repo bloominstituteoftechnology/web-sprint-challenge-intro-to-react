@@ -29,7 +29,8 @@ useEffect( () => {
             mass={char.mass}
             gender={char.gender}
             homeworld={char.homeworld}
-      /> })}
+      /> 
+      })}
 
       </div>
   );
