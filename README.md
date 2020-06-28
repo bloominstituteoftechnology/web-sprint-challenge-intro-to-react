@@ -29,12 +29,15 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+React JS is a library developed by facebook. React lets you break down applications into components which can share info together and make changing information across components a breeze by using a virtual dom. This allows information to quickly change across the application without excessive re-rendering having to take place. This saves time and money.
 
 1. Describe component state.
+   Component state is data that we need to keep track of.
 
 1. Describe props.
-
+   Props or properties allow developers to pass information such as state to other components within an application. It allows us to easily change information without having to re-render data everytime it changes.
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+   Side effects is when functions try to modify things outside of it's body. in order to sync effects in react you can use dependency arrays so that we can trigger effects to happen when certain data changes.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -62,10 +65,10 @@ Your finished project must include all of the following requirements:
   - [Alternate Star Wars API](https://swapi.py4e.com/)
   - [The Rick and Morty API](https://rickandmortyapi.com/)
   - [The RESTful Pokémon API](https://pokeapi.co/) (**harder**)
-- [ ] Use the documentation and Google to learn how to fetch characters from your API.
-- [ ] Obtain a list of characters. One or several requests might be needed, depending on the API.
-- [ ] Set the list of characters into state.
-- [ ] Render your characters to the screen:
+- [ x ] Use the documentation and Google to learn how to fetch characters from your API.
+- [ x] Obtain a list of characters. One or several requests might be needed, depending on the API.
+- [ x ] Set the list of characters into state.
+- [ x ] Render your characters to the screen:
   - Build a React component named 'Character' to render an individual character.
   - Map over the list in state, and for each character render a Character to the page.
   - You must display at least one element for each character in the data set.
@@ -104,6 +107,6 @@ After finishing your required elements, you can push your work further. These go
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` branch (student's  Repo). **Please don't merge your own pull request**
+- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` branch (student's Repo). **Please don't merge your own pull request**
 - [ ] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete after receiving your pull-request
