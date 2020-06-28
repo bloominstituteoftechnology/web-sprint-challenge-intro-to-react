@@ -7,9 +7,9 @@ const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 useEffect( () => {
-   axios.get("https://swapi.dev/api/people/1/")
-   .then(res => { console.log(res.data)
-        setChars(res);
+  axios.get("https://swapi.py4e.com/api/people")
+   .then(res => { console.log(res.data.results)
+        setChars(res.data.results);
       })
       .catch(err => {
         console.log("Error occured in useEffect of MovieList: ", err);
@@ -23,14 +23,17 @@ useEffect( () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {chars.map( char => {
-          <CharacterList
+      {chars.map(char => { 
+      return ( <CharacterList
+            key={char.id}
             name={char.name}
             mass={char.mass}
             gender={char.gender}
             homeworld={char.homeworld}
       /> 
+      );
       })}
+
 
       </div>
   );
