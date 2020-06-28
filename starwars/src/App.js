@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Character from "./components/Character";
-import './App.css'
+import styled from "styled-components";
+import "./App.css";
+
+const H1 = styled.h1`
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+`;
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -24,7 +31,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <H1 className="Header">Characters</H1>
       <Character characters={char} />
     </div>
   );
