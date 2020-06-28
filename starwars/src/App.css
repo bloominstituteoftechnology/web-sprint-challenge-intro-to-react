@@ -1,8 +1,20 @@
-.App {
-  text-align: center;
+body {
+  display: flex;
+  justify-content: center;
 }
-.Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+h1 {
+  font-size: 70px;
 }
-/* write your parent styles in here for your App.js */
+
+.card {
+  display: flex;
+  justify-content: center;
+  border: solid black 3px;
+  margin-bottom: 2%;
+}
+
+h2 {
+  margin: 0 auto;
+  font-size: 50px;
+  color: black;
+}
