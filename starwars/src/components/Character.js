@@ -1,34 +1,38 @@
-// Write your Character component here
-import React, { useState, useEffect } from "react";
-import Axios from "axios";
-import CharacterInfo from "./CharacterInfo";
+import React, {useState} from 'react'
 
-const Character = (props) => {
-  const [ricknMortyData, setricknMortyData] = useState([]);
 
-  useEffect(() => {
-    axios.get("https://rickandmortyapi.com/")
-      .then((response) => {
-        console.log("response object", response);
-        setricknMortyData(response.data.results);
-      })
-      .catch((error) => console.log("error object", error));
-  }, []);
+const CharacterInfo = (props) => {
+    const [showDetails, setShowDetails] = useState(false)
 
-  return (
-    <div className="character">
-      {ricknMortyData.map((character) => {
-        return (
-          <CharacterInfo
-            key={character.key}
-            name={character.name}
-            height={character.height}
-            mass={character.mass}
-          />
-        );
-      })}
-    </div>
-  );
-};
+    const toggleDetails = event => {
+        event.preventDefault()
+        setShowDetails(!showDetails)
+    }
 
-export default Character;
+
+    return( 
+    
+        <div className='info-card'>
+            
+            <img src={props.result.image} alt={`${props.result.name}`}></img>
+            <button onClick={ event => {toggleDetails(event)}}>
+                {
+                    showDetails ? 'Hide Info':'Show Info'
+                }
+            </button>
+            {
+                showDetails && (
+                    <div className='card-text'>
+                        <h2>{props.result.name}</h2>
+                        <p>Species: {props.result.species}</p>
+                        <p>Status: {props.result.status}</p>
+                    </div>
+                )
+            }
+          
+        </div>
+        
+    )
+}
+
+export default CharacterInfo
