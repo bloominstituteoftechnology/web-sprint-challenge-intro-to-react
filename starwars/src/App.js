@@ -1,5 +1,14 @@
 import React from 'react';
 import './App.css';
+import Character from "./components/Character"
+import styled from "styled-components";
+
+const Card = styled.div`
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 80px;
+  color: blue;
+`;
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -10,9 +19,9 @@ const App = () => {
   // sync up with, if any.
 
   return (
-    <div className="App">
+    <Card className="App">
       <h1 className="Header">Characters</h1>
-    </div>
+    </Card>
   );
 }
 
