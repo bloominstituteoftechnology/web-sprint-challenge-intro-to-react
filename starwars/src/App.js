@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from "axios";
+import Characters from "./components/Character";
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -15,7 +16,8 @@ const App = () => {
     axios
     .get("https://swapi.dev/api/people/")
     .then(response => {
-      console.log("this is from the api", response)
+      console.log("this is from the api", response.data.results)
+      setCharacter(response.data.results);
     })
     .catch(error => console.log("error", error));
   }, []);
@@ -23,6 +25,14 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      {this.props.characters.map(person => {
+        return(
+
+          <Characters person={person}/>
+        )
+      
+
+      })}
     </div>
   );
 }
