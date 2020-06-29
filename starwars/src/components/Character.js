@@ -1,38 +1,26 @@
-import React, {useState} from 'react'
+import React from 'react';
+import { Card, CardBody, CardTitle, CardText} from 'reactstrap';
 
-
-const CharacterInfo = (props) => {
-    const [showDetails, setShowDetails] = useState(false)
-
-    const toggleDetails = event => {
-        event.preventDefault()
-        setShowDetails(!showDetails)
-    }
-
-
-    return( 
-    
-        <div className='info-card'>
-            
-            <img src={props.result.image} alt={`${props.result.name}`}></img>
-            <button onClick={ event => {toggleDetails(event)}}>
-                {
-                    showDetails ? 'Hide Info':'Show Info'
-                }
-            </button>
-            {
-                showDetails && (
-                    <div className='card-text'>
-                        <h2>{props.result.name}</h2>
-                        <p>Species: {props.result.species}</p>
-                        <p>Status: {props.result.status}</p>
-                    </div>
-                )
-            }
-          
+const Character = props => {
+let {data} = props;
+    return(
+        <div>
+            {data.map(ricknMorty =>{
+                return(
+            <div>
+                <Card>
+                    <CardBody>
+                    <CardTitle>Name:{ricknMorty.name}</CardTitle>
+                    <CardText>Gender:{ricknMorty.gender}</CardText>
+                    <CardText>Birth Year:{ricknMorty.birth_year}</CardText>
+                    </CardBody>
+                </Card>
         </div>
-        
+
+
+    )
+})}
+</div>
     )
 }
-
-export default CharacterInfo
+export default Character;
