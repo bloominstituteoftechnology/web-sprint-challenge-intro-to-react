@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from "axios";
-import CharacterList from "./components/Character";
+import Character from "./components/Character";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const App = () => {
   const [chars, setChars] = useState([]);
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -22,20 +24,24 @@ useEffect( () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">StarWars Characters</h1>
+
       {chars.map(char => { 
-      return ( <CharacterList
+      return ( <Character
             key={char.id}
             name={char.name}
             mass={char.mass}
             gender={char.gender}
+            height={char.height}
+            skincolor={char.skin_color}
             homeworld={char.homeworld}
+            birth={char.birth_year}
       /> 
-      );
+        );
+
       })}
 
-
-      </div>
+  </div>
   );
 }
 
