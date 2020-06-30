@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import Character from './components/Character';
+import { Container, Row } from "reactstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 // Try to think through what state you'll need for this app before starting. Then build out
@@ -12,7 +14,7 @@ const [data, setData] = useState([])
 // sync up with, if any.
 
 useEffect(() => {
-    axios.get("https://swapi.py4e.com/api/people/")
+    axios.get("https://rickandmortyapi.com/")
     .then((res)=>{
       console.log(res)
       setData(res.data.results)
@@ -23,12 +25,12 @@ useEffect(() => {
 }, [])
 
 return (
-  <div className="App">
-    <h1 className="Header">Star Wars Characters</h1>
-    <div>
+  <Container>
+    <h1 className="Header">Rick and Morty Characters</h1>
+    <Row>
       <Character data = {data} />
-      </div>
-  </div>
+      </Row>
+  </Container>
 );
 }
 
