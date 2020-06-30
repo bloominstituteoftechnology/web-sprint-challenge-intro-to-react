@@ -26,9 +26,9 @@ useEffect( () => {
     <div className="App">
       <h1 className="Header">StarWars Characters</h1>
 
-      {chars.map(char => { 
+      {chars.map((char, i) => { 
       return ( <Character
-            key={char.id}
+            key={i}
             name={char.name}
             mass={char.mass}
             gender={char.gender}
