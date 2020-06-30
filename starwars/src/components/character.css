@@ -1,0 +1,11 @@
+
+    .cardbody{
+        background-color: #555;
+        color: rgb(223, 204, 204);
+    }
+
+    #birthyear{
+        float: right;
+        width:33%;
+
+    }
