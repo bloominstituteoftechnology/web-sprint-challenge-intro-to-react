@@ -12,7 +12,6 @@ let {data} = props;
                     <CardBody>
                     <CardTitle>Name:{ricknMorty.name}</CardTitle>
                     <CardText>Gender:{ricknMorty.gender}</CardText>
-                    <CardText>Birth Year:{ricknMorty.birth_year}</CardText>
                     </CardBody>
                 </Card>
         </div>

@@ -14,7 +14,7 @@ const [data, setData] = useState([])
 // sync up with, if any.
 
 useEffect(() => {
-    axios.get("https://rickandmortyapi.com/")
+    axios.get("https://rickandmortyapi.com/api/character/")
     .then((res)=>{
       console.log(res)
       setData(res.data.results)
