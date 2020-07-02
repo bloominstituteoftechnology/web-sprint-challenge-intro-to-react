@@ -27,6 +27,7 @@ useEffect(() => {
 return (
   <Container>
     <h1 className="Header">Rick and Morty Characters</h1>
+    <img src={data.ricknMorty.img} />
     <Row>
       <Character data = {data} />
       </Row>

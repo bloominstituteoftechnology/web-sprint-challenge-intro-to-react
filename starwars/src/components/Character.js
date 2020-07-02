@@ -10,6 +10,7 @@ let {data} = props;
             <div>
                 <Card>
                     <CardBody>
+                        <span><img src={ricknMorty.img} /></span>
                     <CardTitle>Name:{ricknMorty.name}</CardTitle>
                     <CardText>Gender:{ricknMorty.gender}</CardText>
                     <CardText>Status: {ricknMorty.status}</CardText>
