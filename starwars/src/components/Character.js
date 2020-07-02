@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, CardTitle, CardText} from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText, CardImg} from 'reactstrap';
 
 const Character = props => {
 let {data} = props;
@@ -10,7 +10,7 @@ let {data} = props;
             <div>
                 <Card>
                     <CardBody>
-                        <span><img src={ricknMorty.img} /></span>
+                    <CardImg top width="100%" src={ricknMorty.image} alt="Card image cap" />
                     <CardTitle>Name:{ricknMorty.name}</CardTitle>
                     <CardText>Gender:{ricknMorty.gender}</CardText>
                     <CardText>Status: {ricknMorty.status}</CardText>
