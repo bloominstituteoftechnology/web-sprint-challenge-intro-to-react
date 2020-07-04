@@ -1,6 +1,16 @@
 import React from 'react';
 import './App.css';
 import CharacterData from './components/Character';
+import styled from 'styled-components'
+
+const Body = styled.body`
+    
+    align-items: center;
+    box-sizing: border-box;
+    background-size: auto;
+    background-attachment: fixed;
+`;
+
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -11,10 +21,10 @@ const App = () => {
   // sync up with, if any.
 
   return (
-    <div className="App">
+    <Body>
       <h1 className="Header">Characters</h1>
       <CharacterData/>
-    </div>
+    </Body>
   );
 }
 

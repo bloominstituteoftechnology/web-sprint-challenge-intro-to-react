@@ -12,7 +12,7 @@ function CharacterData() {
         .get(`https://rickandmortyapi.com/api/character`)
         .then(res => {
             console.log( 'res from useEffect of CharacterCard', res);
-            setData(res.data);
+            setData(res.data.results);
         })
         .catch(err => {
             console.log('Error occured in useEffect of CharacterCard', err);
@@ -29,7 +29,8 @@ function CharacterData() {
                     name={props.name}
                     species={props.species}
                     gender={props.gender}
-                    status={props.status}
+                    alive={props.status}
+                    // status={props.status}
                     />
                 )
             })}
