@@ -1,17 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const Flex = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
 
 const CardContainer = styled.div`  
-    justify-content: center;
+
+    text-align: center;
     border: 2px solid black;
     width: 25%;
     margin: 30px;
     background-color: black;
 `;
 
+const CharacterImg = styled.img`
+    width: 100%;
+    height: auto;
+
+`;
+
 const Name = styled.h1`
+    font-size: 100%;
     background-color: silver;
+    width: 100%;
+    height: auto;
 `;
 
 const Species = styled.p`
@@ -29,16 +44,16 @@ const Alive = styled.p`
 
 function CharacterCard(prop) {
     return(
-        
-        <CardContainer>
-            <Name>{prop.name} </Name>
-            <img src = {prop.image}/>
-            <Species>{prop.species}</Species>
-            <Gender>{prop.gender}</Gender>
-            <Alive>{prop.alive}</Alive>
+        <Flex>
+            <CardContainer>
+                <Name>{prop.name} </Name>
+                <CharacterImg src = {prop.image}/>
+                <Species>{prop.species}</Species>
+                <Gender>{prop.gender}</Gender>
+                <Alive>{prop.alive}</Alive>
 
-        </CardContainer>
-        
+            </CardContainer>
+        </Flex>
     )
     
 };
