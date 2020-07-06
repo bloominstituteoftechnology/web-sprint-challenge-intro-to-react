@@ -2,10 +2,26 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios'; 
 import StarshipComponent from './components/Starships.js'
+import styled from "styled-components";
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
+
+  const LargeHeader = styled.h1`
+  color: #33FF38;
+  font-size: 64px;
+  margin: 30px;
+  font-weight: bold;
+  
+`;
+
+const BackgroundDiv = styled.div` 
+  background-color: grey;
+  `;
+
+
+
   const [starships, setChar] = useState([]);
   useEffect(() => {
     axios
@@ -22,12 +38,14 @@ const App = () => {
   // sync up with, if any.
 
   return (
+    <BackgroundDiv>
     <div className="App">
-      <h1 className="Header">Starships</h1>
+      <LargeHeader className="Header">Starships</LargeHeader>
         {starships.map(starships => (
           <StarshipComponent key={starships.id} starships={starships} />
         ))}
     </div>
+    </BackgroundDiv>
   );
 }
 
