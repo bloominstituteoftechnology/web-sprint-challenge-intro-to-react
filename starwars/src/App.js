@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import Character from './components/Character';
-import { Container, Row } from "reactstrap";
+import { Container, Row, CardTitle, } from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -26,8 +26,8 @@ useEffect(() => {
 
 return (
   <Container>
-    <h1 className="Header">Rick and Morty Characters</h1>
-    <Row>
+    <CardTitle style={{justifyContent:'center', alignItems: 'center', fontSize: '3.5rem', textAlign: 'center'}}>Rick and Morty Characters</CardTitle>
+    <Row style={{justifyContent: 'center', alignItems: 'center', alignContent: 'center'}}>
       <Character data = {data} />
       </Row>
   </Container>
