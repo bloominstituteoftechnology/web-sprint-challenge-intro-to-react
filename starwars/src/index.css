@@ -2,6 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url('./images/sw-bg.jpg');
+  background-image: url('../src/images/rm-bg.jpg');
+  height: 1200px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: repeat; /* Do not repeat the image */
   background-size: cover;
+  
 }
+
