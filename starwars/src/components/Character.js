@@ -11,8 +11,8 @@ let {data} = props;
                 <Card>
                     <CardBody>
                     <CardImg top width="100%" src={ricknMorty.image} alt="Card image cap" />
-                    <CardTitle>Name:{ricknMorty.name}</CardTitle>
-                    <CardText>Gender:{ricknMorty.gender}</CardText>
+                    <CardTitle>Name: {ricknMorty.name}</CardTitle>
+                    <CardText>Gender: {ricknMorty.gender}</CardText>
                     <CardText>Status: {ricknMorty.status}</CardText>
                     </CardBody>
                 </Card>
