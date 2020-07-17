@@ -8,6 +8,8 @@ const App = () => {
   // the state properties here.
 
   const [data, setData] = useState([]);
+
+  const [imageIndex, setImageIndex] = useState(0);
   console.log(data);
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a
@@ -25,13 +27,19 @@ const App = () => {
         console.log("Uh oh Somethings is not right!!");
       });
   }, []);
-
+  if (!data.length) {
+    return <p>Loading ...</p>;
+  }
   return (
     <div className="App">
       <h1 className="Header">Rick and Morty Characters List</h1>
 
       <div>
-        <Cards data={data} />
+        <Cards
+          data={data}
+          setImageIndex={setImageIndex}
+          imageIndex={imageIndex}
+        />
       </div>
     </div>
   );
