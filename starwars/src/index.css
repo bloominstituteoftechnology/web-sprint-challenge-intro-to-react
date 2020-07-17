@@ -2,6 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url('./images/sw-bg.jpg');
+  background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg');
+  /* background-image: url("./images/rm-bg.jpg"); */
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
