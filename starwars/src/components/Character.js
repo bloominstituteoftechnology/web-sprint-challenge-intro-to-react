@@ -51,6 +51,7 @@ const Cards = (props) => {
               <h3 className="green">Gender: {character.gender}</h3>
               <h3 className="red"> Status: {character.status}</h3>
               <h3 className="spieces"> Spieces: {character.species}</h3>
+              <h3> Location: {character.location.name}</h3>
 
               <StyledImg src={character.image}></StyledImg>
             </Card>
