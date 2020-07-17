@@ -39,7 +39,7 @@ const Card = styled.div`
     cursor: pointer;
   }
   button:not(:last-child) {
-    margin-right: 100px;
+    margin-right: 80px;
   }
 `;
 
@@ -62,31 +62,33 @@ const Cards = (props) => {
         <h3 className="spieces"> Spieces: {character.species}</h3>
 
         <StyledImg src={character.image}></StyledImg>
-        {imageIndex === 0 ? null : ( // when imageIndex is 0 you can't do previouw
-          <button
-            className="button"
-            onClick={() => {
-              if (imageIndex > 0) {
-                setImageIndex(imageIndex - 1);
-              }
-            }}
-          >
-            Previous Image
-          </button>
-        )}
-        {imageIndex < data.length - 1 ? ( // when imageIndex is 19 the nextimage wont show up.
-          <button
-            className="button"
-            onClick={() => {
-              if (imageIndex < data.length - 1) {
-                setImageIndex(imageIndex + 1);
-              }
-            }}
-            disabled={imageIndex === data.length - 1}
-          >
-            Next Image
-          </button>
-        ) : null}
+        <div>
+          {imageIndex === 0 ? null : ( // when imageIndex is 0 you can't do previouw
+            <button
+              className="button"
+              onClick={() => {
+                if (imageIndex > 0) {
+                  setImageIndex(imageIndex - 1);
+                }
+              }}
+            >
+              Previous Image
+            </button>
+          )}
+          {imageIndex < data.length - 1 ? ( // when imageIndex is 19 the nextimage wont show up.
+            <button
+              className="button"
+              onClick={() => {
+                if (imageIndex < data.length - 1) {
+                  setImageIndex(imageIndex + 1);
+                }
+              }}
+              disabled={imageIndex === data.length - 1}
+            >
+              Next Image
+            </button>
+          ) : null}
+        </div>
       </Card>
     </StyledDiv>
   );

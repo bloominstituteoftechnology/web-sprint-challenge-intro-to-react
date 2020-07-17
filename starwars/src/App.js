@@ -10,7 +10,7 @@ const App = () => {
   const [data, setData] = useState([]);
 
   const [imageIndex, setImageIndex] = useState(0);
-  console.log(data);
+  // console.log(data);
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a
   // side effect in a component, you want to think about which state and/or props it should
@@ -21,15 +21,17 @@ const App = () => {
       .get("https://rickandmortyapi.com/api/character/")
       .then((res) => {
         setData(res.data.results);
-        console.log(setData);
+        // console.log(setData);
       })
       .catch((err) => {
         console.log("Uh oh Somethings is not right!!");
       });
   }, []);
+
   if (!data.length) {
     return <p>Loading ...</p>;
   }
+
   return (
     <div className="App">
       <h1 className="Header">Rick and Morty Characters List</h1>
