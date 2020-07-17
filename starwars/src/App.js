@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import './App.css';
 import axios from 'axios'
 import PokemonCard from '../src/components/PokemonCard'
-import { Container, Row } from 'reactstrap'
+import { Container, FormGroup, Input } from 'reactstrap'
 // import Loops from '../src/components/loops'
 
 const App = () => {
@@ -39,17 +39,46 @@ const App = () => {
 //   return (<h2>{data}</h2>) // This breaks the render
 // }
 
+//    ATTEMPT AT FILTER RESULTS
+//   const opt1 = document.querySelector('#common')
+//   const opt2 = document.querySelector('#uncommon')
+//   const opt3 = document.querySelector('#rare')
+
+
+// const onInputChange = () => {
+//   if(opt1.value === 'common') {
+//     const rarity = 'Common'
+//   } else if(opt2.value === 'uncommon') {
+//     const rarity = 'Uncommon'
+//   } else if(opt3.value === 'rare') {
+//     const rarity = 'Rare'
+//   } else {
+//     const rarity = 'Rare Halo EX'
+//   }
+// }
+
 return ( // data is not defined here, so IMPOSSIBLE to return any retrieved data
-    <Container fluid="sm">
-      <Row>
+    <Container fluid="sm" className="cardContainer">
+
+    <h1 style={{textAlign:"center", padding:"8px", background:"rgba(0,112,0,0.8"}}>&lArr; Pokemon Cards in My Deck &rArr;</h1>
+
+{/* Search Form for Stretch */}
+      {/* <FormGroup>
+      <Input type="select" name="select" id="exampleSelect">
+          <option id="common" value="common">Common</option>
+          <option id="uncommon" value="uncommon">Uncommon</option>
+          <option id="rare" value="rare">Rare</option>
+          <option id="rare2" value="rare2">Rare Halo EX</option>
+        </Input>
+      </FormGroup> */}
+
     {
-              cards.map(card => {
-                return (
-                  <PokemonCard key={card.id} card={card}></PokemonCard>
+        cards.map(card => {
+          return (
+            <PokemonCard key={card.id} card={card}></PokemonCard>
                 )
               })
             }
-            </Row>
     </Container>
 );
 

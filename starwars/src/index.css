@@ -2,6 +2,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url('./images/sw-bg.jpg');
-  background-size: cover;
+  background-image: url('./images/pk-bg.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
+  background-position:0;
+  box-sizing:border-box;
+}
+
+.cardContainer {
+  margin:12px 24px;
 }
