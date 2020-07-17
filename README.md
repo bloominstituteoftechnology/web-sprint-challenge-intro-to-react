@@ -32,9 +32,15 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Describe component state.
 
+Determines how a component renders and behaves.
+
 1. Describe props.
 
+Props, short for properties, is used for passing data from one component to another.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Side effects are performing actions outside the scope of a function.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
