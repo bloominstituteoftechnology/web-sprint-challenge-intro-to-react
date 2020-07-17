@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {requester} from 'easier-requests';
 import './App.css';
+import Character from './Character.jsx';
 
 function getCharacters(setCharacters) {
   // holds each new copy of character array
@@ -34,6 +35,7 @@ export default function App () {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      {characters.map((character) => <Character character={character}/>)}
     </div>
   );
 }
