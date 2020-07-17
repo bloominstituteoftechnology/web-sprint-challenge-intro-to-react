@@ -8,7 +8,7 @@ const App = () => {
   // the state properties here.
 
   const [data, setData] = useState([]);
-  console.log(data)
+  console.log(data);
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a
   // side effect in a component, you want to think about which state and/or props it should
