@@ -13,7 +13,7 @@ const Card = styled.div`
   background-color: #e9fae3;
   border: solid 1px grey;
   border-radius: 2%;
-  width: 30%;
+  width: 40%;
   margin: 2% 0;
   padding: 3%;
   box-shadow: 4px 4px black;
