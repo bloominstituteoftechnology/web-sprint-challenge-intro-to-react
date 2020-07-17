@@ -2,8 +2,7 @@ import React, { useState, useEffect }  from "react";
 import './App.css';
 import styled, { keyframes } from 'styled-components';
 import axios from 'axios';
-
-
+import Character from '../src/components/Character';
 
 function App () {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -20,31 +19,41 @@ useEffect(()=>{
   .then((r)=>{
     console.log(r);
 
-    setCharacter([r.data.results.name, r.data.results.birth_year]);
+    setCharacter(r.data.results);
   })
   .catch(()=>{
     console.log("errorr")
 
   })
 },[])
-
+console.log(character)
 
 const StyledDetails = styled.div`
-
-.Blocks {
-  background-color: #ffa64d;
-  height: 200px;
-  width:40%;
-  opacity: 0.5;
-  border-radius: 20px;
-  border-style: ridge;
-  border-width:10px;
-  
-
 }
+.indBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.Header {
+  font-size: 7em;
+  color: #ff1a1a;
+  opacity: 0.8;
+  &:hover {
+   
+    transform: rotate(360deg);
+    transition: all 2s ease-in-out;
+  }
+}
+.Title {
+  font-size: 3em;
+  color: #ff3333;
+  opacity: 0.8;
+}
+
 `
-
-
 
   return (
     <StyledDetails id='detailsView' className ='container'>
@@ -52,12 +61,11 @@ const StyledDetails = styled.div`
       <h1 className="Header">Star Wars</h1>
       <h2 className="Title">Main Characters List</h2>
       <div className= "Blocks">
-
-        <h3 className={character.map(i =>
-          <data.results.name {i.character})}></h3>
-          
-        <p className ="Birth"></p>
-        <p className="Films"></p>
+        <div className= "indBlock">
+        {character.map((i) =>
+        <Character character = {i}/>
+      )}
+        </div>
 
       </div>
     </div>
