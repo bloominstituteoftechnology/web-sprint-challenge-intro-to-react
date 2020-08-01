@@ -15,6 +15,8 @@ export default function Characters() {
         }, [])
             return (
               <div className="star-wars-list">
+              <starWarsCard />
+              {/* <span className="character-card" onClick={() => setList(starWarsList + 1)}></span> */}
                {/* {starWarsList.map(data => (
           <starWarsCard key={data.name} />
         ))}    */}
@@ -23,4 +25,5 @@ export default function Characters() {
     }
 
     // console.log(Characters.name[0]);
+    // <button className="homeButtons__touchdown" onClick={() => setLcount(lionsCount + 7)}>Home Touchdown</button>
     
