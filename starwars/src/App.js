@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
+import Characters from './components/Character'
+
 
 
 const App = () => {
@@ -13,6 +15,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      <p className="text2"><Characters /></p>
     </div>
   );
 }
