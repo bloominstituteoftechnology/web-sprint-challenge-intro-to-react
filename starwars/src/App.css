@@ -6,3 +6,52 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+
+
+.CardTemp {
+  background-color: darkslategray;
+  color: paleturquoise;
+  border-radius: .35rem;
+  padding: 1rem;
+  margin: 2rem;
+  height: 17rem;
+  text-align: left;
+  border: 2px solid white;
+  
+}
+
+h1 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.card {
+  width: 20rem;
+  
+  
+}
+
+.CardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.CardMain {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+ 
+}
+
+.aligner {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: grey solid 2px;
+}
+ 
