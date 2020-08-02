@@ -1,31 +1,30 @@
 // Write your Character component here
 import React, {useState} from "react";
-import { Dropdown, DropdownMenu, DropdownToggle } from 'reactstrap';
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
+
+
 
 function Character(props) {
 
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
 
-  const toggle = () => setDropdownOpen(prevState => !prevState);
-   
 
 return (
 
-    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-    <DropdownToggle
-      tag="span"
-      data-toggle="dropdown"
-      aria-expanded={dropdownOpen}
-    >
-    {props.name}
-    </DropdownToggle>
-    <DropdownMenu>
-      <div onClick={toggle}>Tsstt</div>
-      <div onClick={toggle}>Custom dropdown item</div>
-      <div onClick={toggle}>Custom dropdown item</div>
-      <div onClick={toggle}>Custom dropdown item</div>
-    </DropdownMenu>
-  </Dropdown>
+  <div>
+  <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>{props.name}</Button>
+  <Collapse isOpen={isOpen}>
+    <Card>
+      <CardBody>
+      Anim pariatur cliche reprehender
+      enim eiusmod high life accusamus terry richardson ad squid. Nihil
+       anim keffiyeh helvetica, craft beer labore wes anderson cred
+       nesciunt sapiente ea proident.
+      </CardBody>
+    </Card>
+  </Collapse>
+</div> 
 
 )
 
