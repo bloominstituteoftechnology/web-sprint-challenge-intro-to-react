@@ -13,7 +13,7 @@ const App = () => {
   // sync up with, if any.
 
 useEffect(() => {
-  axios.get('https://https://swapi.py4e.com/api/species/1/')
+  axios.get('https://https://swapi.py4e.com/api/people/1/')
   .then((res) => {
     setCharacters(response.data.results)
     console.log(response.data.results)
