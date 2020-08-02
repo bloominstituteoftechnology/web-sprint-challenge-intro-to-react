@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios'
-import Character from './components/Character'
+import styled from 'styled-components'
+import CardInfo from './components/Character'
 
 
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
+  // Try to thinanek through what state you'll need for this app before starting. Then build out
   // the state properties here.
-const [characters, setCharacters] = useState ([]);
+const [charactersInfo, setCharactersData] = useState ([]);
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
@@ -16,20 +17,19 @@ const [characters, setCharacters] = useState ([]);
 
     axios.get('https://swapi.dev/api/people')
     .then(response => {
-      //console.log(response.data.results);
-      setCharacters(response.data.results)
+      console.log(response.data.results);
+      setCharactersData(response.data.results)
     })
     .catch(err => {
       console.log(err.status, err.data)
     })
   }, []);
 
-  console.log(characters)
 
   return (
     <div className="App">
-      <Header className="Header"> API StarWars</Header>
-      <Character characters={characters}/>
+      <h1 className="Header"> API StarWars</h1>
+      <CardInfo/>
     </div>
   );
 }
