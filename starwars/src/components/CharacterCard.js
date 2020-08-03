@@ -8,7 +8,7 @@ import {
   CardSubtitle,
   Button,
 } from "reactstrap";
-//import "./CharacterCard.css";
+import "./CharacterCard.css";
 
 const CharacterCard = (props) => {
   return (
