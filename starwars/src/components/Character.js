@@ -1,22 +1,34 @@
 // Write your Character component here
-import React from 'react';
+// birth_year, eye_color, gender, hair_color, height, mass, name, skin_color
+import React, {useState} from 'react';
 import styled from 'styled-components';
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
+
 const WrapperDiv = styled.div `
-border: 1px solid red;
-background-color: grey;
-border-radius: 5px;
-color: white;
-width: 50%;
-margin: 1%;
+margin: 10px;
 `;
 function Character(props){
-    const {name, birthyear } = props;
-    console.log(name)
+    const {data } = props;
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => setIsOpen(!isOpen);
     
     return(
         <WrapperDiv>
-            <h2>Name: {name}</h2>
-            <h2>Birthyear: {birthyear}</h2>
+            <Button outline color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}  size="lg" block>{data.name}</Button>
+            <Collapse isOpen={isOpen}>
+                <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                <CardBody>
+                    <h2>Birthyear: {data.birth_year}</h2>
+                    <h2>Gender: {data.gender}</h2>
+                    <h2>Hair Color: {data.hair_color}</h2>
+                    <h2>Eye Color: {data.eye_color}</h2>
+                    <h2>Skin Color: {data.skin_color}</h2>
+                    <h2>Mass: {data.mass}</h2>
+                    <h2>Height: {data.height}</h2>
+                </CardBody>
+                </Card>
+            </Collapse>
         </WrapperDiv>
     )
 }   
