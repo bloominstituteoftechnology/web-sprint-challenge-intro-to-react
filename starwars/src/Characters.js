@@ -1,8 +1,9 @@
-import React,{ useState, useEffect } from 'react';
+import React from 'react';
 import {
   Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  CardTitle, CardSubtitle
 }  from 'reactstrap';
+
 
 //https://rickandmortyapi.com/api/character/1,
 function Characters(props) {

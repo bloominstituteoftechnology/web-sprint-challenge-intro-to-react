@@ -4,10 +4,12 @@ import MyCarousel from './Carousel.js';
 import Characters from './Characters.js'
 import axios from 'axios';
 import styled from 'styled-components';
+import Character from './components/Character.js';
+
 //styles
 const MyDiv = styled.div`
-background:url("https://www.publicdomainpictures.net/pictures/70000/nahled/stars-in-the-night-sky.jpg");
-	animation:space-vroom 10s linear infinite;
+background:url("https://vignette.wikia.nocookie.net/rickandmorty/images/f/fc/S2e5_Earth.png/revision/latest?cb=20160926065208");
+	animation:space-vroom 50s linear infinite;
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
@@ -21,11 +23,17 @@ border:0px;
 	0%{
 		background-position:0% 0%;
 	}
+	25%{
+		background-position:20% 10%;
+	}
 	50%{
+		background-position:30% 30%;
+  }
+  75%{
 		background-position:20% 10%;
 	}
 	100%{
-		background-position:30% 30%;
+		background-position:0% 0%;
 	}
 `;
 const DivWrapper = styled.div`
@@ -39,12 +47,14 @@ margin:20px;
 const Slide = styled.div`
 width:35%;
 margin:10px 30px;
+color:black;
 `;
 const MainSlide = styled.div`
-width:70%;
-height:50rem;
-margin:10px;
-`
+width:35%;
+display:block;
+margin:50px;
+color:black;
+`;
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -58,6 +68,7 @@ const App = () => {
   const [charThreeName, setThreeName] = useState('');
   const [charThreeLoc, setThreeLoc] = useState('');
   const [charThreeUrl, setThreeUrl] = useState('');
+
   //carousel components
 
 //get character one
@@ -108,9 +119,13 @@ useEffect(() => {
 
   return (
     <MyDiv>
+      <DivWrapper>
       <h1 className="Header">Galactic Empires MOST WANTED</h1>
+      </DivWrapper>
+    <DivWrapper>
+    <MainSlide><MyCarousel /></MainSlide>
+    </DivWrapper>
     <DivWrapper> 
-     <MainSlide><MyCarousel /></MainSlide>
         <Slide>
             <Characters
             name = {charOneName}
@@ -131,6 +146,9 @@ useEffect(() => {
             location = {charThreeLoc}
             url = {charThreeUrl}
             />
+            </Slide>
+            <Slide>
+            <Character />
             </Slide>
         </DivWrapper>
     </MyDiv>

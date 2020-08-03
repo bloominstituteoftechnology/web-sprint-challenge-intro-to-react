@@ -1,17 +1,14 @@
 import React,{ useState, useEffect } from 'react';
 import axios from 'axios';
-import Characters from './Characters.js'
 import { UncontrolledCarousel } from 'reactstrap';
+import './App.css';
 
 function MyCarousel() {
     const [charOneName, setOneName] = useState('');
-    const [charOneLoc, setOneLoc] = useState('');
     const [charOneUrl, setOneUrl] = useState('');
     const [charTwoName, setTwoName] = useState('');
-    const [charTwoLoc, setTwoLoc] = useState('');
     const [charTwoUrl, setTwoUrl] = useState('');
     const [charThreeName, setThreeName] = useState('');
-    const [charThreeLoc, setThreeLoc] = useState('');
     const [charThreeUrl, setThreeUrl] = useState('');
     //carousel components
 
@@ -22,7 +19,6 @@ function MyCarousel() {
         .then(response => {
             console.log(response.data.image)
             setOneName(response.data.name);
-            setOneLoc(response.data.location.name);
             setOneUrl(response.data.image);
         })
         .catch(err => {
@@ -36,7 +32,6 @@ useEffect(() => {
     .then(response => {
         console.log(response.data)
         setTwoName(response.data.name);
-        setTwoLoc(response.data.location.name);
         setTwoUrl(response.data.image);
     })
     .catch(err => {
@@ -50,7 +45,6 @@ useEffect(() => {
     .then(response => {
         console.log(response.data)
         setThreeName(response.data.name);
-        setThreeLoc(response.data.location.name);
         setThreeUrl(response.data.image);
     })
     .catch(err => {
@@ -82,7 +76,7 @@ const items = [
   ];
     return(
         <div>
-             <UncontrolledCarousel items={items} />
+             <UncontrolledCarousel className = "changeColor"items={items} />
         </div>
     )
 }
