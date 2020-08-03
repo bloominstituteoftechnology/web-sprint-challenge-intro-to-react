@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './App.css';
 import Characters from './components/Character'
-import Starships from './components/starships'
 import { createGlobalStyle } from "styled-components";
+import styled from 'styled-components'
 
 
 const GlobalStyles = createGlobalStyle`
@@ -13,7 +13,23 @@ const GlobalStyles = createGlobalStyle`
 `
 
 
+
 const App = () => {
+
+  const Header = styled.a`
+  
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 0.5rem 0;
+    margin: 0.5rem 1rem;
+    width: 20rem;
+    background: ghostwhite;
+    color: cyan;
+    border: 2px solid black;
+    `
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -24,9 +40,9 @@ const App = () => {
   return (
     <div className="App">
       <GlobalStyles />
-      <h1 className="Header">Characters</h1>
+      <Header className="Header">Characters</Header>
       <p className="text2"><Characters /></p>
-      <img src={<Starships/>}/>
+     
     </div>
   );
 }

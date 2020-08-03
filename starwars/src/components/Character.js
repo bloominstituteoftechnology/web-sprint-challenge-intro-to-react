@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import CharacterCard from './CharactersCard'
-import StarshipsCard from './starShipsCard'
+
 
 
 function Characters() {
@@ -29,19 +29,30 @@ function Characters() {
                        mass={people.mass}
                        birthYear={people.birth_year}
                        homeWorld={people.homeworld}
-                       starShips={people.starShips}
+                       
                         
 
                        />
-
+                       
+                       
+                       
+                    
                     
                        
                    )
                })}
-             
+
+               
         </div>
+
+        
+        
     )
+   
+    
 
 }
+
+
 
 export default Characters
