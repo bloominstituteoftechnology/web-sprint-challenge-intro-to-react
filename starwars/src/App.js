@@ -17,7 +17,7 @@ function App() {
       .get("https://swapi.dev/api/people/")
       .then((response) => {
         console.log("success", response);
-        setInfo(response.data);
+        setInfo(response.data.results);
       })
       .catch((error) => console.log("failure", error));
   }, []);

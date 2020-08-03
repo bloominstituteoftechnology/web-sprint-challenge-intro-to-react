@@ -3,11 +3,39 @@ import React from "react";
 
 const Character = (props) => {
   const { data } = props;
-  let mappedData = data.map((element) => {
-    let resultsMapped = element.results;
-    return resultsMapped;
-  });
-  return <div>{resultsMapped}</div>;
+  console.log({ ...data });
+  console.log({ data });
+
+  return <div>{}</div>;
 };
 
 export default Character;
+
+// const Character = (props) => {
+//     let charFunc = (props) => {
+//         const { data } = props;
+//         const chars = { ...data, results: data.results };
+//         return chars;
+//     };
+
+// return (
+// <div></div>;
+// )
+// }
+
+// export default Character;
+
+// const dataResults = data.results;
+//   return dataResults.map((bio) => (
+//     <div>
+//       <p>{data.results.bio}</p>
+//       <p>{data.results.bio}</p>
+//       <p>{data.results.bio}</p>
+//       <p>{data.results.bio}</p>
+//       <p>{data.results.bio}</p>
+//       <p>{data.results.bio}</p>
+//       <p>{data.results.bio}</p>
+//       <p>{data.results.bio}</p>
+//       <p>{data.results.bio}</p>
+//     </div>
+//   ));
