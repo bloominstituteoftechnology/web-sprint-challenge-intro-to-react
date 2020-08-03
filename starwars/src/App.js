@@ -1,7 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import Characters from './components/Character'
+import Starships from './components/starships'
+import { createGlobalStyle } from "styled-components";
 
+
+const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono');
+  body {
+    font-family: 'Roboto Mono', monospace;
+  }
+`
 
 
 const App = () => {
@@ -14,8 +23,10 @@ const App = () => {
 
   return (
     <div className="App">
+      <GlobalStyles />
       <h1 className="Header">Characters</h1>
       <p className="text2"><Characters /></p>
+      <img src={<Starships/>}/>
     </div>
   );
 }
