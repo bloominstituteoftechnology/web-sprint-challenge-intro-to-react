@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+/*import React from "react";
 
 const CharacterStats = (props) => {
   console.log(CharacterStats);
@@ -14,3 +14,4 @@ const CharacterStats = (props) => {
 };
 
 export default CharacterStats;
+*/
