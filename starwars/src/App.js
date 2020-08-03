@@ -2,8 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import axios from "axios";
 import Character from './components/Character';
-
-
+import { Container } from 'reactstrap';
 
 const App = ()=> {
   const [people, setPeople] = useState([]);
@@ -34,17 +33,18 @@ const App = ()=> {
   // sync up with, if any.
 
   return (
+    <Container>
     <div className="App">
       <h1 className="Header">React Wars</h1>
       <ul>
       {people.map(people =>{
-        return <Character key={people.name + people.birth_year} name={people.name}/>
+        return <Character key={people.name + people.birth_year} name={people.name}  title={people.name} Height={people.height} mass={people.mass} gender={people.gender} eye_color={people.eye_color} birth_year={people.birth_year}/>
       })}
       </ul>
       
 
     </div>
-  
+    </Container>
    
   );
 }

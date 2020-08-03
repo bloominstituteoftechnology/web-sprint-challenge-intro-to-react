@@ -1,6 +1,6 @@
 // Write your Character component here
 import React, {useState} from "react";
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import { Collapse, Button, CardBody, Card, Col, CardTitle, CardText, Badge, ListGroup, ListGroupItem  } from 'reactstrap';
 
 
 
@@ -17,10 +17,18 @@ return (
   <Collapse isOpen={isOpen}>
     <Card>
       <CardBody>
-      Anim pariatur cliche reprehender
-      enim eiusmod high life accusamus terry richardson ad squid. Nihil
-       anim keffiyeh helvetica, craft beer labore wes anderson cred
-       nesciunt sapiente ea proident.
+      <CardTitle></CardTitle>
+      <h1>{props.title}</h1>
+      <CardText> </CardText>
+      <ListGroup flush>
+      <ListGroupItem disabled tag="a" href="#">{"Birth_year:" +  props.birth_year}</ListGroupItem>
+      <ListGroupItem disabled tag="a" href="#">{"Gender:" + props.gender}</ListGroupItem>
+      <ListGroupItem disabled tag="a" href="#">{"Eye_color:" + props.eye_color} </ListGroupItem>
+      <ListGroupItem disabled tag="a" href="#">{"Height:" + props.height}</ListGroupItem>
+      <ListGroupItem disabled tag="a" href="#">{"Mass:" + props.mass}</ListGroupItem>
+    </ListGroup>
+
+      
       </CardBody>
     </Card>
   </Collapse>
@@ -28,16 +36,7 @@ return (
 
 )
 
-    // <li className="character-info">
-
-    //     <h2>Character Name: {props.name}</h2>
-    //     <p>Mass:{props.mass}</p>
-    //     <p>height:{props.height}</p>
-    //     <p>gender:{props.gender}</p>
-    //     <p>eye_color:{props.eye_color}</p>
-    //     <p>birth_year:{props.birth_year}</p>
-    // </li>
-
+    
 }
 
 export default Character;
