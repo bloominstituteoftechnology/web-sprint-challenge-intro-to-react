@@ -16,13 +16,17 @@ function App() {
     axios
       .get("https://swapi.dev/api/people/")
       .then((response) => {
-        console.log("success", response);
         setInfo(response.data.results);
-        console.log(response.data.results);
+        console.log("success", response);
+        let failedState = response.data.results;
+        failedState.map((bio) => {
+          console.log(bio);
+          return bio;
+        });
       })
       .catch((error) => console.log("failure", error));
   }, []);
-  console.log(info);
+
   return (
     <div className="App">
       <h1 className="Header">
@@ -33,3 +37,8 @@ function App() {
 }
 
 export default App;
+
+// console.log(data);
+//   data.map((bio) => {
+//     console.log(bio);
+//     return <div key={bio}>{bio}</div>;
