@@ -1,7 +1,23 @@
 // Write your Character component here
 import React, {useState} from "react";
+import styled from "styled-components";
 import { Collapse, Button, CardBody, Card, Col, CardTitle, CardText, Badge, ListGroup, ListGroupItem  } from 'reactstrap';
 
+const  StarWarsButton =styled.button `
+  width: 300px;
+  height: 30px;
+  background: ${props => (props.primary ? "brown" : "red")}; 
+  color:white;
+  border: 0;
+  margin: 5px 10px;
+  border-radius:12px;
+`
+ const StarWarsCardBody = styled.div `
+ background:antiquewhite;
+ `
+//  const StarWarsCard = styled.div`
+//   background:antiquewhite;
+//   `
 
 
 function Character(props) {
@@ -13,10 +29,10 @@ function Character(props) {
 return (
 
   <div>
-  <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>{props.name}</Button>
+  <StarWarsButton primary onClick={toggle} style={{ marginBottom: '1rem' }}>{props.name}</StarWarsButton>
   <Collapse isOpen={isOpen}>
     <Card>
-      <CardBody>
+      <StarWarsCardBody>
       <CardTitle></CardTitle>
       <h1>{props.title}</h1>
       <CardText> </CardText>
@@ -29,7 +45,7 @@ return (
     </ListGroup>
 
       
-      </CardBody>
+      </StarWarsCardBody>
     </Card>
   </Collapse>
 </div> 
