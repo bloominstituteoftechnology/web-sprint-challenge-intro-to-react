@@ -18,10 +18,11 @@ function App() {
       .then((response) => {
         console.log("success", response);
         setInfo(response.data.results);
+        console.log(response.data.results);
       })
       .catch((error) => console.log("failure", error));
   }, []);
-
+  console.log(info);
   return (
     <div className="App">
       <h1 className="Header">
@@ -32,24 +33,3 @@ function App() {
 }
 
 export default App;
-
-// import React from "react";
-// import axios from "axios";
-
-// function App() {
-//   const [info, setInfo] = useState({});
-
-//   useEffect(() => {
-//     axios
-//       .get("https://swapi.dev/api/people/")
-//       .then((response) => {
-//         console.log("success", response);
-//         setInfo(response.data);
-//       })
-//       .catch((error) => console.log("failure", error));
-//   }, []);
-
-//   return <div></div>;
-// }
-
-// export default App;
