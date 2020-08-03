@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Character from "./components/Character";
 import "./App.css";
+import styled from "styled-components";
 
 function App() {
   // Try to think through what state you'll need for this app before starting. Then build out

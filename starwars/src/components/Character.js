@@ -1,20 +1,41 @@
 // Write your Character component here
 import React from "react";
+import styled from "styled-components";
+
+const BigDiv = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 0.5rem solid yellow;
+  line-height: 15%;
+  width: 100%;
+  margin: 0%, 12.5%, 10%, 12.5%;
+`;
+
+const Pea = styled.p`
+  width: 50%;
+`;
+
+const PeaUrl = styled.p`
+  display: flex;
+  justify-content: center;
+  width: 50%;
+`;
 
 const Character = (props) => {
   const { data, key } = props;
   console.log(data);
 
   return data.map((bio) => (
-    <ul key={bio.name + bio.birth_year}>
-      <li>{bio.name}</li>
-      <li>{bio.birth_year}</li>
-      <li>{bio.gender}</li>
-      <li>{bio.hair_color}</li>
-      <li>{bio.height}</li>
-      <li>{bio.mass}</li>
-      <li>{bio.url}</li>
-    </ul>
+    <BigDiv key={bio.name + bio.birth_year}>
+      <Pea>Name: {bio.name}</Pea>
+      <Pea>Birth Year: {bio.birth_year}</Pea>
+      <Pea>Gender: {bio.gender}</Pea>
+      <Pea>Hair Color: {bio.hair_color}</Pea>
+      <Pea>Height: {bio.height}</Pea>
+      <Pea>Mass: {bio.mass}</Pea>
+      <PeaUrl>{bio.url}</PeaUrl>
+    </BigDiv>
   ));
 };
 
