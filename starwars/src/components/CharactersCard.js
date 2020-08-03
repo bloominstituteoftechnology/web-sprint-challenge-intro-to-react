@@ -8,7 +8,7 @@ const CharacterCard = props => {
     const Square = styled.a`
     @keyframes fade {
         from {background-color: #A3C2C4;}
-        to {background-color: #DDA362;}
+        to {background-color: #98EBFF;}
       }
     margin-right: 10px;
     animation-name: fade;
