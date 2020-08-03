@@ -10,7 +10,7 @@ function App() {
   // Fetch characters from the API in an effect hook. Remember, anytime you have a
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
-  const [info, setInfo] = useState({});
+  const [info, setInfo] = useState([]);
 
   useEffect(() => {
     axios
@@ -18,19 +18,13 @@ function App() {
       .then((response) => {
         setInfo(response.data.results);
         console.log("success", response);
-        let failedState = response.data.results;
-        failedState.map((bio) => {
-          console.log(bio);
-          return bio;
-        });
       })
       .catch((error) => console.log("failure", error));
   }, []);
-
   return (
     <div className="App">
       <h1 className="Header">
-        <Character data={info} />
+        <Character key={info.index} data={info} />
       </h1>
     </div>
   );
@@ -42,3 +36,10 @@ export default App;
 //   data.map((bio) => {
 //     console.log(bio);
 //     return <div key={bio}>{bio}</div>;
+
+// let failedState = response.data.results;
+// failedState.map((bio) => {
+//   // console.log(bio);
+//   setInfo(bio);
+//   console.log(info);
+// });
