@@ -1,0 +1,22 @@
+.title {
+  font-size: 30px;
+  border-radius: 14px;
+  color: gold;
+  outline: single;
+  padding: 4px;
+  margin-top: 12px;
+}
+.subtitle {
+  font-size: 20px;
+  color: white;
+}
+.text {
+  color: chocolate;
+}
+.button {
+  color: gold;
+  background-color: black;
+  text-decoration: none;
+  border: 2px solid gold;
+  padding: 4px;
+}
