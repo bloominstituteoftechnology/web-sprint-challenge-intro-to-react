@@ -1,0 +1,20 @@
+.title {
+  font-size: 30px;
+  color: gold;
+  text-shadow: 4px 4px black;
+  outline: double;
+  margin-top: 12px;
+}
+.subtitle {
+  font-size: 20px;
+  color: white;
+}
+.text {
+  color: red;
+}
+.button {
+  color: gold;
+  text-decoration: none;
+  border: 2px dashed gold;
+  padding: 4px;
+}
