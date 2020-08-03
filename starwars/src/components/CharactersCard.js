@@ -7,8 +7,8 @@ import styled from 'styled-components'
 const CharacterCard = props => {
     const Square = styled.a`
     @keyframes fade {
-        from {background-color: ghostwhite;}
-        to {background-color: darkslategrey;}
+        from {background-color: #A3C2C4;}
+        to {background-color: ghostwhite;}
       }
     margin-right: 10px;
     animation-name: fade;
@@ -18,9 +18,9 @@ const CharacterCard = props => {
     padding: 0.5rem 0;
     margin: 0.5rem 1rem;
     width: 20rem;
-    background: ghostwhite;
+    background: #A3C2C4;
     color: white;
-    border: 2px solid white;
+    border: 2px solid black;
     `
     return (
         <ul>    

@@ -26,7 +26,7 @@ const App = () => {
     padding: 0.5rem 0;
     margin: 0.5rem 1rem;
     width: 20rem;
-    background: ghostwhite;
+    background: #DDA362;
     color: cyan;
     border: 2px solid black;
     `
