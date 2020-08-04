@@ -31,14 +31,17 @@ const [charactersInfo, setCharactersData] = useState ([]);
     <div className="App">
       <h1 className="Header"> API StarWars</h1>
       {charactersInfo.map(character => {
-        return <Character
-        name={charactersInfo.name}
-        height={charactersInfo.height}
-        mass={charactersInfo.mass}
-        gender={charactersInfo.gender}
+        return (
+        <Character
+        name={character.name}
+        height={character.height}
+        mass={character.mass}
+        gender={character.gender}
         />
+        )
       })}
       <CardInfo/>
+  
     </div>
   );
 }

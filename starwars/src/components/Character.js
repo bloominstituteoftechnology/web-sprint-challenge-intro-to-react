@@ -2,7 +2,7 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import axios from 'axios'
+import axios from "axios"
 
 
 const CardInfo = styled.div`
@@ -18,9 +18,6 @@ margin: 15px;
 color: black;
 font-size: 10px;
 `;
-
-
-
 
 const Character = props => {
     
