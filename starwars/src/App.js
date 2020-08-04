@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios'
 import styled from 'styled-components'
 import CardInfo from './components/Character'
+import Character from './components/Character';
 
 
 const App = () => {
@@ -15,9 +16,9 @@ const [charactersInfo, setCharactersData] = useState ([]);
 
   useEffect(() => {
 
-    axios.get('https://swapi.dev/api/people')
+    axios.get('https://swapi.dev/api/people/')
     .then(response => {
-      console.log(response.data.results);
+      console.log(response);
       setCharactersData(response.data.results)
     })
     .catch(err => {
@@ -29,6 +30,14 @@ const [charactersInfo, setCharactersData] = useState ([]);
   return (
     <div className="App">
       <h1 className="Header"> API StarWars</h1>
+      {charactersInfo.map(character => {
+        return <Character
+        name={charactersInfo.name}
+        height={charactersInfo.height}
+        mass={charactersInfo.mass}
+        gender={charactersInfo.gender}
+        />
+      })}
       <CardInfo/>
     </div>
   );
