@@ -1,8 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import './App.css';
+import styled from 'styled-components'
+
 import Character from './components/Character'
-import CharacterInfo from './components/CharacterInfo'
+
+const StyledApp = styled.div `
+display:flex;
+flex-direction: column;
+border-style: dotted;
+text-align: center;
+width:100%;
+
+`
+const StyledHeader = styled.h1`
+color: #443e3e;
+text-shadow: 1px 1px 5px #fff;
+font-size:4rem;
+
+`
 
 
 const BASEURL = "https://swapi.py4e.com/api/people"
@@ -11,14 +26,7 @@ function App () {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
   const [characterList, setCharacterList] = useState([])
-  const [characterName, setCharacterName] = useState('1')
   
-  const openBio = id => {
-    setCharacterName(id)
-  }
-  const closeBio = () => {
-    setCharacterName(null)
-  }
   
   useEffect(() => {
     axios.get(`${BASEURL}`)
@@ -29,10 +37,6 @@ function App () {
       console.log(err)
     })
   }, [])
-console.log(characterName)
-
-
-
 
 
   
@@ -41,17 +45,14 @@ console.log(characterName)
   // sync up with, if any.
 
   return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
+    <StyledApp className="App">
+      <StyledHeader className="Header">Characters</StyledHeader>
       {
-        characterList.map(cr => {
-          return <Character key={cr.name} info= {cr} action={openBio} actionText ={cr.birth_year} />
+        characterList.map((cr) => {
+          return <Character info={cr}  />
         })
       }
-      {
-        characterName && <CharacterInfo characterName={characterName} close={closeBio} /> 
-      }
-    </div>
+    </StyledApp>
   );
 }
 
