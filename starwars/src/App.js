@@ -29,7 +29,7 @@ function App () {
       console.log(err)
     })
   }, [])
-
+console.log(characterName)
 
 
 
