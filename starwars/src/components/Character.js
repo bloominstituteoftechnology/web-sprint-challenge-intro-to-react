@@ -1,6 +1,7 @@
 // Write your Character component here
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import CharacterCard from "./CharacterCard";
 
 export default function CharacterList() {
   const [charList, setCharList] = useState([]);
@@ -18,4 +19,14 @@ export default function CharacterList() {
         console.log("There is an error: ", err);
       });
   }, []);
+
+  return (
+    <div>
+      {charList.map((char) => {
+        return (
+          <CharacterCard char={char} name={char.name} status={char.status} />
+        );
+      })}
+    </div>
+  );
 }
