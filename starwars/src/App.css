@@ -5,4 +5,13 @@
   color: #fff;
   text-shadow: 1px 1px 5px #443e3e;
 }
+
 /* write your parent styles in here for your App.js */
+
+.Image {
+  margin-top: 1rem;
+}
+
+.Name:hover {
+  color: #fdf86c;
+}

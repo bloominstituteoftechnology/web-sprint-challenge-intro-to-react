@@ -29,7 +29,7 @@ export default function CharacterList() {
             name={char.name}
             image={char.image}
             status={char.status}
-            gender={char.gender}
+            origin={char.origin.name}
             species={char.species}
           />
         );
