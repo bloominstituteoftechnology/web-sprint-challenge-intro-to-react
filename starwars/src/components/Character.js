@@ -11,7 +11,7 @@ export default function CharacterList() {
       .get("https://rickandmortyapi.com/api/character")
       .then((res) => {
         setCharList(res.data.results);
-        console.log(charList);
+        // console.log(res.data.results);
         // console.log("This is the response:", res);
         // console.log("These are the characters: ", res.data.results);
       })
@@ -24,7 +24,13 @@ export default function CharacterList() {
     <div>
       {charList.map((char) => {
         return (
-          <CharacterCard char={char} name={char.name} status={char.status} />
+          <CharacterCard
+            char={char}
+            name={char.name}
+            status={char.status}
+            gender={char.gender}
+            species={char.species}
+          />
         );
       })}
     </div>
