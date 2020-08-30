@@ -27,6 +27,22 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+        {characters.map((character) => {
+          return(
+            <Character 
+              key={character.id}
+              name={character.name}
+              gender={character.gender}
+              birth_year={character.birth_year}
+              eye_color={character.eye_color}
+              hair_color={character.hair_color}
+              skin_color={character.skin_color}
+              height={character.height}
+              mass={character.mass}
+              homeworld={character.homeworld}
+            />
+          )
+        })}
     </div>
   );
 }
