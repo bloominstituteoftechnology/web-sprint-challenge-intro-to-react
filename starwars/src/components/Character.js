@@ -22,12 +22,12 @@ const [characters, setCharacters] = useState([]);
 
     return (
         <div>
-            {characters.map(character => {
+            {characters.map(characters => {
                return (<People 
                 
-                name ={character.name}
-                home ={character.homeworld} 
-                species ={character.species}
+                name ={characters.name}
+                home ={characters.homeworld} 
+                species ={characters.species}
                 />);
             })}
         </div>
