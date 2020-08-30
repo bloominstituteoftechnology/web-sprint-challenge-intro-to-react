@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import axios from 'axios';
 
 const App = () => {
   
@@ -15,7 +16,7 @@ const App = () => {
         console.log('error: ', err)
       })
   }, []);
-  
+
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
