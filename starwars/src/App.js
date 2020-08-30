@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios'; 
-import StarshipComponent from './components/Starships.js'
+import PlanetsComponent from './components/Starships.js'
 import styled from "styled-components";
 
 const App = () => {
@@ -17,15 +17,17 @@ const App = () => {
 `;
 
 const BackgroundDiv = styled.div` 
-  background-color: grey;
+ max-width: 100%;
+ display: flex;
+ justify-content: center;
   `;
 
 
 
-  const [starships, setChar] = useState([]);
+  const [planets, setChar] = useState([]);
   useEffect(() => {
     axios
-      .get('http https://swapi.dev/api/starships')
+      .get('https://swapi.dev/api/planets')
       .then(response => {
         console.log(response)
         setChar(response.data.results)
@@ -40,10 +42,17 @@ const BackgroundDiv = styled.div`
   return (
     <BackgroundDiv>
     <div className="App">
-      <LargeHeader className="Header">Starships</LargeHeader>
-        {starships.map(starships => (
-          <StarshipComponent key={starships.id} starships={starships} />
-        ))}
+      <LargeHeader className="Header">Planets</LargeHeader>
+          {planets.map((planets) => <PlanetsComponent 
+          key={planets.id} 
+          
+          name={planets.name}
+          rotation_period={planets.rotation_period}
+          gravity={planets.gravity}
+          population={planets.population}
+          terrain={planets.terrain}
+          />)}
+        
     </div>
     </BackgroundDiv>
   );

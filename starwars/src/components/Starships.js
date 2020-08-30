@@ -2,28 +2,53 @@ import React from 'react'
 import styled from "styled-components";
 
 const StarBox = styled.div`
-    border-top: 2px solid #33FF33;
-    margin-top: 40px;
-    margin-left: 50px;
-    margin-right: 50px;
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+align-content: flex-start;
+justify-content: space-evenly;
+padding: 10vh 0 0;
+background-color: rgba(217, 184, 192, 0.7);
+color:white;
 `;
+
+const InfoDiv = styled.div`
+display: flex
+flex-direction: column;
+max-width: 70%;
+`
 
 const StarInfo = styled.p` 
 font-size: 16px;
-margin: 5px;
-color: #33FF33;
+display: flex;
+justify-content: space-evenly;
+
 `;
 
-const StarshipComponent = ({ starship }) => {
+const StyledH1 = styled.h1`
+font-size: 25px;
+font-weight: bold;
+margin: 16px;
+color: #33FF38;
+padding: 10px;
+background-color: black;
+border-radius: 25px;
+  border: 2px solid #73AD21;
+
+`;
+
+const PlanetsComponent = ({ name, rotation_period, gravity, population, terrain }) => {
     return (
         <StarBox>
-            <h1>{starship.name}</h1>
-            <StarInfo>{starship.model}</StarInfo>
-            <StarInfo>{starship.manufacturer}</StarInfo>
-            <StarInfo>{starship.hyperdrive_rating}</StarInfo>
-            <StarInfo>{starship.starship_class}</StarInfo>
+        <InfoDiv>
+            <StyledH1>{name}</StyledH1>
+            <StarInfo style={{fontWeight: "bold", color: "grey"}}>Rotation:</StarInfo> <StarInfo>{rotation_period}</StarInfo>
+            <StarInfo style={{fontWeight: "bold", color: "grey"}}>Gravity:</StarInfo> <StarInfo> {gravity}</StarInfo>
+            <StarInfo style={{fontWeight: "bold", color: "grey"}}>Population:</StarInfo> <StarInfo> {population}</StarInfo>
+            <StarInfo style={{fontWeight: "bold", color: "grey"}}>Terrain Type:</StarInfo> <StarInfo> {terrain}</StarInfo>
+        </InfoDiv>
         </StarBox>
     )
 }
 
-export default StarshipComponent;
+export default PlanetsComponent;
