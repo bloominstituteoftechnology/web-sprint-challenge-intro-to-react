@@ -1,6 +1,7 @@
-import React, {useState } from "react";
+import React from "react";
 
-const People = props => {
+const People = (props) => {
+    
     return (
         <div>
             <h2>{props.name}</h2>
