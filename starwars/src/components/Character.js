@@ -10,7 +10,7 @@ const [characters, setCharacters] = useState([]);
         axios
         .get ("https://swapi.dev/api/people/")
         .then(res => {
-            console.log(res);
+            console.log("Finding Characters", res);
         setCharacters(res.data.results);
     })
         .catch(error => {
