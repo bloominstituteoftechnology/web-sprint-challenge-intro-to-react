@@ -25,7 +25,7 @@ const Characters = props => {
         <div>
             {characters.map(character => {
                return (<People 
-                // key = {character.url} 
+                
                 name ={character.name}
                 home ={character.homeworld} 
                 species ={character.species}
