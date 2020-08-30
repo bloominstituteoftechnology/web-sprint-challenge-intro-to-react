@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import styled from 'styled-components';
-
 import axios from 'axios';
 import Character from './components/Character';
+import logo from './images/pokemon_logo.png';
+
+
+const Image = styled.img`
+  width: 100px;
+`;
 
 const App = () => {
   
@@ -22,7 +27,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+
+      <h1 className="Header">Choose Your
+        <br/>
+        <span><Image src={logo} alt="pokemon logo"/></span>
+      </h1>
+
       {characters.map((item) => {
         return(
           <Character
