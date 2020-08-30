@@ -39,7 +39,6 @@ const App = () => {
               skin_color={character.skin_color}
               height={character.height}
               mass={character.mass}
-              homeworld={character.homeworld}
             />
           )
         })}
