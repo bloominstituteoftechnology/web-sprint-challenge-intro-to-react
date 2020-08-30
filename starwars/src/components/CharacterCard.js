@@ -23,9 +23,9 @@ const Link = styled.a`
 
 const CharacterCard = ({ char }) => {
   return (
-    <Card>
+    <Card className="Card">
       <div>
-        <img src={char.image} className="Image"></img>
+        <img src={char.image} className="Image" alt="character head shot"></img>
       </div>
 
       <div>
