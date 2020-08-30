@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import Characters from './components/Character';
+import Characters from './components/Character.js';
 
 
 
@@ -25,8 +25,6 @@ const App = () => {
       console.log("StarWars not Working Browswer has Covid-19", error);
 });
 },[])
-
-      console.log(characters);
 
   return (
     <div className="App">
