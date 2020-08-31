@@ -6,7 +6,7 @@ const Name = styled.h2`
   color: #fff;
 `;
 
-const Status = styled.h3`
+let Status = styled.h3`
   color: #fff;
 `;
 

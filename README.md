@@ -30,11 +30,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-1. Describe component state.
+\*\* React is a Javascript library that allows us to break down our code into reusable components.
 
-1. Describe props.
+2. Describe component state.
 
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+\*\* Component state is the current status of our component at any given time.
+
+3. Describe props.
+
+\*\* Props are parameters that a parent component can pass down to child components.
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+\*\* Side effects tell React that your component needs to do something after render. You sync effects by including the useState variables or props in your useEffect.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -83,11 +91,11 @@ It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wik
 
 ### Tips and Gotchas
 
-- [ ] Test your API and inspect the data in Chrome, Postman or HTTPie _before_ writing the code for the request(s). See screenshots at the root of the project.
-- [ ] Try not to hammer your API while developing. Infinite loops in your code might trigger hundreds of requests!
-- [ ] The Pokemon API is a slightly harder challenge because a single network request might not be enough to get all the data you need.
-- [ ] Running `npm` commands in the wrong folder will not work. **Be aware of what folder you're in** when working in the command line.
-- [ ] The `start` process can sometimes choke after adding new dependencies and may need to be restarted.
+- [x] Test your API and inspect the data in Chrome, Postman or HTTPie _before_ writing the code for the request(s). See screenshots at the root of the project.
+- [x] Try not to hammer your API while developing. Infinite loops in your code might trigger hundreds of requests!
+- [x] The Pokemon API is a slightly harder challenge because a single network request might not be enough to get all the data you need.
+- [x] Running `npm` commands in the wrong folder will not work. **Be aware of what folder you're in** when working in the command line.
+- [x] The `start` process can sometimes choke after adding new dependencies and may need to be restarted.
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
@@ -104,6 +112,6 @@ After finishing your required elements, you can push your work further. These go
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` branch (student's Repo). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete after receiving your pull-request
+- [x] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` branch (student's Repo). **Please don't merge your own pull request**
+- [x] Add your team lead as a reviewer on the pull-request
+- [x] Your team lead will count the project as complete after receiving your pull-request
