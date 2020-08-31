@@ -29,7 +29,8 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-    react JS is a UI library that leverages state and components in order to quickly and efficently build interfaces
+    React JS is a UI library that leverages state and components in order to quickly and efficently build interfaces.  It was built by facebook and utilizes a virtual dom to effectivley 
+    limit re-renders in the actual dom by only re-rendering that data that has changed. This makes react very efficient. 
 2. Describe component state.
   A components state is a way that we can keep track and "subscribe" to information in react. This lets us possibly render it into the virtual dom and then update just our specific state that is changing vs having to reload the whole dom everytime something changes.
 3. Describe props.
