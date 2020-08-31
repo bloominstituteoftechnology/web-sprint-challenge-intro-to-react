@@ -18,6 +18,7 @@ const App = () => {
   axios
   .get ("https://swapi.dev/api/people/")
   .then(res => {
+      
       console.log("Here is the FORCE! Data", res.data.results);
   setData(res.data.results);
 })
@@ -29,7 +30,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Character">Characters</h1>
-      <Characters />
+      <Characters key={data.results}  />
     </div>
   );
 }
