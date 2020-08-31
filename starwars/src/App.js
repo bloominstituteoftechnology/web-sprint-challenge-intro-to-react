@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Project from "./components/Project"
 
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -13,10 +14,10 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <div className = "Header">
+    
     <Project/>
     </div>
-    </div>
+   
   );
 }
 
@@ -24,14 +25,3 @@ export default App;
 
 
 
-
-// const App = () => {
-
-//   return (
-//     <div className="App">
-//       <div className="Header">
-//       <Project/>
-//       </div>
-//     </div>
-//   );
-// }
