@@ -72,7 +72,7 @@ const ProjectCard = (props) => {
   return (
     <Body>
     <Toast>
-    <ToastHeader icon={<Spinner size="sm" />}>
+    <ToastHeader icon={<Spinner size="m" color="warning"/>     }>
       <Name>{props.name}</Name>
       </ToastHeader>
       <ToastBody>
