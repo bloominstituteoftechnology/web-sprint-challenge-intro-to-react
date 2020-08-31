@@ -1,10 +1,22 @@
 import React from 'react'
+import Character from './Character'
+import styled from 'styled-components'
+function CharacterMap(props) {
 
-function CharacterMap() {
+
+
+
+
+    console.log(props)
     return (
-        <div>
-            <h1>test</h1>
-        </div>
+       <div>
+            {
+                props.data.map((e, index) => {
+                    return <h1>Test</h1>
+                })
+            }
+            </div>
+     
     )
 }
 
