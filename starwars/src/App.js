@@ -13,9 +13,25 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      <div className = "Header">
     <Project/>
+    </div>
     </div>
   );
 }
 
 export default App;
+
+
+
+
+// const App = () => {
+
+//   return (
+//     <div className="App">
+//       <div className="Header">
+//       <Project/>
+//       </div>
+//     </div>
+//   );
+// }
