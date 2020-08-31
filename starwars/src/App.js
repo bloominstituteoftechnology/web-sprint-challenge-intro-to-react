@@ -4,10 +4,27 @@ import axios from 'axios';
 import Character from './components/Character';
 import logo from './images/pokemon_logo.png';
 
+const Header = styled.h1`
+  color: white;
+  text-align: center;
+  text-shadow: 10px 8px 20px #25262C;
+  text-transform: uppercase;
+`;
 
 const Image = styled.img`
-  width: 100px;
+  width: 25%;
 `;
+
+const Wrapper = styled.div`
+  background-color: #C6ECEE;
+  width: 600px;
+  margin: auto;
+  border-radius: 125px;
+  border: 20px solid #FDF8FC;
+  box-shadow: 10px 10px 30px #888888;
+`;
+
+
 
 const App = () => {
   
@@ -25,12 +42,12 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <Wrapper>
 
-      <h1>Choose Your
+      <Header>Choose Your
         <br/>
         <span><Image src={logo} alt="pokemon logo"/></span>
-      </h1>
+      </Header>
 
       {characters.map((item) => {
         return(
@@ -40,7 +57,7 @@ const App = () => {
           />
         )
       })}
-    </div>
+    </Wrapper>
   );
 }
 
