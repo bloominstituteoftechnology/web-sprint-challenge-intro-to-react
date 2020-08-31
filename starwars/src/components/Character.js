@@ -24,7 +24,8 @@ const [characters, setCharacters] = useState([]);
                    <div>
                <People key={characters.props}
                 
-                name ={characters.name}
+                name ={characters.name} 
+                height ={characters.height}
                 home ={characters.homeworld} 
                species ={characters.species}
                 />
