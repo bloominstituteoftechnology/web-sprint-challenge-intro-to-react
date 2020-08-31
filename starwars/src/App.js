@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 import styled from 'styled-components';
 import axios from 'axios';
 import Character from './components/Character';
@@ -26,9 +25,9 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div>
 
-      <h1 className="Header">Choose Your
+      <h1>Choose Your
         <br/>
         <span><Image src={logo} alt="pokemon logo"/></span>
       </h1>
