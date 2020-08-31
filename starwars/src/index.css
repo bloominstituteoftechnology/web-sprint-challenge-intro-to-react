@@ -11,10 +11,3 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-
-/* Media queries, begin */
-@media (min-width: 1000px) {
-  .Card {
-    width: 40%;
-  }
-}

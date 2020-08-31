@@ -10,6 +10,7 @@
 
 .Image {
   margin-top: 1rem;
+  border-radius: 25px;
 }
 
 .Name:hover {

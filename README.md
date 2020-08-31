@@ -77,7 +77,7 @@ Your finished project must include all of the following requirements:
 - [x] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
 - [x] Consistent quotation usage.
 - [x] Spell-check.
-- [ ] Schedule time to review, refine and reassess your work.
+- [x] Schedule time to review, refine and reassess your work.
 
 It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.
 
