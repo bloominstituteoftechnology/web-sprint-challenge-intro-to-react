@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import Character from "./components/Character";
 import logo from "./assests/logo.png";
 import axios from "axios";
-import {CardImg, CardTitle} from 'reactstrap'
+import {CardImg} from 'reactstrap'
 import './App.css';
 
 const App = () => {
@@ -29,7 +29,7 @@ const App = () => {
   return (
     <div className="App">
         <div className="logo"><CardImg src={logo} style={{width: '200px'}} />
-      <h1 className="Header">Starwars Characters</h1></div>
+      <h1 className="Header">Star Wars Characters</h1></div>
         {characters.map((character) => {
           return(
             <Character 
