@@ -3,19 +3,24 @@ import Character from './Character'
 import styled from 'styled-components'
 function CharacterMap(props) {
 
-
+    const Container = styled.div `
+   
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+`
 
 
 
     console.log(props)
     return (
-       <div>
+        <Container>
             {
                 props.data.map((e, index) => {
-                    return <h1>Test</h1>
+                    return <Character name={e.name} height={e.height} key={index}/> 
                 })
             }
-            </div>
+           </Container>
      
     )
 }
