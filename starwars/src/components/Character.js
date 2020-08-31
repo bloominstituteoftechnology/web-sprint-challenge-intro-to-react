@@ -8,7 +8,7 @@ const Characters = props => {
 const [characters, setCharacters] = useState([]);
         useEffect(() => {
         axios
-        .get ("https://swapi.dev/api/people/")
+        .get ("https://swapi.dev/api/people")
         .then(res => {
             console.log("Finding Characters", res);
         setCharacters(res.data.results);
@@ -17,22 +17,21 @@ const [characters, setCharacters] = useState([]);
             console.log("StarWars not Working Browswer has Covid-19", error);
     });
 },[])
-
-            console.log(characters);
-
-    return (
+               return (
         <div>
             {characters.map(characters => {
-               return (<People 
+               return (
+                   <div>
+               <People key={characters.props}
                 
                 name ={characters.name}
                 home ={characters.homeworld} 
-                species ={characters.species}
-                />);
+               species ={characters.species}
+                />
+                </div>);
             })}
         </div>
     );
-
 };
  
 export default Characters;
