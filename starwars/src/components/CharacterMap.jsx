@@ -9,9 +9,6 @@ function CharacterMap(props) {
     justify-content: center;
     flex-wrap: wrap;
 `
-
-
-
     console.log(props)
     return (
         <Container>
@@ -20,8 +17,7 @@ function CharacterMap(props) {
                     return <Character name={e.name} height={e.height} key={index}/> 
                 })
             }
-           </Container>
-     
+           </Container>    
     )
 }
 

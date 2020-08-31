@@ -34,25 +34,14 @@ background-color: white;
 `;
 
 
-
 function Character(props) {
-
-
-
-
     return (
-   
+
         <Div>
-           
-
-
-                <h1>{props.name}</h1>
-    <p>{Math.trunc(props.height/12)}ft <strong>tall</strong></p>
-
-
-            
+            <h1>{props.name}</h1>
+            <p>{Math.trunc(props.height / 12)}ft <strong>tall</strong></p>
         </Div>
-        
+
 
 
     )
