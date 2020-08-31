@@ -1,6 +1,8 @@
 import React, { useState, useEffect} from 'react';
 import Character from "./components/Character";
+import logo from "./assests/logo.png";
 import axios from "axios";
+import {CardImg, CardTitle} from 'reactstrap'
 import './App.css';
 
 const App = () => {
@@ -26,7 +28,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+        <div className="logo"><CardImg src={logo} style={{width: '200px'}} />
+      <h1 className="Header">Starwars Characters</h1></div>
         {characters.map((character) => {
           return(
             <Character 
@@ -39,11 +42,15 @@ const App = () => {
               skin_color={character.skin_color}
               height={character.height}
               mass={character.mass}
+              
             />
+            
           )
         })}
     </div>
   );
 }
+
+
 
 export default App;

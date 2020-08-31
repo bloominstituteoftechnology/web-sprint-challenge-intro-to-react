@@ -1,8 +1,19 @@
 .App {
-  text-align: center;
+  background-image: url('https://images8.alphacoders.com/653/thumb-1920-653784.jpg');
 }
 .Header {
   color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+  font-size: 5.0rem;
+  text-shadow: 1px 1px 8px #fff;
+  margin-top: 10%;
+  
 }
+.logo {
+  display: flex;
+  margin-left: 19%;
+  margin-bottom: 1%;
+
+}
+
+
 /* write your parent styles in here for your App.js */
