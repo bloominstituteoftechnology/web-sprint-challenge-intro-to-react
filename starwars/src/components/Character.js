@@ -2,17 +2,16 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const Animate = keyframes`
-  0% { border-radius: 5px;}
-  50% { border-radius: 50%;}
-  100% { border-radius: 5px; }
+    from {background-color: white;}
+    to {background-color: #9FCECF;}
 `;
 
 const Wrapper = styled.div`
-    background-color: #9FCECF;
+    background-color: red;
     border-radius: 25px;
     margin: auto;
     width: 40%;
-    animation: ${Animate} 1s linear infinite;
+    animation: ${Animate} 2s linear infinite;
 `;
 
 const PokeDiv = styled.div`
