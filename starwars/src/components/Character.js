@@ -11,7 +11,7 @@ background-color: white;
  
 :hover {
     animation-name: spin;
-    animation-duration: 1500ms; /* How long lasts 1 turn */
+    animation-duration: 10000ms; /* How long lasts 1 turn */
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     border: dashed red 4px;
