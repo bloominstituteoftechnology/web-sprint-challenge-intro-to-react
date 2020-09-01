@@ -1,8 +1,18 @@
 // Write your Character component here
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styled from "styled-components";
 import People from "./People"
 
+const CharacterCard = styled.div`
+    color: red;
+    margin: 10px;
+    padding: 10px;
+    background-color: lightblue;
+    border-radius: 15px;
+    width: 40%;
+    transition: height 0.5s;
+`;
 const Characters = props => {
 
 const [characters, setCharacters] = useState([]);
@@ -18,17 +28,20 @@ const [characters, setCharacters] = useState([]);
     });
 },[])
                return (
+                   
         <div>
-            {characters.map(characters => {
+            {characters.map((characters) => {
                return (
                    <div>
-               <People key={characters.props}
-                
-                name ={characters.name} 
-                height ={characters.height}
-                home ={characters.homeworld} 
-               species ={characters.species}
-                />
+                        <CharacterCard>
+               <People 
+                    key = {characters.id}
+                    name ={characters.name} 
+                    height ={characters.height}
+                    home ={characters.homeworld} 
+                    species ={characters.species}
+               />
+                        </CharacterCard>
                 </div>);
             })}
         </div>

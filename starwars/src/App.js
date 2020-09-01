@@ -30,7 +30,8 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Character">Characters</h1>
-      <Characters key={data.results}  />
+      <Characters/>
+      
     </div>
   );
 }
