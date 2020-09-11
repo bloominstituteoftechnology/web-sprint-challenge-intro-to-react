@@ -19,7 +19,7 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import axios from 'axios'
-import { BASE_URL, API_KEY } from '../constants/constants'
+// import { BASE_URL, API_KEY } from '../constants/constants'
 import Character from './Character'
 import Deets from './Deets'
 
@@ -36,7 +36,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/characters?api_key=${API_KEY}`)
+    axios.get(`https://swapi.py4e.com/api/people/`)
       .then(res => {
         setCharacters(res.data)
       })
@@ -49,8 +49,8 @@ export default function App() {
     <div className='App'>
       <h1>Characters</h1>
       {
-        characters.map(fr => {
-          return <Character key={fr.id} info={fr} action={openDetails} />
+        characters.map(characters => {
+          return <Character key={characters.id} info={characters} action={openDetails} />
         })
       }
       {

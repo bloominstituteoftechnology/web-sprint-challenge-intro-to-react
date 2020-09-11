@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const StyledCharacter = styled.div`
   opacity: 0.10;
-  animation: ${kf} 5s forwards;
    background-color: ${pr => pr.alert
     ? pr.theme.secondaryColor
     : pr.theme.primaryColor
