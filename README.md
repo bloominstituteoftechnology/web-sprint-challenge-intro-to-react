@@ -30,11 +30,20 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React solves several larger efficiency issues that were present when interacting with the DOM previously, than are now solved by the existence of the virtual DOM. Likewise, it solved several efficiency issues within Javascript itself by eliminating the use of the 'this' keyword throughout most of it, as well as 'bind'.
+
 1. Describe component state.
+
+State is the data that is fed into the react app live via components, which are functions that manipulate the data.
+
 
 1. Describe props.
 
+Props are somewhat like dummy variables or arbitrary inputs that are passed through the components in react. They return the elements that are meant to actually appear on the screen.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Side effects are anything that can impact something outside of the function being executed. The clearest example is fetching data from an API, such as in this app.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
