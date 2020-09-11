@@ -15,7 +15,7 @@ const App = () => {
         setMissions(response.data)
       })
       .catch((err) => console.log('Error: ', err))
-  },  [])
+  },  [URL])
 
   return (
     <div className="App">

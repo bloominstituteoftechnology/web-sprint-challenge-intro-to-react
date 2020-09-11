@@ -6,7 +6,7 @@ import cuid from 'cuid'
 const StyledDiv = styled.div`
     background-color: ${(pr) => pr.theme.black};
     color: ${(pr) => pr.theme.awhite};
-    padding ${(pr) => pr.theme.paddingSmall};
+    padding: ${(pr) => pr.theme.paddingSmall};
     margin: ${(pr) => pr.theme.marginSmall} auto;
     border-radius: 10px;
     width: 80%;
@@ -40,17 +40,17 @@ const Card = ({ missions }) => {
     console.log(missions)
     return (
         <>
-            {missions.map((mission) => {
+            {missions.map((mission) => (
                 <StyledDiv key={cuid()}>
                     <h2>
                         {mission.mission_name} '{mission.mission_id}'
                     </h2>
                     <p>{mission.description}</p>
                     <p>
-                        <a href={mission.wikipedia}> {mission.mission_name}</a>
+                        <a href={mission.wikipedia}>{mission.mission_name}</a>
                     </p>
                 </StyledDiv>
-            })
+            ))}
         </>
     )
 }
