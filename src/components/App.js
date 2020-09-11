@@ -19,8 +19,9 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import axios from 'axios'
-import { BASE_URL, API_KEY } from '../constants'
+import { BASE_URL, API_KEY } from '../constants/constants'
 import Character from './Character'
+import Deets from './Deets'
 
 export default function App() {
   const [characters, setCharacters] = useState([])

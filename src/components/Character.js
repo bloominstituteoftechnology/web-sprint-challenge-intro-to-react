@@ -1,18 +1,8 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
-const kf = keyframes`
-  50% {
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-`
-
-const StyledFriend = styled.div`
-  opacity: 0;
+const StyledCharacter = styled.div`
+  opacity: 0.10;
   animation: ${kf} 5s forwards;
    background-color: ${pr => pr.alert
     ? pr.theme.secondaryColor

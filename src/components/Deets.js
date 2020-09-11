@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BASE_URL, API_KEY } from '../constants'
+import { BASE_URL, API_KEY } from '../constants/constants'
 import axios from 'axios'
 
 export default function Deets(props) {
@@ -20,7 +20,7 @@ export default function Deets(props) {
         <>
           <p>{deets.name} is {deets.birth_year}</p>
           <p>eye color is {deets.eye_color}</p>
-          {name} likes:
+          {deets.name} likes:
           <ul>
             {
               deets.vehicles.map((like, idx) => <li key={idx}>{like}</li>)
