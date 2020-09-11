@@ -5,7 +5,11 @@ import React from "react";
 
 const Character = (props) => {
   console.log("props", props);
-  return <h2>test</h2>;
+  return (
+    <div>
+      <h2>{props.character}</h2>
+    </div>
+  );
 };
 
 export default Character;
