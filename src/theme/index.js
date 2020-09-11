@@ -7,5 +7,6 @@ export default{
     cardWrap: 'wrap',
     cardSpacing: 'space-around',
     cardWidth: '30%',
-    cardBorder: '8px white solid'
+    cardBorder: '8px white solid',
+    cardMargin: '2%',
 }
