@@ -30,11 +30,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+  - an open-source JS library that is used to build web applications. It allows us to use reusable components. It is a more simpler programming model with better performance.
+
 1. Describe component state.
+
+  - in instance of a React component class that is an object of a group of properties that control the component. 
 
 1. Describe props.
 
+  - a foundation of React that are defining characteristics stored by pieces that can be accessed and sent on demand.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+  - any secondary effect or reaction that comes from an action we take. Whenever props get changed, it will set as the state inside useEffect.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
