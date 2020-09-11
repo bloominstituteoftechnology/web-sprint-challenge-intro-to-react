@@ -35,7 +35,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/friends?api_key=${API_KEY}`)
+    axios.get(`${BASE_URL}/characters?api_key=${API_KEY}`)
       .then(res => {
         setCharacters(res.data)
       })
