@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Character from './components/Character'
+// import Character from './components/Character'
 import Gallery from './components/Gallery'
 import Footer from './components/Footer'
 
