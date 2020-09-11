@@ -1,8 +1,30 @@
 .App {
   text-align: center;
 }
-.Header {
+Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
+  display: flex;
+  justify-content: space-around;
+  background-color: lightgrey;
+  padding: 5%;
+  margin:1%;
+  border-radius: 5%;
+}
+input{
+  padding:0 auto;
+}
+.characters{
+  background-color: darkred;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 1%;
+}
+.card{
+  border:2px solid black;
+  width: 50%;
+  background-color: #443e3e;
+  margin:2%;
 }
 /* write your parent styles in here for your App.js */
