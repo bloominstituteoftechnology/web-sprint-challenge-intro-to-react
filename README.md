@@ -30,11 +30,20 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+  React JS uses a virtual DOM to update the page data and UI without even having to refresh. Why this is important is the DOM tends to render things slowly, this creates a problem for apps that process a lot of data and need to at fast speeds, such as facebook. 
+
 1. Describe component state.
+
+  Component state determines how a component state renders and behaves. State is where you store props value that belongs to component. 
 
 1. Describe props.
 
+  Props are arguments that are passed into react components. 
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Side effects are anything that effects somethng outside the scope of the funciton.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
