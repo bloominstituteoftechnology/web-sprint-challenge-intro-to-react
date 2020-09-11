@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+import Character from "./components/Character";
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -21,12 +22,10 @@ const App = () => {
     console.log("info: ", info);
     console.log("results: ", results);
     console.log("search: ", search);
-    console.log(url, info, results);
-  }, [url, info, results]);
+  }, [url, info, results, search]);
 
   useEffect(() => {
-    axios
-      .get(`${url} ${search}`)
+    axios.get(`${url} ${search}`)
       .then((result) => {
         console.log(result);
         setInfo(result.data.info);
@@ -35,13 +34,13 @@ const App = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [search]);
 
   return (
     <>
       <header>
       <p>Search</p><input onChange={(e) => {
-            setSearch = e.target.value;
+            setSearch(e.target.value);
         }}
           value={search}
           type="text"
@@ -50,8 +49,8 @@ const App = () => {
       <main className="App">
           <section className='characters'>
           {results.map((result, index) => (
-        
-        ))}
+              <Character key={index} result={result} />
+          ))}
           </section>
       </main>
     </>
