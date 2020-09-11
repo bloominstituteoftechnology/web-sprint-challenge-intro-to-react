@@ -10,10 +10,10 @@ function App () {
 
   useEffect(() =>{
     axios
-    .get(`https://rickandmortyapi.com/api/character/`)
+    .get(`https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9`)
     .then(response => {
-      const charInfo = (response.data.results)
-      console.log(response.data.results)
+      const charInfo = (response.data)
+      console.log(response)
       setCharData(charInfo)
     })
     .catch(error =>{

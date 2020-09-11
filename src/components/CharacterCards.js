@@ -5,6 +5,7 @@ const CardContainer = styled.div `
 width: ${prop => prop.theme.cardWidth};
 border: ${prop => prop.theme.cardBorder};
 margin-bottom: ${prop => prop.theme.cardMargin};
+background: #FAFD7CFF;
 `
 const CardHeader = styled.h1 `
 background: ${prop => prop.theme.secondaryColor};
