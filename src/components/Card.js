@@ -5,7 +5,7 @@ import cuid from 'cuid'
 
 const StyledDiv = styled.div`
     background-color: ${(pr) => pr.theme.black};
-    color: ${(pr) => pr.theme.awhite};
+    color: ${(pr) => pr.theme.white};
     padding: ${(pr) => pr.theme.paddingSmall};
     margin: ${(pr) => pr.theme.marginSmall} auto;
     border-radius: 10px;

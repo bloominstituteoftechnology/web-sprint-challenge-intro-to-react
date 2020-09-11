@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Card from './components/Card'
-import './App.css';
+import './App.css'
 
 const App = () => {
   const [missions, setMissions] = useState([])
