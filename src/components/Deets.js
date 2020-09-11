@@ -8,7 +8,7 @@ export default function Deets(props) {
 
   useEffect(() => {
     axios.get(`https://swapi.py4e.com/api/people/`)
-      .then(res => { setDeets(res.data) })
+      .then(res => { setDeets(res.data.results) })
       .catch(err => { debugger }) 
   }, [characterId])
 

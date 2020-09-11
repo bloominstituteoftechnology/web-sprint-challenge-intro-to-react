@@ -38,7 +38,8 @@ export default function App() {
   useEffect(() => {
     axios.get(`https://swapi.py4e.com/api/people/`)
       .then(res => {
-        setCharacters(res.data)
+        setCharacters(res.data.results)
+        console.log(res.data.results)
       })
       .catch(err => {
         console.log(err)
@@ -48,11 +49,12 @@ export default function App() {
   return (
     <div className='App'>
       <h1>Characters</h1>
-      {
+    {
         characters.map(characters => {
-          return <Character key={characters.id} info={characters} action={openDetails} />
-        })
+        return <Character key={characters.id} info={characters} action={openDetails} />
+       })
       }
+      
       {
         currentCharacterId && <Deets characterId={currentCharacterId} close={closeDetails} />
       }

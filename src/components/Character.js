@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledCharacter = styled.div`
-  opacity: 0.10;
+  opacity: 1;
    background-color: ${pr => pr.alert
     ? pr.theme.secondaryColor
     : pr.theme.primaryColor
