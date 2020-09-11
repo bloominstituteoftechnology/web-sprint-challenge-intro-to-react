@@ -53,7 +53,7 @@ export default function App() {
         })
       }
       {
-        currentCharacterId && <Details characterId={currentCharacterId} close={closeDetails} />
+        currentCharacterId && <Deets characterId={currentCharacterId} close={closeDetails} />
       }
     </div>
   )
