@@ -79,7 +79,7 @@ const StyledCharacter = styled.main`
     button {
         padding: 5px;
         border-radius: 10px;
-        border: 0;
+        border: 1.5px dotted goldenrod;
         width: 300px;
         font-family: 'Grandstander', cursive;
         color: black;
