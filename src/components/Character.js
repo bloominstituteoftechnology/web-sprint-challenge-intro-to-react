@@ -1,9 +1,22 @@
 // Write your Character component here
 import React from "react";
 import cuid from "cuid";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const kf = keyframes`
+50% {
+  transform: scale(0.8);
+}
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
 
 const StyledDiv = styled.div`
+  opacity: 0;
+  transform: scale(2);
+  animation: ${kf} 2s forwards;
   background-color: ${(pr) => pr.theme.black};
   color: ${(pr) => pr.theme.white};
   padding: ${(pr) => pr.theme.paddingLarge};

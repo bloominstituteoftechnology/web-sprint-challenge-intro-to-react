@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Character from "./components/Character";
 // import Character from "./components/Character";
 import axios from "axios";
-// import styled from "styled-components";
+import styled from "styled-components";
 import "./App.css";
 
 const App = () => {
