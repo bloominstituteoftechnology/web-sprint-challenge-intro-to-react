@@ -28,13 +28,23 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
+
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+
+Reactjs is a javascript library. It has many synthetic events that memic many javascript event handlers. With the help of react and jsx the implementation of the DOM is hidden and becomes refactored by updating its state any time there is a change or props are passed threw components. It makes it easy to organize components to smaller bits so it can be included within the JSX. 
 
 1. Describe component state.
 
+The component state is implemented with the useState module from React. With it an automatic mutator function is predefined as well as a variable. This is important if you want to pass props threw to another component or toggle a className in or out. In most cases react will not listen to other variables once the component's state changes. At this point you should have the component's state managed with the useState module from React. 
+
 1. Describe props.
 
+Props work the same way a parameter works in a function, except it is implemtned with a JSX component. This is great because a component's state can be passed along to another JSX component where the decision of what to render depending on that component's state is passed threw the JSX rendering area of the named or default export. Once the prop has been passed inside the React component each name value pair is accessed from within the new component. This is where data can be manipulated or logic with javascript can be planned out for extra functionality before the new JSX component is rendered.  
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Side effects can be synced with React components by enabling whatever prop or state after useEffect function. This can be prerendered with an empty array or variable but however must have some kind of variable supplied after its function. Side Effects work great with axios and can always be used as many times as needed. From an axios request you can have a sideEffect function first start off to mutate the first state variable. Once first state gets changed the next side effect fires off with that function where you can mutate a 2nd state or prop in an additional useEffect function and you can keep going from there as many times as needed. This is very handy considering it can also be used with a javascript timer function as well.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
