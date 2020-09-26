@@ -15,14 +15,16 @@ const App = () => {
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
-  const [count,setCount] = useState(3);
+  const [count,setCount] = useState(1);
   const [reqG, setReqG] = useState({});
   const [reqA, setReqA] = useState([]);
   const [reqGa, setReqGa] = useState([{}]);
   
 
   useEffect( () =>{
-    axios.get(urlB[0]+thing[0]+count+"/")
+
+    
+    axios.get(urlB[0]+thing[0]+count+"/?limit=20")
     .then( (re) =>{
       
         setReqG(re);
@@ -35,10 +37,13 @@ const App = () => {
        setReqGa(bb);
       
       console.log(re.data);
+      let c = count + 1;
+      setCount(c);
     })
     .catch( (er1) =>{
       console.log(er1);
     })
+  
   },[])
 
 
@@ -52,7 +57,7 @@ const App = () => {
    
     
       reqGa.map( (e,i) =>{
-      return  <Character key={reqGa[i]} name={reqGa[i].name} />
+      return  <Character key={e} name={e.name} dob={e.birth_year} gender={e.gener} mass={e.mass}/>
       })
     
 

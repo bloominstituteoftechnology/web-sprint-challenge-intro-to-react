@@ -15,12 +15,12 @@ Render your characters to the screen:
 import React,{useState, useEffect } from "react";
 import axios from "axios";
 import Char from "./Char";
-const Character = ({name}) =>{
+const Character = ({name, dob, gender, mass}) =>{
 
 
     if(!name) return <h2>Loading...</h2>;
     return (
-        <Char name={name} />
+        <Char name={name} dob={dob} gender={gender} mass={mass} />
     );
 };
 
