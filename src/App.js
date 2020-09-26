@@ -17,24 +17,29 @@ const App = () => {
   // sync up with, if any.
   const [count,setCount] = useState(3);
   const [reqG, setReqG] = useState({});
+  const [reqA, setReqA] = useState([]);
+  const [reqGa, setReqGa] = useState([{}]);
   
 
   useEffect( () =>{
     axios.get(urlB[0]+thing[0]+count+"/")
     .then( (re) =>{
       
-        setReqG(re.data);
+        setReqG(re);
         // aa = [];
       let aa = Object.entries(re.data);
       console.log(aa);
-        // setReqG(re.data);
+       setReqA(aa);
+       let bb = [];
+       bb.push(re.data);
+       setReqGa(bb);
       
       console.log(re.data);
     })
     .catch( (er1) =>{
       console.log(er1);
     })
-  },{})
+  },[])
 
 
   return (
@@ -43,7 +48,15 @@ const App = () => {
 
       {
 
-        <Character key={reqG} name={reqG.name} />
+  
+   
+    
+      reqGa.map( (e,i) =>{
+      return  <Character key={reqGa[i]} name={reqGa[i].name} />
+      })
+    
+
+
         
       }
           

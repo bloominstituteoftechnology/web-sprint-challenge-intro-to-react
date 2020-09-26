@@ -14,15 +14,13 @@ Render your characters to the screen:
 
 import React,{useState, useEffect } from "react";
 import axios from "axios";
-
+import Char from "./Char";
 const Character = ({name}) =>{
 
 
     if(!name) return <h2>Loading...</h2>;
     return (
-        <div>
-            <h3>{name}</h3>
-        </div>
+        <Char name={name} />
     );
 };
 
