@@ -24,7 +24,9 @@ const App = () => {
     .then( (re) =>{
       
         setReqG(re.data);
-      
+        // aa = [];
+      let aa = Object.entries(re.data);
+      console.log(aa);
         // setReqG(re.data);
       
       console.log(re.data);
