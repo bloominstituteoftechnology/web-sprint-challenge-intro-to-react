@@ -31,7 +31,7 @@ const H3 = styled.h3`
 `;
 
 
-const Char = ({name ,dob, gender, mass,skin_color}) =>{
+const Char = ({name ,dob, gender, mass,skin_color,height,hair_color}) =>{
     const  [charFo,setCharFo] = useState(false);
 
     const info = () =>{
@@ -60,6 +60,12 @@ const Char = ({name ,dob, gender, mass,skin_color}) =>{
                     </p>
                     <p>
                         Skin: {skin_color}
+                    </p>
+                    <p>
+                        Height: {height}
+                    </p>
+                    <p>
+                        Hair: {hair_color}
                     </p>
                         </div>
             : <div><i>Info</i> 

@@ -78,8 +78,8 @@ const App = () => {
       reqGa.map( (e,i) =>{
       return  <Character key={i} 
       name={e.name} dob={e.birth_year} gender={e.gender} 
-      mass={e.mass} skin_color={e.skin_color}
-      
+      mass={e.mass} skin_color={e.skin_color} height={e.height}
+      hair_color={e.hair_color}
       
       />
       })

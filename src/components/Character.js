@@ -23,13 +23,14 @@ const Card = styled.div`
 
 `;
 
-const Character = ({name, dob, gender, mass,skin_color}) =>{
+const Character = ({name, dob, gender, mass,skin_color,height,hair_color}) =>{
 
 
     if(!name) return <h2>Loading...</h2>;
     return (
         <Char name={name} dob={dob} gender={gender} 
-        mass={mass} skin_color={skin_color}/>
+        mass={mass} skin_color={skin_color} height={height} hair_color={hair_color}
+        />
     );
 };
 
