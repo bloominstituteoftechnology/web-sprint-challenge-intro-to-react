@@ -15,6 +15,14 @@ Render your characters to the screen:
 import React,{useState, useEffect } from "react";
 import axios from "axios";
 import Char from "./Char";
+import styled from "styled-components";
+
+const Card = styled.div`
+    display:flex;
+    
+
+`;
+
 const Character = ({name, dob, gender, mass}) =>{
 
 

@@ -9,6 +9,18 @@ const thing = ["people/"]
 
 
 const App = () => {
+  const D = styled.div`
+      display:flex;
+      justify-content:space-evenly;
+      align-items:center;
+        width:100%;
+        border:1px solid black;
+        height:100%;
+        background-color:blue;
+        margin:1px;
+        padding:1px;
+
+`;
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -48,7 +60,7 @@ const App = () => {
 
 
   return (
-   <div>
+   <D>
 
 
       {
@@ -66,7 +78,7 @@ const App = () => {
       }
           
 
-   </div>
+   </D>
   );
 };
 

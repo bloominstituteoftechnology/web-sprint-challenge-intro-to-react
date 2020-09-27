@@ -1,5 +1,33 @@
 import React,{useState, useEffect } from "react";
-import axios from "axios";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+
+import styled from "styled-components";
+
+const ClkD = styled.div`
+        display:flex;
+        
+        justify-content:center;
+        align-content:center;
+        width:20%;
+        border:1px solid black;
+        height:100%;
+        background-color:blue;
+        margin:1px;
+        padding:1px;
+
+`;
+
+const H3 = styled.h3`
+
+    margin-right:5%;
+    width:60%;
+    height:100%;
+
+    background-color:red;
+
+
+`;
 
 
 const Char = ({name ,dob, gender, mass}) =>{
@@ -16,23 +44,25 @@ const Char = ({name ,dob, gender, mass}) =>{
 
 
     return (
-        <div onClick={info}>
-            <h3>{name}</h3>
+        <ClkD onClick={info}>
+            <H3>{name}</H3>
             {
                 charFo ? <div >
-                <p>
-                DOB {dob}
-                </p>
-                <p>
-                    Gender {gender}
-                </p>
-                <p>
-                    Mass: {mass}
-                </p>
-    </div>
-            : <div><i>Info</i></div>
+                    <p>
+                    DOB {dob}
+                    </p>
+                    <p>
+                        Gender {gender}
+                    </p>
+                    <p>
+                        Mass: {mass}
+                    </p>
+                        </div>
+            : <div><i>Info</i> 
+
+            </div>
             }
-        </div>
+        </ClkD>
     );
 }
 
