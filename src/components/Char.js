@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const ClkD = styled.div`
         display:flex;
-        
+        box-shadow: 1px 1px 0px black;
         justify-content:center;
         align-content:center;
         width:20%;
@@ -23,9 +23,9 @@ const H3 = styled.h3`
     margin-right:5%;
     width:60%;
     height:100%;
-
+    text-shadow: 0px 1px 1px black;
     background-color:red;
-
+    box-shadow: 1px 1px 0px black;
 
 `;
 

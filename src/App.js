@@ -13,12 +13,13 @@ const App = () => {
       display:flex;
       justify-content:center;
       align-items:center;
-        width:100%;
-        border:1px solid black;
+        width:98%;
+        
         height:100%;
+        box-shadow: 1px 1px 0px black;
         background-color:tan;
-        margin-right: 8rem ;
-        margin-left:8rem;
+        margin-right: 1rem ;
+        margin-left:1rem;
         
 
 `;
@@ -28,16 +29,18 @@ const App = () => {
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
-  const [count,setCount] = useState(1);
+  const [count,setCount] = useState(2);
   const [reqG, setReqG] = useState({});
   const [reqA, setReqA] = useState([]);
   const [reqGa, setReqGa] = useState([{}]);
   
 
   useEffect( () =>{
+    let bb = [];
 
-    
-    axios.get(urlB[0]+thing[0]+count+"/?limit=20")
+    let c = 0;
+    for(let tm = 1; tm <= 8; tm++){
+      axios.get(urlB[0]+thing[0]+tm+"/")
     .then( (re) =>{
       
         setReqG(re);
@@ -45,17 +48,18 @@ const App = () => {
       let aa = Object.entries(re.data);
       console.log(aa);
        setReqA(aa);
-       let bb = [];
+       
        bb.push(re.data);
        setReqGa(bb);
       
       console.log(re.data);
-      let c = count + 1;
+      c = count + 1;
       setCount(c);
     })
     .catch( (er1) =>{
       console.log(er1);
     })
+    }
   
   },[])
 
@@ -70,7 +74,7 @@ const App = () => {
    
     
       reqGa.map( (e,i) =>{
-      return  <Character key={e} name={e.name} dob={e.birth_year} gender={e.gender} mass={e.mass}/>
+      return  <Character key={i} name={e.name} dob={e.birth_year} gender={e.gender} mass={e.mass}/>
       })
     
 
