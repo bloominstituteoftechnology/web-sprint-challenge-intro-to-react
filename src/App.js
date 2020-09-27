@@ -11,14 +11,15 @@ const thing = ["people/"]
 const App = () => {
   const D = styled.div`
       display:flex;
-      justify-content:space-evenly;
+      justify-content:center;
       align-items:center;
         width:100%;
         border:1px solid black;
         height:100%;
-        background-color:blue;
-        margin:1px;
-        padding:1px;
+        background-color:tan;
+        margin-right: 8rem ;
+        margin-left:8rem;
+        
 
 `;
   // Try to think through what state you'll need for this app before starting. Then build out
