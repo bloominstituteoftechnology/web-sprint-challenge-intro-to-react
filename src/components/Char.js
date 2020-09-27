@@ -3,22 +3,35 @@ import axios from "axios";
 
 
 const Char = ({name ,dob, gender, mass}) =>{
+    const  [charFo,setCharFo] = useState(false);
 
+    const info = () =>{
+        if(charFo){
+            setCharFo(false);
+        }else{
+            setCharFo(true);
+        }
 
+    };
 
 
     return (
-        <div>
+        <div onClick={info}>
             <h3>{name}</h3>
-            <p>
-               DOB {dob}
-            </p>
-            <p>
-                Gender {gender}
-            </p>
-            <p>
-                Mass: {mass}
-            </p>
+            {
+                charFo ? <div >
+                <p>
+                DOB {dob}
+                </p>
+                <p>
+                    Gender {gender}
+                </p>
+                <p>
+                    Mass: {mass}
+                </p>
+    </div>
+            : <div><i>Info</i></div>
+            }
         </div>
     );
 }
