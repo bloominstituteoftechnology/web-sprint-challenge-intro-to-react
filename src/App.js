@@ -11,10 +11,12 @@ const thing = ["people/"]
 const App = () => {
   const D = styled.div`
       display:flex;
+      
       justify-content:center;
+      align-content:space-evenly;
       align-items:center;
-        width:98%;
-        
+        max-width:98%;
+        flex-wrap:wrap;
         height:100%;
         box-shadow: 1px 1px 0px black;
         background-color:tan;
@@ -39,7 +41,7 @@ const App = () => {
     let bb = [];
 
     let c = 0;
-    for(let tm = 1; tm <= 8; tm++){
+    for(let tm = 5; tm <= 8; tm++){
       axios.get(urlB[0]+thing[0]+tm+"/")
     .then( (re) =>{
       
@@ -74,7 +76,12 @@ const App = () => {
    
     
       reqGa.map( (e,i) =>{
-      return  <Character key={i} name={e.name} dob={e.birth_year} gender={e.gender} mass={e.mass}/>
+      return  <Character key={i} 
+      name={e.name} dob={e.birth_year} gender={e.gender} 
+      mass={e.mass} skin_color={e.skin_color}
+      
+      
+      />
       })
     
 

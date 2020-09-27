@@ -19,16 +19,17 @@ import styled from "styled-components";
 
 const Card = styled.div`
     display:flex;
-    
+
 
 `;
 
-const Character = ({name, dob, gender, mass}) =>{
+const Character = ({name, dob, gender, mass,skin_color}) =>{
 
 
     if(!name) return <h2>Loading...</h2>;
     return (
-        <Char name={name} dob={dob} gender={gender} mass={mass} />
+        <Char name={name} dob={dob} gender={gender} 
+        mass={mass} skin_color={skin_color}/>
     );
 };
 

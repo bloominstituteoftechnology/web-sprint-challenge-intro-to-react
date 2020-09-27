@@ -12,6 +12,7 @@ const ClkD = styled.div`
         width:20%;
         border:1px solid black;
         height:100%;
+        min-width:10rem;
         background-color:blue;
         margin:1px;
         padding:1px;
@@ -30,7 +31,7 @@ const H3 = styled.h3`
 `;
 
 
-const Char = ({name ,dob, gender, mass}) =>{
+const Char = ({name ,dob, gender, mass,skin_color}) =>{
     const  [charFo,setCharFo] = useState(false);
 
     const info = () =>{
@@ -49,13 +50,16 @@ const Char = ({name ,dob, gender, mass}) =>{
             {
                 charFo ? <div >
                     <p>
-                    DOB {dob}
+                    DOB: {dob}
                     </p>
                     <p>
-                        Gender {gender}
+                        Gender: {gender}
                     </p>
                     <p>
                         Mass: {mass}
+                    </p>
+                    <p>
+                        Skin: {skin_color}
                     </p>
                         </div>
             : <div><i>Info</i> 
