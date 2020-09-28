@@ -2,9 +2,36 @@
 import React from 'react';
 import {
   Card,
-  Button,
   CardHeader,
-  CardBody,
   CardTitle,
+  CardBody,
+  Button,
   CardText,
 } from 'reactstrap';
+
+//
+
+function Character(props) {
+  return (
+    <Card>
+      {props.characterArray.map((Character) => {
+        return (
+          <Card key={Character.created}>
+            <CardHeader>{Character.name}</CardHeader>
+            <CardTitle>{Character.model}</CardTitle>
+            <CardBody>
+              <CardText>{Character.manufacturer}</CardText>
+              <Button>{Character.length}</Button>
+            </CardBody>
+          </Card>
+        );
+      })}
+      <Button
+        onClick={() => (document.getElementById('inputSearch').value = '')}
+      >
+        Clear
+      </Button>
+    </Card>
+  );
+}
+export default Character;
