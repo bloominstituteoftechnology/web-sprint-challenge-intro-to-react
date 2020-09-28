@@ -1,10 +1,9 @@
 // Write your Character component here
 import React from 'react';
-import {Card,CardTitle} from 'reactstrap'
 import CharacterInfo from "./CharacterInfo"
 
 
-const Characters = (props) => {
+const Character = (props) => {
     const {data} = props;
     return(
         <div>
@@ -19,4 +18,4 @@ const Characters = (props) => {
     )
 
     }
-export default Characters;
+export default Character;
