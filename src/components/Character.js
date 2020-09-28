@@ -26,11 +26,6 @@ function Character(props) {
           </Card>
         );
       })}
-      <Button
-        onClick={() => (document.getElementById('inputSearch').value = '')}
-      >
-        Clear
-      </Button>
     </Card>
   );
 }

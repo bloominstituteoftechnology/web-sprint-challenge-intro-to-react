@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import Character from './components/Character';
 import styled from 'styled-components';
+import { Button } from 'reactstrap';
 
 const CharacterPageDiv = styled.div`
   display: flex;
@@ -56,6 +57,7 @@ const App = () => {
           onChange={handleSearchChange}
         />
       </label>
+      <Button onClick={handleSearchChange}>Clear Search..</Button>
       <Character characterArray={data} />
     </CharacterPageDiv>
   );
