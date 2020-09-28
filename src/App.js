@@ -47,7 +47,7 @@ const App = () => {
     <CharacterPageDiv className='App'>
       <h1 className='Header'>Characters</h1>
       <label>
-        search for a vehicle here:
+        Search for a vehicle here:
         <input
           type='text'
           id='inputSearch'
