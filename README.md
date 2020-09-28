@@ -45,6 +45,7 @@ A side effect is anything that affects something outside the scope of the functi
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
+
 ## Instructions
 
 ### Task 1: Project Set Up
