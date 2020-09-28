@@ -28,7 +28,7 @@ const [data, setData] = useState([]);
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <Character data = {data}/>
+      <Character key = {data.id} data = {data}/>
     </div>
   );
 }

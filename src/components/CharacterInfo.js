@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Card,CardTitle} from 'reactstrap';
 
 
 const CharacterInfo = (props) => {
-    return (null
-
+    // const [desc, setDesc] = useState('');
+    return(
+        <div>
+            <Card>
+            <CardTitle>{props.people.name}</CardTitle>
+            </Card>
+        </div>
     )
 }
 
-export default CharacterInfo
+export default CharacterInfo;
