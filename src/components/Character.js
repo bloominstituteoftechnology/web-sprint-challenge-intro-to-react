@@ -18,7 +18,6 @@ const Styledh2 = styled.h2`
     color: rgba(255, 166, 0, 0.8);
     text-shadow: -1px 0 rgba(255, 0, 0, 0.445), 0 1px rgba(255, 0, 0, 0.445), 1px 0 rgba(255, 0, 0, 0.445), 0 -1px rgba(255, 0, 0, 0.445);
     margin: .5% auto;
-
 `
 
 const Styledh1 = styled.h1`
