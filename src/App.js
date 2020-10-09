@@ -30,7 +30,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h2 className="Header">Starwars Characters</h2>
       <Character chData={swData} />
     </div>
   );
