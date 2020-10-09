@@ -30,7 +30,11 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React is a front end library used to effectively build clean UI's
+
 1. Describe component state.
+
+A component
 
 1. Describe props.
 
