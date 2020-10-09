@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import './App.css';
 import axios from "axios"
-//import Character from "./components/Character"
+import Character from "./components/Character"
 
 
 const App = () => {
@@ -19,7 +19,7 @@ axios.get("https://swapi.dev/api/people/")
 })
 },[])
 
- console.log(swcharacters)
+ 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
@@ -27,7 +27,7 @@ axios.get("https://swapi.dev/api/people/")
   return (
  <div>
    {swcharacters.map(function(item){
-     
+     return <Character key = {item.name} swcharacter = {item}/>
    })}
  </div>
   );
