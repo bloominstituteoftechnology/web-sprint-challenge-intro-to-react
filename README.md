@@ -30,11 +30,23 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+It is quite simply a javascript library used for building user interfaces.
+
 1. Describe component state.
+
+state is a JS object which holds information that influences the output of render.  State is managed within the component.
 
 1. Describe props.
 
+
+props are also a JS object that can influence the output of the render but props get passed to the component instead of inside it.
+
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+
+essentially they are anything that affects something outside of the scope of the current function thats being executed.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
