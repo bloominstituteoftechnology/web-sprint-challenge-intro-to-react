@@ -2,30 +2,36 @@ import React, { useState, useEffect } from 'react'
 import './App.css';
 import axios from 'axios'
 import Character from './components/Character'
-import { BASE_URL, API_KEY } from './components/constants/index'
+import {   Card, CardImg, CardText, CardBody,    CardTitle, CardSubtitle,   } from 'reactstrap';
 
-export default function App() {
+
+const App = () => {
 
   const [characters, setCharacters] = useState([])
 
+  // fetch data
   useEffect(() => {
-    axios.get(`${BASE_URL}/character?api_key=${API_KEY}`)
-        .then(result => {
-            setCharacters(result.data)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-}, [])
+    axios.get('https://swapi.dev/api/people/')
+      .then((response) => {
+          setCharacters(response.data.results)
+          console.log(response)
+      })
+      .catch(err => {
+          console.log(err)
+      })
+  }, [])
 
+  // return data
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {
-        characters.map(ch => {
-          return <Character/>
-        })
-      }
+        <Card>
+          {characters.map((item) => {
+          return(
+            <Character key={item.name} name={item.name} gender={item.gender} />
+            )})}
+        </Card>
     </div>
-  );
-}
+    );
+  };
+export default App;
