@@ -1,5 +1,6 @@
 // theme object here
 export default {
+
     primaryColor: 'rgb(255, 255, 255);',
     secondaryColor: 'rgb(255, 152, 0);',
     breakpoints: {
