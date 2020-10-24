@@ -2,6 +2,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Character from './Character';
+
+
 function CharacterPage(props){
   console.log(props);
    function formatCharacters(chars){
