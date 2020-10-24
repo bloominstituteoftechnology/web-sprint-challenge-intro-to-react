@@ -26,6 +26,11 @@ const App = () => {
   return (
     <div className="App">
       <CharacterPage data={characters.results}/>
+      {
+        page > 1 &&
+        <button onClick={() => setPage(page-1)}>Previous Page</button>
+      }
+      <button onClick={() => setPage(page+1)}>Next Page</button>
     </div>
   );
 }

@@ -20,7 +20,6 @@ function CharacterPage(props){
           {props.data.map(char =>
             <Character data={char}/>
           )}
-          <button>Previous Page</button><button>Next Page</button>
       </div>
     );
 }
