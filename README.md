@@ -18,7 +18,7 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 [Example](https://tk-assets.lambdaschool.com/b011a132-0916-4ed2-8955-14192de03a75_sample-screenshot.png)
 
-[Another example](https://tk-assets.lambdaschool.com/3b82c793-2352-4d4d-a81d-e55bf350f7bd_sample-screenshot2.png)
+[Another example](https://tk-assets.lambdaschool.com/b011a132-0916-4ed2-8955-14192de03a75_sample-screenshot.png)
 
 ### Commits
 
@@ -30,11 +30,21 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React is founded on the idea that DOM manipulation is an expensive operation and should be minimized. It also recognizes that doing optimizing DOM manipulation.
+React solves this by giving the developer a virtual DOM to render to instead of the actual DOM, which it then diffs with the real DOM, and does the minimum number of DOM operations needed to achieve the new state.
+
 1. Describe component state.
+
+    schedules an update to a component’s state object. When state changes, the component responds by re-rendering.
+
 
 1. Describe props.
 
+    Props it's a data which is passed from parent component to child one
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+    anything that affects something outside of the scope of the current function that’s being executed
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
