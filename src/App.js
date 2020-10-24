@@ -3,6 +3,12 @@ import './App.css';
 import styled from 'styled-components';
 import CharacterPage from './components/CharacterPage';
 const axios = require('axios').default;
+
+const StyledButton = styled.button`
+  background-color: black;
+  color:white;
+  border: 1px yellow solid;
+`
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -28,9 +34,9 @@ const App = () => {
       <CharacterPage data={characters.results}/>
       {
         page > 1 &&
-        <button onClick={() => setPage(page-1)}>Previous Page</button>
+        <StyledButton onClick={() => setPage(page-1)}>Previous Page</StyledButton>
       }
-      <button onClick={() => setPage(page+1)}>Next Page</button>
+      <StyledButton onClick={() => setPage(page+1)}>Next Page</StyledButton>
     </div>
   );
 }
