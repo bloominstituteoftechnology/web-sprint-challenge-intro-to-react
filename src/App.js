@@ -21,13 +21,11 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1);
   useEffect(() => {
-    const fetchCharacters = () => 
     axios.get(`https://swapi.dev/api/people?page=${page}`)
     .then(res => {
       console.log(res.data);
       setCharacters(res.data);
     });
-    fetchCharacters();
   }, [page])
   return (
     <div className="App">
