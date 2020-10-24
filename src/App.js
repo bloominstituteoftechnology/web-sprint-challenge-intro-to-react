@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
+import styled from 'styled-components';
+import CharacterPage from './components/CharacterPage';
 const axios = require('axios').default;
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -23,8 +25,7 @@ const App = () => {
   }, [page])
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
-      
+      <CharacterPage data={characters.results}/>
     </div>
   );
 }
