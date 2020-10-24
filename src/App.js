@@ -29,6 +29,7 @@ const App = () => {
   }, [page])
   return (
     <div className="App">
+      <h1>Star Wars Characters</h1>
       <CharacterPage data={characters.results}/>
       {
         page > 1 &&
