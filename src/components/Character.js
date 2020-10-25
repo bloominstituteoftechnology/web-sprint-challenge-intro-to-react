@@ -3,6 +3,9 @@ import React from "react";
 import {Card, CardTitle, CardSubtitle, Container, Row , Col} from 'reactstrap'
 import styled from "styled-components";
 
+const StyledDiv= styled.div`
+font-family:'Syne Tactile', cursive;
+`;
 function Character(props){
 console.log(props.characterArray, "props")
 return(
@@ -12,9 +15,9 @@ return(
                     return (
                         <Col xs='12'>
                             <Card key={person.id}>
-                                <div>Name</div>
+                                <StyledDiv>Name</StyledDiv>
                                 <CardTitle>{person.name}</CardTitle>
-                                <div>Status</div>
+                                <StyledDiv>Status</StyledDiv>
                                 <CardSubtitle>{person.species}</CardSubtitle>
                             </Card>
                         </Col>
