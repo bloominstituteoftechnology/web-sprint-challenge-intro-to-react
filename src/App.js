@@ -1,7 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
+import styled from "styled-components";
 import Character from "./components/Character";
 import './App.css';
+
+const StyledH1 = styled.h1`
+font-family:'Henny Penny', cursive;
+`;
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -26,7 +31,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <StyledH1 className="Header">Characters</StyledH1>
       <Character  characterArray = {character}/>
     </div>
   );
