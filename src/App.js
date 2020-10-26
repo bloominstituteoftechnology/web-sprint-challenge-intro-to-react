@@ -27,10 +27,12 @@ const App = () => {
 
 
   return (
-    <div className="App">
-      {starWars.map((item) =>
-        <Character starWars={item} className="Header" />
-      )}
+    <div>
+      <div className="App">
+        {starWars.map((item) =>
+          <Character starWars={item} className="Header" />
+        )}
+      </div>
     </div>
   );
 }
