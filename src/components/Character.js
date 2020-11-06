@@ -7,16 +7,16 @@ import React, {useState, useEffect}from "react";
 function Character(props) {
 const {charArray} = props;
 console.log(charArray);
-charArray.map(element => {
+const card =charArray.map((element, idx) => {
     console.log(element);
     let name = element.name;
-    let img = element.img;
+    let img = element.image;
     let gender = element.gender;
     let species = element.species;
-    let location = element.location;
+    let location = element.location.name;
     let status = element.status;
     return (
-        <div>
+        <div key = {idx}>
             <h1>{name} </h1>
             <img src={img} alt = {name}/>
             <div>
@@ -33,11 +33,12 @@ charArray.map(element => {
             </div>
         </div>
     )
-})
-
-return Character
+    
+}
+)
+return (<div>
+    {card}
+    </div>)
 }
 
 export default Character
-
-    
