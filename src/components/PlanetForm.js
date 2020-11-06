@@ -3,8 +3,11 @@ import React from "react";
 const PlanetForm = (props) => {
   return (
     <>
-      <p>PlanetForm {props.name}</p>
-      <button onClick={props.getData}>Get Planet </button>
+      {props.load ? (
+        <p>Loading Planets</p>
+      ) : (
+        <button onClick={props.getData}>Get Planet </button>
+      )}
     </>
   );
 };
