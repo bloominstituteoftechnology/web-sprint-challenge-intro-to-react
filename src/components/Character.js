@@ -1,26 +1,29 @@
 // Write your Character component here
 import React from 'react';
-import styled from 'styled-components'
-import Details from './Details';
+import styled from 'styled-components';
 
 const StyledChar = styled.div`
   display:flex;
-  justify-content: ;
-  font-size:15px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  background: lightgray;
+  text-align: center;
+  align-items:center;
+  
 
 
 `
 
 export default function Character({info}) {
   
-  return (
-    <StyledChar>
-      <h2>{info.name}: 
-      <button onClick={Details}>
-        See details
-      </button></h2>
-
-
-    </StyledChar>  
+  return ( 
+      <StyledChar>      
+          <h2>Details:</h2>
+          <p>Name: {info.name}</p> 
+          <p>Weight: {info.mass}</p>
+          <p>Gender: {info.gender}</p>
+          <p>DOB: {info.birth_year}</p>
+      </StyledChar>
   )
 }
