@@ -9,7 +9,11 @@ const Section = styled.div`
     align-items: center;
     background-color: black;
     color: white;
+    border: 2px solid green;
     margin: 2% auto;
+    .div{
+        margin: 2%;
+    }
 `
 
 const Character = ({ character }) => {
