@@ -19,6 +19,7 @@ const PlanetList = (props) => {
           <h2>Planet Name:{props.planetPost.name}</h2>
           <p>Planet Rotation Period: {props.planetPost.rotation_period}</p>
           <p>Planet Orbital Period:{props.planetPost.orbital_period}</p>
+          <p>Terrain: {props.planetPost.terrain}</p>
         </>
       )}
     </Styles>
