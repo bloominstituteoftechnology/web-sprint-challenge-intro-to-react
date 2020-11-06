@@ -16,6 +16,12 @@ const Details = (props) => {
             <div className="characterAttrValue">{character.status}</div>
             <div className="characterAttr">Species:</div>
             <div className="characterAttrValue">{character.species}</div>
+            <div className="characterAttr">Gender:</div>
+            <div className="characterAttrValue">{character.gender}</div>
+            <div className="characterAttr">Origin:</div>
+            <div className="characterAttrValue">{character.origin.name}</div>
+            <div className="characterAttr">Location:</div>
+            <div className="characterAttrValue">{character.location.name}</div>
         </StyledPage>
     );
 };
