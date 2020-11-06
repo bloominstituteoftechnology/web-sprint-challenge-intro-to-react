@@ -9,11 +9,11 @@ const Character = (props) => {
     return (
     <div className ='variation-container'>
         <span className='variation-name'>{variationName}</span>
+        <br></br>
         <img className='variation-image' src={variationImage} alt='vraition of character'/>
     </div>
-    
-    ) 
-}
+    );
+};
 
 
 
