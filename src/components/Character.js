@@ -9,6 +9,15 @@ const StyledCards = styled.div`
     position: relative;
     margin: 2%;
     width: auto;
+    &:hover{
+        box-shadow: 0 0 20px #97ce4c;
+    }
+    h2{
+        font-family: 'Permanent Marker', cursive;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: .5px;
+        -webkit-text-stroke-color: black;
+    }
     ${({ status }) => status === 'Dead' && `
         outline: none;
         border-color: red;
