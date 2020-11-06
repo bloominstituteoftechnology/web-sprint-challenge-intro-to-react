@@ -1,16 +1,29 @@
 // Write your Character component here
-import React from "react";
+import React from 'react';
+import styled from 'styled-components';
+
+const Section = styled.div`
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    margin: 2% auto;
+`
 
 const Character = ({ character }) => {
 //   const { character } = props;
 console.log({character})
 
   return(
-      <div>
+    <Section>
         <div>{character.name}</div>
         <p>{character.birth_year}</p>
-        <p></p>
-      </div>
+                
+    </Section>
+
+      
     );
 };
 

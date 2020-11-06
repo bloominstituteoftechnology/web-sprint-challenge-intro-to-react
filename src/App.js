@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import Character from './components/Character';
+import styled from 'styled-components'
+
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -25,13 +28,22 @@ const App = () => {
     })
   }, [])
 
+
+
+  const Page = styled.div`
+  dislpay: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  `
+
   return (
-    <div className="App">
+    <Page className="App">
       <h1 className="Header">Characters</h1>
       {characters && characters.map(character => {
         return <Character key={characters.id} character={character}  />
       })}
-    </div>
+    </Page>
   );
 }
 
