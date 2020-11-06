@@ -1,15 +1,27 @@
 import React, { useState } from "react";
-import CharacterList from "./components/CharacterList.js";
-import CharacterForm from "./components//CharacterForm.js";
+import PlanetList from "./components/PlanetList.js";
+import PlanetForm from "./components/PlanetForm";
+import axios from "axios";
 import "./App.css";
 
 const App = () => {
   const [error, setError] = useState("");
   const [load, setLoad] = useState(false);
-  const [characterPost, setCharacterPost] = [];
+  const [planetPost, setPlanetPost] = useState([]);
 
   const getData = () => {
     console.log("btn");
+    axios
+      .get("https://swapi.dev/api/planets/1/") //Make this all later!!
+      .then((res) => {
+        console.log("res", res);
+        setPlanetPost(res.data);
+        console.log("planetPost", planetPost);
+      })
+      .catch((error) => {
+        console.log(`Error:${error}`);
+        setError(error);
+      });
   };
 
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -21,9 +33,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
-      <CharacterForm name={"app"} getData={getData} />
-      <CharacterList name={"app"} />
+      <h1 className="Header">Star Wars Planets</h1>
+      <PlanetForm name={"app"} getData={getData} />
+      <PlanetList name={"app"} />
     </div>
   );
 };
