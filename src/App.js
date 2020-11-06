@@ -28,7 +28,7 @@ const App = () => {
           { 
             const results = res.data.results;
 
-            console.table(results);
+            console.log(results);
             setCharacters(results);
           })
           .catch((err) => 
@@ -46,10 +46,15 @@ const Character = (props) =>
     {props.info.name}
     <button onClick={() => 
     { 
-      openDetails(props.info.name)
+      openDetails(props.character.url)
     }}>More Info</button>
   </div>
 );
+
+    characters.forEach(item => 
+      {
+        console.log(item.name);
+      })
 
   return (
     <div className="App">
@@ -57,12 +62,13 @@ const Character = (props) =>
       {
         characters.map((character) => 
         { 
-          return <Character key={character.name} info={character} />
+          const id = ``
+          return <Character key={character.url} info={character} />
         })
       }
-  {selectedChar && (
-    <Details charId={selectedChar} close={closeDetails} />
-  )}
+      {selectedChar && (
+        <Details charId={selectedChar} close={closeDetails} />
+      )}
     </div>
   );
 }
