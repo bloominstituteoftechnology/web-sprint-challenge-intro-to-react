@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PlanetList from "./components/PlanetList.js";
 import PlanetForm from "./components/PlanetForm";
+import { ThemeProvider } from "styled-components";
+import Theme from "./components/theme/theme.js";
 import axios from "axios";
 import "./App.css";
 
@@ -29,11 +31,13 @@ const App = () => {
   //Add more planets and see if we can add a drop down for each, simialr, to web-guided-project-react-components2
 
   return (
-    <div className="App">
-      <h1 className="Header">Star Wars Planets</h1>
-      <PlanetForm getData={getData} load={load} />
-      <PlanetList planetPost={planetPost} error={error} />
-    </div>
+    <ThemeProvider theme={Theme}>
+      <div className="App">
+        <h1 className="Header">Star Wars Planets</h1>
+        <PlanetForm getData={getData} load={load} />
+        <PlanetList planetPost={planetPost} error={error} />
+      </div>
+    </ThemeProvider>
   );
 };
 
