@@ -1,11 +1,18 @@
 // Write your Character component here
 import React, {useState} from 'react';
-const Character = () => {
+
+const Character = (props) => {
+    const {variationName, variationImage} = props;
 
 
 
-
-    return (<div>lalala</div>) 
+    return (
+    <div className ='variation-container'>
+        <span className='variation-name'>{variationName}</span>
+        <img className='variation-image' src={variationImage} alt='vraition of character'/>
+    </div>
+    
+    ) 
 }
 
 

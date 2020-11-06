@@ -1,12 +1,17 @@
 import React, {useState} from 'react';
+import Character from './Character'
 
-const Characters = () => {
+const Characters = (props) => {
+    const {variations} = props;
 
-
-
-
-    return (<div>lalala</div>) 
-}
+    return (
+        <div className='characters-container'>
+            {/* {variations.map(variation => {
+                return <Character key={variation.id} variationName={variation.name} variationImage={variation.image} />
+            })} */}
+        </div>
+    );
+};
 
 
 
