@@ -33,7 +33,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <img src='https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png'></img>
+      <img src='https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png' alt='Rick and Morty'></img>
       <h1 className="Header">Characters</h1>
       <StyledList>
         {characters.map((character) => (
