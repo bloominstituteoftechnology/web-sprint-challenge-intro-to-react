@@ -29,24 +29,6 @@ const App = () => {
       .catch((err) => console.log("error", err));
   }, []);
 
-  const [characters, setCharacters] = useState([
-    {
-      image: "https://rickandmortyapi.com/api/character/avatar/6.jpeg",
-      name: "Abandango Cluster",
-    },
-  ]);
-
-  useState(() => {
-    Axios.get(baseUrl)
-      .then((info) => {
-        console.log(info);
-        setCharacters(info.data.results);
-      })
-      .catch((err) => {
-        console.log("there is an error", err);
-      });
-  }, []);
-
   return (
     <Cards
       className="App"

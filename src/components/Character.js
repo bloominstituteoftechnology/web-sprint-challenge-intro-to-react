@@ -14,27 +14,30 @@ const Cards = styled.div`
   color: black;
   margin: 5%;
   border-radius: 6px;
+  border: 1px solid gold;
 
   &:hover {
-    border: 2px solid slategray;
+    border: 1px solid white;
   }
 `;
 
 const Button = styled.button`
   color: whitesmoke;
   background-color: black;
+  border: 1px solid black;
   border-radius: 6px;
   padding: 5%;
   text-align: "center";
   width: 100%;
 
   &:hover {
-    background-color: rgb(35, 35, 35);
+    border: 1px solid white;
+    background-color: rgb(45, 45, 45);
   }
 `;
 
 const Character = ({ character }) => {
-  console.log("poke props", character);
+  // console.log("poke props", character);
   return (
     <Cards>
       <h2 style={{ textAlign: "center", fontSize: 30, width: "100%" }}>
@@ -47,7 +50,7 @@ const Character = ({ character }) => {
         }}
       >
         {" "}
-        Learn More!!!
+        Learn More
       </Button>
     </Cards>
   );
