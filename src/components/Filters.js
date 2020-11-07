@@ -9,12 +9,12 @@ const Filters = (props) => {
 
     return (
         <div>
-            <Button color= 'primary' onClick={showRick}> Show me The Ricks! </Button>{' '}
-            <button className='filter-button'onClick={showMorty}> Show me The Mortys! </button>
-            <button className='filter-button'onClick={showEveryone}> Show me Everyone! </button>
+            <Button color= 'primary' onClick={showRick}> Show me alternate Ricks! </Button>{'  '}
+            <Button color='primary' onClick={showMorty}> Show me alternate Mortys! </Button>{'  '}
+            <Button color='primary' onClick={showEveryone}> Show me all characters! </Button>{'  '}
         </div>
         ); 
-};
+}
 
 
 

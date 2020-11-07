@@ -3,6 +3,7 @@ import './App.css';
 import Filters from './components/Filters'
 import Characters from './components/Characters'
 import SiteTitle from './components/SiteTitle'
+import OverallTracker from './components/OverallTracker'
 // import Character from './components/Character'
 
 const axios = require('axios').default;
@@ -17,6 +18,7 @@ const axios = require('axios').default;
 const App = () => {
   const [characterOfInterest, setCharacterOfInterest] = useState('');
   const [variations, setVariations] = useState([]);
+  
   // const [variationImage, setVariationImage] = useState('');
   // const [variationName, setVariationName] = useState('');
 
@@ -56,6 +58,7 @@ const App = () => {
     <div className="App">
       <SiteTitle siteTitle={'Rick and Morty Tracker'} />
       <Filters showRick = {showRick} showMorty = {showMorty} showEveryone={showEveryone}/>
+      {/* <OverallTracker numberOfRicks={numberOfRicks} numberOfMortys={numberOfMortys} /> */}
       <br></br>
       <Characters variations={variations}/>
       {/* <Character /> */}

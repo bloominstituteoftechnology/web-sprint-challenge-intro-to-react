@@ -19,7 +19,7 @@ const Characters = (props) => {
 
 const StyledCharacters = styled.div`
 display: flex;
-background-color: #EBF5FB;
+background-color: #f1f1f1;
 width: auto;
 /* border: red solid 5px; */
 flex-flow: row wrap;
