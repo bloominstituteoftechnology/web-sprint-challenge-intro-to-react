@@ -21,13 +21,13 @@ const Character = (props) => {
 
 
 const StyledCharacterContainer  = styled.div`
-    border: #F4F6F6 solid 1px;
+    /* border: #F4F6F6 solid 1px;
     background-color: #F8F9F6;
     width: 35%;
     padding: 10px;
     margin: 10px;
     : hover{
-        background-color: #FDF2E9;}
+        background-color: #FDF2E9;} */
 
 `
 
