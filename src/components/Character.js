@@ -11,6 +11,7 @@ const StyledCards = styled.div`
     width: auto;
     &:hover{
         box-shadow: 0 0 20px #97ce4c;
+        border-color: #97ce4c;
     }
     h2{
         font-family: 'Permanent Marker', cursive;
