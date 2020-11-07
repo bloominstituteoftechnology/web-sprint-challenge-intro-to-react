@@ -56,7 +56,7 @@ const App = () => {
   
   return (
     <div className="App">
-      <SiteTitle siteTitle={'Rick and Morty Tracker'} />
+      <SiteTitle siteTitle={'Rick and Morty Explorer'} />
       <Filters showRick = {showRick} showMorty = {showMorty} showEveryone={showEveryone}/>
       {/* <OverallTracker numberOfRicks={numberOfRicks} numberOfMortys={numberOfMortys} /> */}
       <br></br>
