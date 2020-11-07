@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Character from './Character'
+import styled from 'styled-components'
 
 const Characters = (props) => {
     const {variations} = props
@@ -7,15 +8,21 @@ const Characters = (props) => {
     
 
     return (
-        <div className='characters-container'>              
+        <StyledCharacters className='characters-container'>              
             {variations.map(variation => {
                 return <Character key={variation.id} variationImage={variation.image} variationName = {variation.name}/>
             })}
-        </div>
+        </StyledCharacters>
     );
 };
 
 
+const StyledCharacters = styled.div`
+display: flex;
+border: red solid 5px;
+flex-flow: row wrap;
+justify-content: center;
+`
 
 
 

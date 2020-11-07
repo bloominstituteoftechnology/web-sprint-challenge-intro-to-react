@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import Filters from './components/Filters'
 import Characters from './components/Characters'
+import SiteTitle from './components/SiteTitle'
 // import Character from './components/Character'
 
 const axios = require('axios').default;
@@ -33,6 +34,11 @@ const App = () => {
     setCharacterOfInterest('morty');
   }
 
+  //Set state of character of interest helper to everyone to be used with button
+  const showEveryone = () => {
+    setCharacterOfInterest('');
+  }
+
   //Set state of which variations, images and names to render
   useEffect(() => {
     axios
@@ -48,8 +54,8 @@ const App = () => {
   
   return (
     <div className="App">
-      <h1 className="Header">Rick and Morty Tracker</h1>
-      <Filters showRick = {showRick} showMorty = {showMorty} />
+      <SiteTitle siteTitle={'Rick and Morty Tracker'} />
+      <Filters showRick = {showRick} showMorty = {showMorty} showEveryone={showEveryone}/>
       <br></br>
       <Characters variations={variations}/>
       {/* <Character /> */}
