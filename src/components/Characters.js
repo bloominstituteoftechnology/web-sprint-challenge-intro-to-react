@@ -8,7 +8,7 @@ const Characters = (props) => {
     
 
     return (
-        <StyledCharacters className='characters-container'>              
+        <StyledCharacters>              
             {variations.map(variation => {
                 return <Character key={variation.id} variationImage={variation.image} variationName = {variation.name}/>
             })}
@@ -19,9 +19,11 @@ const Characters = (props) => {
 
 const StyledCharacters = styled.div`
 display: flex;
-border: red solid 5px;
+background-color: #EBF5FB;
+width: auto;
+/* border: red solid 5px; */
 flex-flow: row wrap;
-justify-content: center;
+justify-content: space-around;
 `
 
 
