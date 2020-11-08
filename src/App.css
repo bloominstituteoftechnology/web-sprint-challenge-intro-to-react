@@ -2,7 +2,8 @@
   display:flex;
   text-align: center;
   flex-direction: column;
-  padding: 0% 10%;
+  padding: 0% 25%;
+  text-shadow: 1px 1px 10px #fff;
 }
 .Header {
   color: #443e3e;
