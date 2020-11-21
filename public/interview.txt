@@ -1,0 +1,15 @@
+What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+
+    It is a front end library that helps devs creeate reusable components in an efficient way.
+
+Describe component state.
+
+    Data that is stored within a component. If it changes, the component will be re-rendered.
+
+Describe props.
+
+    Props are properties that can be passed to multiple components.
+
+What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+    The "useEffect" hook.
