@@ -29,13 +29,32 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+    React JS is a UI library whose whole purpose is to make it easier for the programmer to create good user interface. 
+    One way it does this is through JSX, which cuts down the code needed to render html elements to the dom significantly.
+    Another way it helps is with the virtual DOM, which is React's own version of the DOM that helps cut down on memory used
+    by only rendering to the real DOM when some sort of change or event causes it to.
 
 1. Describe component state.
+    State in a component could also be called the status of a component or element of that component. 
+    For instance, the state-or status-of a data set can be dependant on whether or not data has come back from an
+    api, as well as many other things like user events. Using and changing state in our components-such as through
+    the useState hook-allows us to make our pages more dynamic and user friendly.
 
 1. Describe props.
+    Props is short for properties, and is data that is passed from a parent component to its children.
+    If you were to make an api call in a parent component, how would you pass the data that comes back to 
+    the child components so they can individually render parts of that data? You would use props of course.
+    Props does have the drawback of prop drilling, which you would need to do in order to pass props down 
+    multiple levels.
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
-
+    Side effects are things that happen as a result of certain code, but aren't the main or wanted effect.
+    Like with medication, the intended outcome is relief from medical ailments, but some uninteded concequences 
+    often happen as well. The same applies to code, and we want to make sure these side effects do not happen when we don't want them to.
+    We can sync side effects to changes in state or props in a react component by using the useEffect hook. 
+    This allows us, through the dependency array at the end of it, to control when something renders-whether once or
+    on changes of state or props.
+    
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
