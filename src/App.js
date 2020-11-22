@@ -2,6 +2,16 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import './App.css';
 import Character from "../src/components/Character"
+import styled from 'styled-components';
+
+const CharStyle = styled.div`
+width: 100%;
+display:flex;
+flex-flow: row wrap;
+justify-content: space-around;
+
+`
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -26,9 +36,11 @@ let charProp = Array.from(state);
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      <CharStyle>
       {charProp.map((character) => 
         (<Character character = {character} />))
       }
+      </CharStyle>
     </div>
   );
 }

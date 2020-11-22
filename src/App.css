@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-image:url('../src/images/rm-bg.jpg');
+  background-size:auto;
+  background-repeat: repeat;
 }
 .Header {
   color: #443e3e;
