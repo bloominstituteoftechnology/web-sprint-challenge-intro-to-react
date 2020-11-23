@@ -1,22 +1,30 @@
 // Write your Character component here
 import React from `react`;
 import styled from `styled-components`;
-export default Character
+
 
 const StyleCard = styled.div`
 border:
 magrin:
 width:
-`
-
-const StyleDeadcard = styled.p`
+font-size:
 color:
-font-weight:
+padding:
+`
+const StyledInfo = styled.h2 `
+font-size:
+color:
 `
 
-const Character = (props) => {
-    console.log(props);
+const StyleData = styled.p`
+text-align:
+`
+
+const Character = props => {
+    const { characterInfo} = props;
 }
+
+console.log(characterInfo);
 
 return (
     <StyleCard>
@@ -29,3 +37,6 @@ return (
 <p>{props.character.status}</p>
     </StyleCard>
 )
+
+
+export default Character;
