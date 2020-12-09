@@ -30,9 +30,15 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+A library that a lot of people consider specifically built for handling complex DOM interactions/updates.
+
 1. Describe component state.
 
+Components are the building blocks of React applications. We use components to display some data (often called “state”) to the screen for our users. 
+
 1. Describe props.
+
+A way to pass information held on state inside one component to another component. These are read-only
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
 
