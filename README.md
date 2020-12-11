@@ -29,12 +29,20 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+  It solves the problem of needing to constantly create new html elements; before you would need to create each individualy but with react you can use components to apply the same type of element all across the webpage. It aslo save time in which you would spend time writing on 3 seperete files 1 to render 1 to style and 1 to apply accsesibility 
+
 
 1. Describe component state.
+ component state is creating a varible with an initial state of being a string array null, and being able to take that varible and make it dynamic by freely changing the set data to something else.
+
 
 1. Describe props.
+props are properties or pieces of information that you can pass down through components to be able to access that data within anthoer file so the components can use said data
+
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+  Side effects are anything that affects a function outside of it's scope, fetching data from an api is a side effect, there are two types of side effects ones that require clean up and ones that dont.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -97,7 +105,7 @@ After finishing your required elements, you can push your work further. These go
 - [ ] Make the Character component more complex and break it into several subcomponents.
 - [ ] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
 - [ ] Use Promise.all to resolve an array of promises.
-- [ ] Create transitions or animations with styled-components.
+- [x] Create transitions or animations with styled-components.
 
 ## Submission format
 

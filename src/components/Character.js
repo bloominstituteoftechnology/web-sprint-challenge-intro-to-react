@@ -65,7 +65,7 @@ const StyledChar = styled.div`
         padding: 10px 0px;
         border: 6px solid;
         border-color: ${(pr) => (pr.theme.sith)};
-        width:40%;
+        width:35%;
     }
 
     h2{
@@ -80,8 +80,22 @@ const StyledChar = styled.div`
     }
 
     & h1:hover{
-        scale: (1.2),
-        
+        transform: scale(1.2);
+        transition: all 0.8s ease-in-out;
+        color: ${(pr) => (pr.theme.firstColor)};
+        border-radius: 25px;
+    }
+
+    & p:hover{
+        color: ${(pr) => (pr.theme.secondColor)};
+    }
+
+    
+    & h2:hover{
+        transform: scale(1.2);
+        transition: all 0.8s ease-in-out;
+        border-radius: 25px;
+        border-color: ${(pr) => (pr.theme.firstColor)};
     }
 
 `
