@@ -4,6 +4,11 @@ import Character from './components/Character'
 import rickandmorty from './constants'
 import './App.css';
 
+import Container from 'react-bootstrap/Container';
+import CardColumns from 'react-bootstrap/CardColumns';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 const App = () => {
 
   const [myCharacters, setMyCharacters] = useState('')
@@ -32,17 +37,19 @@ const App = () => {
   const listAllCharacters = myCharacters.results
 
   return (
-    <div className="container-fluid">
+    <Container>
       <h1 className="Header">Characters</h1>
 
+      <CardColumns>
       {
         listAllCharacters && (listAllCharacters.map((item) => {
           return <Character key={item.id} data={item} />
         }))
       }
+      </CardColumns>
 
       {/* <Character name="YoMerengue" data={myCharacters.results} /> */}
-    </div>
+    </Container>
   );
 }
 
