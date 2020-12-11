@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import Character from './components/Character'
 import rickandmorty from './constants'
-import './App.css';
 
 import Container from 'react-bootstrap/Container';
 import CardColumns from 'react-bootstrap/CardColumns';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import './App.css';
 
 const App = () => {
 

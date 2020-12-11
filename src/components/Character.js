@@ -8,23 +8,22 @@ const Character = ({ data }) => {
     const colorConditional = data.status != 'unknown' ? data.status == 'Alive' ? 'success' : 'danger' : 'secondary';
     
     return (
-        <Card border={colorConditional}>
+        <Card bg="light" text='dark' border={colorConditional}>
         <Card.Img variant="top" src={ data.image } />
         <Card.Body>
             <Card.Title>
                 { data.name } {" "}
                 <Badge pill variant={colorConditional}>{ data.status }</Badge>
             </Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">{ data.species }</Card.Subtitle>
-            <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-            </Card.Text>
+            <Card.Subtitle className="mb-2 text-muted">
+                { data.type ? data.type : data.species }
+            </Card.Subtitle>
+            <Card.Text>Last known location:</Card.Text>
+            <Card.Link href="#">{ data.location.name }</Card.Link>
+            <Card.Text>First seen in:</Card.Text>
+            <Card.Link href="#">{ data.origin.name }</Card.Link>
         </Card.Body>
         </Card>
-
-
-
     )
 }
 

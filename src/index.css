@@ -4,4 +4,11 @@ body {
   font-family: sans-serif;
   /* background-image: url('./images/sw-bg.jpg');
   background-size: cover; */
+  background-color: WHITE !important;
+}
+
+
+p.card-text {
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
