@@ -1,8 +1,13 @@
 .App {
   text-align: center;
+  background-image: url('https://wallpapersafari.com/image/star-wars-star-background.jpg');
+ 
 }
-.Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+h1 {
+  color: #9f0613;
+  margin:0%;
+  margin-bottom:5%;
+  padding-top:5%;
+  font-size: 44px;
 }
 /* write your parent styles in here for your App.js */
