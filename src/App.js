@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 
 
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -18,7 +19,7 @@ const App = () => {
     axios.get('https://swapi.dev/api/people/')
       .then((res) => {
         setCharacter(res.data.results)
-        
+
       })
       .catch((err) => {
         console.log('Use the force!')
