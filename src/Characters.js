@@ -1,33 +1,41 @@
-
+import CharacterCards from "./CharacterCards"
+import React from "react"
 
 
 export default function Characters (props){
 
- const {rickAndMort,SetRickAndMort} =Props
+  const {characters } = props;
 
- console.log(rickAndMort)
+ 
 
+    return(
+        <div>
+        {characters.map((item)=>
 
- return (
-    <div className="Character-Container">
+        <CharacterCards character={item}/>
+        
+        
+        
+        
       
-  );{rickAndMort.map((character,index) => {
-        return (
-          <character key={character.id} characterStatus={character.status} characterName={character.name} characterSpecies ={character.species} characterurl = {Charcterurl} />
-        );
-      })}
-    </div>
+        
+)}
+
+        </div>
+
+
+
+
+
+
+
+    )
+
+
+        
+        
+        
+    
+    
  
- 
-     
-
-
-
-
-
-
-
-
-
-
-}
+    }
