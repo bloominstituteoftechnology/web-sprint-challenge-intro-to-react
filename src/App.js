@@ -3,6 +3,8 @@ import './App.css';
 import axios from "axios"
 import Character from "./components/Character"
 
+
+
 const App = () => {
   const [names, setNames] = useState([]);
   const [characterId, setCharacterId] = useState("")

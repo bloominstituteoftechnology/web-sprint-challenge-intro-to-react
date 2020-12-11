@@ -1,6 +1,12 @@
 // Write your Character component here
 import React, { useState, useEffect } from 'react';
 import axios from "axios"
+import styled from "styled-components";
+
+const StyledCharacters = styled.div`
+
+
+`;
 
 export default function Character(props) {
     const { charID, close } = props;
@@ -17,8 +23,8 @@ export default function Character(props) {
       }, [charID]);
 
     return (
-        <div className= "container-fluid">
-            <div className>
+        <div className= "input-group">
+            
                 <h3>Name: {details.name}</h3>
                 <p>Gender: {details.gender}</p>
                 <p>Birth Year: {details.birth_year}</p>
@@ -29,7 +35,7 @@ export default function Character(props) {
                 
             <button onClick={close}>Close</button>
             
-            </div>
+            
         </div>
     )
 }
