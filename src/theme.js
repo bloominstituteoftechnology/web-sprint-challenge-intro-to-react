@@ -1,10 +1,11 @@
 export default {
-    firstColor: "skyblue",
+    firstColor: "royalblue",
     secondColor: "goldenrod",
     jedi: "limegreen",
-    darkSideColor: "crimson",
+    sith: "crimson",
     black: "#202020",
     white: "white",
+    light: "lightgrey",
 
     breakpoints: {
         mobile: "(max-width: 550px)",
