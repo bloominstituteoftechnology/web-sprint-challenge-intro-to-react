@@ -3,23 +3,22 @@ import React from "react";
 import styled from "styled-components";
 
 export default function CharacterData(props) {
-    const {rmData} = props;
-    
-    return (
-        <styledCharacter>
+        return (
+            <styledCharacter>
             <div>
-                <img src = {rmData.image} alt = "character portrait"/>
+            <h2>{props.results.name}</h2>
+                <img src = {props.results.image} alt = "character portrait"/>
             </div>
-            <h2>{rmData.name}</h2>
             <div>
-                <h3>Species: {rmData.species}</h3>
-                <h3>Gender: {rmData.gender}</h3>
-                <h3>Status:{rmData.status}</h3>
-                <h3>Origin: {rmData.origin.name}</h3>
+                <h3>Species: {props.results.species}</h3>
+                <h3>Gender: {props.results.gender}</h3>
+                <h3>Status:{props.results.status}</h3>
+                <h3>Origin: {props.results.origin.name}</h3>
             </div>
         </styledCharacter>
     )
 }
+
 
 const styledCharacter = styled.div`
     display: flex'
