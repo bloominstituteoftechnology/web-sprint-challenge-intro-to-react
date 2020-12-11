@@ -47,10 +47,11 @@ const App = () => {
         }))
       }
       </CardColumns>
-      {/* <button onClick={() => setMyUrl(`${myCharacters.info.next}`)}>Siguiente</button> */}
 
-      <Button variant="primary" onClick={() => setMyUrl(`${myCharacters.info.prev}`)}>Prev</Button>{' '}
-      <Button variant="primary" onClick={() => setMyUrl(`${myCharacters.info.next}`)}>Next</Button>{' '}
+      
+        <Button variant="primary" onClick={() => setMyUrl(`${myCharacters.info.prev}`)}>Prev</Button>{' '}
+        <Button variant="primary" onClick={() => setMyUrl(`${myCharacters.info.next}`)}>Next</Button>{' '}
+      
 
 
     </Container>
