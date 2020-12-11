@@ -18,6 +18,7 @@ const App = () => {
     axios.get('https://swapi.dev/api/people/')
       .then((res) => {
         setCharacter(res.data.results)
+        
       })
       .catch((err) => {
         console.log('Use the force!')

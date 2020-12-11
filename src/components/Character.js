@@ -4,6 +4,10 @@ import styled from 'styled-components';
 
 
 
+
+
+
+
 const Character = ({character}) => {
     const { data } = character
     return (
