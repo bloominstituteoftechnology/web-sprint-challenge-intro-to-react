@@ -30,11 +30,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+  it is a way to write the html and css portions of the webpage so that each component can be updated with different information given to the app, and customized for each user
+
 1. Describe component state.
+
+state is a way to update a components object by rerendering it
 
 1. Describe props.
 
+props are immutable ways to update component objects by rerendering
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+they are effects you can set on the component and you can sync effects by creating it in its own file, and importing it into the rest of the app so each component can use it
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
