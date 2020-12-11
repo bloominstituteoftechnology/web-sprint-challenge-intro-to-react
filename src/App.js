@@ -5,6 +5,7 @@ import rickandmorty from './constants'
 
 import Container from 'react-bootstrap/Container';
 import CardColumns from 'react-bootstrap/CardColumns';
+import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
@@ -12,7 +13,6 @@ import './App.css';
 const App = () => {
 
   const [myUrl, setMyUrl] = useState(`${rickandmorty.characters}`)
-  const [count, setCount] = useState()
   const [myCharacters, setMyCharacters] = useState([])
 
   useEffect(() => {
@@ -36,7 +36,6 @@ const App = () => {
 
   const listAllCharacters = myCharacters.results
 
-
   return (
     <Container>
       <h1 className="Header">Characters</h1>
@@ -47,8 +46,12 @@ const App = () => {
           return <Character key={item.id} data={item} />
         }))
       }
-      <button onClick={() => setMyUrl(`${myCharacters.info.next}`)}>Siguiente</button>
       </CardColumns>
+      {/* <button onClick={() => setMyUrl(`${myCharacters.info.next}`)}>Siguiente</button> */}
+
+      <Button variant="primary" onClick={() => setMyUrl(`${myCharacters.info.prev}`)}>Prev</Button>{' '}
+      <Button variant="primary" onClick={() => setMyUrl(`${myCharacters.info.next}`)}>Next</Button>{' '}
+
 
     </Container>
   );

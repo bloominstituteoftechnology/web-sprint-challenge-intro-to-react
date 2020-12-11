@@ -13,7 +13,7 @@ const Character = ({ data }) => {
         <Card.Body>
             <Card.Title>
                 { data.name } {" "}
-                <Badge pill variant='{colorConditional}'>{ data.status }</Badge>
+                <Badge pill variant={colorConditional}>{ data.status }</Badge>
             </Card.Title>
             <Card.Subtitle className="mb-2">
                 { data.type ? data.type : data.species }
