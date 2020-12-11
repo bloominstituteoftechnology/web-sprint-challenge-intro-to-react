@@ -1,8 +1,8 @@
 import React from "react";
-import CharacterCard from "./components/CharacterCard.js";
+import CharacterCard from "./CharacterCard.js";
 import Styled from "styled-components";
 
-export default function CharacterList(props) {
+function CharacterList(props) {
   const { characters } = props;
 
   return (
@@ -14,7 +14,9 @@ export default function CharacterList(props) {
   );
 }
 const StyledDiv = Styled.div`
-  color: '#d6e8ad',
-  background-color: '#17163e',
-  text-align: left;
+  color: '#d6e8ad';
+  /* background-color: 'black'; */
+  text-align: center;
 `;
+
+export default CharacterList;

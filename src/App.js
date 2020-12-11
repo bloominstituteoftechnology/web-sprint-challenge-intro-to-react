@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import CharacterList from "./components/CharacterList.js";
+import CharacterList from "./CharacterList.js";
 import Styled from "styled-components";
 import "./App.css";
 
@@ -31,9 +31,15 @@ function App() {
     </div>
   );
 }
+
 const StyledH1 = Styled.h1`
-  color: #07acc4,
-  font-weight:700,
+  font-size:80px;
+  color: #07acc4;
+  font-weight:700;
+  background-color: '#ffffff';
+  font-style: sans-serif;
+  margin: 0;
+  padding: 20px;
 `;
 
 export default App;
