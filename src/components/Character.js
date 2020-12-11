@@ -7,8 +7,8 @@ export default function Character({details}){
     return(
         <div>
             <StyleCharacter>
-                <p>{details.name}</p>
-                <p>{details.birth_year}</p>
+                <StyleP>{details.name}</StyleP>
+                <StyleP>{details.birth_year}</StyleP>
             </StyleCharacter>
         </div>
         
@@ -25,4 +25,8 @@ const StyleCharacter = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 1% auto;
+`;
+
+const StyleP = styled.p`
+    margin: 1%;
 `;
