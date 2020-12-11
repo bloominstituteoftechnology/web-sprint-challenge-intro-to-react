@@ -11,18 +11,20 @@ import './App.css';
 
 const App = () => {
 
-  const [myCharacters, setMyCharacters] = useState('')
+  const [myUrl, setMyUrl] = useState(`${rickandmorty.characters}`)
+  const [count, setCount] = useState()
+  const [myCharacters, setMyCharacters] = useState([])
 
   useEffect(() => {
     axios
-      .get(`${rickandmorty.characters}`)
+      .get(`${myUrl}`)
       .then((res) => {
         setMyCharacters(res.data)
       })
       .catch((err) => {
         console.log("Ups! There's something broken in here!")
       })
-  }, [])
+  }, [myUrl])
 
 
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -32,9 +34,8 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
-  // console.log('Mauricio', myCharacters.results)
-
   const listAllCharacters = myCharacters.results
+
 
   return (
     <Container>
@@ -46,9 +47,9 @@ const App = () => {
           return <Character key={item.id} data={item} />
         }))
       }
+      <button onClick={() => setMyUrl(`${myCharacters.info.next}`)}>Siguiente</button>
       </CardColumns>
 
-      {/* <Character name="YoMerengue" data={myCharacters.results} /> */}
     </Container>
   );
 }

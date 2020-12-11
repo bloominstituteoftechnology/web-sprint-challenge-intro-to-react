@@ -5,17 +5,17 @@ import Badge from 'react-bootstrap/Badge';
 
 const Character = ({ data }) => {
 
-    const colorConditional = data.status != 'unknown' ? data.status == 'Alive' ? 'success' : 'danger' : 'secondary';
-    
+    const colorConditional = data.status !== 'unknown' ? data.status === 'Alive' ? 'success' : 'danger' : 'secondary';
+
     return (
-        <Card bg="light" text='dark' border={colorConditional}>
+        <Card bg="dark" border="dark" text='light'>
         <Card.Img variant="top" src={ data.image } />
         <Card.Body>
             <Card.Title>
                 { data.name } {" "}
-                <Badge pill variant={colorConditional}>{ data.status }</Badge>
+                <Badge pill variant='{colorConditional}'>{ data.status }</Badge>
             </Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">
+            <Card.Subtitle className="mb-2">
                 { data.type ? data.type : data.species }
             </Card.Subtitle>
             <Card.Text>Last known location:</Card.Text>
