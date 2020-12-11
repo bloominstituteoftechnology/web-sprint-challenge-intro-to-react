@@ -19,9 +19,12 @@ justify-content: center;
 align-items: center;
 height: 80px;
 
-h1 span {
-    background-color: lightgrey;
+h1 {
+    text-decoration: underline;
 }
+/* h1 span {
+    background-color: lightgrey;
+} */
 `
 
 

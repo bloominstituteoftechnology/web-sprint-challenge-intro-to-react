@@ -1,14 +1,23 @@
 import React from 'react';
-import CardItem from './CardItem'
+import CardItem from './CardItem';
+import styled from 'styled-components';
+
 
 const Cards = ({ characters }) => {
     return(
-        <div>
+        <StyledCards>
             {characters.map(character => {
                 return <CardItem key={character.id} character={character} />
             })}
-        </div>
+        </StyledCards>
     )
 }
 export default Cards;
+
+const StyledCards = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+`
 
