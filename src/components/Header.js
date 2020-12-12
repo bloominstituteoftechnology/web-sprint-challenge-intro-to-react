@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const Header = () => {
+const Header = () => {
     return (
-        <Header>
-            
-        </Header>
+        <header>
+            <h1>The Rick and Morty API</h1>
+        </header>
     )
 }
+
+export default Header;

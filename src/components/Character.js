@@ -2,7 +2,6 @@ import React from 'react'
 import Image from './Image'
 import Body from './Body'
 import Card from 'react-bootstrap/Card';
-import Badge from 'react-bootstrap/Badge';
 
 
 const Character = ({ data }) => {

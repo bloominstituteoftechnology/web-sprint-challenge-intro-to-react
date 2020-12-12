@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
+import Header from './components/Header'
 import Character from './components/Character'
 import rickandmorty from './constants'
 
@@ -37,24 +38,27 @@ const App = () => {
   const listAllCharacters = myCharacters.results
 
   return (
-    <Container>
-      <h1 className="Header">Characters</h1>
-
-      <CardColumns>
-      {
-        listAllCharacters && (listAllCharacters.map((item) => {
-          return <Character key={item.id} data={item} />
-        }))
-      }
-      </CardColumns>
-
+    <>
+      <Header />
       
-        <Button variant="primary" onClick={() => setMyUrl(`${myCharacters.info.prev}`)}>Prev</Button>{' '}
-        <Button variant="primary" onClick={() => setMyUrl(`${myCharacters.info.next}`)}>Next</Button>{' '}
-      
+      <Container>
+
+        <CardColumns>
+        {
+          listAllCharacters && (listAllCharacters.map((item) => {
+            return <Character key={item.id} data={item} />
+          }))
+        }
+        </CardColumns>
+
+        
+          <Button variant="primary" onClick={() => setMyUrl(`${myCharacters.info.prev}`)}>Prev</Button>{' '}
+          <Button variant="primary" onClick={() => setMyUrl(`${myCharacters.info.next}`)}>Next</Button>{' '}
+        
 
 
-    </Container>
+      </Container>
+    </>
   );
 }
 

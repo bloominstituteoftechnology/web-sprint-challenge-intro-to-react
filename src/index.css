@@ -7,6 +7,24 @@ body {
   background-color: WHITESMOKE !important;
 }
 
+header {
+  padding: 4rem 0;
+  /* background-image: url(images/rm-bg.jpg);
+  background-position: center;
+  background-size: cover; */
+  background-color: WHITE !important;
+
+}
+header h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+
+.container { 
+  padding: 3rem 0;
+}
 
 p.card-text {
   margin-top: 1rem;
