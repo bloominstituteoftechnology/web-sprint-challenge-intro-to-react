@@ -24,15 +24,15 @@ export default function Details(props) {
         axios
         .get(`${BASE_URL}/${characterId}`)
         .then((res) => {
-            console.log("yep", res.data.results);
-            setDetails(res.data.results);
+            console.log("details before setDetails", res.data);
+            setDetails(res.data);
         })
         .catch((err) => {
             console.log("you have an Error", err);
         });
   }, [characterId]);
 
-  //console.log(`this is details after invoking setDetails():${details.data}`)
+  console.log(`this is details after invoking setDetails():${details.data}`)
 
   return (
     <div className='container'>
