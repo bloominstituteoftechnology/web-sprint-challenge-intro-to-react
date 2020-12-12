@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'
-import Characters from './components/Characters'
-import styled from 'styled-components'
-
+import axios from 'axios';
+import Characters from './components/Characters';
+import styled from 'styled-components';
+import backgroundImage from './images/stars.jpg';
 
 //styles
 const StyledApp = styled.div`
-  display: block;
-  height: 100vh;
-  width: 100vw;
-  background: url('images/stars.jpg');
-  background-color: black;
-  color: white;
-  margin: 0;
-  padding: 0;
+  background-color: ${pr => pr.theme.black};
+
 `
 
 const App = () => {
