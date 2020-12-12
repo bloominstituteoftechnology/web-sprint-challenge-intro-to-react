@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from './Image'
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 
@@ -9,7 +10,7 @@ const Character = ({ data }) => {
 
     return (
         <Card bg="dark" border="dark" text='light'>
-        <Card.Img variant="top" src={ data.image } />
+        <Image alt={ data.name } src={ data.image } />
         <Card.Body>
             <Card.Title>
                 { data.name } {" "}
