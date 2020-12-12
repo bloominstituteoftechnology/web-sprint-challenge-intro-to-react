@@ -27,7 +27,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    axios.get(`https://rickandmortyapi.com/api/character`)
+    axios.get(`${BASE_URL}`)
       .then(res => {
         console.log(res.data)
         setcharacters(res.data.results)
@@ -40,6 +40,14 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      {
+        characters.map(char => {
+          return <Character key={char.id} info={char} action={openDetails} />
+        }) 
+      }
+      {
+        currentCharacterId && <Details friendId={currentCharacterId} close={closeDetails} />
+      }
     </div>
   );
 }
