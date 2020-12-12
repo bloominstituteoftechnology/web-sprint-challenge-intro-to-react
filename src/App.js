@@ -29,7 +29,7 @@ const App = () => {
   useEffect(() => {
     axios.get(`${BASE_URL}`)
       .then(res => {
-        console.log(res.data)
+        //console.log(res.data)
         setcharacters(res.data.results)
       })
       .catch(err => {
@@ -46,7 +46,7 @@ const App = () => {
         }) 
       }
       {
-        currentCharacterId && <Details friendId={currentCharacterId} close={closeDetails} />
+        currentCharacterId && <Details characterId={currentCharacterId} close={closeDetails} />
       }
     </div>
   );

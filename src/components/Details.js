@@ -1,20 +1,25 @@
 // add details here
 
 import React, { useState, useEffect } from 'react'
-import { BASE_URL, API_KEY } from '../constants'
+import { BASE_URL } from '../components/index'
 import axios from 'axios'
 
 export default function Details(props) {
   const { characterId, close } = props
   const [details, setDetails] = useState(null)
 
+  console.log(`THIS IS THE CHARACTER URL: ${BASE_URL}/${characterId}`)
+
   useEffect(() => {
     axios.get(`${BASE_URL}/${characterId}`)
       .then(res => { 
+          console.log(res.data);
           setDetails(res.data) })
       .catch(err => {
-           debugger }) // eslint-disable-line
+           debugger })
   }, [characterId])
+
+  console.log(details.name)
 
   return (
     <div className='container'>
