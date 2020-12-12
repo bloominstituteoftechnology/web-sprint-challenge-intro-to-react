@@ -33,7 +33,7 @@ const App = () => {
         setcharacters(res.data.results)
       })
       .catch(err => {
-        console.log(err)
+        debugger;
       })
   }, [])
 

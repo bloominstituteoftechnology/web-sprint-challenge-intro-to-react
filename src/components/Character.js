@@ -10,7 +10,7 @@ const kf = keyframes` // used for animations!
 `
 
 const StyledFriend = styled.div`
-  opacity: 0;
+  opacity: 1;
   animation: ${kf} 0.5s ease-in-out forwards; // used with keyframe!
   color: 'red';
   font-weight:${pr => pr.bold ? 'bold' : 'initial'};
@@ -38,7 +38,7 @@ const StyledFriend = styled.div`
   }
 ` 
 
-export default function Friend({bold, info, action }) {
+export default function Character({bold, info, action }) {
     return (
       <StyledFriend bold={bold} danger={info.name ==='Bea'}>
         {info.name}
