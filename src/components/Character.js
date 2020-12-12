@@ -2,39 +2,45 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const Character = ({ name, height, birthYear, homePlanet }) => {
-  const styleProp = {style: "padding-top: 60px"}
+const Character = ({ character }) => {
+
+  
+  
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6">
-          <p>
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            {name}
-            </a> 
-          </p>
-          <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-            </div>
+    
+    <div className="accordion" id="accordionExample">
+    <div className="accordion-item">
+      <h2 className="accordion-header" id="headingOne">
+        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          {character.name}
+        </button>
+      </h2>
+      <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div className="accordion-body">
+          
+        
+          <div className="card card-body top">
+            <p className="card-text">
+              Height: {character.height} <br />
+              Mass: {character.mass} <br />
+              Hair Color: {character.hair_color} <br />
+              Skin Color: {character.skin_color} <br />
+              Eye: {character.eye_color} <br />
+              Birth Year: {character.birth_year} <br />
+              Gender: {character.gender} <br />
+            </p>
           </div>
-        </div>
-        <div className="col-md-6">
-          <p>
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
-            {name}
-            </a> 
-          </p>
-          <div class="collapse" id="collapseExample1">
-            <div class="card card-body">
-             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-            </div>
-          </div>
+        
+
         </div>
       </div>
     </div>
+    </div>
+    
   )
 }
 
 export default Character;
+
+

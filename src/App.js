@@ -6,42 +6,37 @@ import Character from './components/Character'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
-  const [ characterOne, setCharacterOne ] = useState([]);
-  const [ currentCharacter, setCurrentCharacter ] = useState([]);
-
-  const openDetails = (id) => {
-    setCurrentCharacter(id)
-  }
-
-  const closeDetails = () => {
-    setCurrentCharacter(null)
-  }
+  const [ characters, setCharacters ] = useState([]);
 
   useEffect(() => {
     axios
     .get('https://swapi.dev/api/people/')
     .then((res) => {
-      setCharacterOne(res.data.results[0])
-      
+      setCharacters(res.data.results)
     })
     .catch((error) => {
       alert(error)
     })
   }, [])
 
-  
-
   return (
     <div className="App">
       <NavBar />
       <h1 className="Header">Characters</h1>
-      <Character name={characterOne.name} height={characterOne.height} birthYear={characterOne.birth_year} homePlanet={characterOne.homeworld}/>
+      <div className="top">
+        
+      {
+        characters.map((character) => {
+          return <Character key={character.name} character={character} />
+        })
+      }
+      </div>
+      
     </div>
   );
 }
 
 export default App;
-
 
  // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
