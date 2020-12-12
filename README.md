@@ -29,13 +29,14 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+react is a suite that enables a developer to inject hmtl from javascript using jsx syntax, as well as enabling the usage of states and properties to render web pages made from importable/exportable components, rather than hard-coded html and singular javascript files
 
 1. Describe component state.
-
+starts when the component mounts from an initialized value, recieves mutations from user events to change the current slice it is rendering. component states do not change the state of child components 
 1. Describe props.
-
+configurations of components, passed in from outside the scope of the prop. a component cannot change its props, but is instead used for putting together props of children
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
-
+side effects are commands that affect something outside the scope of the current function being executed. this includes API requests, calls to authenticators, error tracking calls. they can be set up using useEffect and eventListeners to execute as a side effect of another input
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
