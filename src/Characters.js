@@ -1,5 +1,6 @@
 import CharacterCards from "./CharacterCards"
 import React from "react"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function Characters (props){
@@ -13,29 +14,9 @@ export default function Characters (props){
         {characters.map((item)=>
 
         <CharacterCards character={item}/>
-        
-        
-        
-        
-      
-        
-)}
+        )}
 
         </div>
+        )
 
-
-
-
-
-
-
-    )
-
-
-        
-        
-        
-    
-    
- 
-    }
+}
