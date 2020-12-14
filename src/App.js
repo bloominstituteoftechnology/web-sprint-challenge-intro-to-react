@@ -12,17 +12,14 @@ export default function App() {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   useEffect(() => {
-    const obtChar = () => {
       axios.get('https://rickandmortyapi.com/api/character')
       .then(res => {
-        console.log(res.data);
-        setCharacters(res.data)
+        console.log(res.data.results);
+        setCharacters(res.data.results);
       })
       .catch((err) => {
-        console.log("Loading")
+        console.log("Loading", err)
       })
-    }
-    obtChar()
   }, [])
 
 //   return (

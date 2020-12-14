@@ -5,13 +5,13 @@ import styled from "styled-components";
 
 //there are two ways to export inline or In its individual line
 // written: export default App;
-export default function createCharacter(props){
-    const [eachCharacter] = props;
+export default function createCharacter(fn){
+    // const [eachCharacter] = props;
     
     return (
         <div>
-            <img src = {eachCharacter.image} alt = "Character Name"/>
-            <h1 className = "name">{eachCharacter.name}</h1>
+            <img src = {fn.image} alt = "Character Name"/>
+            <h1 className = "name">{fn.name}</h1>
             
         </div>
     )
