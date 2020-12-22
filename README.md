@@ -58,6 +58,7 @@ Your finished project must include all of the following requirements:
 
 - [ ] Use ONE of the following APIs:
   - [Star Wars API](https://swapi.dev/)
+
   - [Alternate Star Wars API](https://swapi.py4e.com/)
   - [The Rick and Morty API](https://rickandmortyapi.com/)
   - [The RESTful Pokémon API](https://pokeapi.co/) (**harder**)
