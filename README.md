@@ -30,23 +30,23 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-    It's a front end JS library that provides rigorous structure for managing application state.
+   It's a front end JS library that provides rigorous structure for managing application state.
 
-    This is useful for managing complex data and asynchronous calls.  It allows us to manipulate data quickly without reloading the entire page, making the UI experience quicker.  The rigorous structure of the framework makes the app easily scalable.
+   This is useful for managing complex data and asynchronous calls. It allows us to manipulate data quickly without reloading the entire page, making the UI experience quicker. The rigorous structure of the framework makes the app easily scalable.
 
 1. Describe component state.
 
-    Component state is an changeable object that affects a component.
+   Component state is an changeable object that affects a component.
 
 1. Describe props.
 
-    Props stands for properties.  It is a an object state or a state changer that are passed down from a parent component to a child component.  
+   Props stands for properties. It is a an object state or a state changer that are passed down from a parent component to a child component.
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
 
-    Side effects handle application state changes that happen outside of the main applicaiton fucntion.  
+   Side effects handle application state changes that happen outside of the main applicaiton fucntion.
 
-    They allow us to handle state very precisely outside of the main function and are often used with API data fetches, timers, logging, and manually manipulating the DOM.
+   They allow us to handle state very precisely outside of the main function and are often used with API data fetches, timers, logging, and manually manipulating the DOM.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -106,7 +106,7 @@ In your solution, it is essential that you follow best practices and produce cle
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on any the following optional goals:
 
-- [ ] Make the Character component more complex and break it into several subcomponents.
+- [x] Make the Character component more complex and break it into several subcomponents.
 - [ ] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
 - [ ] Use Promise.all to resolve an array of promises.
 - [ ] Create transitions or animations with styled-components.
@@ -115,6 +115,6 @@ After finishing your required elements, you can push your work further. These go
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` branch (student's Repo). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete after receiving your pull-request
+- [x] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` branch (student's Repo). **Please don't merge your own pull request**
+- [x] Add your team lead as a reviewer on the pull-request
+- [x] Your team lead will count the project as complete after receiving your pull-request
