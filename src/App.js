@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import Character from './components/Character';
+import { ListGroup, ListGroupItem } from 'reactstrap';
+//import styled from 'styled-components';
 
 const App = () => {
   const [characterData, setCharacterData] = useState([]);
@@ -24,16 +26,18 @@ const App = () => {
   // sync up with, if any.
 
   return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
+    <ListGroup>
+      <h1 className='Header'>Characters</h1>
 
       {characterData.map(character => {
-        
-        return <Character name={character.name} birthYear={character.birth_year}/>
-      }) 
-        
-      }
-    </div>
+        return (
+          <ListGroupItem>
+            <Character name={character.name} birthYear={character.birth_year}/>
+          </ListGroupItem>
+        );
+      })} 
+     
+    </ListGroup>
   );
 }
 
