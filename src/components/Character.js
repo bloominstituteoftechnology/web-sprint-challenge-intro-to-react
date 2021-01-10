@@ -1,5 +1,5 @@
 // Write your Character component here
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 
@@ -8,7 +8,7 @@ const StyledChar = styled.div`
     
     border: 5px solid black;
     background-color: white;
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
     margin-bottom: 20px;
     margin-top: 10px;
@@ -18,17 +18,25 @@ const StyledChar = styled.div`
     
     h2 {
         font-size: 55px;
-        font-family: sans-serif;
+        font-family: Creepster;
+        font-weight: bold;
         background-color: black;
-        width: 105%;
-        margin-top: 0;
-        color: white;
+        width: 103%;
+        margin-top: 0px;
+        color: #05b1c9;
 
         
     }
 
     img {
-        width: 103%;
+        width: 102%;
+
+        &:hover {
+            webkit-transform: scale(1.5);
+            transform: scale(1.5);
+            webkit-transition: 1.5s ease-in-out;
+            transition: 0.5s ease-in-out;
+        }
     }
 
     p {
@@ -59,7 +67,7 @@ const Character = (props) => {
             <p>Species: {props.character.species} 👽</p>}
             <p>Gender: {props.character.gender}</p>
             <p>Origin: {props.character.origin.name}</p>
-            <p>Location: {props.character.location.name}</p>
+            <p>Current Location: {props.character.location.name}</p>
             <img src={props.character.image}/>
 
 
