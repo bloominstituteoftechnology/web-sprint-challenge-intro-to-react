@@ -34,7 +34,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App container">
       <div className="d-flex flex-column">
         <div className="character2">
           <h1
