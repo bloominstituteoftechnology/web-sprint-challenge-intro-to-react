@@ -5,10 +5,15 @@ import styled from 'styled-components'
 
 
 const StyledChar = styled.div`
-    
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center; 
     border: 5px solid black;
-    background-color: white;
-    width: 800px;
+    background-color: #daeaff;
+    width: 1000px;
     margin: 0 auto;
     margin-bottom: 20px;
     margin-top: 10px;
@@ -23,14 +28,15 @@ const StyledChar = styled.div`
         background-color: black;
         width: 103%;
         margin-top: 0px;
-        color: #05b1c9;
+        color: #08889a;
+        -webkit-text-stroke: 0.1px white;
 
         
     }
 
     img {
         width: 102%;
-
+        height: 500px;%;
         &:hover {
             webkit-transform: scale(1.5);
             transform: scale(1.5);
@@ -43,16 +49,11 @@ const StyledChar = styled.div`
         font-size: 25px;
         font-family: sans-serif:
         font-weight: bold;
-        margin-top: 0;
+        margin-top: 0px;
 
     }
 
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;  
+     
 
 `
 

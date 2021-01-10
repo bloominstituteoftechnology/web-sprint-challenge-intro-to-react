@@ -30,13 +30,24 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-1. Describe component state.
+React is a Javascript Library created by the makers of Facebook. It allows you to create dynamic and reusable UI components. It allows the use to update information on the page without reloading.
 
-1. Describe props.
+2. Describe component state.
 
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+Component State is a stored value for a component. It allows you to create a dynamic component that can change over time. 
 
-You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
+3. Describe props.
+
+Props are used for storing data and passing that data to other components in your project.
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+A side effect is something that occurs outside the scope of the function. These can be used to manipulate the DOM, fetch information from an API, and many more
+
+
+
+
+//You are expected to be able to answer questions in these areas. Your responses contribute to //your Sprint Challenge grade.
 
 ## Instructions
 

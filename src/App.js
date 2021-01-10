@@ -28,28 +28,33 @@ const App = () => {
 
     },[])
 
+  //header r&m image   
   const StyledImg = styled.img`
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    width: 1500px;
     
-    `
-
+  `
+    
   const StyledH1 = styled.h1`
-    color: #05b1c9;
+    color: #08889a;
     font-family: Creepster;
     font-size: 50px;
+    -webkit-text-stroke: 1px white;
+    margin-bottom: 50px;
 
   `
 
   return (
     <div className="App">
       <StyledImg img src={logo} />
-      <StyledH1>Character List</StyledH1>
+      <StyledH1>-Character List-</StyledH1>
       {character.map((char) => (
       <Character key={char.id} character={char} />
-      ))}
+      ))
+    }
     </div>
-  )}
+)}
 
   
       
