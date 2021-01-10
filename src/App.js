@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import Character from './components/Character';
+import styled from 'styled-components'
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -26,8 +27,19 @@ const App = () => {
 
     },[])
 
+  const StyledH1 = styled.h1`
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-size: 100px;
+    font-family: sans serif;
+    background-color: #00ffd7;
+    color: black;
+    
+    `
+
   return (
     <div className="App">
+      <StyledH1 className="Header">Rick and Morty Characters</StyledH1>
       
       {character.map((char) => (
       <Character key={char.id} character={char} />
