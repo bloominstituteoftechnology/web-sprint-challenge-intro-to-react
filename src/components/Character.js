@@ -5,19 +5,22 @@ import styled from 'styled-components'
 
 
 const StyledChar = styled.div`
-
-    margin: 10px;
-    padding: 5px;
-    border: 2px solid black;
-    width: 500px;
-
-    img {
-    width: 300px;
-    height: 300px;
+    
+    border: 5px solid black;
+    background-color: white;
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    
+    h2 {
+        font-size: 55px;
+        font-family: sans-serif;
     }
 
-    display: flex;
-    justify-content: center;
+    img {
+        width: 100%;
+    }
+        
 
 
 
@@ -25,10 +28,12 @@ const StyledChar = styled.div`
 
 const Character = (props) => {
 
+    
     return (
         <StyledChar className='container'>
             <h2>{props.character.name}</h2>
             <p>Species: {props.character.species}</p>
+            <p>Gender: {props.character.gender}</p>
             <p>Origin: {props.character.name}</p>
             <img src={props.character.image}/>
 

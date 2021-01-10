@@ -11,7 +11,7 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   
-  const [characters, setCharacter] = useState([]) 
+  const [character, setCharacter] = useState([]) 
   
   useEffect( () => {
     axios   
@@ -28,8 +28,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
-      {characters.map((char) => (
+      
+      {character.map((char) => (
       <Character key={char.id} character={char} />
       ))}
     </div>
