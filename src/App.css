@@ -10,10 +10,10 @@
 .card {
   background-color: black;
   color: white;
-  margin: 3px;
-  margin: 20px 400px;
+  border: white;
+  margin: 20px 400px; 
 }
 
 .card-text {
-  margin: 40px;
+  margin: 10px;
 }
