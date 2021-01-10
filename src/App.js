@@ -36,7 +36,7 @@ const App = () => {
   return (
     <div className="App container">
       <div className="d-flex flex-column">
-        <div className="d-flex character2">
+        <div className="d-flex container character2">
           <h1
             className="display-1"
             style={{ textShadow: ".3rem .5rem .5rem #000" }}
