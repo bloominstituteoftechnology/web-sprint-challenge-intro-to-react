@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Character } from "./components/Character";
 
-const App = () => {
+const App = (props) => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -22,12 +22,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">REACT WARS</h1>
-      <Character key={Character.id}>
-        {characters.map((Character) => {
-          return <h3>{Character.name}</h3>;
-        })}
-      </Character>
+      <h1 className="Header">REACT WARS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ></h1>
+      <Character data={characters} />
     </div>
   );
 };
