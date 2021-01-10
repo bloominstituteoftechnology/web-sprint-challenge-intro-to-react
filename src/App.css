@@ -8,14 +8,18 @@
 }
 /* write your parent styles in here for your App.js */
 .Character {
-  margin-left: 25%;
-  margin-right: 25%;
-  display: flex;
-  justify-content: space-between;
+  margin: 1% 25%;
   padding: 10px;
   color: #443e3e;
   text-shadow: 2px 2px 5px #fff;
-  background-color: #ddcdb3;
   font-family: "Black Ops One", cursive;
   border-style: outset;
+}
+
+.Details {
+  margin: 1% 25%;
+  padding: 10px;
+  color: #443e3e;
+  text-shadow: 2px 2px 5px #fff;
+  font-family: "Black Ops One", cursive;
 }
