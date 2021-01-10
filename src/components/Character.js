@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import StarWarsCard from "./StarWarsCard";
+import { Container, Row } from "reactstrap";
 
 const Character = () => {
   const [character, setCharacter] = useState([]);
@@ -16,11 +17,13 @@ const Character = () => {
   }, []);
 
   return (
-    <div>
-      {character.map((data) => (
-        <StarWarsCard key={data.name} data={data} />
-      ))}
-    </div>
+    <Container className="star-wars-list">
+      <Row>
+        {character.map((data) => (
+          <StarWarsCard key={data.name} data={data} />
+        ))}
+      </Row>
+    </Container>
   );
 };
 

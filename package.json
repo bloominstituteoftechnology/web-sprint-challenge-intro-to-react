@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "react": "^16.14.0",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^16.14.0",
     "react-scripts": "3.4.3",
     "reactstrap": "^8.8.1"
