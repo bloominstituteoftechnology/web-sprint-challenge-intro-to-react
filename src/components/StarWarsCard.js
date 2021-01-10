@@ -12,7 +12,7 @@ const StarWarsCard = (props) => {
   return (
     <Col xs="6" md="4" xl="3">
       <Card>
-        <CardBody>
+        <CardBody className="card-text">
           <CardTitle>NAME: {props.data.name}</CardTitle>
           <CardSubtitle>CREATED: {props.data.created}</CardSubtitle>
           <CardText> SPECIES: {props.data.species} </CardText>

@@ -8,6 +8,12 @@
 /* write your parent styles in here for your App.js */
 
 .card {
-  background: black:
+  background-color: black;
+  color: white;
   margin: 3px;
+  margin: 20px 400px;
+}
+
+.card-text {
+  margin: 40px;
 }
