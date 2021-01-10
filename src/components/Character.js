@@ -10,17 +10,19 @@ import {
 
 export default function Character({data}) {
   const { name, height, mass, hair_color, skin_color, eye_color, birth_year, gender } = data;
-  console.log("data in Character: ", data);
+  const { homeworld, films, species, vehicles, starships } = data;
+  console.log("data in Character: ", data); // it works
 
   const StyledDiv = styled.div`
   color: palevioletred;
   font-weight: bold;
 `;
 
+
   return (
     <div className="character-container">
       {/* <StyledDiv> */}
-        <Card class='card'>
+        <Card  class='card'>
           <CardTitle>{name}</CardTitle>
           <CardText>
             height: {height} <br/>
@@ -30,9 +32,7 @@ export default function Character({data}) {
             eye color: {skin_color} <br/>
             birth year: {birth_year} <br/>
             gender: {gender} <br/>
-
           </CardText>
-          
         </Card>
       
 
@@ -41,6 +41,8 @@ export default function Character({data}) {
 
 
     </div>
+
+    
   );
 
 
@@ -50,4 +52,5 @@ export default function Character({data}) {
 
 // const StyledDiv = styled.div`
 // background: white;
+// width: 50%;
 // `;
