@@ -35,8 +35,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="d-flex flex-column">
-        <div className="d-flex container character2">
+      <div className="d-flex container-fluid flex-column">
+        <div className="d-flex container justify-content-center character2">
           <h1
             className="display-4"
             style={{ textShadow: ".3rem .5rem .5rem #000" }}
