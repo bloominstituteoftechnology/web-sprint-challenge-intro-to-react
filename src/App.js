@@ -39,11 +39,21 @@ const App = () => {
         <div className="container justify-content-center character2">
           <h1
             className="display-4"
-            style={{ margin: "1rem 1rem",textShadow: ".3rem .3rem 1.5rem white" }}
+            style={{
+              margin: "1rem 1rem",
+              textShadow: ".3rem .3rem 1.5rem white",
+            }}
           >
             Star Wars API
           </h1>
-          <img className="yoda-shadow" src="http://conceptartworld.com/wp-content/uploads/2016/03/Star_Wars_Art_Concept_Illustration_02_Marco_Teixeira_Young_Jedi_Master.jpg" alt="concept yoda" style={{width: "35%"}}></img>
+          <br></br>
+         <div className="line-up">""</div>
+          <img
+            className="yoda-shadow"
+            src="https://hipsterapproved.files.wordpress.com/2013/05/starwars-art-r2d2.jpeg"
+            alt="concept yoda"
+            style={{ width: "70%" }}
+          ></img>
         </div>
         <br></br>
         <Characters characters={data} />
