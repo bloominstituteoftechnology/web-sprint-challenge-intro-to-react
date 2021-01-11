@@ -41,7 +41,7 @@ const App = () => {
             className="display-4"
             style={{
               margin: "1rem 1rem",
-              textShadow: ".3rem .3rem 1.5rem white",
+              textShadow: ".3rem .3rem 1.5rem black",
             }}
           >
             Star Wars API
