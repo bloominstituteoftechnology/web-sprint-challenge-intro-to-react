@@ -13,6 +13,14 @@ body {
   color: #fff;
 }
 
+.background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .characters {
   padding: 0 1.5rem;
 }
