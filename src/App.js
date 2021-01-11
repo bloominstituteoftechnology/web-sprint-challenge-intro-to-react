@@ -6,38 +6,35 @@ import { Container } from 'reactstrap';
 
 const App = () => {
   const [data, setData] = useState([]);
+  const [homeworldData, setHomeworldData] = useState({});
 
-  function cleanUpData (originalData) {
-    // an array of objects
-    const cleanData = originalData.map(object => {
+  function cleanUpData (origData) {
+    // takes an array of objects, removes obj keys .created, .edited, .url
+    const cleanData = origData.map(object => {
       delete object.created;
       delete object.edited;
       delete object.url;
+      return object;
     });
-    console.log("Clean data: ", cleanData);
+    return cleanData;
+  }; 
 
-  };
+  // QUESTION:  Should cleanUpData be written in a way that it does not modigy origData and if so, how would you write it?  Do I need to clone the objects before operating on them? *expensive* This helper function has inputs, outputs, AND side Fx (origData got changed).
 
   useEffect(() => {
-
     axios
       .get("https://swapi.dev/api/people/")
       // Which we then set to state
       .then(res => {
-        cleanUpData(res.data.results);
-        setData(res.data.results);
+        const cleanData = cleanUpData(res.data.results);
+        setData(cleanData);
       // console.log("fetch data", res.data.results); // it works
       })
       // Always include error handling
       .catch(err => console.log(err));
-      
-  }, []);
+  }, []); // fetchData
 
-  // useEffect(() => {
-  //   console.log("Log this when data state changes");
-  // }, data);
 
-  // console.log("Data: ", data); 
 
   return (
     <div className="App">
@@ -46,7 +43,7 @@ const App = () => {
       <Container class="Container">
  
       {data.map(char => {
-          return <Character key={char.id} data={char}/>
+          return <Character key={char.id} data={char} setHomeworldData={setHomeworldData}/>
         })}
 
       </Container>

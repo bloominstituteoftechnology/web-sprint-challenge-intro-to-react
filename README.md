@@ -108,7 +108,7 @@ After finishing your required elements, you can push your work further. These go
 
 - [x] Make the Character component more complex and break it into several subcomponents.
 - [x] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
-- [ ] Use Promise.all to resolve an array of promises.
+- [ ] Use Promise.all to resolve an array of promises. CANNOT DO BECAUSE NESTED API fetchs result in a CORS error. Unresolvable without third party middleware.
 - [ ] Create transitions or animations with styled-components.
 
 ## Submission format
@@ -118,3 +118,19 @@ Follow these steps for completing your project.
 - [x] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` branch (student's Repo). **Please don't merge your own pull request**
 - [x] Add your team lead as a reviewer on the pull-request
 - [x] Your team lead will count the project as complete after receiving your pull-request
+
+## NOTES
+
+https://swapi.dev/
+
+First ran into SSL expired cert issues that lasted 12 hours. Site was down.
+
+Then encountered MAJOR CORS error with the fetch for the nested API for homeworld. Main fetch had header and passes fine. Nested APIs do not.
+
+After research, concluded that must use third party middleware to resolve CORS header issue.
+
+https://blog.container-solutions.com/a-guide-to-solving-those-mystifying-cors-issues
+
+See screenshots
+
+Have decided to abandon this project for further stretch goal, portfolio project development due to long term instability of API. API not viable for further development, at least at this stage of my skill level.
