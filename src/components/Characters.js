@@ -6,7 +6,7 @@ export const Films = (props) => {
     <div className="d-flex flex-column">
       {props.films.map((film, idx) => (
         <p>
-          <a href={film.idx}>{film}</a>
+          <a href="{film.idx}">{film}</a>
         </p>
       ))}
     </div>
