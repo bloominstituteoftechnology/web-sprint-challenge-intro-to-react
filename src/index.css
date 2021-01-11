@@ -20,15 +20,6 @@ body {
 }
 
 .character {
-  border: 0.1rem solid gray;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  width: 100%;
-  box-shadow: 0.5rem 0.5rem #000;
-}
-
-.character {
   background-image: url("https://www.barnorama.com/wp-content/images/2015/03/Star-Wars-Concept-Art/14-Star-Wars-Concept-Art.jpg");
   border: 0.1rem solid gray;
   border-radius: 0.5rem;
