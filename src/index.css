@@ -43,7 +43,7 @@ body {
 }
 
 .character2 {
-  background-image: url("https://static0.srcdn.com/wordpress/wp-content/uploads/2017/11/Luke-The-Last-Jedi-Green-Lightsaber-Missing.jpg");
+  background-image: url("https://assets.gamepur.com/files/imagepicker/6/star-wars-1313-concept-art-1.jpg");
   right: 0;
   bottom: 0;
   width: 100%;
@@ -54,10 +54,8 @@ body {
   padding: 1rem;
   max-width: 100%;
   box-shadow: 0.5rem 0.5rem #000;
-  color:#000;
+  color: #222;
 }
-
-
 
 .character__name {
   text-align: center;
@@ -144,4 +142,14 @@ body {
   100% {
     background-position: 0 0;
   }
+}
+
+.text-shadow {
+  text-shadow: 0.3rem 0.3rem 1.5rem #fff;
+}
+
+.yoda-shadow {
+  border-radius: 5px;
+  box-shadow: 0.1rem 0.1rem 1.5rem lime;
+  margin: 3.5rem 0;
 }

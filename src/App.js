@@ -36,13 +36,14 @@ const App = () => {
   return (
     <div className="App">
       <div className="d-flex container-fluid flex-column">
-        <div className="d-flex container justify-content-center character2">
+        <div className="container justify-content-center character2">
           <h1
             className="display-4"
-            style={{ textShadow: ".3rem .3rem 1.5rem lime" }}
+            style={{ margin: "1rem 1rem",textShadow: ".3rem .3rem 1.5rem white" }}
           >
-            Characters
+            Star Wars API
           </h1>
+          <img className="yoda-shadow" src="http://conceptartworld.com/wp-content/uploads/2016/03/Star_Wars_Art_Concept_Illustration_02_Marco_Teixeira_Young_Jedi_Master.jpg" alt="concept yoda" style={{width: "35%"}}></img>
         </div>
         <br></br>
         <Characters characters={data} />
