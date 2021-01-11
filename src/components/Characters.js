@@ -20,7 +20,7 @@ export const Character = (props) => {
     <div className="character gray-mask justify-content-center">
       <h3 className="display-4">{props.name}</h3>
       <div>{props.films && <Films films={props.films} />}</div>
-      <div>
+      <div className="text-shadow">
         <p>Birth Year: {props.birth_year}</p>
         <p>
           Mass <em>(approx.): </em>

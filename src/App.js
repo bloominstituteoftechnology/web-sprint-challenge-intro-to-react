@@ -39,7 +39,7 @@ const App = () => {
         <div className="d-flex container justify-content-center character2">
           <h1
             className="display-4"
-            style={{ textShadow: ".3rem .3rem .7rem #AAA" }}
+            style={{ textShadow: ".3rem .3rem 1.5rem #FFF" }}
           >
             Characters
           </h1>
