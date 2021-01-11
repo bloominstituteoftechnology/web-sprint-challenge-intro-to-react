@@ -35,7 +35,7 @@ const App = () => {
 
   return (
     <div className="App">
-     <img src="https://i.pinimg.com/736x/27/74/bc/2774bcb17f76fc6e80b422754f71038d.jpg" alt="background className="background"></img>
+     <img src="https://i.pinimg.com/736x/27/74/bc/2774bcb17f76fc6e80b422754f71038d.jpg" alt="background" className="background"></img>
       <div className="d-flex container flex-column">
         <div className="justify-content-center character2">
           <h1
