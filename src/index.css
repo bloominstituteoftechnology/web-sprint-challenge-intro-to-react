@@ -5,7 +5,8 @@ body {
   background-position: center bottom;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover
+  background-size: cover;
+  background-color: black
 }
 
 .gray-mask {
