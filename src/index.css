@@ -3,11 +3,10 @@ body {
   background-image: url("./images/sw-bg.jpg");
   right: 0;
   bottom: 0;
-  width: 100%;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: contain, cover
+  background-size: cover
 }
 
 .gray-mask {
