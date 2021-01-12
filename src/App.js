@@ -3,9 +3,13 @@ import axios from 'axios';
 import './App.css';
 import Character from './components/Character.js';
 import { Container } from 'reactstrap';
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
 const App = () => {
   const [data, setData] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
 
   function cleanUpData (origData) {
     // takes an array of objects, removes obj keys .created, .edited, .url
@@ -18,7 +22,7 @@ const App = () => {
     return cleanData;
   }; 
 
-  // QUESTION:  Should cleanUpData be written in a way that it does not modify origData and if so, how would you write it?  Do I need to clone the objects before operating on them? *expensive* This helper function has inputs, outputs, AND side Fx (origData got changed). ANS: create new object with values needed.
+  // ANS: create new object with values needed.
 
   useEffect(() => {
     axios
@@ -36,18 +40,17 @@ const App = () => {
 
 
   return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
+    <div class="App">
+      <h1 class="header">Characters</h1>
      
-      <Container class="Container">
+      {/* <Container> */}
  
-      {data.map(char => {
-          return <Character key={char.id} data={char}/>
-        })}
+        {data.map(char => {
+            return <Character key={char.id} data={char}/>
+          })}
 
-      </Container>
-      
-
+      {/* </Container> */}
+    
     </div>
   );
 }

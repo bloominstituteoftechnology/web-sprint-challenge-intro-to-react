@@ -1,10 +1,12 @@
 @import './fonts/fonts.css';
 
+
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 
-.Header {
+.header {
   /* color: #443e3e; */
   color: white;
   text-shadow: 2px 2px 5px orange;
@@ -16,30 +18,41 @@
 }
 /* write your parent styles in here for your App.js */
 
-.Container {
+
+.Character {
   display: flex;
-  flex-flow: row wrap;
-  margin-left: auto;
-  margin-right: auto;
+  flex-flow: column;
+  box-sizing: border-box;
 }
 
 div {
   display: flex;
-  flex-flow: row wrap !important;
+  flex-flow: row wrap;
   justify-content: space-around;
 }
 
 .card {
-  padding: 30px;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 200px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
   background-color: rgb(252, 221, 165);
+  opacity: 0.9;
   box-shadow: 2px 2px 5px orange;
 
-  border-radius: 180px;
+  border-radius: 10px;
   color: slategrey;
   font-family: 'Orbitron', sans-serif;
+  justify-content: center;
   margin-bottom: 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+} 
+
+
+.Homeworld {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
 }
