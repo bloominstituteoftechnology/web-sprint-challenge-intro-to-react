@@ -6,17 +6,15 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: black
+  background-color: black;
 }
 
-.gray-mask {
-  background-color: #444;
-  color: #fff;
+a {
+  color: white;
 }
 
 .background {
   position: fixed;
-  
   right: 0;
   bottom: 0;
   width: 100%;
@@ -28,7 +26,9 @@ body {
 }
 
 .character {
-  background-image: url("https://www.barnorama.com/wp-content/images/2015/03/Star-Wars-Concept-Art/14-Star-Wars-Concept-Art.jpg");
+  background-image: url("https://www.this-is-cool.co.uk/wp-content/gallery/kai-lim/kai-lim-star-wars-artist-scifi-fantasy-art.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 0.1rem solid gray;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
@@ -37,7 +37,8 @@ body {
   box-shadow: 0.5rem 0.5rem #000;
   color: lime;
   text-shadow: #000;
-  opacity: 0.9
+  opacity: 0.9;
+  text-align: center;
 }
 
 .character2 {
@@ -52,8 +53,8 @@ body {
   padding: 1rem;
   max-width: 100%;
   box-shadow: 0.5rem 0.5rem #000;
-  color: #FFF;
-  opacity: 0.9
+  color: #fff;
+  opacity: 0.9;
 }
 
 .character__name {
@@ -145,6 +146,9 @@ body {
 
 .text-shadow {
   text-shadow: 0.3rem 0.3rem 1.5rem #fff;
+  background-color: #777;
+  opacity: 0.9;
+  box-shadow: 0.1rem 0.1rem 1.5rem black;
 }
 
 .yoda-shadow {
@@ -159,4 +163,25 @@ body {
   background-color: lime;
   margin: 0 auto;
   box-shadow: 0.1rem 0.1rem 1.5rem black;
+}
+
+.smokey-bg {
+  background-image: linear-gradient(to right, #000, #888);
+  box-shadow: 0.1rem 0.1rem 1.5rem black;
+  opacity: 0.8;
+  border-radius: 5px;
+  width: 95%;
+}
+
+.smokey-bg-2 {
+  background-color: #222;
+  box-shadow: 0.1rem 0.1rem 1.5rem black;
+  opacity: 0.8;
+  border-radius: 5px;
+  width: 95%;
+}
+
+.map-borders {
+  border: 2px solid #fff;
+  width: 100%;
 }

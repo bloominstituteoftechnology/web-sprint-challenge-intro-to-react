@@ -34,27 +34,33 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-     <img src="https://i.pinimg.com/736x/27/74/bc/2774bcb17f76fc6e80b422754f71038d.jpg" alt="background" className="background"></img>
+    <div className="App d-flex">
+      <img
+        src="https://i.pinimg.com/736x/27/74/bc/2774bcb17f76fc6e80b422754f71038d.jpg"
+        alt="background"
+        className="background"
+      ></img>
       <div className="d-flex container flex-column">
-        <div className="justify-content-center character2">
-          <h1
-            className="display-4"
-            style={{
-              margin: "1rem 1rem",
-              textShadow: ".3rem .3rem 1.5rem lime",
-            }}
-          >
-            Star Wars API
-          </h1>
-          <br></br>
-         <div className="line-up">""</div>
-          <img
-            className="yoda-shadow"
-            src="https://hipsterapproved.files.wordpress.com/2013/05/starwars-art-r2d2.jpeg"
-            alt="concept yoda"
-            style={{ width: "70%" }}
-          ></img>
+        <div className="d-flex justify-content-center align-content-center character2">
+          <div className="smokey-bg-2">
+            <h1
+              className="display-4"
+              style={{
+                margin: "1rem 1rem",
+                textShadow: ".3rem .3rem 1.5rem lime",
+              }}
+            >
+              Star Wars API
+            </h1>
+            <br></br>
+            <div className="line-up">""</div>
+            <img
+              className="yoda-shadow"
+              src="https://hipsterapproved.files.wordpress.com/2013/05/starwars-art-r2d2.jpeg"
+              alt="concept yoda"
+              style={{ width: "70%" }}
+            ></img>
+          </div>
         </div>
         <br></br>
         <Characters characters={data} />
