@@ -12,13 +12,15 @@ const Vehicles = (props) => {
 
   const toggle = () => setIsOpen(!isOpen);
 
+  const vehicle = vehiclesData.length === 0 ? ["none"] : vehiclesData
+
   return (
     <div class="sub-component">
       <Button color="warning" onClick={toggle} style={{ marginBottom: '1rem' }}>Vehicles</Button>
       <Collapse isOpen={isOpen}>
          <Card>
           <CardBody> 
-            {vehiclesData.map(filmName => {
+            {vehicle.map(filmName => {
               return <p>{filmName}</p>
             })}
           </CardBody>

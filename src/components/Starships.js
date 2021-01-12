@@ -12,13 +12,15 @@ const Starships = (props) => {
 
   const toggle = () => setIsOpen(!isOpen);
 
+  const starship = starshipsData.length === 0 ? ["none"] : starshipsData
+
   return (
     <div class="sub-component">
       <Button color="secondary" onClick={toggle} style={{ marginBottom: '1rem' }}>Starships</Button>
       <Collapse isOpen={isOpen}>
          <Card>
           <CardBody> 
-            {starshipsData.map(filmName => {
+            {starship.map(filmName => {
               return <p>{filmName}</p>
             })}
           </CardBody>
