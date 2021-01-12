@@ -29,12 +29,16 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+It allows developers to build more complex user interfaces where components change frequently over time, without needing alot of heavily coded JavaScript. When making the NASA APOD mirror site it made it much easier to render daily changing information without needing to hard code it daily like the old web mastering days. 
 
 1. Describe component state.
+component state object holds property values for a component, when the state changes the value is changed with setState to the new value
 
 1. Describe props.
+data passed from one component to the other. it is their communications line
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+useEffect is used to make adjustments to the page when a thing happens. whether initial loading, tied to an event or change
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

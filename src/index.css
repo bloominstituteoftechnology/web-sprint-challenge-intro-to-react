@@ -1,7 +1,187 @@
 body {
-  margin: 0;
-  padding: 0;
   font-family: sans-serif;
-  background-image: url('./images/sw-bg.jpg');
+  right: 0;
+  bottom: 0;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-color: black;
+}
+
+a {
+  color: white;
+}
+
+.background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.characters {
+  padding: 0 1.5rem;
+}
+
+.character {
+  background-image: url("https://www.this-is-cool.co.uk/wp-content/gallery/kai-lim/kai-lim-star-wars-artist-scifi-fantasy-art.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: 0.5rem 0.5rem #000;
+  color: lime;
+  text-shadow: #000;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.character2 {
+  background-image: url("https://assets.gamepur.com/files/imagepicker/6/star-wars-1313-concept-art-1.jpg");
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  max-width: 100%;
+  box-shadow: 0.5rem 0.5rem #000;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.character__name {
+  text-align: center;
+}
+
+.button-style {
+  text-decoration: none;
+  color: "#222";
+  background-color: "#000";
+}
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.text-shadow {
+  text-shadow: 0.3rem 0.3rem 1.5rem #fff;
+  background-color: #777;
+  opacity: 0.9;
+  box-shadow: 0.1rem 0.1rem 1.5rem black;
+}
+
+.yoda-shadow {
+  border-radius: 5px;
+  box-shadow: 0.1rem 0.1rem 1.5rem black;
+  margin: 3.5rem 0;
+}
+
+.line-up {
+  width: 60%;
+  height: 2px;
+  background-color: lime;
+  margin: 0 auto;
+  box-shadow: 0.1rem 0.1rem 1.5rem black;
+}
+
+.smokey-bg {
+  background-image: linear-gradient(to right, #000, #888);
+  box-shadow: 0.1rem 0.1rem 1.5rem black;
+  opacity: 0.8;
+  border-radius: 5px;
+  width: 95%;
+}
+
+.smokey-bg-2 {
+  background-color: #222;
+  box-shadow: 0.1rem 0.1rem 1.5rem black;
+  opacity: 0.8;
+  border-radius: 5px;
+  width: 95%;
+}
+
+.map-borders {
+  border: 2px solid #fff;
+  width: 100%;
 }
