@@ -5,10 +5,11 @@ import styled from 'styled-components';
 
 
 export default function Homeworld(props) {
-  // const [homeworldData, setHomeworldData] = useState({}); // yank to parent, Character
-  const { homeworldData} = props;
+  const { homeworldData } = props;
 
-  // console.log("homeworldData: ", homeworldData); // it works
+  console.log(props);
+
+  console.log("homeworldData from Homeworld: ", homeworldData); // it works
 
  
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../App.css';
 import styled from 'styled-components';
@@ -14,10 +14,10 @@ import Vehicles from './Vehicles.js';
 
 
 export default function Character({data}) {
-  // const [homeworldData, setHomeworldData] = useState({}); // yank to parent
+  const [homeworldData, setHomeworldData] = useState([]); 
   const { name, height, mass, hair_color, skin_color, eye_color, birth_year, gender } = data;
   const { homeworld, films, species, vehicles, starships } = data; // apis
-  const { setHomeworldData } = data; // props to pass to child
+
   // console.log("data in Character: ", data); // it works
  
   // useEffect(() => {
@@ -42,7 +42,7 @@ export default function Character({data}) {
       // set data to state here
       console.log("res: ", res)
       setHomeworldData(res.data);
-      console.log("Homeworld data; ", res.data);
+      console.log("Homeworld data from Character: ", res.data);
     })
     .catch(err => console.log("Error: ", err));
 
@@ -67,13 +67,9 @@ export default function Character({data}) {
             birth year: {birth_year} <br/>
             gender: {gender} <br/>
           </CardText>
-          {/* <Homeworld homeworldData={homeworldData} /> */}
+          <Homeworld homeworldData={homeworldData} />
         </Card>
-      
-
-      {/* </StyledDiv> */}
-   
-
+    
 
     </div>
 
