@@ -54,98 +54,68 @@ export default function Character({data}) {
 
     }, []); // fetch filmsData, set state to [] of strings
 
-    useEffect(() => {
+  useEffect(() => {
 
-      const speciesPromises = species.map(api => {
-        return axios.get(api)
+    const speciesPromises = species.map(api => {
+      return axios.get(api)
+    });
+
+    Promise.all(speciesPromises)
+      .then((values) => {
+      console.log("Values: ", values); // need to go into .data
+
+      const speciesNames = values.map(object => {
+        return object.data.name;
       });
-  
-      Promise.all(speciesPromises)
-        .then((values) => {
-        console.log("Values: ", values); // need to go into .data
-  
-        const speciesNames = values.map(object => {
-          return object.data.name;
-        });
-  
-        setSpeciesData(speciesNames);
-  
-        })
-        .catch(err => console.log(err));
-  
-      }, []); // fetch speciesData, set state to [] of string
 
-    useEffect(() => {
+      setSpeciesData(speciesNames);
 
-      const starshipsPromises = starships.map(api => {
-        return axios.get(api)
+      })
+      .catch(err => console.log(err));
+
+    }, []); // fetch speciesData, set state to [] of string
+
+  useEffect(() => {
+
+    const starshipsPromises = starships.map(api => {
+      return axios.get(api)
+    });
+
+    Promise.all(starshipsPromises)
+      .then((values) => {
+      console.log("Values: ", values); // need to go into .data
+
+      const starshipsNames = values.map(object => {
+        return object.data.name;
       });
-  
-      Promise.all(starshipsPromises)
-        .then((values) => {
-        console.log("Values: ", values); // need to go into .data
-  
-        const starshipsNames = values.map(object => {
-          return object.data.name;
-        });
-  
-        setStarshipsData(starshipsNames);
-  
-        })
-        .catch(err => console.log(err));
-  
-      }, []); // fetch starshipsData, set state to [] of strings
 
-      useEffect(() => {
+      setStarshipsData(starshipsNames);
 
-        const vehiclesPromises = vehicles.map(api => {
-          return axios.get(api)
-        });
-    
-        Promise.all(vehiclesPromises)
-          .then((values) => {
-          console.log("Values: ", values); // need to go into .data
-    
-          const vehiclesNames = values.map(object => {
-            return object.data.name;
-          });
-    
-          setVehiclesData(vehiclesNames);
-    
-          })
-          .catch(err => console.log(err));
-    
-        }, []); // fetch vehiclesData, set state to [] of strings
+      })
+      .catch(err => console.log(err));
 
+    }, []); // fetch starshipsData, set state to [] of strings
 
+  useEffect(() => {
 
-  // useEffect(() => {
+    const vehiclesPromises = vehicles.map(api => {
+      return axios.get(api)
+    });
 
-  //   const speciesPromise = axios.get(species);  // .data
-  //   const vehiclesPromise = axios.get(vehicles); // mult api
-  //   const starshipsPromise = axios.get(starships); // mult api
+    Promise.all(vehiclesPromises)
+      .then((values) => {
+      console.log("Values: ", values); // need to go into .data
 
-  //   Promise.all([homeworldPromise, filmsPromise, speciesPromise, vehiclesPromise, starshipsPromise])
-  //     .then((values) => {
-  //     console.log(values);
-  //     })
-  //     .catch(err => console.log(err));
+      const vehiclesNames = values.map(object => {
+        return object.data.name;
+      });
 
-  //   }, []);
+      setVehiclesData(vehiclesNames);
 
+      })
+      .catch(err => console.log(err));
 
-
-  // useEffect(() => {
-  //   axios.get(homeworld)
-  //   .then(res => {
-  //     // set data to state here
-  //     console.log("res: ", res)
-  //     setHomeworldData(res.data);
-  //     console.log("Homeworld data from Character: ", res.data);
-  //   })
-  //   .catch(err => console.log("Error: ", err));
-
-  // }, []); // fetch homeworldData, return homeworld object, need obj.name
+    }, []); // fetch vehiclesData, set state to [] of strings
 
 
 
@@ -163,8 +133,8 @@ export default function Character({data}) {
             birth year: {birth_year} <br/>
             gender: {gender} <br/>
           </CardText>
-         
         </Card>
+        
         <Homeworld homeworldData={homeworldData}/>
         <Films filmsData={filmsData}/>
         <Species speciesData={speciesData}/>

@@ -13,7 +13,7 @@ const Species = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div class="sub-component">
       <Button color="warning" onClick={toggle} style={{ marginBottom: '1rem' }}>Species</Button>
       <Collapse isOpen={isOpen}>
          <Card>

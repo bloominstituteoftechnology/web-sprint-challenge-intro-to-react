@@ -13,7 +13,7 @@ const Starships = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div class="sub-component">
       <Button color="secondary" onClick={toggle} style={{ marginBottom: '1rem' }}>Starships</Button>
       <Collapse isOpen={isOpen}>
          <Card>

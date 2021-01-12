@@ -13,7 +13,7 @@ const Films = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div class="sub-component">
       <Button color="secondary" onClick={toggle} style={{ marginBottom: '1rem' }}>Films</Button>
       <Collapse isOpen={isOpen}>
          <Card>

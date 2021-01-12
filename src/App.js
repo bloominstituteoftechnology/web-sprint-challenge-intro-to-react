@@ -41,15 +41,21 @@ const App = () => {
 
   return (
     <div class="App">
-      <h1 class="header">Characters</h1>
-     
-      {/* <Container> */}
- 
-        {data.map(char => {
-            return <Character key={char.id} data={char}/>
-          })}
+      
+      <h1 class="header">Star Wars</h1>
 
-      {/* </Container> */}
+     
+      <div class="main-container">
+
+          <div class="title-container">C<br/>h<br/>a<br/>r<br/>a<br/>c<br/>t<br/>e<br/>r<br/>s</div>
+
+          <div class="main-characters-container">
+            {data.map(char => {
+                return <Character key={char.id} data={char}/>
+              })}
+          </div>
+
+      </div>
     
     </div>
   );

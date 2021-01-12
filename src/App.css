@@ -1,9 +1,10 @@
 @import './fonts/fonts.css';
 
-
 .App {
   text-align: center;
   box-sizing: border-box;
+  flex-flow: column nowrap;
+
 }
 
 .header {
@@ -12,12 +13,57 @@
   text-shadow: 2px 2px 5px orange;
   /* font-family: 'Monoton', sans-serif; */
   font-family: 'Distant Galaxy', sans-serif;
-  font-size: 5rem;
+  font-size: 6rem;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 40px;
+  background-color: rgb(16, 16, 16);
+  width: 100vw;
+  opacity: 0.8;
 }
-/* write your parent styles in here for your App.js */
 
+.main-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title-container {
+    color: white;
+    text-shadow: 2px 2px 5px orange;
+    font-family: 'Distant Galaxy', sans-serif;
+    font-size: 6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    /* background-color: black; */
+    opacity: 0.9;
+    /* height: 90vh; */
+    align-self: flex-start;
+    width: 6rem;
+    flex-wrap: wrap;
+    line-height: 1;
+    /* padding-top: 120px; */
+}
+
+.main-characters-container {
+  display: flex;
+  flex-flow: column;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.character-container {
+  background-image: url("https://cdn.pixabay.com/photo/2016/05/03/20/12/moon-1370052_1280.jpg");
+  background-position: center;
+  opacity: .9;
+  margin-top: 5rem; 
+  /* centers card to middle of planet */
+  padding-left: 6rem;
+  /* creates circle */
+  width: 550px; 
+  border-radius: 360px;
+}
 
 .Character {
   display: flex;
@@ -27,32 +73,24 @@
 
 div {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-around;
 }
 
 .card {
-  padding: 20px;
-  margin: 10px;
   width: 300px;
-  background-color: rgb(252, 221, 165);
-  opacity: 0.9;
+  background-color: rgb(252, 221, 165) !important;
   box-shadow: 2px 2px 5px orange;
 
-  border-radius: 10px;
-  color: slategrey;
+  /* border-radius: 180px !important; */
+  color: #404040;
   font-family: 'Orbitron', sans-serif;
   justify-content: center;
-  margin-bottom: 30px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
-} 
+  margin-bottom: 17px;
+  margin-top: 15px;
+  padding: 10px;
+}
 
-
-.Homeworld {
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
+.sub-component {
+  width: 300px;
 }
