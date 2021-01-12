@@ -2,14 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import Character from './components/Character.js';
-import { Container } from 'reactstrap';
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
 const App = () => {
   const [data, setData] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
 
   function cleanUpData (origData) {
     // takes an array of objects, removes obj keys .created, .edited, .url
@@ -40,18 +35,18 @@ const App = () => {
 
 
   return (
-    <div class="App">
+    <div className="App">
       
-      <h1 class="header">Star Wars</h1>
+      <h1 className="header">Star Wars</h1>
 
      
-      <div class="main-container">
+      <div className="main-container">
 
-          <div class="title-container">C<br/>h<br/>a<br/>r<br/>a<br/>c<br/>t<br/>e<br/>r<br/>s</div>
+          <div className="title-container">C<br/>h<br/>a<br/>r<br/>a<br/>c<br/>t<br/>e<br/>r<br/>s</div>
 
-          <div class="main-characters-container">
+          <div className="main-characters-container">
             {data.map(char => {
-                return <Character key={char.id} data={char}/>
+                return <Character key={char.name} data={char}/>
               })}
           </div>
 

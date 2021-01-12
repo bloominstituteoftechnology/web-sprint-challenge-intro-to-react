@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../App.css';
-import styled from 'styled-components';
 import {
   Card, CardText, 
   CardTitle, 
@@ -22,8 +21,6 @@ export default function Character({data}) {
 
   const { name, height, mass, hair_color, skin_color, eye_color, birth_year, gender } = data;
   const { homeworld, films, species, vehicles, starships } = data; // apis
-
-  console.log("species: ",species);
 
   useEffect(() => {
     axios.get(homeworld)
@@ -62,7 +59,7 @@ export default function Character({data}) {
 
     Promise.all(speciesPromises)
       .then((values) => {
-      console.log("Values: ", values); // need to go into .data
+      // console.log("Values: ", values); // need to go into .data
 
       const speciesNames = values.map(object => {
         return object.data.name;
@@ -83,7 +80,7 @@ export default function Character({data}) {
 
     Promise.all(starshipsPromises)
       .then((values) => {
-      console.log("Values: ", values); // need to go into .data
+      // console.log("Values: ", values); // need to go into .data
 
       const starshipsNames = values.map(object => {
         return object.data.name;
@@ -104,7 +101,7 @@ export default function Character({data}) {
 
     Promise.all(vehiclesPromises)
       .then((values) => {
-      console.log("Values: ", values); // need to go into .data
+      // console.log("Values: ", values); // need to go into .data
 
       const vehiclesNames = values.map(object => {
         return object.data.name;
@@ -117,11 +114,9 @@ export default function Character({data}) {
 
     }, []); // fetch vehiclesData, set state to [] of strings
 
-
-
   return (
     <div className="character-container">
-      {/* <StyledDiv> */}
+
         <Card>
           <CardTitle style={{ color: "black" }}>{name}</CardTitle>
           <CardText>
@@ -129,7 +124,7 @@ export default function Character({data}) {
             mass: {mass} <br/>
             hair color: {hair_color} <br/>
             skin color: {skin_color} <br/>
-            eye color: {skin_color} <br/>
+            eye color: {eye_color} <br/>
             birth year: {birth_year} <br/>
             gender: {gender} <br/>
           </CardText>
@@ -143,15 +138,8 @@ export default function Character({data}) {
 
     </div>
 
-    
   );
-
-
- 
 
 }
 
-// const StyledDiv = styled.div`
-// background: white
-// width: 50%;
-// `;
+
