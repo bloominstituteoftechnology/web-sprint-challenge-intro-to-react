@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 import Character from './components/Character';
 import { ListGroup, ListGroupItem } from 'reactstrap';
-//import styled from 'styled-components';
+import styled from 'styled-components';
 
 const App = () => {
   const [characterData, setCharacterData] = useState([]);
@@ -26,19 +26,34 @@ const App = () => {
   // sync up with, if any.
 
   return (
-    <ListGroup>
-      <h1 className='Header'>Characters</h1>
+    <Container className='dog'>
+      <ListGroup>
+        <h1 className='Header'>Characters</h1>
 
-      {characterData.map(character => {
-        return (
-          <ListGroupItem>
-            <Character name={character.name} birthYear={character.birth_year}/>
-          </ListGroupItem>
-        );
-      })} 
-     
-    </ListGroup>
+          {characterData.map(character => {
+            return (
+              <ListGroupItem>
+                <Character name={character.name} birthYear={character.birth_year}/>
+              </ListGroupItem>
+          );
+        })} 
+      
+      </ListGroup>
+    </Container>
   );
 }
 
 export default App;
+
+const Container = styled.div `
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`
+
+///you can use ternary expressions in styled components vs. not being able to in css files. 
+//Styling can be done in a variety of ways, css, libraries (reactstrap, styledcomponents, etc), libraries will always 
+//be changing, but having a good understanding of CSS will make it easier to comphrehend.
+/*You can use styling components/styling within the js files with react, but ALSO be sure to 
+style within the CSS pages for your app & index (the index for the overall page, the app page for everything else)
+It's a combo of everything, and how you style depends on how your company styles/your own approach*/ 

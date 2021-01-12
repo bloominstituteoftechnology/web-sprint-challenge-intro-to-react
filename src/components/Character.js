@@ -8,11 +8,10 @@ export default function Character(props){
     
 
     return (
-        <div className='character-card'>
            <SingleCharacter className='individual-character'>
-                <p>{name} - {birthYear}</p>
+                <p>{name}</p>
+                <p>{birthYear}</p>
            </SingleCharacter>
-        </div>
 
     );
 }
@@ -20,5 +19,9 @@ export default function Character(props){
 
 const SingleCharacter = styled.div`
     border: solid 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    width: 500px;
     
 `;
