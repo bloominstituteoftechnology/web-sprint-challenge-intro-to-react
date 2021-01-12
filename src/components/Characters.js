@@ -40,7 +40,7 @@ export const Character = (props) => {
 
   return (
     <div className="character d-flex justify-content-center container">
-      <div className="smokey-bg container">
+      <div className="smokey-bg d-flex container">
         <h3 className="display-3" style={{ margin: "2rem" }}>
           {props.name}
         </h3>
