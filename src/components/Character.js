@@ -22,13 +22,15 @@ export default function Character({data}) {
   const { name, height, mass, hair_color, skin_color, eye_color, birth_year, gender } = data;
   const { homeworld, films, species, vehicles, starships } = data; // apis
 
+
+  // Removed empty array so that the warning goes away and can deploy to Netlify
   useEffect(() => {
     axios.get(homeworld)
     .then(res => {
       setHomeworldData(res.data);
     })
     .catch(err => console.log("Error: ", err));
-  }, []); // fetch homeworldData, set state to homeworld object
+  }, ); // fetch homeworldData, set state to homeworld object
 
   useEffect(() => {
 
@@ -49,7 +51,7 @@ export default function Character({data}) {
       })
       .catch(err => console.log(err));
 
-    }, []); // fetch filmsData, set state to [] of strings
+    }, ); // fetch filmsData, set state to [] of strings
 
   useEffect(() => {
 
@@ -70,7 +72,7 @@ export default function Character({data}) {
       })
       .catch(err => console.log(err));
 
-    }, []); // fetch speciesData, set state to [] of string
+    }, ); // fetch speciesData, set state to [] of string
 
   useEffect(() => {
 
@@ -91,7 +93,7 @@ export default function Character({data}) {
       })
       .catch(err => console.log(err));
 
-    }, []); // fetch starshipsData, set state to [] of strings
+    }, ); // fetch starshipsData, set state to [] of strings
 
   useEffect(() => {
 
@@ -112,7 +114,7 @@ export default function Character({data}) {
       })
       .catch(err => console.log(err));
 
-    }, []); // fetch vehiclesData, set state to [] of strings
+    }, ); // fetch vehiclesData, set state to [] of strings
 
   return (
     <div className="character-container">

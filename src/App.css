@@ -4,7 +4,6 @@
   text-align: center;
   box-sizing: border-box;
   flex-flow: column nowrap;
-
 }
 
 .header {
@@ -54,7 +53,7 @@
 }
 
 .character-container {
-  background-image: url("https://cdn.pixabay.com/photo/2016/05/03/20/12/moon-1370052_1280.jpg");
+  background-image: url('./images/moon.jpg');
   background-position: center;
   opacity: .9;
   margin-top: 5rem; 
