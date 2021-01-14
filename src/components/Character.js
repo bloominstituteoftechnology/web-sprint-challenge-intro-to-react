@@ -28,6 +28,7 @@ export default function Character({data}) {
     axios.get(homeworld)
     .then(res => {
       setHomeworldData(res.data);
+      console.log(homeworld);
     })
     .catch(err => console.log("Error: ", err));
   }, ); // fetch homeworldData, set state to homeworld object
