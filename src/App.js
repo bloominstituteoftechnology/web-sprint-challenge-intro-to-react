@@ -1,17 +1,57 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.css';
+import Character from './components/Character.js';
 
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
+  const [data, setData] = useState([]);
 
-  // Fetch characters from the API in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
+  function cleanUpData (origData) {
+    // takes an array of objects, removes obj keys .created, .edited, .url
+    const cleanData = origData.map(object => {
+      delete object.created;
+      delete object.edited;
+      delete object.url;
+      return object;
+    });
+    return cleanData;
+  }; 
+
+  // ANS: create new object with values needed.
+
+  useEffect(() => {
+    axios
+      .get("https://swapi.dev/api/people/")
+      // Which we then set to state
+      .then(res => {
+        const cleanData = cleanUpData(res.data.results);
+        setData(cleanData);
+      // console.log("fetch data", res.data.results); // it works
+      })
+      // Always include error handling
+      .catch(err => console.log(err));
+  }, []); // fetchData
+
+
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      
+      <h1 className="header">Star Wars</h1>
+
+     
+      <div className="main-container">
+
+          <div className="title-container">C<br/>h<br/>a<br/>r<br/>a<br/>c<br/>t<br/>e<br/>r<br/>s</div>
+
+          <div className="main-characters-container">
+            {data.map(char => {
+                return <Character key={char.name} data={char}/>
+              })}
+          </div>
+
+      </div>
+    
     </div>
   );
 }

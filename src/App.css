@@ -1,8 +1,95 @@
+@import './fonts/fonts.css';
+
 .App {
   text-align: center;
+  box-sizing: border-box;
+  flex-flow: column nowrap;
 }
-.Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+
+.header {
+  /* color: #443e3e; */
+  color: white;
+  text-shadow: 2px 2px 5px orange;
+  /* font-family: 'Monoton', sans-serif; */
+  font-family: 'Distant Galaxy', sans-serif;
+  font-size: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  background-color: rgb(16, 16, 16);
+  width: 100vw;
+  opacity: 0.8;
 }
-/* write your parent styles in here for your App.js */
+
+.main-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title-container {
+    color: white;
+    text-shadow: 2px 2px 5px orange;
+    font-family: 'Distant Galaxy', sans-serif;
+    font-size: 6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    /* background-color: black; */
+    opacity: 0.9;
+    /* height: 90vh; */
+    align-self: flex-start;
+    width: 6rem;
+    flex-wrap: wrap;
+    line-height: 1;
+    /* padding-top: 120px; */
+}
+
+.main-characters-container {
+  display: flex;
+  flex-flow: column;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.character-container {
+  background-image: url('./images/moon.jpg');
+  background-position: center;
+  opacity: .9;
+  margin-top: 5rem; 
+  /* centers card to middle of planet */
+  padding-left: 6rem;
+  /* creates circle */
+  width: 550px; 
+  border-radius: 360px;
+}
+
+.Character {
+  display: flex;
+  flex-flow: column;
+  box-sizing: border-box;
+}
+
+div {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 300px;
+  background-color: rgb(252, 221, 165) !important;
+  box-shadow: 2px 2px 5px orange;
+
+  /* border-radius: 180px !important; */
+  color: #404040;
+  font-family: 'Orbitron', sans-serif;
+  justify-content: center;
+  margin-bottom: 17px;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.sub-component {
+  width: 300px;
+}
