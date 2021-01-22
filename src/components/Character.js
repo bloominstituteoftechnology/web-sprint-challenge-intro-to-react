@@ -13,7 +13,6 @@ export default function Character(props) {
     <div className="character-character container">
       <div className="character-info">
         <div>
-          <h1>Characters</h1>
           <h3>Name: {character.name}</h3>
           <p>BirthYear: {character.birth_year}</p>
           <p>Gender: {character.gender}</p>
