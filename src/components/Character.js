@@ -1,13 +1,7 @@
 // Write your Character component here
-import React, { useState } from "react";
+import React from "react";
 export default function Character(props) {
   const { character } = props;
-
-  const [showDetails, setShowDetails] = useState(false);
-
-  function onClick() {
-    setShowDetails((showDetails) => !showDetails);
-  }
 
   return (
     <div className="character-character container">

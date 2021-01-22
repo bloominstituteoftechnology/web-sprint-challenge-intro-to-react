@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { BASE_URL, API_KEY } from "./index.js";
+import { BASE_URL } from "./index.js";
 import Character from "./components/Character.js";
 import axios from "axios";
 export default function App() {
