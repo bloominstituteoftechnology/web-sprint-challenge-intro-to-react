@@ -20,7 +20,7 @@ const Char = (props) => {
             </StyledChar>
     )
 }
-
+//testing
 
 export default Char
 
