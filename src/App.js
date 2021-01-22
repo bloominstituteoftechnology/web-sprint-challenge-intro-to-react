@@ -23,10 +23,10 @@ export default function App() {
   // sync up with, if any.
   useEffect(() => {
     axios
-      .get(`${BASE_URL}/character/${characterId}?api_key=${API_KEY}`)
-      .then((res) => setCharacterId(res.data))
+      .get(`${BASE_URL}/api/people`)
+      .then((res) => setCharacters(res.data))
       .catch((err) => console.log(err));
-  }, [characters]);
+  }, []);
   return (
     <div className="App">
       <Character />

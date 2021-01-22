@@ -2,28 +2,20 @@
 import React from "react";
 
 export default function Character(props) {
-  const [
-    name,
-    birthYear,
-    gender,
-    height,
-    mass,
-    eyeColor,
-    hairColor,
-    skinColor,
-  ] = props;
+  const character = props;
   return (
     <div className="character-character container">
       <div className="character-info">
         <div>
-          <h3>Name: {name}</h3>
-          <p>BirthYear: {birthYear}</p>
-          <p>Gender: {gender}</p>
-          <p>Height: {height}</p>
-          <p>Mass: {mass}</p>
-          <p>Eye Color: {eyeColor}</p>
-          <p>Hair Color: {hairColor}</p>
-          <p>Skin Color: {skinColor}</p>
+          <h1>Characters</h1>
+          <h3>Name: {character.name}</h3>
+          <p>BirthYear: {character.birthYear}</p>
+          <p>Gender: {character.gender}</p>
+          <p>Height: {character.height}</p>
+          <p>Mass: {character.mass}</p>
+          <p>Eye Color: {character.eyeColor}</p>
+          <p>Hair Color: {character.hairColor}</p>
+          <p>Skin Color: {character.skinColor}</p>
         </div>
       </div>
     </div>
