@@ -6,30 +6,23 @@ import axios from "axios";
 export default function App() {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
-
-  const [characters, setCharacters] = useState([]);
-  const [characterId, setCharacterId] = useState(null);
-
-  const openDetails = (id) => {
-    setCharacterId(id);
-  };
-
-  const closeDetails = () => {
-    setCharacterId(null);
-  };
+  const [character, setCharacter] = useState([]);
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   useEffect(() => {
     axios
-      .get(`${BASE_URL}/api/people`)
-      .then((res) => setCharacters(res.data))
+      .get(`${BASE_URL}api/people`)
+      .then((res) => setCharacter(res.data.results))
       .catch((err) => console.log(err));
   }, []);
   return (
     <div className="App">
-      <Character />
+      <h1 className="App">Characters</h1>
+      {character.map((obj) => {
+        return <Character character={obj} />;
+      })}
     </div>
   );
 }
