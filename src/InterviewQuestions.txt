@@ -1,0 +1,11 @@
+1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+    React is an open-source JavaScript library for building user interfaces or UI components.React can be used as a base in the development of single-page or mobile applications.
+
+2. Describe component state.
+    The state object is where you store property values that belongs to the component. When the state object changes, the component re-renders..
+
+3. Describe props.
+    Props is short for properties. Props are variables passed to it by its parent component
+
+5. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+    Side effects are basically anything that affects something outside of the scope of the current function that's being executed.
