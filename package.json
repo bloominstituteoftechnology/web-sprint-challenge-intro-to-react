@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.3",
     "axios": "^0.21.1",
     "msw": "^0.24.4",
+    "mutationobserver-shim": "^0.3.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",

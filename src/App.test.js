@@ -1,30 +1,24 @@
 import React from "react";
-import { render, screen, act } from "@testing-library/react";
-import axios from "axios";
+import { render, screen } from "@testing-library/react";
 import App from "./App";
-import { data as starWarsData } from "./mocks/handlers";
+import { server } from "./mocks/server";
+import "mutationobserver-shim";
 
-jest.mock("axios");
-
-test("sanity", () => {
-  expect(true).not.toBe(false);
+beforeAll(() => server.listen());
+afterAll(() => server.close());
+afterEach(() => {
+  server.resetHandlers();
+  document.body.innerHTML = "";
 });
 
 describe("<App />", () => {
   it("fetches characters from the Star Wars API and displays them", async () => {
-    const characters = starWarsData;
-
-    const promise = Promise.resolve({ data: characters });
-    axios.get.mockImplementationOnce(() => promise);
-
     render(<App />);
 
-    await act(() => promise);
-
-    expect(screen.getByText("Luke Skywalker")).toBeInTheDocument();
-    expect(screen.getByText("C-3PO")).toBeInTheDocument();
-    expect(screen.getByText("R2-D2")).toBeInTheDocument();
-    expect(screen.getByText("Darth Vader")).toBeInTheDocument();
-    expect(screen.getByText("Leia Organa")).toBeInTheDocument();
+    expect(await screen.findByText("Luke Skywalker")).toBeInTheDocument();
+    expect(await screen.findByText("C-3PO")).toBeInTheDocument();
+    expect(await screen.findByText("R2-D2")).toBeInTheDocument();
+    expect(await screen.findByText("Darth Vader")).toBeInTheDocument();
+    expect(await screen.findByText("Leia Organa")).toBeInTheDocument();
   });
 });
