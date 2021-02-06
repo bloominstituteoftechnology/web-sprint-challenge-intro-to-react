@@ -26,6 +26,10 @@ const StyledCharacter = styled.div`
         border: 4px solid #d8763a;
         transition: all .2s linear;
     }
+
+    @media(max-width: 1600px) {
+        flex: 1 1 30%;
+    }
 `;
 
 const Character = (props) => {

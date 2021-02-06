@@ -29,6 +29,10 @@ const CharacterListWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 50px;
+
+  @media(max-width: 1600px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const App = () => {
