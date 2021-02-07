@@ -1,13 +1,28 @@
-import React from 'react';
+  
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import axios from 'axios';
 
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
+     const [data, setData] = useState('');
 
-  // Fetch characters from the API in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
+     useEffect(() => {
+          axios.get(
+               'https://swapi.dev/api/people/1/'
+          )
+               .then((returnedData) => {
+                    console.log('file: App.js ~ line 14 ~ .then ~ returnedData', returnedData);
+                    setData(returnedData.data);
+                    
+               })
+               .catch((error) => {
+               console.log('file: App.js ~ line 18 ~ useEffect ~ error', error);
+                    
+               })
+               .finally(() => {
+                    console.log('file: App.js ~ line 22 ~  Promise Complete');
+               });
+     }, []);
 
   return (
     <div className="App">
