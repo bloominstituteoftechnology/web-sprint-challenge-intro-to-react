@@ -30,11 +30,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React JS is a JavaScript library that helps build UI specifically for single-page applications. The major thing introduced by React is the virtual DOM, it allows us to make and see small changes on a page without the need to refresh the whole page.
+
+
+
 1. Describe component state.
+In the most basic definition state is data as well as the ways that data can exist. For example you can have a state of color that can exist as green, red, blue ect.
+
 
 1. Describe props.
+Props are objects created by react that give us the ability to manage how data is passed into and between components. 
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+Side effects are actions/things that affect things outside of scope, including api calls, error tracking, ect. You can bind a side effect to state change using the desired state within the dependency array of the side effect hook.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

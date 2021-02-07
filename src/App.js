@@ -2,6 +2,19 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import Character from './components/Character';
+import styled from 'styled-components';
+
+
+const WRAPPER = styled.div`
+	width: 80%;
+	max-width: 850px;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: row;
+     flex-wrap: wrap;
+	align-items: center;
+	padding: 20px;
+`;
 
 const App = () => {
      const [data, setData] = useState([]);
@@ -24,21 +37,21 @@ const App = () => {
      }, []);
 
      return (
-          <div className="App">
-			<div className="Header">Characters</div>
+          <WRAPPER>
 			<div>
 				{data.map((character) => {
 					return (
 						<p>
 							<Character
 								name={character.name}
-								gender={character.gender}
+                                        gender={character.gender}
+                                        birth_year={character.birth_year}
 							/>
 						</p>
 					);
 				})}
 			</div>
-		</div>
+		</WRAPPER>
           );
 };
 
