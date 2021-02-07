@@ -30,11 +30,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+--React JS see data changes and instantly responds to them, which renders the right components giving us, the users, a better experience.
+
 1. Describe component state.
+
+--A component state is an object that is part of a set of properties which control the behavior of that component.
 
 1. Describe props.
 
+--Props pass data between a parent and child component and are the main source of communication.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+--A side effect is a state change which is seen from outside the called function other than its returned value.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
