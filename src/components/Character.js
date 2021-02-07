@@ -2,15 +2,14 @@
 import React from "react"
 import styled from "styled-components";
     const Character  =  (props) => {
-  
     return (
         <characterStyle>
       <div className="character-container">
         <div className="character-info">
           <div>
             <h3>Name: {props.character.name}</h3>
-            <p>BirthYear: {props.character.birth_year}</p>
-            <p>Hair Color: {props.character.hair_color}</p>
+            <p>BirthDay: {props.character.birth_year}</p>
+            <p>HairColor: {props.character.hair_color}</p>
             <p>Height: {props.character.height}</p>
             <p>Gender: {props.character.gender}</p>
             <p>Mass: {props.character.mass}</p>
@@ -18,7 +17,6 @@ import styled from "styled-components";
           </div>
         </div>
       </div></characterStyle>)}
-
 
 const characterStyle = styled.div`
     display: flex;
@@ -42,7 +40,7 @@ const characterStyle = styled.div`
     padding-top: 0px;
     padding-bottom: 50px;
     
-    h2 {
+    h3 {
         font-size: 50px;
         font-weight: bold;
 
@@ -51,7 +49,6 @@ const characterStyle = styled.div`
 
         margin-top: 0px;
         color: #08889a;
-        -webkit-text-stroke: 0.1px white;
     }
     p {
         font-size: 30px;
@@ -60,5 +57,4 @@ const characterStyle = styled.div`
 
         margin-top: 0px;
     }`
-
     export default Character

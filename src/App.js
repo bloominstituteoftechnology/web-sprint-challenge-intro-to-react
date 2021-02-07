@@ -24,13 +24,15 @@ useEffect(() => {
       <h1 className="Header">Star Wars Characters</h1>
       <AppStyled>{characterInfo && characterInfo.map(character => {
 
-  return <Character/>
-        })}</AppStyled>
+ return (<Character key={character.id} 
+          info={character}
+        />
+       )})}</AppStyled>
     </div>
   );
 }
 
-const AppStyled = styled.ul`
+const AppStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
