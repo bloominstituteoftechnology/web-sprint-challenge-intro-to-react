@@ -13,6 +13,13 @@ const App = () => {
     align-content: center;
     flex-flow: column wrap;
 
+    h1 {
+      color: #FFD700;
+      font-family: 'Monoton', cursive;
+      font-size: 3rem;
+      font-weight: 400;
+      text-shadow: 1px 1px 5px #000;
+    }
   `;
 
 
@@ -45,7 +52,7 @@ const App = () => {
 
   return (
     <AppContainer className="App">
-      <h1 className="Header">Characters</h1>
+      <h1>Characters</h1>
       {
         peopleList.map(element => {
           return <Character key={element.name} data={element} />
