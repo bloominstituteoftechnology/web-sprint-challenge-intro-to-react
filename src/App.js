@@ -1,9 +1,24 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import Character from './components/Character';
 import { BASE_URL } from './constants/index';
+import styled from 'styled-components'
 import './App.css';
 
 const App = () => {
+
+  const AppContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column wrap;
+
+  `;
+
+
+
+
+
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -12,12 +27,13 @@ const App = () => {
   // sync up with, if any.
 
   const [peopleList, setPeopleList] = useState([])
+  const [speciesList, setSpeciesList] = useState([])
 
   const fetchPeople = () => {
     axios.get(`${BASE_URL}people/`)
       .then(res => {
         console.log('the API is running, catch it!')
-        console.log(res.data)
+        setPeopleList(res.data)
       })
       .catch(err => {
         console.log('The API did Ups!')
@@ -25,14 +41,18 @@ const App = () => {
   }
 
   useEffect(fetchPeople, [])
-  console.log(peopleList)
-
 
 
   return (
-    <div className="App">
+    <AppContainer className="App">
       <h1 className="Header">Characters</h1>
-    </div>
+      {
+        peopleList.map(element => {
+          return <Character key={element.name} data={element} />
+        })
+      }
+      
+    </AppContainer>
   );
 }
 
