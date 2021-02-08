@@ -4,6 +4,12 @@ import './App.css';
 import Character from './components/Character';
 import axios from 'axios';
 
+const StyledList = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+`
+
 const App = () => {
   const [characters, setCharacters] = useState([]);
 
@@ -18,11 +24,6 @@ const App = () => {
     })
   }, [])
 
-  const StyledList = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-`
 
   return (
     <div className="App">
