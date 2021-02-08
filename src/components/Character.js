@@ -1,40 +1,34 @@
 // Write your Character component here
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-
-
-const StyledCard = styled.div`
-color: white;
-background-color: grey;
-text-align: center;
-align-items: center;
-margin-top: 1%;
-display: flex;
-justify-content: space-evenly;
-border: 1px solid black;
+const StyledCards = styled.div`
+    color: black;
+    border: black 3px solid;
+    margin: 2%;
+    width: auto;
+`
+const StyledDead = styled.p`
+    color: green;
+    font-weight: bold;
 `
 
-
-
 const Character = (props) => {
+    console.log(props);
 
-
-return (
-    <StyledCard>
-        <div>
-        <h3>{props.character.name}</h3>
-        <img src={props.character.image} alt={props.character.name} />
-        <p>Living Status: {props.character.status}</p>
-        <p>Species: {props.character.species}</p>
-        <p>Gender: {props.character.gender}</p>
-        <p>Origin: {props.character.origin}</p>
-        <p>Last Seen In: {props.character.location}</p>
-        <p>First Appearance: {props.character.episode}</p>
-                </div>
-    </StyledCard>
+    return(
+        <StyledCards>
+            <img src={props.character.image} alt={props.character.name} />
+            <h2>{props.character.name}</h2>
+            <p>{props.character.species}</p>
+            <p>{props.character.gender}</p>
+            {props.character.status === "Dead" ?
+                <StyledDead>{props.character.status}</StyledDead>
+                :
+                <p>{props.character.status}</p>
+            }
+        </StyledCards>
     )
 }
-            
 
-export default Character;
+export default Character

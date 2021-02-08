@@ -1,36 +1,39 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import './App.css';
-import axios from "axios";
 import Character from './components/Character';
+import axios from 'axios';
 
 const App = () => {
-  const [characterInfo, setCharacterInfo] = useState([]);
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-      axios
-      .get('https://rickandmortyapi.com/api/character/')
-      .then(res => {
-        console.log(res)
-        setCharacterInfo(res.results)
-      })
-      .catch((err) => {
-        console.log('error', err)
-      })
-    }, []);
-    console.log(characterInfo)
+    axios.get('https://rickandmortyapi.com/api/character/')
+    .then((response) => {
+      console.log(response);
+      setCharacters(response.data.results)
+    })
+    .catch(error => {
+      console.log('Something went wrong', error);
+    })
+  }, [])
 
-    return (
-        <div className="App">
-          <h1 className="Header">Rick And Morty Characters!</h1>
-          {characterInfo.map((character, index) => {
-            return (<Character key={character.id}
-            info={character} />
-          )}
-          )}
-        </div>
-        
-    );
+  const StyledList = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+`
+
+  return (
+    <div className="App">
+      <img src='https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png'></img>
+      <h1 className="Header">Character List!</h1>
+      <StyledList>
+        {characters.map((character) => (
+          <Character key={character.id} character={character} />
+        ))}
+      </StyledList>
+    </div>
+  );
 }
-
-
 export default App;
