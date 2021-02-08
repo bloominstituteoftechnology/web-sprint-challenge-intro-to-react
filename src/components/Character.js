@@ -46,7 +46,7 @@ const CharacterDiv = styled.div`
 
     &:hover {
         background-color: rgba(255,215,0,0.6);
-        transition: 0.1s ease-in-out;
+        transition: 0.2s ease-in-out;
 }
     &:hover > h2 {
         color: #FFF;
