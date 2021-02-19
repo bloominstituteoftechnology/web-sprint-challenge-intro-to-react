@@ -4,11 +4,13 @@ import axios from 'axios'
 import './App.css';
 import Cards from './components/Cards'
 
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
   const [characters, setCharacters] = useState([])
+  
 
   useEffect(() => {
     axios.get("https://swapi.dev/api/people")
