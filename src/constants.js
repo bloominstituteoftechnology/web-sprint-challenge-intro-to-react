@@ -1,0 +1,1 @@
+export const swBase_Url = 'https://swapi.dev/api/'
