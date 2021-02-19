@@ -49,14 +49,9 @@ const Lists = styled.div`
     vertical-align: top;
     border-top: 1px solid #dee2e6;
   `;
-export default function CharacterList() {
+export default function CharacterList({}) {
 const [characters, setCharacters] = useState([]);
-const [search, setSearch] = useState("");
-const [sorting, setSorting] = useState({ field: "", order: "" });
-const [totalItems, setTotalItems] = useState(0);
-const [currentPage, setCurrentPage] = useState(1);
 
-const ITEMS_PER_PAGE = 5;
 
 const people = 'people/';
 
@@ -79,28 +74,7 @@ const stringArray = [string1, string2, string3,
           console.log(err);
         });
     }, []);
-    
-    const charactersData = useMemo(()=> {
-        let computedData = characters;
-        if (search) {
-            computedData = computedData.filter(character => 
-            character.data.name.toLowerCase().includes(search.toLowerCase()) ||
-            character.data.birth_year.toLowerCase().includes(search.toLowerCase()) ||
-            character.data.gender.toLowerCase().includes(search.toLowerCase()) ||
-            character.data.height.toLowerCase().includes(search.toLowerCase()) ||
-            character.data.mass.toLowerCase().includes(search.toLowerCase()) ||
-            character.data.eye_color.toLowerCase().includes(search.toLowerCase()) ||
-            character.data.skin_color.toLowerCase().includes(search.toLowerCase()) 
-        );
-        }
-        setTotalItems(computedData.length);
-        
-        return computedData.slice(
-            (currentPage - 1) * ITEMS_PER_PAGE,
-            (currentPage - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE
-        );
-    }, [characters, currentPage, search, sorting])
-    
+   
     return (
         <Lists>    
         { characters.map(character =>
@@ -108,12 +82,9 @@ const stringArray = [string1, string2, string3,
         <Table className="table table-striped">
                         <TableHeader
                             headers={TableHeader}
-                            onSorting={(field, order) =>
-                                setSorting({ field, order })
-                            }
                         />
                         <tbody>
-                            {charactersData.map(character => (
+                            {characters.map(character => (
                                 <tr>
                                     <Thead scope="row" key={character.data.id}>
                                         {character.data.id}
