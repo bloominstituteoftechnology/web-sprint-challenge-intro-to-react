@@ -4,42 +4,26 @@ import './App.css';
 // import axios from 'axios';
 import Header from './components/Header';
 import CharactersList from './CharactersList';
+import styled from 'styled-components';
 
+const Container = styled.div`
+width: 1000px;
+margin: 0 auto;
+border: 1px solid rgb(210, 210, 210);
+box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+padding: 12px 16px 12px 16px;
+`;
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
-  const [characters, setCharacters] = useState([]);
-  const people = 'people/';
-  const sequence = (Math.floor(Math.random() *50) + 1);
-  // const string = `${BASE_URL}${people}${sequence}`;
 
-  // Fetch characters from the API in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
-
-  // useEffect(() => {
-  //   const fetchData = () => {
-  //   axios
-  //     .get(string)
-  //       .then((res) => {
-  //         const array = []
-  //         array.push(res.data);
-  //         setCharacters(array); 
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //     }
-  //     fetchData();
-  //   },[]);
-  //   console.log(characters);
 
   return (
-    <div className="App">
+    <Container>
       <Header />
       <CharactersList />
-    </div>
+    </Container>
   );
 }
 
