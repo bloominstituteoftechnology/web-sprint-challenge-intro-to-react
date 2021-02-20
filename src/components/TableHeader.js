@@ -1,9 +1,18 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import styled from 'styled-components';
 
-const TableHeader = ({ headers, onSorting }) => {
-    const [sortingField, setSortingField] = useState("");
-    const [sortingOrder, setSortingOrder] = useState("asc");
+const Thead = styled.th`
+display: table-cell;
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
+word-spacing: 3px;
+text-align: left;
+padding: $table-cell-padding;
+padding-left: 10px;
+vertical-align: top;
+border-top: $table-border-width solid $table-border-color;
+`;
+export default function TableHeader({ headers, onSorting }){
          headers = [
         {name: "Name", field: "name", sortable: true },
         {name: "Birth Year", field: "birth_year", sortable: true },
@@ -14,41 +23,15 @@ const TableHeader = ({ headers, onSorting }) => {
         {name: "Skin Color", field: "skin_color", sortable: true },
         ];
 
-    const onSortingChange = (field) => {
-        const order =
-            field === sortingField && sortingOrder === "asc" ? "desc" : "asc";
-
-        setSortingField(field);
-        setSortingOrder(order);
-        onSorting(field, order);
-    };
-
     return (
         <thead>
             <tr>
                 {headers.map(({ name, field, sortable }) => (
-                    <th
-                        key={name}
-                        onClick={() =>
-                            sortable ? onSortingChange(field) : null
-                        }
-                    >
+                    <Thead key={name}>
                         {name}
-
-                        {sortingField && sortingField === field && (
-                            <FontAwesomeIcon
-                                icon={
-                                    sortingOrder === "asc"
-                                        ? "arrow-down"
-                                        : "arrow-up"
-                                }
-                            />
-                        )}
-                    </th>
+                    </Thead>
                 ))}
             </tr>
         </thead>
     );
-};
-
-export default TableHeader;
+}

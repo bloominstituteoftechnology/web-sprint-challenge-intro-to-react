@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 // import BASE_URL from './components/constants';
 import './App.css';
 // import axios from 'axios';
