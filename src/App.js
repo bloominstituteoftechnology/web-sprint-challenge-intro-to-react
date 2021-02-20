@@ -8,7 +8,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
 width: 1000px;
-margin: 0 auto;
+margin: 20px auto;
 border: 1px solid rgb(210, 210, 210);
 box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
 padding: 12px 16px 12px 16px;

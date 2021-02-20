@@ -6,15 +6,12 @@ import styled from 'styled-components';
 import TableHeader from './TableHeader';
 
 
-const Lists = styled.div`
-    padding: 12px 25px 12px 25px; 
-    `;
   
   const Table = styled.table`
   width: 100%;
   margin-bottom: $spacer;
   color: $table-color;
-  background-color: $table-bg; 
+  background-color: white; 
   border-spacing: 2px;
   `;
 
