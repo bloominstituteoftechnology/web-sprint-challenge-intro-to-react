@@ -7,7 +7,7 @@ font-family: 'Roboto', sans-serif;
 font-weight: 500;
 word-spacing: 3px;
 text-align: left;
-padding: $table-cell-padding;
+padding: .75rem;
 padding-left: 10px;
 vertical-align: top;
 border-top: $table-border-width solid $table-border-color;

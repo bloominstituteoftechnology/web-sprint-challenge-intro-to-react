@@ -19,6 +19,7 @@ const App = () => {
   return (
     <Container>
       <Header />
+      <br></br>
       <Character />
     </Container>
   );
