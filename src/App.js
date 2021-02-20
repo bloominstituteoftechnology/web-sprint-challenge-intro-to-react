@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import './App.css';
 // import axios from 'axios';
 import Header from './components/Header';
-import CharactersList from './CharactersList';
+import Character from './components/Character';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -18,11 +18,12 @@ const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
+  
 
   return (
     <Container>
       <Header />
-      <CharactersList />
+      <Character />
     </Container>
   );
 }
