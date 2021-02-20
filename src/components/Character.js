@@ -5,8 +5,6 @@ import axios from 'axios';
 import styled from 'styled-components';
 import TableHeader from './TableHeader';
 
-
-  
   const Table = styled.table`
   width: 100%;
   margin-bottom: $spacer;
@@ -15,7 +13,6 @@ import TableHeader from './TableHeader';
   border-spacing: 2px;
   `;
 
- 
   const Tdata = styled.td`
     display: table-cell;
     font-family: 'Roboto', sans-serif;
@@ -28,7 +25,6 @@ import TableHeader from './TableHeader';
   `;
 export default function Character() {
 const [characters, setCharacters] = useState([]);
-
 
 const people = 'people/';
 

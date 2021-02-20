@@ -1,7 +1,5 @@
 import React from 'react';
-// import BASE_URL from './components/constants';
 import './App.css';
-// import axios from 'axios';
 import Header from './components/Header';
 import Character from './components/Character';
 import styled from 'styled-components';
@@ -17,8 +15,6 @@ padding: 12px 16px 12px 16px;
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
-
-  
 
   return (
     <Container>

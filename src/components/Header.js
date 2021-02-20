@@ -7,8 +7,8 @@ const HeaderDiv = styled.div`
     align-items: center;
     padding: 0;
     height: 50px;
-    background-color: #0093D2;
-    color:white;
+    background-color: black;
+    color:yellow;
     text-align: center; 
   `;
 
