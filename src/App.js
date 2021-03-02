@@ -12,7 +12,7 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   const [array,setArray] = useState([]);
-  const[makeTrue, setMakeTrue] = useState(false);
+  const [makeTrue, setMakeTrue] = useState(false);
 
   // Mocking doesn't allow me to work with all characters so i asked instructor and he told me to work with it
   useEffect(() =>{
