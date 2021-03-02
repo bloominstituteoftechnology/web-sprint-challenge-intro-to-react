@@ -1,9 +1,10 @@
 // Write your Character component here
-import React from 'react';
+import React,{useState} from 'react';
 import styled from 'styled-components';
 
 
 //! This creates each character
+
 
 
 // this styles each table 
@@ -32,22 +33,21 @@ const AllCharacterStyle = styled.div`
   font-weight: bold;
   width: 600px;
   margin: 0 auto;
-  /* animation: animateCrawl 5s ease-in; //i added this ugly animation just for fun
+  animation: animateCrawl 20s ease-in; //i added this ugly animation just for fun
   @keyframes animateCrawl {
     0%   { transform: rotateX(30deg) translateY(400px); }
-    100% { transform: rotateX(30deg) translateY(-300px); } 
- } */
+    100% { transform: rotateX(30deg) translateY(-300px); }
+ }
 `;
 
-//this component receives an array with names and returns created tables for every character from an array
-const CharacterCreator = props => {
-    const {array} = props;
-    const creator = (item) =>{
-        const{makeTrue,setMakeTrue} = props;
+/* //this component receives an array with names and returns created tables for every character from an array */
+
+    const Person = props =>{
+        const{makeTrue,setMakeTrue,item} = props;
         return (
             <CreatorStyle key={item.name} className={item.name}>
             <h2>{item.name}</h2>
-            <button onClick={(e) =>{setMakeTrue(!makeTrue)}}>▄</button>
+            <button onClick={(e) =>{setMakeTrue(!makeTrue); e.stopPropagation()}}>▄</button>
             {makeTrue && <div> 
             <p>Gender: {item.gender}</p>
             <p>Height: {item.height}</p>
@@ -60,14 +60,6 @@ const CharacterCreator = props => {
         )
     };
 
-    return(
-    <AllCharacterStyle className="characters">
-        {array.map(item => {
-            return (creator(item))
-        })}
-    </AllCharacterStyle>
-    )
-}
+  
 
-
-export default CharacterCreator;
+export default Person;
