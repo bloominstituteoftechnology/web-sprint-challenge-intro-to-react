@@ -28,8 +28,9 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Star Wars</h1>
-
-      {characters.map((character) => {
+      <h1 className="Header">People</h1>
+      {
+      characters.map((character) => {
         return (
           <CharacterContainer
             key={character.id}
