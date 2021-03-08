@@ -13,7 +13,7 @@ export default function Character(props) {
 
     useEffect(() => {
         axios.get(`https://swapi.dev/api/people/`)
-        .then(data => setFriends(data.results.name)
+        .then(data => setFriends(data.results)
         ) }, [friends])
     
         console.log(data);

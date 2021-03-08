@@ -15,7 +15,9 @@ const MainDiv = styled.div`
 `;
 
 
-
+//test
+//updating once more
+console.log(Character);
 
 
 
@@ -28,15 +30,14 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
-  const { friends, setFriends } = useState(true);
 
   useEffect(() => {
     axios.get(`https://swapi.dev/api/people/`)
     .then(data => setFriends(data.results.name)
-    ) }, [friends])
+    ) }, [])
 
-    console.log(data);
-    
+
+    const myName = 'jbev'
 
 
 
@@ -44,7 +45,7 @@ const App = () => {
     <MainDiv>
       <h1 className="Header">Characters</h1>
 
-      {friends.map(friend => <Character key = {friend.name} friend = {friend}/>, )}  
+      {friends.map(friend => <Character key = {friends} friend = {friend}/>, )}  
 
     </MainDiv>
   );
