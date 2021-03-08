@@ -1,7 +1,9 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 100px;
   font-family: sans-serif;
   background-image: url('./images/sw-bg.jpg');
   background-size: cover;
+  
+
 }
