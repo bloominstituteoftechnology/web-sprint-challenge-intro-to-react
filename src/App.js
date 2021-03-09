@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.css';
+import data from './mocks/handlers.js'
+import Character from  './components/Character.js'
+export const BASE_URL = 'https://swapi.dev/api/people'
 
 const App = () => {
+
+  const [peopleDate, setPeopleData] = useState(data)
+
+  useEffect(() => {
+    console.log(peopleDate)
+    // axios.get(`${BASE_URL}/1/`)
+    // .then(res => {
+    //   console.log(res)
+    //   console.log(peopleDate);
+    // })
+    // .catch(err => {
+    //   console.log(err)
+    // })
+  }, [])
+
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -12,6 +31,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+       <Character peopleData={peopleDate}></Character>
     </div>
   );
 }
