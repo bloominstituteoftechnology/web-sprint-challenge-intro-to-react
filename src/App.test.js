@@ -10,7 +10,7 @@ afterEach(() => {
   server.resetHandlers();
   document.body.innerHTML = "";
 });
-
+  
 describe("<App />", () => {
   it("fetches characters from the Star Wars API and displays them", async () => {
     render(<App />);
@@ -22,3 +22,25 @@ describe("<App />", () => {
     expect(await screen.findByText("Leia Organa")).toBeInTheDocument();
   });
 });
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
