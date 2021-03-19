@@ -1,21 +1,23 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './App.css';
-import './components/Character'
+import './components/Character';
+import './App.css';
+
 
 // don't forget the dependency array
 const App = () => {
-  const [data, setData] = useState({})
+  const [data, setCharacter] = useState()
   
-const baseURL = 'https://swapi.dev/'
+// const baseURL = 'http://swapi.dev/'
   useEffect(() => {  
-      axios.get(`${baseURL}`)
-          .then((response) => {   
-            setData(response.data)
-            console.log(response.data)  
+      axios.get('https://swapi.dev/people')
+          .then((req) => {   
+            setCharacter(req.data)
+            console.log(req.data)  
       })
-      .catch( error => { 
-          console.log(error);
+      .catch(err => { 
+          console.log(err);
       })
   }, [])
 
