@@ -1,25 +1,27 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './App.css';
-import './components/Character';
-import './App.css';
+import StyledCharacter from './components/Character';
 
+
+// import {handlers, data} from './mocks/handlers'
 
 // don't forget the dependency array
 const App = () => {
-  const [data, setCharacter] = useState()
+  const [data, SetData] = useState([])
   
 // const baseURL = 'http://swapi.dev/'
-  useEffect(() => {  
-      axios.get('https://swapi.dev/people')
-          .then((req) => {   
-            setCharacter(req.data)
-            console.log(req.data)  
-      })
+  useEffect(() => { 
+      axios.get('https://swapi.dev/')
+      .then((res) => {   
+        res.map( key => {
+          return res.key = res.data
+        },
       .catch(err => { 
           console.log(err);
       })
-  }, [])
+  }
+, [])
 
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -29,10 +31,13 @@ const App = () => {
   // sync up with, if any.
 
   return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
+    <div className = "App">
+      <div className = "Header">
+      <StyledCharacter/>
+      </div>
     </div>
-  );
-}
+  )
+  
+
 
 export default App;
