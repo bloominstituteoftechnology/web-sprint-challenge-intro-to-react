@@ -13,9 +13,8 @@ const App = () => {
 // const baseURL = 'http://swapi.dev/'
   useEffect(() => { 
       axios.get('https://swapi.dev/')
-      .then((res) => {   
-        res.map( key => {
-          return res.key = res.data
+      .then(res => 
+        setUser(res.data))
         },
       .catch(err => { 
           console.log(err);
