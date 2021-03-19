@@ -22,3 +22,25 @@ describe("<App />", () => {
     expect(await screen.findByText("Leia Organa")).toBeInTheDocument();
   });
 });
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
