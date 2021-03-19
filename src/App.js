@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
+
+
 const App = () => {
+  const [chars, setChars] = React.useState('');
+
+  React.useEffect(() => {
+    setChars('hello')
+    console.log(chars)
+  }, [setChars, chars])
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
