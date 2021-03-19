@@ -31,6 +31,7 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+  - React.JS allows us to render data through the DOM in a "virtual state". The data is imported to pre-made Components that have all of the HTML layout and styling already made up into classes or objects, and only the new/updating data to be changed, insted of rendering the entire page's content again. This has a huge impact on performace of sites where there is high traffic and/or lots of content to display. For example, our Day 3 and 4 project was loaded using the data from an API response to change the content relevant to that day's NASA photo of the day. 
 
 1. Describe component state.
 
@@ -44,10 +45,10 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [x] Create a forked copy of this project
+- [x] Add your team lead as collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: `git checkout -b <firstName-lastName>`.
 - [ ] Run `npm install` to retrieve all needed dependencies.
 - [ ] In a separate terminal, run `npm run test:watch` to run tests.
 - [ ] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
