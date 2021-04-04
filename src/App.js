@@ -12,6 +12,7 @@ font-weight:900;
 font-size:150px;
 text-align:center;
 `
+
 const App = () => {
 
     //set up necessary slices of state
