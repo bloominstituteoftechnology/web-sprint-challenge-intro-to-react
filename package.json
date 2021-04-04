@@ -11,10 +11,10 @@
     "msw": "^0.24.4",
     "mutationobserver-shim": "^0.3.7",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "react-transition-group": "^2.9.0",
-    "reactstrap": "^8.9.0",
     "styled-components": "^5.2.3"
   },
   "scripts": {

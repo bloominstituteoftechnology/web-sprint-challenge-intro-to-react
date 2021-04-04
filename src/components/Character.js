@@ -1,88 +1,68 @@
-import React, { useState } from 'react';
-import { Collapse, CardBody, Card } from 'reactstrap';
+import React from 'react';
+import {Accordion, Card} from 'react-bootstrap'
 import styled from 'styled-components';
 import DetailsSection from './DetailsSection.js';
-import{Transition} from 'react-transition-group'
+
+
+const StyledHeaderName = styled.h2`
+font-family: Megrim;
+font-size: 40px;
+text-align: left;
+font-weight:800;
+padding: 10px 20px 20px 30px;  `;
+
+const DetailsButton = styled.button`
+font-family: Megrim;
+font-size: 28px;
+`;
 
 const Character = props => {
-  const {
-    id,
-    key,
-    details: {
-      name,
-      height,
-      mass,
-      hair_color,
-      skin_color,
-      eye_color,
-      birth_year,
-      gender,
-      homeworld,
-      films,
-      species,
-      vehicles,
-      starships
-    }
-  } = props;
-
-  const [areDetailsShowing, setAreDetailsShowing] = useState(false);
-  const [collapse, setCollapse] = useState(false)
-  const [status, setStatus] = useState('Closed')
-
-  const onEntering = () => setStatus('Opening...')
-  const onEntered = ()  => setStatus('Opened')
-  const onExiting = () => setStatus('Closing...')
-  const onExited = () => setStatus('Closed')
-
-  const StyledWrapper = styled.section`
-    margin: 10px 400px;
-    background: silver;
-  `;
-
- const StyledName = styled.h2`
-    font-family: Megrim;
-    font-size: 30px;
-    text-align: left;
-    padding: 40px 30px 20px 30px;
-  `;
-
-  const Button = styled.button`
-    font-family: Megrim;
-    font-size: 28px;
-  `;
-  let collapsedClass;
-
-    status === 'Closed'
-    ?
-    collapsedClass= 'hide'
-    : collapsedClass = 'show'
-
-  const toggle = props => {
-               setAreDetailsShowing(!areDetailsShowing);
-      setCollapse(!collapse)
-       };
+  const { id,
+    name,
+    height,
+    mass,
+    hair_color,
+    skin_color,
+    eye_color,
+    birth_year,
+    gender,
+    homeworld,
+    films,
+    species,
+    vehicles,
+    starships,
+    currentCharacterId} = props;
+ 
   return (
-    <StyledWrapper>
-      <StyledName>
-        {name}
-      </StyledName>
-      {status}
-      <Button id="toggler" color="secondary" onClick={toggle}>
-        Details
-      </Button>
-      {/* <Collapse className={collapsedClass}
-            isOpen={collapse}
-            onEntering={onEntering}
-            onEntered={onEntered}
-            onExiting={onExiting}
-            onExited={onExited}>
-            <Card>
-                <DetailsSection id={id} key={key} details={props.details}                        
-                />
-            </Card>
-
-      </Collapse> */}
-    </StyledWrapper>
+    <>
+    <Card>
+      <Card.Header>
+        <StyledHeaderName>{name}</StyledHeaderName>
+        <Accordion.Toggle as={DetailsButton} variant='link' eventKey='0'>
+          Details
+        </Accordion.Toggle>
+      </Card.Header>
+      <Accordion.Collapse eventKey='0'>
+        <Card.Body>
+          <DetailsSection 
+                currentCharacterId={currentCharacterId}
+                id={id}
+                height={height}
+                mass={mass}
+                hair_color={hair_color}
+                skin_color={skin_color}
+                eye_color={eye_color}
+                birth_year={birth_year}
+                gender={gender}
+                homeworld={homeworld}
+                films={films}
+                species={species}
+                vehicles={vehicles}
+                starships={starships}/>
+            </Card.Body>
+      </Accordion.Collapse>
+    </Card>
+    </>
   );
 };
 
