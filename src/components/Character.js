@@ -1,60 +1,32 @@
 
 import React from "react"
 import styled from "styled-components";
-    const Character  =  (props) => {
-    return (
-        <characterStyle>
-      <div className="character-container">
-        <div className="character-info">
-          <div>
-            <h3>Name: {props.character.name}</h3>
-            <p>BirthDay: {props.character.birth_year}</p>
-            <p>HairColor: {props.character.hair_color}</p>
-            <p>Height: {props.character.height}</p>
-            <p>Gender: {props.character.gender}</p>
-            <p>Mass: {props.character.mass}</p>
-            <p>Species: {props.character.species}</p>
-          </div>
-        </div>
-      </div></characterStyle>)}
 
-const characterStyle = styled.div`
-    display: flex;
-    flex-flow: column nowrap;
+export default function Character({props})  {
+  
+return ( 
+  <StyledCharacter>      
+        <h3>Name: {props.character.name}</h3>
+        <ul>
+            <li>BirthDay: {props.character.birth_year}</li>
+            <li>HairColor: {props.character.hair_color}</li>
+            <li>Height: {props.character.height}</li>
+            <li>Gender: {props.character.gender}</li>
+            <li>Mass: {props.character.mass}</li>
+            <li>Species: {props.character.species}</li>
+            </ul>
+  </StyledCharacter>
+)} 
 
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    align-content: center; 
+const StyledCharacter = styled.div`
+text-align: center;
+align-items:center;
 
-    border: 5px solid black;
-    background-color: #daeaff;
+margin-top:1%;
 
-    width: 1000px;
+display:flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
 
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 10px;
-
-    padding: 10px;
-    padding-top: 0px;
-    padding-bottom: 50px;
-    
-    h3 {
-        font-size: 50px;
-        font-weight: bold;
-
-        background-color: black;
-        width: 102%;
-
-        margin-top: 0px;
-        color: #08889a;
-    }
-    p {
-        font-size: 30px;
-        font-family: sans-serif:
-        font-weight: bold;
-
-        margin-top: 0px;
-    }`
-    export default Character
+border: 1px solid black;
+`
