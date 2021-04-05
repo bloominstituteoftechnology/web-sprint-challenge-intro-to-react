@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-//import index from  './index.js'
+import Characters from  './components/Character'
 import axios from 'axios'
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
   
   useEffect(()=> {
     axios
-    .get(`https://swapi.dev/api/people/1/`)
+    .get(`https://swapi.dev/api/people/`)
     .then(res => {
       setData(res.data)
       console.log(res.data, 'data')
@@ -28,16 +28,11 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-     {data.map( => {
-        return <data
-        key={data.id}
-        data={data}
-        setData={setData}
-        />
-      })}
+      {data.map(data => (<data key={Character} />))}
       
+
     </div>
   );
-}
+  }
 
 export default App;
