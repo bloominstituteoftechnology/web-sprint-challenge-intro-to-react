@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+// import styled from 'styled-components';
 import './App.css';
 
 const App = () => {
+  const [coins, setCoins] = useState([]);
+  useEffect(() => {
+    const data = axios
+      .get("")
+      .then((response) => {
+        console.log(response);
+        setCoins(response.data.results);
+      })
+.catch((err) => {
+  console.log(err);
+});
+console.log(data);
+    }, []);
+
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
