@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CharacterContainer from './components/Character.js';
-// import styled from 'styled-components';
+import Character from './components/Character.js';
 import './App.css';
 
 const App = () => {
-  const [characters, setCharacters] = useState([]);
-  useEffect(() => {
-    const data = axios
-      .get("https://swapi.dev/api/people/?")
-      .then((response) => {
-        console.log(response);
-        setCharacters(response.data.results);
+  const [data, setData] = useState([]);
+  useEffect((data) => {
+    axios
+      .get("https://swapi.dev/api/people/")
+      .then((res) => {
+        console.log(res);
+        setData(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -28,20 +27,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Coins</h1>
-      <h2 className="Header">Characters</h2>
-      {characters.map((character) => {
-        return (
-          <CharacterContainer
-            key={character.id}
-            name={character.name}
-            gender={character.gender}
-            birthyear={character.birthyear}
-          />
-        )
-      })}
+      <h1 className="Header">Star War Characters:</h1>
+       {data.map(element => {
+         return <Character data={element}/>
+       }
+       )}
+
     </div>
   );
 }
-
 export default App;
