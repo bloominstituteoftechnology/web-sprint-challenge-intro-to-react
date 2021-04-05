@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import CharacterContainer from './components/Character.js';
 // import styled from 'styled-components';
 import './App.css';
 
 const App = () => {
-  const [coins, setCoins] = useState([]);
+  const [characters, setCharacters] = useState([]);
   useEffect(() => {
     const data = axios
-      .get("")
+      .get("https://swapi.dev/api/people/?")
       .then((response) => {
         console.log(response);
-        setCoins(response.data.results);
+        setCharacters(response.data.results);
       })
-.catch((err) => {
-  console.log(err);
-});
-console.log(data);
-    }, []);
+      .catch((err) => {
+        console.log(err);
+      });
+    console.log(data);
+  }, []);
 
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -27,7 +28,18 @@ console.log(data);
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">Coins</h1>
+      <h2 className="Header">Characters</h2>
+      {characters.map((character) => {
+        return (
+          <CharacterContainer
+            key={character.id}
+            name={character.name}
+            gender={character.gender}
+            birthyear={character.birthyear}
+          />
+        )
+      })}
     </div>
   );
 }
