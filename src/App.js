@@ -6,11 +6,11 @@ import StyledCharacter from './components/Character';
 
 // import {handlers, data} from './mocks/handlers'
 
-const characterData = {
-  name: '',
-  height: '',
-  gender: ''
-}
+// const characterData = {
+//   name: '',
+//   height: '',
+//   gender: ''
+// }
 
 // don't forget the dependency array
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
 // const baseURL = 'http://swapi.dev/'
   useEffect(() => { 
       axios
-      .get('https://swapi.dev/')
+      .get('https://swapi.dev/people/')
       .then(res => 
         setData(res.data))
       
@@ -31,7 +31,7 @@ export default function App() {
 , [])
 
   // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here..
+  // the state properties here.
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should

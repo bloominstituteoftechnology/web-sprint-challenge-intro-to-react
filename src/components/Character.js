@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 
@@ -17,7 +17,7 @@ const StyledCharacter = styled.div`
     padding: 4vh;
 `
 
-
+// const [character, setCharacter] = useState(character)
 
   
     const Character = props => {
