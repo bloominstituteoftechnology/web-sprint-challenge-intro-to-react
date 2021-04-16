@@ -2,8 +2,8 @@
 import React, {useState,useEffect} from 'react';
 import styled from 'styled-components'
 
-import axios from 'axios';
-import { render } from '@testing-library/react';
+
+
 
 const StyledName = styled.p`
 font-family: 'Press Start 2P', cursive;
@@ -40,15 +40,9 @@ width: 25%;
 margin: 0 auto;
 `
 export default function Characters(props){
-    const {src} = props;
+    const {characters} = props;
     const [display,toggleDisplay] = useState(false);
-    const [characters ,setCharacters] = useState([]);
-    useEffect(()=>{
-        axios.get(src).then((res)=>{
-            setCharacters(res.data);
-            
-        })
-    },[])
+ 
  
     const Setup = (props)=>(
         <CharacterContainer>
@@ -68,7 +62,7 @@ export default function Characters(props){
  return (
     <div>
         { 
-        characters.map((item, i)=>{
+       characters.map((item, i)=>{
             return <Setup key = {i} info = {item}/>
         })
         }
