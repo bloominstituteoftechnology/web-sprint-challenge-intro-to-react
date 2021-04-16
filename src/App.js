@@ -23,7 +23,7 @@ const App = () => {
     .catch(err => {
       console.log(err)
     })
-  }, ['https://swapi.dev/api/people/'])
+  }, [])
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
