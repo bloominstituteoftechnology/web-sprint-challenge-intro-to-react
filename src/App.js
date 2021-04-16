@@ -14,11 +14,11 @@ const App = () => {
   // sync up with, if any.
 
 
-  useEffect(()=>{
-    axios.get(url).then((res)=>{
-      console.log("DATA!",res);
-    })
-},[])
+//   useEffect(()=>{
+//     axios.get(url).then((res)=>{
+//       console.log("DATA!",res);
+//     })
+// },[])
 
 
   
