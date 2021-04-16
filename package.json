@@ -42,5 +42,8 @@
   },
   "bugs": {
     "url": "https://github.com/LambdaSchool/web-sprint-challenge-intro-to-react/issues"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0"
   }
 }
