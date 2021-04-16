@@ -15,12 +15,12 @@ const characterData = {
 // don't forget the dependency array
 export default function App() {
 
-  const [data, setData] = useState({data})
+  const [data, setData] = useState([])
   
 // const baseURL = 'http://swapi.dev/'
   useEffect(() => { 
       axios
-      .get('https://swapi.dev/people/1')
+      .get('https://swapi.dev/')
       .then(res => 
         setData(res.data))
       

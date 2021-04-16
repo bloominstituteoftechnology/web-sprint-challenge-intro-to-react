@@ -7,9 +7,14 @@ import styled from 'styled-components';
 // Write your Character component here
 
 const StyledCharacter = styled.div`
-    width: 20% auto;
-    background-color: #f4f4f4;
+    width: 40vh;
+    background-color: black;
     border: 5px inset #6CCAC7;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 3vh;
+    padding: 4vh;
 `
 
 
@@ -18,9 +23,9 @@ const StyledCharacter = styled.div`
     const Character = props => {
         return (
             <StyledCharacter>
-                <h2>Name:{props.characterData.name}</h2>
-                <div>Height:{props.characterData.height}</div>
-                <div>Gender:{props.characterData.gender}</div>
+                <h2>Name:{props.name}</h2>
+                <div>Height:{props.height}</div>
+                <div>Gender:{props.gender}</div>
             </StyledCharacter>
         )
     }
