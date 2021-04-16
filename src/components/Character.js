@@ -12,19 +12,15 @@ const StyledCharacter = styled.div`
     border: 5px inset #6CCAC7;
 `
 
-const characterInfo = {
-    name: '',
-    height: '',
-    gender: ''
-  }
+
 
   
     const Character = props => {
         return (
             <StyledCharacter>
-                <h2>{character.name}</h2>
-                <div>{character.birth_year}</div>
-                <div>{character.height}</div>
+                <h2>Name:{props.characterData.name}</h2>
+                <div>Height:{props.characterData.height}</div>
+                <div>Gender:{props.characterData.gender}</div>
             </StyledCharacter>
         )
     }
