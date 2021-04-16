@@ -7,8 +7,8 @@ const App = () => {
   const [chars, setChars] = React.useState('');
 
   React.useEffect(() => {
-    setChars('hello')
-    console.log(chars)
+    setChars('')
+ 
   }, [setChars, chars])
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
