@@ -9,7 +9,7 @@ const Container = styled.div `
 `;
 
 const Header = styled.h1 `
-  color: #transparent;
+  color: transparent;
   text-align: center;
   font-family: 'Teko', sans-serif;
   font-size: 8rem;
