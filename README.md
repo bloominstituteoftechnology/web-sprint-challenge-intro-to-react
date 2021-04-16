@@ -31,12 +31,16 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+  - React.JS allows us to render data through the DOM in a "virtual state". The data is imported to pre-made Components that have all of the HTML layout and styling already made up into classes or objects, and only the new/updating data to be changed, insted of rendering the entire page's content again. This has a huge impact on performace of sites where there is high traffic and/or lots of content to display. For example, our Day 3 and 4 project was loaded using the data from an API response to change the content relevant to that day's NASA photo of the day. 
 
 1. Describe component state.
+  - The component state is the Object that holds the information that will be populated into the component any time the API request is updated or pings the server again because of a change in the date. The data to be displayed is passed into the component in object form, and then populated onto the webpage via the compnent's layout. 
 
 1. Describe props.
+ - Props are the Keys of the Key: Value pairs when recieving an object of data back from the API call. You can pass in the values to all of the keys with {callbacks} and dot notation to return the value desired from the object of data recieved. 
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+ - Side effects are anything that affect something outside the scope of the function being executed: such as the .get, .then, and .catch in an axios API call. They are the process of receiving, assigning, and displaying the data recieved from the API call. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -44,22 +48,22 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Run `npm install` to retrieve all needed dependencies.
-- [ ] In a separate terminal, run `npm run test:watch` to run tests.
-- [ ] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
-- [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: `git push origin <firstName-lastName>`
+- [x] Create a forked copy of this project
+- [x] Add your team lead as collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [x] Run `npm install` to retrieve all needed dependencies.
+- [x] In a separate terminal, run `npm run test:watch` to run tests.
+- [x] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
+- [x] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x] Push commits: `git push origin <firstName-lastName>`
 
 ### Task 2: Project Requirements
 
 Your finished project must include all of the following requirements:
 
-- [ ] Use the following API:
+- [x] Use the following API:
   - [Star Wars API](https://swapi.dev/)
 - [ ] Use the documentation and Google to learn how to fetch characters from your API.
 - [ ] Obtain a list of characters. One or several requests might be needed, depending on the API.
