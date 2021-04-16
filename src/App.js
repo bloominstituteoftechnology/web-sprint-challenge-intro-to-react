@@ -6,18 +6,21 @@ import StyledCharacter from './components/Character';
 
 // import {handlers, data} from './mocks/handlers'
 
+
+
 // don't forget the dependency array
-const App = () => {
-  const [data, SetData] = useState([])
+export default function App() {
+
+  const [data, setData] = useState({characterInfo})
   
 // const baseURL = 'http://swapi.dev/'
   useEffect(() => { 
       axios.get('https://swapi.dev/')
-      .then(res => 
-        setUser(res.data))
-        },
-      .catch(err => { 
-          console.log(err);
+      .then(response => 
+        setCharacter(response.userData))
+      
+      .catch(error => { 
+          console.log(error);
       })
   }
 , [])
@@ -32,11 +35,8 @@ const App = () => {
   return (
     <div className = "App">
       <div className = "Header">
-      <StyledCharacter/>
+      <StyledCharacter character={character}/>
       </div>
     </div>
   )
-  
-
-
-export default App;
+}
