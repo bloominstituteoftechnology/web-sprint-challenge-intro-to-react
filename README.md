@@ -50,12 +50,13 @@ Your finished project must include all of the following requirements:
 
   1. Build a React component named 'Character' to render an individual character.
   1. Map over the list in state, and for each character render a Character to the page.
-  1. Each rendered character must display its `name` in the DOM (e.g. "Luke Skywalker").
+  1. Each rendered character must display its name in the DOM (e.g. "Luke Skywalker").
+  1. The character's name can't be hard-coded into the HTML. This data must be obtained from the API.
   1. The components must be styled with **styled-components**.
 
   **Notes:**
 
-* Data obtained from the endpoint using browser-run JavaScript is mocked using [msw](https://github.com/mswjs/msw).
+* Data obtained from the endpoint using browser-run JavaScript is mocked with [msw](https://github.com/mswjs/msw).
 * If you test the endpoint using HTTPie or Postman you will obtain different results, as msw won't intercept the request.
 * You are welcome to create additional files but **do not move or rename existing files** or folders.
 * Do not alter your `package.json` file except to install extra libraries.
