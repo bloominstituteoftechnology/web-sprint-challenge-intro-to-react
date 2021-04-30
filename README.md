@@ -20,8 +20,6 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 [Another example](https://tk-assets.lambdaschool.com/3b82c793-2352-4d4d-a81d-e55bf350f7bd_sample-screenshot2.png)
 
-You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
-
 ## Instructions
 
 ### Task 1: Project Setup
