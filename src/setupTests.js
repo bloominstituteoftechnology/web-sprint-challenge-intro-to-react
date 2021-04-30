@@ -5,7 +5,7 @@
 
 import "@testing-library/jest-dom/extend-expect";
 
-test("The application compiles", async () => {
+test("The application compiles", () => {
   // Arrange
   // Act
   // Assert

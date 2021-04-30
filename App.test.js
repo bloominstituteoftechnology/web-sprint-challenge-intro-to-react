@@ -1,30 +1,47 @@
 import React from "react";
-import { render, screen, act } from "@testing-library/react";
-import axios from "axios";
-import App from "./src/App";
-import { data as starWarsData } from "./src/mocks/handlers";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import { server } from "./mocks/server";
+import "mutationobserver-shim";
 
-jest.mock("axios");
-
-test("sanity", () => {
-  expect(true).not.toBe(false);
+beforeAll(() => server.listen());
+afterAll(() => server.close());
+afterEach(() => {
+  server.resetHandlers();
+  document.body.innerHTML = "";
 });
 
 describe("<App />", () => {
-  it("fetches characters from the Star Wars API and displays them", async () => {
-    const characters = starWarsData;
-
-    const promise = Promise.resolve({ data: characters });
-    axios.get.mockImplementationOnce(() => promise);
-
+  test("Luke Skywalker is not in the DOM on page load", async () => {
     render(<App />);
-
-    await act(() => promise);
-
-    expect(screen.getByText("Luke Skywalker")).toBeInTheDocument();
-    expect(screen.getByText("C-3PO")).toBeInTheDocument();
-    expect(screen.getByText("R2-D2")).toBeInTheDocument();
-    expect(screen.getByText("Darth Vader")).toBeInTheDocument();
-    expect(screen.getByText("Leia Organa")).toBeInTheDocument();
+    expect(screen.queryByText(/Luke/i)).not.toBeInTheDocument();
+  });
+  test("C-3PO is not in the DOM on page load", async () => {
+    render(<App />);
+    expect(screen.queryByText(/3PO/i)).not.toBeInTheDocument();
+  });
+  test("R2-D2 is not in the DOM on page load", async () => {
+    render(<App />);
+    expect(screen.queryByText(/R2/i)).not.toBeInTheDocument();
+  });
+  test("Darth Vader is not in the DOM on page load", async () => {
+    render(<App />);
+    expect(screen.queryByText(/Vader/i)).not.toBeInTheDocument();
+  });
+  test("Leia Organa is not in the DOM on page load", async () => {
+    render(<App />);
+    expect(screen.queryByText(/Leia/i)).not.toBeInTheDocument();
+  });
+  test("Owen Lars is not in the DOM on page load", async () => {
+    render(<App />);
+    expect(screen.queryByText(/Owen/i)).not.toBeInTheDocument();
+  });
+  test("All characters' names eventually populate in the DOM", async () => {
+    render(<App />);
+    expect(await screen.findByText(/Luke/i)).toBeInTheDocument();
+    expect(await screen.findByText(/3PO/i)).toBeInTheDocument();
+    expect(await screen.findByText(/R2/i)).toBeInTheDocument();
+    expect(await screen.findByText(/Vader/i)).toBeInTheDocument();
+    expect(await screen.findByText(/Leia/i)).toBeInTheDocument();
   });
 });
