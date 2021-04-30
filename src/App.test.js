@@ -12,13 +12,23 @@ afterEach(() => {
 });
 
 describe("<App />", () => {
-  it("fetches characters from the Star Wars API and displays them", async () => {
+  test("The DOM does not contain the character names on page load", async () => {
     render(<App />);
 
-    expect(await screen.findByText("Luke Skywalker")).toBeInTheDocument();
-    expect(await screen.findByText("C-3PO")).toBeInTheDocument();
-    expect(await screen.findByText("R2-D2")).toBeInTheDocument();
-    expect(await screen.findByText("Darth Vader")).toBeInTheDocument();
-    expect(await screen.findByText("Leia Organa")).toBeInTheDocument();
+    expect(screen.queryByText(/Luke/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/3PO/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/R2/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Vader/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Leia/i)).not.toBeInTheDocument();
+  });
+
+  test("The character's names eventually populate in the DOM", async () => {
+    render(<App />);
+
+    expect(await screen.findByText(/Luke/i)).toBeInTheDocument();
+    expect(await screen.findByText(/3PO/i)).toBeInTheDocument();
+    expect(await screen.findByText(/R2/i)).toBeInTheDocument();
+    expect(await screen.findByText(/Vader/i)).toBeInTheDocument();
+    expect(await screen.findByText(/Leia/i)).toBeInTheDocument();
   });
 });
