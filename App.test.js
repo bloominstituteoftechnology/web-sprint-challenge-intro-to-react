@@ -12,27 +12,27 @@ afterEach(() => {
 });
 
 describe("<App />", () => {
-  test("Luke Skywalker is not in the DOM on page load", async () => {
+  test("Luke Skywalker is _not_ in the DOM on page load", async () => {
     render(<App />);
     expect(screen.queryByText(/Luke/i)).not.toBeInTheDocument();
   });
-  test("C-3PO is not in the DOM on page load", async () => {
+  test("C-3PO is _not_ in the DOM on page load", async () => {
     render(<App />);
     expect(screen.queryByText(/3PO/i)).not.toBeInTheDocument();
   });
-  test("R2-D2 is not in the DOM on page load", async () => {
+  test("R2-D2 is _not_ in the DOM on page load", async () => {
     render(<App />);
     expect(screen.queryByText(/R2/i)).not.toBeInTheDocument();
   });
-  test("Darth Vader is not in the DOM on page load", async () => {
+  test("Darth Vader is _not_ in the DOM on page load", async () => {
     render(<App />);
     expect(screen.queryByText(/Vader/i)).not.toBeInTheDocument();
   });
-  test("Leia Organa is not in the DOM on page load", async () => {
+  test("Leia Organa is _not_ in the DOM on page load", async () => {
     render(<App />);
     expect(screen.queryByText(/Leia/i)).not.toBeInTheDocument();
   });
-  test("Owen Lars is not in the DOM on page load", async () => {
+  test("Owen Lars is _not_ in the DOM on page load", async () => {
     render(<App />);
     expect(screen.queryByText(/Owen/i)).not.toBeInTheDocument();
   });
