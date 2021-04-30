@@ -34,7 +34,7 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 ### Task 2: CodeGrade Setup
 
 * [ ] Open the assignment in Canvas and follow [these instructions](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374) on setting up Codegrade.
-* [ ] Set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>`.
+* [ ] Set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>` branch.
 * [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
 * [ ] Check to see that Codegrade has accepted your git submission.
 
@@ -42,7 +42,7 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 Your finished project must include all of the following requirements:
 
-* [ ] Use the endpoint `[GET] https://swapi.dev/api/people` mocked in [msw](https://github.com/mswjs/msw) to obtain characters.
+* [ ] Use the endpoint `[GET] https://swapi.dev/api/people` (mocked in [msw](https://github.com/mswjs/msw)) to obtain characters.
 * [ ] Set the list of characters into state.
 * [ ] Render your characters to the DOM:
 
