@@ -44,52 +44,48 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 Your finished project must include all of the following requirements:
 
-- [ ] Use the following API:
-  - [Star Wars API](https://swapi.dev/)
-- [ ] Use the documentation and Google to learn how to fetch characters from your API.
-- [ ] Obtain a list of characters. One or several requests might be needed, depending on the API.
-- [ ] Set the list of characters into state.
-- [ ] Render your characters to the screen:
-  - Build a React component named 'Character' to render an individual character.
-  - Map over the list in state, and for each character render a Character to the page.
-  - You must display at least one element for each character in the data set.
-  - The elements must be styled with **styled-components** - don't rely on browser default styles.
+* [ ] Use the endpoint `[GET] https://swapi.dev/api/people` mocked in [msw](https://github.com/mswjs/msw) to obtain characters.
+* [ ] Set the list of characters into state.
+* [ ] Render your characters to the DOM:
+
+  1. Build a React component named 'Character' to render an individual character.
+  1. Map over the list in state, and for each character render a Character to the page.
+  1. Each rendered character must display its name in the DOM (e.g. "Luke Skywalker").
+  1. The components must be styled with **styled-components**.
 
   **Notes:**
 
-* The endpoints are fake ones created with Mock Service Worker. Testing them with Postman or HTTPie won't work.
+* Data obtained from the endpoint using browser-run JavaScript is mocked using [msw](https://github.com/mswjs/msw).
+* If you test the endpoint using HTTPie or Postman you will obtain different results, as msw won't intercept the request.
 * You are welcome to create additional files but **do not move or rename existing files** or folders.
 * Do not alter your `package.json` file except to install extra libraries.
 * The `start` process can sometimes choke after adding new dependencies and may need to be restarted.
 * In your solution, it is essential that you follow best practices and produce clean and professional results.
-* Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work.
+* Schedule time to review and polish your work, including spell-checking and grammar-checking.
 * It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
 ### Task 4: Stretch Goals
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on any the following optional goals:
 
-- [ ] Make the Character component more complex and break it into several subcomponents.
-- [ ] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
-- [ ] Use Promise.all to resolve an array of promises.
-- [ ] Create transitions or animations with styled-components.
+* [ ] Make the Character component more complex and break it into several subcomponents.
+* [ ] Use the endpoint `[GET] https://swapi.dev/api/films` (mocked in msw) to obtain movie information to render with the characters.
+* [ ] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
+* [ ] Create transitions or animations with styled-components.
+* [ ] Use Promise.all to resolve an array of promises.
 
 ## Submission format
 
-Follow these steps for completing your project.
-
-Set up your fork on Github to [submit via Codegrade](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374), pushing commits to your `<firstName-lastName>` branch.
-
-Your code will be reviewed over the next few days. Read [these instructions](https://www.notion.so/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a) to learn how to view feedback in CodeGrade.
+* [ ] Submit via Codegrade by commiting and pushing any new changes. Commits pushed after the deadline will not be processed.
+* [ ] Submit a pull-request to merge `<firstName-lastName>` branch into `main`. Please don't merge your own pull request and make sure you are on your own repo.
+* [ ] Check Codegrade for automated feedback and (in a few days) for reviewer feedback.
+* [ ] For more information on how to access and read your feedback, check [here.](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-
 1. Describe component state.
-
 1. Describe props.
-
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
