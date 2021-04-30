@@ -28,8 +28,8 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 * [ ] Create a new working branch: `git checkout -b <firstName-lastName>`.
 * [ ] Implement the project on your newly created branch, committing changes regularly.
 * [ ] Push commits: `git push origin <firstName-lastName>`.
-* [ ] Executre `npm install` to install your dependencies.
-* [ ] Executre `npm start` to start your application.
+* [ ] Execute `npm install` to install your dependencies.
+* [ ] Execute `npm start` to start your application.
 
 ### Task 2: CodeGrade Setup
 
