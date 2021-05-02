@@ -1,4 +1,4 @@
-import { CharacterContainer, CharacterCard  } from './StylesComponents.js';
+import { CharacterContainer, CharacterCard  } from '../StylesComponents.js';
 // Write your Character component here
 
 
