@@ -4,26 +4,26 @@ import axios from 'axios'
 
 export default function Characters(props) {
     const { characterId, close } = props
-    const [ info, setInfo ] = useState(null)
+    const [ charInfo, setCharInfo ] = useState(null)
 
     useEffect(() => {
-        axios.get(`https://swapi.dev/api/people/${characterId}`)
-        .then(({data}) => setInfo(data))
+        axios.get(`https://swapi.dev/api/people/`)
+        .then(({data}) => setCharInfo(data))
         .catch(err => console.log(err))
     }, [characterId])
     return (
         <div className='infoContainer'>
             <h2>Info of Target</h2>
             {
-                info &&
+                charInfo &&
                 <>
-                <p>Gender: {info.gender}</p>
-                <p>Height: {info.height}</p>
-                <p>Mass: {info.mass}</p>
-                <p>Birth Year: {info.birth_year}</p>
-                <p>Eye Color: {info.eye_color}</p>
-                <p>Hair Color: {info.hair_color}</p>
-                <p>Skin Color: {info.skin_color}</p>
+                <p>Gender: {charInfo.gender}</p>
+                <p>Height: {charInfo.height}</p>
+                <p>Mass: {charInfo.mass}</p>
+                <p>Birth Year: {charInfo.birth_year}</p>
+                <p>Eye Color: {charInfo.eye_color}</p>
+                <p>Hair Color: {charInfo.hair_color}</p>
+                <p>Skin Color: {charInfo.skin_color}</p>
                 </>
             }
             <button onClick={close}>Close File</button>

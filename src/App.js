@@ -1,33 +1,34 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import './App.css';
+import Characters from './components/Character'
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
-const [characters, setCharacters] = useState([])
+const [results, setResults] = useState([])
 const [currentCharacterId, setcurrentCharacterId] = useState(null)
 
 const openCharDetails = id => {
-  setCharacterId(id)
+  setcurrentCharacterId(id)
 }
 
-const closeCharDetails = id => {
-  setCharacterId(null)
+const closeCharDetails = () => {
+  setcurrentCharacterId(null)
 }
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 useEffect(() => {
   axios.get('https://swapi.dev/api/people')
-  .then(({data}) => setCharacters(data))
+  .then(({data}) => setResults(data))
   .catch((err) => console.log(err))
 }, [])
 
 const Character = props => (
   <div className='character'>
-    {props.name}
-    <button onClick={() => openCharDetails(props.id)}>
+    {props.info.name}
+    <button onClick={() => openCharDetails(props.info)}>
       Target File
     </button>
   </div>
@@ -35,12 +36,12 @@ const Character = props => (
   return (
     <div className="App">
       <h1 className="Header">Boba's Black Book</h1>
-      {characters.map(characterId => {
-        return <Character key={characterId.id} />
+      {results.map(results => {
+        return <Character key={results.characterId} info={results}/>
       })
       }
       {
-        currentCharacterId && <Character characterId={currentCharacterId} close={closeCharDetails} />
+        currentCharacterId && <Characters characterId={currentCharacterId} close={closeCharDetails} />
       }
     </div>
   );
