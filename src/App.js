@@ -28,13 +28,13 @@ const Character = props => (
   <div className='character'>
     {props.name}
     <button onClick={() => openCharDetails(props.id)}>
-      Holo-file
+      Target File
     </button>
   </div>
 )
   return (
     <div className="App">
-      <h1 className="Header">REACT WARS</h1>
+      <h1 className="Header">Boba's Black Book</h1>
       {characters.map(characterId => {
         return <Character key={characterId.id} />
       })
