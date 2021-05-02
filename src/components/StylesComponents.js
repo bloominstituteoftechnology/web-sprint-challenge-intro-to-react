@@ -12,4 +12,5 @@ margin: 2rem 3rem 0;
 background-color: salmon;
 `
 
+
 export { CharacterContainer, CharacterCard };

@@ -4,7 +4,6 @@ import { CharacterContainer, CharacterCard  } from './StylesComponents.js';
 
 function Character (props) {
   const characterData = props.props;
-  console.log(characterData)
 
   return (
     <CharacterContainer>
