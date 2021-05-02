@@ -1,19 +1,22 @@
 // Write your Character component here
 import React, { useEffect } from 'react';
-import data from '.././mocks/handlers.js'
+import { BASE_URL } from '../App.js';
+import StyleWars from './Styled.js'
+
+
 
 const Character = props => {
-
-    useEffect(() => {
-
-
-    }, [])
+    const { peopleData } = props
 
     return (
-        <div>
-            <h1>
+        <div className="characters">
 
-            </h1>
+            {peopleData.map((data, index) => (
+                <StyleWars key={index}>
+                    <h3>{data.name}</h3>
+                    <p>{data.birth_year}</p>
+                </StyleWars>
+            ))}
         </div>
     )
     
