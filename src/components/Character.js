@@ -3,19 +3,22 @@ import React from "react";
 import styled from 'styled-components';
 
 const StyledCharacter = styled.div`
-  background-color: grey;
-  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid grey;
   border-radius: 10px;
-  padding: 1% 2%;
-  width: 60%;
   text-align: center;
+  margin: 5% 1px;
+`
+const CharHeader = styled.h1`
+    margin: 10px 0;
+    font-size: 2rem;
 `
 
 const Character = props => {
     const { info } = props
     return (
         <StyledCharacter>
-            <h1>{info.name}</h1>
+            <CharHeader>{info.name}</CharHeader>
         </StyledCharacter>
     );
 };

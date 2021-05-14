@@ -4,6 +4,14 @@ import axios from 'axios';
 
 import Character from './components/Character';
 
+import styled from 'styled-components';
+
+const CharactersDiv = styled.div`
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 50%;
+`
+
 const App = () => {
   const [charactersInfo, setCharactersInfo] = useState(null);
 
@@ -21,16 +29,18 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {
-        charactersInfo && 
-        <>
-          {
-            charactersInfo.map((character, index) => {
-              return <Character key={index} info={character}/>
-            })
-          }
-        </>
-      }
+      <CharactersDiv>
+        {
+          charactersInfo && 
+          <>
+            {
+              charactersInfo.map((character, index) => {
+                return <Character key={index} info={character}/>
+              })
+            }
+          </>
+        }
+      </CharactersDiv>
     </div>
   );
 }
