@@ -1,19 +1,27 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
+import { Characters } from './components/characters'
 
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
+  const [deathStick, setDeathStick] = useState([]);
+  let deathstick = useRef();
 
-  // Fetch characters from the API in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
+  useEffect(() => {
+    axios.get(`https://swapi.dev/api/people`)
+      .then((doc) => {
+         setDeathStick(doc.data.results);
+     }).catch((error) => alert(error));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [deathstick])
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      {(deathStick !== []) && <Characters className="Header" data={deathStick}><h1>Characters</h1></Characters>}
     </div>
   );
 }
 
-export default App;
+export {
+  App
+}
