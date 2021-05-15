@@ -2,12 +2,14 @@ import React from 'react'
 
 
 export default function Characters(props) {
-const { char } = props;
-console.log(char)
+const {chars} = props
+console.log(chars)
     return (
         <div className='char-container'>
             <div className='char-info'>
-                <div>{char[0].name}</div>
+                <div>{chars.map(char => {
+                    return <div>{char.name}</div>
+                })}</div>
             </div>
         </div>
     )
