@@ -1,12 +1,11 @@
 // Write your Character component here
-
+import {ContainerDiv, H1, P} from './Example';
 function Character(props){
-    console.log("THis is props ", props)
     return (
-        <div>
-          <h1>{props.name}</h1>
-          <p>{props.name}</p>
-        </div>
+        <ContainerDiv>
+          <H1>{props.name}</H1>
+          <P>{props.name}</P>
+        </ContainerDiv>
     )
 }
 export default Character
