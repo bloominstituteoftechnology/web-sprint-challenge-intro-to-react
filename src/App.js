@@ -1,42 +1,28 @@
-import React, { useState, useEffect} from 'react';
- import Character from './components/Character'
-import './App.css';
-const App = () => {  
-  let arr=[]
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
-const [list, setList] = useState([])
 
-useEffect(()=>{
-  fetch(`https://swapi.dev/api/people`)
+import React, { useEffect, useState } from 'react';
+import Character from './components/Character'
+import { H1} from './components/Example';
+import "./App.css";
+const axios = require('axios');
+function App() {
+ const [item , setItem] = useState([])
+ useEffect(()=>{
+  axios
+  .get('https://swapi.dev/api/people')
   .then(res=>{
-    return  res.json()
+    console.log(res.data)
+    setItem(res.data)
   })
-  .then(res=>{
-   res.map(item=>{
-    return arr.push(item.name) 
-   })
-    setList(arr) 
-  })
-  
   .catch(err=>{
-  console.log("something went wrong")
+    console.log("I got something wrong ", err)
   })
-  console.log("ARRAY ")
-  },[]) ; 
-  
-  // Fetch characters from the API in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
-  let char = list.map((x,i)=>{
-    return (
-      <div key={i}className="App">
-          <h1 className="Header">Characters</h1>   
-           <Character name= {list[i]}/>
-       </div>
-    )
-  })
-  return char;
+ },[])
+ return (   
+      <div className="App">
+         <H1>Characters</H1>
+         <Character item={item} />
+     </div>
+ );
 }
 
 export default App;
