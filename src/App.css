@@ -1,10 +1,15 @@
 body{
   margin: 0;
   padding: 0 auto;
-  background-image: no-repeat;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .Header {
   color: rgb(120,50,30);
@@ -12,12 +17,18 @@ body{
   letter-spacing: 1.2rem;
   text-shadow: 1px 1px 5px #fff;
 }
+@keyframes example {
+  from {background-color: black;}
+  to {background-color: gray;}
+}
 li {
   padding: 10px;
   border: 2px solid black;
   margin: 2px;
   background-color: gray;
-  opacity: .5;
+  /* opacity: .5; */
+  animation-name: example;
+  animation-duration: 2s;
  
 }
 li:hover{
