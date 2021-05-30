@@ -4,8 +4,8 @@ import styled from 'styled-components';
 export const  ContainerDiv= styled.div`
 background-color:black;
 color: white;
-padding: 10%;
-margin:  0 10%;
+padding: 5%;
+margin: 2px 40%;
 width: 20vw;
 height: 5vh;
 opacity: .5;
@@ -14,7 +14,7 @@ border: 5px solid black;
 `;
 
 export const H1 = styled.h1`
-letter-spacing: 1.3rem;
+
 font-size: 28px;
 text-align: center;
 `;
