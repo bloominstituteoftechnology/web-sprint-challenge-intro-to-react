@@ -1,19 +1,22 @@
 
 import styled from 'styled-components';
 export const  ContainerDiv= styled.div`
-list-style-type: none;
-font-size: 28px;
 padding: 5%;
-color: white;
-padding: 10px;
-border: 2px solid black;
-&:hover{
-    background-color: blue;
-}
+
 `;
 
-export const H1 = styled.h1`
-
+export const H1 = styled.li`
+list-style-type: none;
+color: white;
+background-color: black;
+font-size: 28px;
+&:hover{
+    background-color: rgb(169,141,110);
+    color: red;
+    font-size: 30px;
+    opacity: 1;
+   
+}
 `;
 
 export const P = styled.p`

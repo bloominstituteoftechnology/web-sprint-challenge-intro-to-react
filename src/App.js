@@ -1,7 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
 import Character from './components/Character'
-import { H1} from './components/Example';
 import "./App.css";
 const axios = require('axios');
 function App() {
@@ -19,7 +18,7 @@ function App() {
  },[])
  return (   
       <div className="App">
-         <H1>Characters</H1>
+         <h1 className="Header">Characters</h1>
          <Character item={item} />
      </div>
  );
