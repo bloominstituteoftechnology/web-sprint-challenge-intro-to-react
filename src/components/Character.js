@@ -1,9 +1,9 @@
 // Write your Character component here
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+//import { handler, server } from './mocks'
 
-
-function Characters(props) {
+function Character(props) {
 const { characterId, close } = props
   const [details, setDetails] = useState(null)
   useEffect(() => {
@@ -24,18 +24,24 @@ const { characterId, close } = props
     {
     details &&
     <>
-         <ul>
-            {details.name.map((name) => <li key={name}>{name}</li>)}
-          </ul> 
+        <p>Name{characterId.name}</p> 
+        <p>gender{characterId.gender}</p>
+         <p>Height {characterId.height}</p>
+         <p>mass{characterId.mass}</p>
+         <p>Hair Color{characterId.hair_color}</p>
+         <p>Eye Color{characterId.eye_color}</p>
+    
+           
     </>
     }
         <button onClick ={close}>Close</button>
-
-
 
         </div>
 
  )
 
 }
-export default Characters;
+export default Character;
+
+//<ul>
+//{details.name.map((name) => <li key={name}>{name}</li>)}

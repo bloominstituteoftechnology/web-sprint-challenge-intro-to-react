@@ -39,7 +39,7 @@ const closeDetails = () => {
     console.log(setData)
   }, [])
 
-  const Character = props => (
+  const Characters = props => (
     <div className='character'>
       {props.info.name}
       <button onClick={() => openDetails(props.info.id)}>
@@ -54,12 +54,16 @@ const closeDetails = () => {
       <h1 className="Header">Characters</h1>
       {
       data.map(fr => {
-       return <Character key={fr.id} info={fr}/>
+       return <Character key={fr.name} info={fr}/>
 })
 }
+
+  
 {
-        currentCharacterId && <Character characterId={currentCharacterId} close={closeDetails} />
-      }
+        currentCharacterId && <characterId characterId={currentCharacterId} close={closeDetails} />
+}      
+      
+
     </div>
   );
 }
