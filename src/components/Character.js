@@ -1,11 +1,13 @@
 // Write your Character component here
-import {ContainerDiv, H1, P} from './Example';
+import {ContainerDiv, H1} from './Example';
 function Character(props){
-    return (
+  
+return (
         <ContainerDiv>
           <H1>{props.name}</H1>
-          <P>{props.name}</P>
+          <p>{props.name}</p>
         </ContainerDiv>
     )
+ 
 }
 export default Character
