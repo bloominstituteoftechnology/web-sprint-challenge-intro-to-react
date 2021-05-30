@@ -2,7 +2,17 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import CloseButton from './components/Character';
-import Character from './components/Character';
+import styled, { keyframes } from 'styled-components'
+
+const StyledButton = styled.button `
+  text-align: left;
+  border: 2px solid black;
+width: 15%;
+margin-left: 1%;
+padding: 2px;
+font-weight: bold;
+
+`
 const App = () => {
 
   const [data, setData] = useState([]);
@@ -29,7 +39,7 @@ const closeDetails = () => {
     // const apiUrl = BASE_URL + '/friends' + '?api_key=' + API_KEY
     //const apiUrl = `${BASE_URL}/friends?api_key=${API_KEY}`
     axios
-    .get('https://swapi.dev/api/people')
+    .get('https://swapi.dev/api/people/')
     .then((response) => {
       setData(response.data);
     })
@@ -42,9 +52,9 @@ const closeDetails = () => {
   const Characters = props => (
     <div className='character'>
       {props.info.name}
-      <button onClick={() => openDetails(props.info.id)}>
+      <StyledButton onClick={() => openDetails(props.info.name)}>
         See details
-      </button>
+      </StyledButton>
     </div>
   )
 
