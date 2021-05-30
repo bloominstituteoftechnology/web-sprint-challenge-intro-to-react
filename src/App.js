@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
-//import {handler} from './mocks/handlers';
+import CloseButton from './components/Character';
 import Character from './components/Character';
 const App = () => {
 
@@ -54,13 +54,13 @@ const closeDetails = () => {
       <h1 className="Header">Characters</h1>
       {
       data.map(fr => {
-       return <Character key={fr.name} info={fr}/>
+       return <Characters key={fr.name} info={fr} details={openDetails}/>
 })
 }
 
   
 {
-        currentCharacterId && <characterId characterId={currentCharacterId} close={closeDetails} />
+        currentCharacterId && <CloseButton  CloseButton characterId={currentCharacterId} close={closeDetails} />
 }      
       
 

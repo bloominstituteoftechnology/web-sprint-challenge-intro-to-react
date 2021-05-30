@@ -1,0 +1,18 @@
+1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+
+    React is one of the most commonly used libraries for building applications today.
+    React is a simple engine called the virtual DOM that interacts with the actual DOM telling it which state to render to the actual DOM and will reactwhen the stae in the app changes and will update the DOM accordingly 
+
+2. Describe component state.
+
+    State holds information about the component and it is only created in a component.  A component uses State to keep track of information between renderings.  It can create, update and use state
+
+3. Describe props.
+
+    Props which stands for properties are passed into conponents.  Props are immutable, they should not change therefore rendering the same output given the same input.
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+      A side effect is anything that affects something outside the scope of the function being executed.  Used inside the component, puts the effect function inside the component's function scope.
+
+      Using a dependency array as the second argument in the effect hook, we can tell it with which state or props the effect should be synced.
