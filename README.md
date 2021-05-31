@@ -89,3 +89,5 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
    props is a way to pass data.
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
    asyncranse js and we use side effects because we dont know what data we are getting
+
+   done
