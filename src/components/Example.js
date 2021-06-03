@@ -1,22 +1,25 @@
 
 import styled from 'styled-components';
 export const  ContainerDiv= styled.div`
-padding: 5%;
-
+  background-color: rgb(169,141,110);
+  padding:4px;
+ 
 `;
 
 export const H1 = styled.li`
 list-style-type: none;
 color: white;
-background-color: black;
+padding: 5px;
+margin: 2px;
 font-size: 28px;
 width: 300px;
-transition: width 2s;
+opacity: .8;s
+
 &:hover{
     background-color: rgb(169,141,110);
     color: red;
     font-size: 30px;
     opacity: 1;
-    /* width: 350px; */
+   
 }
 `;
