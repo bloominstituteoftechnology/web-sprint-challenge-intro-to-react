@@ -44,9 +44,6 @@ const App = () => {
           return <Character key={char.idx} info={char.name} year={char.birth_year} />
         })
       }
-      {
-        currentCharacter && <Year characterIdx={currentCharacter}/>
-      }
     </div>
   );
 }

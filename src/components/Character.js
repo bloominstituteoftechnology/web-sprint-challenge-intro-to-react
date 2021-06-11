@@ -17,12 +17,14 @@ const StyledCharacter = styled.div`
   width: 60%;
   display: flex;
   justify-content: space-between;
+  align-content: center;
   padding: 8px;
-  border: 2px solid white;
+  border: 2px solid green;
+  color: white;
   
   &:hover {
-    transition: all 0.2s ease-in-out;
-    background-color: red;
+    transition: all 1s ease-in-out;
+    background-color: lightskyblue;
   }
 
   transform: scale(2);
