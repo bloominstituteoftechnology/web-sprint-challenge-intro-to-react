@@ -17,7 +17,6 @@ useEffect(() => {
   axios.get('https://swapi.dev/api/people')
   .then(function (response) {
     setChars(response.data)
-    console.log(response.data);
   })
   .catch(function (error) {
     // handle error

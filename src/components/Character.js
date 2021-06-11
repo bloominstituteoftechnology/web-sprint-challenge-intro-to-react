@@ -1,5 +1,5 @@
 import React from 'react'
-import Char from "./Char"
+import Legends from "./Char"
 
 export default function Characters(props) {
     const { chars } = props
@@ -8,7 +8,7 @@ export default function Characters(props) {
         <div className='char-container'>
             <div className='char-info'>
                 <div>{chars.map(char => {
-                    return <Char key={char.name} char={char} />
+                    return <Legends key={char.name} char={char} props={props}/>
                 })}</div>
             </div>
             </div>
