@@ -17,3 +17,6 @@ const App = () => {
 }
 
 export default App;
+
+
+SETTING UP CODEGRADE AND STUFF
