@@ -2,6 +2,17 @@ import './App.css';
 import axios from "axios"
 import React, { useState, useEffect } from "react";
 import Character from "./components/Character"
+import styled from 'styled-components';
+
+const StyledTitle = styled.h1`
+-webkit-text-stroke: 3px black;
+-webkit-text-fill-color: yellow;
+font-size:5rem;
+color: white;
+text-decoration: underline; 
+
+`
+
 
 
 
@@ -28,11 +39,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Star WAR</h1>
+      <StyledTitle className="Header">Star WAR</StyledTitle>
       {character.map((char, i) => {
         return <Character key={i} char={char} />;
       })}
+    <div class="meme"></div> 
     </div>
+  
   );
   }
 

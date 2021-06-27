@@ -1,4 +1,19 @@
 import React from "react";
+import styled from 'styled-components';
+
+
+const StyledDiv = styled.div`
+-webkit-text-stroke: 1.8px black;
+-webkit-text-fill-color: yellow;
+font-size:2.3rem;
+color: white;
+`
+
+const StyledName = styled.h2`
+font-size:4rem;
+-webkit-text-stroke: 2.2px black;
+-webkit-text-fill-color: yellow;
+`
 
 
 // Write your Character component here
@@ -31,15 +46,15 @@ import React from "react";
 const Character = (props) => {
     const { char } = props; 
                     return (
-                        <div>
-                          <h1>{char.name}</h1>
+                        <StyledDiv>
+                          <StyledName>{char.name}</StyledName>
                           <p>Gender: {char.gender}</p>
                           <p>Birth Year: {char.birth_year}</p>
                           <p>Height: {char.height}</p>
                           <p>Skin Color: {char.skin_color}</p>
                           <p>Eye Color: {char.eye_color}</p>
                           <p>Hair Color: {char.hair_color}</p>
-                          </div>
+                          </StyledDiv>
                       );
                     };
 
