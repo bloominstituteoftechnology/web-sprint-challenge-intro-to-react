@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios'
-//import styled from 'styled-components'
+import styled from 'styled-components'
 
 import Character from './components/Character';
 
@@ -13,11 +13,13 @@ const App = () => {
   // ??? why is the api only grabbing 6 people???
   const [baseURL] = useState("https://swapi.dev/api/people/?page=2")
   const [characters, setCharacters] = useState([])
+ 
   // adding style ??? why this not work???
-  // const Button = styled.button`
-  // background-color: red;
+  const button = styled.button`
+  background-color: red;
+  border-radius: 1rem;
   
-  // `;
+  `;
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should

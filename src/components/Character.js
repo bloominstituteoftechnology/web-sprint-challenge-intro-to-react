@@ -12,6 +12,10 @@ const Character = (props) => {
         display: flex;
         justify-content: center;
         &:hover {text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;}
+        //border: 1px solid black;
+        // width: 20%;
+        margin: 0 auto;
+        // border-radius: 1rem;
     
     `;
 

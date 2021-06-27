@@ -69,7 +69,7 @@ After finishing your required elements, you can push your work further. These go
 
 ## Submission format
 
-- [ ] Submit via Codegrade by committing and pushing any new changes.
+- [x] Submit via Codegrade by committing and pushing any new changes.
 - [ ] Create a pull request to merge `<firstName-lastName>` branch into `main`.
 - [ ] Please don't merge your own pull request and make sure **you are on your own repo**.
 - [ ] Check Codegrade for automated feedback.
