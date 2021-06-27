@@ -23,8 +23,9 @@ const Character = () => {
 
 
 	return (
-		
-		character.map((char) => (<div>{char.name}</div>))
+		<div>
+			{character.map((char, key) => (<CharacterCard key={key} character={char} />))}
+		</div>
 	)
 	
 }
