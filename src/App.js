@@ -29,8 +29,8 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Star WAR</h1>
-      {characters.map((char, i) => {
-        return <Charater key={i} char={char} />;
+      {character.map((char, i) => {
+        return <Character key={i} char={char} />;
       })}
     </div>
   );
