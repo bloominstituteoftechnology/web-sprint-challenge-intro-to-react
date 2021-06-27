@@ -1,20 +1,27 @@
 // Write your Character component here
 import React from 'react'
+import styled from 'styled-components'
 
 
 const Character = (props) => {
     console.log(props)
 
+    //adding style
+    const Section = styled.section`
+        color: hotpink;
+        display: flex;
+        justify-content: center;
+        &:hover {text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;}
+    
+    `;
 
 return (
     <div>
         {
             props.characters.map(character => (
-              <>
+              <Section>
                 <h2>{character.name}</h2>
-
-                <p>{character.height}</p> 
-              </>
+              </Section>
             ))
         }
     </div>
