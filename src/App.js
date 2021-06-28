@@ -7,7 +7,7 @@ import styled from 'styled-components'
 
 const App = () => {
 
-  const Container = styled.div
+  const Container = styled.body
     `
     display: flex;
     justify-content: space-evenly;
