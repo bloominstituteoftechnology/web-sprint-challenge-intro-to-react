@@ -2,10 +2,17 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Character from '../src/components/Character'
 import axios from 'axios'
+import styled from 'styled-components'
 
 
 const App = () => {
 
+  const Container = styled.div
+    `
+    display: flex;
+    justify-content: space-evenly;
+
+    `
 
  const [character, setCharacter] = useState([])
 
@@ -24,9 +31,9 @@ const App = () => {
 
 
   return (
-    <div>
+    <Container>
 			{character.map((char, key) => (<Character key={key} character={char} />))}
-		</div>
+		</Container>
   );
 }
 
