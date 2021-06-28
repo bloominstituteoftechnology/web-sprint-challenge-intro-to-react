@@ -1,7 +1,13 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
+import styled from "styled-components";
 import './App.css';
 import Character from './components/Character';
+
+const styleDiv = styled.div`
+   display: flex;
+   flex-wrap: wrap;
+`;
 
 const App = () => {
   
@@ -21,7 +27,7 @@ const App = () => {
         console.log(res.data.body)
         setChar(res.data.body)
       })
-      .catch(errors => {return errors})
+      .catch(errors => {console.log(errors)})
   }, [])
   
   
@@ -29,7 +35,9 @@ const App = () => {
   
   return (
     <div className="App">
+      <styleDiv>
       <h1 className="Header"><Character  character={char} /></h1>
+      </styleDiv>
     </div>
   );
 }

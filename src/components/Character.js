@@ -1,6 +1,4 @@
 import React from 'react';
-// import React, { useState } from 'react';
-
 
 
 
@@ -10,16 +8,17 @@ const charApp = (props) => {
     return(
       <section>
            {
-            
-             props.character.map((char) => (
+            props.character.map((character) => (
                <article>
-               <p>{char.name}  {char.birth_year}</p>
+               <p>{character.name}  {character.birth_year}</p>
                </article>
+               
                ))
+
                
            }
       </section>   
-    )
+    );
   }
 
 
