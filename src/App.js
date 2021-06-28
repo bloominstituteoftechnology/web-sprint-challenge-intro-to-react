@@ -3,7 +3,10 @@ import './App.css';
 import Character from '../src/components/Character'
 import axios from 'axios'
 
+
 const App = () => {
+
+
  const [character, setCharacter] = useState([])
 
 	useEffect(() => {
