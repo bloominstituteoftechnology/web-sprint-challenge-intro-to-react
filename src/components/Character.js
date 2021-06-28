@@ -1,5 +1,5 @@
-import React from 'react'
-// import React, { useState } from 'react'
+import React from 'react';
+// import React, { useState } from 'react';
 
 
 
@@ -7,10 +7,20 @@ import React from 'react'
 
 const charApp = (props) => {
   
-    return (
-         
-  );
-}
+    return(
+      <section>
+           {
+            
+             props.character.map((char) => (
+               <article>
+               <p>{char.name}  {char.birth_year}</p>
+               </article>
+               ))
+               
+           }
+      </section>   
+    )
+  }
 
 
 export default charApp;

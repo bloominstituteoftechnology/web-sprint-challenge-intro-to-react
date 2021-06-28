@@ -1,6 +1,5 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
-import React, { useState } from 'react'
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import Character from './components/Character';
 
@@ -19,17 +18,18 @@ const App = () => {
   useEffect(()=>{
    axios.get(URL)
       .then((res) => {
-        setChar(res.data.results)
+        console.log(res.data.body)
+        setChar(res.data.body)
       })
       .catch(errors => {return errors})
-  },[])
+  }, [])
   
   
   
   
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header"><Character  character={char} /></h1>
     </div>
   );
 }
