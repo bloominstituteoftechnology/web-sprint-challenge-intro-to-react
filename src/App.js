@@ -4,6 +4,7 @@ import axios from 'axios'
 import styled from 'styled-components'
 
 import Character from './components/Character';
+import Button from "./components/Button";
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -44,9 +45,10 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Star Wars </h1>
-      <button>Characters</button>
+      <Button />
         <main>
           <Character myName="Alieze" characters={characters}/>
+          
         </main>
         
     </div>
