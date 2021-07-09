@@ -1,45 +1,25 @@
-import axios from 'axios'
-import React, {useEffect, useState} from 'react'
-import CharactersList from './components/Character';
-
-function App() {
-  const [baseURL] = useState('https://swapi.dev/api/people')
-  const [characters, setCharacters] = useState([])
-
-  useEffect(()=>{
-    axios.get(baseURL)
-      .then((res)=> {
-        console.log(res.data.results)
-        setCharacters(res.data.results)
-        
-      })
-        .catch(err => {console.log(console.error)})
-
-  },[])
-
-  console.log(characters)
-
-  return (
-    <div className="App">
-
-      <header>
+import React from 'react';
+import axios form 'axios';
+import { useState, useEffect } from 'react';
+import Character from './components/Character'
+import './App.css';
 
 
-      </header>
+const App = () => {
+  axios.get(`https://swapi.dev/api/people`)
+  .then((data) => {
+    setCharacters(data.data);
+  })
+  .catch(e => {console.log(e)})
+  
+}, [])
 
-      <main>
-        <CharactersList myName ="Esteban" myAge="42" mySaying ="6" characters={characters} />
-
-      </main>
-
-      <footer>
-        &copy: 2021 what is the heck this industries llc
-
-      </footer>
-
-
-    </div>
-  );
+return {
+  <div classnaem = "App">
+    <h1 className = "Header">Characters</h1>
+    <Character props = {characters} />
+  </div>
+);
 }
 
 export default App;
