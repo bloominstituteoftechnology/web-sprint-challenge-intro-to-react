@@ -52,5 +52,5 @@ const Character = ({ characters }) =>
       </div>
     )
   }
-  
+  //Export statement
   export default Character 

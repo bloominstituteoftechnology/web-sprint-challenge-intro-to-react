@@ -1,3 +1,12 @@
+/**
+ * Thomas Bielawski
+ * Lambda School WEB45
+ * 2.2.5 intro to react sprint challenge
+ * character.js
+ * 7/16/2021
+ **/
+
+//Import statements
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './App.css';
@@ -51,13 +60,16 @@ const App = () =>
 
   //Define the return function
   return (
-    <div>
+    <div class = "App">
+    <h1 class = "Header"> Star Wars Project </h1>
     {/* Render the title */}
-    <PageTitle>The Star Wars Saga</PageTitle>
+    <PageTitle>React Wars</PageTitle>
+    
     {/* Render the characters */}
     <Character characters={ characters } key={ characters.index }/>
     </div>
   );
 }
 
+//Export statement
 export default App;
