@@ -11,8 +11,25 @@ export default function Character(props){
 
     // const Names = styled.div``;
     return(
+        <container>
         <div>
-            {names}
+            {names[0]}
         </div>
+        <div>
+            {names[1]}
+        </div>
+        <div>
+            {names[2]}
+        </div>
+        <div>
+            {names[3]}
+        </div>
+        <div>
+            {names[4]}
+        </div>
+        <div>
+            {names[5]}
+        </div>
+        </container>
     );
 }
