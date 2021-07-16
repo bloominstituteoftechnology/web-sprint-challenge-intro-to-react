@@ -33,6 +33,9 @@ export default function Character(props){
         {/* <div>
             {character.homeworld}
         </div> */}
+        <div>
+            {character.birth_year}
+        </div>
 
         </Container>
     );
