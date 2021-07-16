@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
-import Character from './components/Character';
+// import Character from './components/Character';
 import { API_KEY } from './components/Key';
 
 const App = () => {
