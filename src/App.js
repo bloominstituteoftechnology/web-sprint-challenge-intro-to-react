@@ -18,6 +18,7 @@ const App = () => {
       axios.get(`${API_KEY}`)
       .then(res => {
         setCharacters(res.data);
+       
       })
       .catch(err => {
         debugger
@@ -26,11 +27,13 @@ const App = () => {
     fetchChracterData();
   }, []);
 
+  console.log(`HERE IS THE RESPONSE`, characters);
+
   return (
     
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <Character results={characters.results}/>
+      <Character results={characters}/>
     </div>
     
     

@@ -3,11 +3,17 @@ import React from 'react';
 // import styled from  'styled-components';
 export default function Character(props){
     const {results} =props;
-    
+    console.log(`HERE ARE THE RESULTS`,results);
+    // {results.map(name => );
 
     // const Names = styled.div``;
     return(
-        // {results.map((p) => ()};
-        <div></div>
+        <div>
+            {results.map(resultsObj => {
+                return(
+                    resultsObj.name
+                )
+            })}
+        </div>
     );
 }
