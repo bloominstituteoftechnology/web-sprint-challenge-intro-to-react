@@ -28,6 +28,8 @@ const PageTitle = styled.title`
   border-radius: 10px;
   text-align: center;
 `
+
+//App function definition
 const App = () => 
 {
   //Declare the state variable and set function, init to []
@@ -62,6 +64,7 @@ const App = () =>
   return (
     <div class = "App">
     <h1 class = "Header"> Star Wars Project </h1>
+
     {/* Render the title */}
     <PageTitle>React Wars</PageTitle>
     

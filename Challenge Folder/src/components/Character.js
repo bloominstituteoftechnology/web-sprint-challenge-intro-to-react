@@ -28,12 +28,16 @@ const SagaCards = styled.div`
   border: white;
 `
 
+const TopDiv = styled.div'
+  color: black;
+'
+
 //Character function definition, pass in characters
 const Character = ({ characters }) => 
 {
   //Return function
   return (
-    <div>
+    <TopDiv>
       {characters.map(data => 
       {
         return (
@@ -49,8 +53,9 @@ const Character = ({ characters }) =>
           </SagaCards>
         )
       })}
-      </div>
+      </TopDiv>
     )
   }
+
   //Export statement
   export default Character 
