@@ -10,18 +10,22 @@ export default function Character(props){
     })
 
     const Container = styled.section`
-    
+   
     border-style: dashed;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10%;
     margin:2%;
+
+    .StarWarsNames{
+
+    }
     `;
 
     return(
         <Container>
-        <div>
+        <div className='StarWarsNames'>
             {names[0]}
         </div>
         <div>
