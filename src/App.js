@@ -24,7 +24,8 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {data.map(data => <Character data={data}/>)}
+      <Character data={data}/>
+      {/* {data.map(data => <Character data={data}/>)} */}
     </div>
   );
 }
