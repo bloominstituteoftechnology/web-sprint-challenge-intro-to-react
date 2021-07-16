@@ -34,7 +34,7 @@ export default function UrlList(props) {
     return urls.length === 0 ? null : (
         <StyledList>
             <h3>{title}:</h3>
-            {nameList.map(name => <li key={uuid()}>{name}</li>)}
+            {nameList.length > 0 ? nameList.map(name => <li key={uuid()}>{name}</li>) : <h3>loading...</h3>}
         </StyledList>
     )
 }
