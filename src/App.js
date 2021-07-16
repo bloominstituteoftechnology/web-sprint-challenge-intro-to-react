@@ -3,9 +3,10 @@ import './App.css';
 import axios from 'axios';
 // import Character from './components/Character';
 import { API_KEY } from './components/Key';
+// import styled from 'styled-components';
 
 const App = () => {
-  const [names, setNames] =useState([]);
+  const [characters, setCharacters] =useState([]);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -16,7 +17,7 @@ const App = () => {
     const fetchChracterData = () => {
       axios.get(`${API_KEY}`)
       .then(res => {
-        setNames(res.data);
+        setCharacters(res.data);
       })
       .catch(err => {
         debugger
