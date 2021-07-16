@@ -17,6 +17,9 @@ export default function Character(props){
     justify-content: space-between;
     padding: 10%;
     margin:2%;
+    &:hover{
+        background-color: green;
+    }
     `;
 
     return(

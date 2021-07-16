@@ -37,11 +37,18 @@ const App = () => {
   const Header = styled.h1`
    color:white;
    background-color:black;
-   border-radius: 25%;`
+   border-radius: 25%;
+   &:hover{
+        color:black;
+        background-color: white;
+        transform:scale(2);
+        transition: all 0.5s ease-in-out;
+   }`
 
    const CharacterDetails = styled.section`
    background-color: black;
    color: white;
+   margin: 1%auto;
    `;
 
   return (
