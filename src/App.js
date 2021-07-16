@@ -50,7 +50,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       <CharacterDetails>
-      <Character results={characters}/>
+      {characters.map((character, key) => (<Character character={character} key={key}/>))}
       </CharacterDetails>
       
     </div>

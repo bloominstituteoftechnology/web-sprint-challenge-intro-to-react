@@ -2,12 +2,12 @@
 import React from 'react';
 import styled from  'styled-components';
 export default function Character(props){
-    const {results} =props;
-    console.log(`HERE ARE THE RESULTS`, results);
-    // {results.map(name => );
-    const names = results.map(resultsObj => {
-        return (resultsObj.name)
-    })
+    const {character} =props;
+    console.log(`HERE ARE THE RESULTS`, character);
+   
+    // const names = results.map(resultsObj => {
+    //     return (resultsObj.name)
+    // })
 
     const Container = styled.section`
    
@@ -18,31 +18,14 @@ export default function Character(props){
     padding: 10%;
     margin:2%;
 
-    .StarWarsNames{
-
-    }
     `;
 
     return(
         <Container>
-        <div className='StarWarsNames'>
-            {names[0]}
-        </div>
         <div>
-            {names[1]}
+            {character.name}
         </div>
-        <div>
-            {names[2]}
-        </div>
-        <div>
-            {names[3]}
-        </div>
-        <div>
-            {names[4]}
-        </div>
-        <div>
-            {names[5]}
-        </div>
+
         </Container>
     );
 }
