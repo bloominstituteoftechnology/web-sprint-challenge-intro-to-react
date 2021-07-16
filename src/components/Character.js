@@ -60,7 +60,10 @@ export default function Character(props) {
         h3 {
             font-size: 2rem;
         }
-        ul {
+        ul {    
+            margin: 1rem 0;
+            border: ${props => props.theme.color} 3px solid;
+            border-radius: 1rem;
             display: flex;
             align-items: baseline;
             justify-content: flex-start;
@@ -79,8 +82,8 @@ export default function Character(props) {
             {visible ?
             <div className="character-details">
                 <h3>Born: {character.birth_year}</h3>
-                    <h3>Films: </h3>
                 <ul>
+                    <h3>Films: </h3>
                     {character.films.map(film => <li>{film}</li>)}
                 </ul>
                 <UrlList urls={character.vehicles} title="Vehicles" key={uuid()} />
