@@ -11,7 +11,7 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   const baseUrl = "https://swapi.dev/api/";
-  const [people, setPeople] = useState()
+  const [people, setPeople] = useState([])
   useEffect(() => {
     const getPeople = () => {
       axios.get(`${baseUrl}people/`)
