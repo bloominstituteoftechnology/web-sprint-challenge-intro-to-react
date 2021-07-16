@@ -28,7 +28,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       <ul>
-        {people?.map((person, index) => <Character character={person} key={index} />)}
+        {people.map((person, index) => <Character character={person} key={index} />)}
       </ul>
     </div>
   );
