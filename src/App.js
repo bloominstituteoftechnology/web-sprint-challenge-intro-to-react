@@ -3,7 +3,6 @@ import './App.css';
 import axios from 'axios';
 import { API_KEY } from './components/Key';
 import Character from './components/Character';
-
 // import styled from 'styled-components';
 
 const App = () => {
@@ -25,7 +24,7 @@ const App = () => {
       });
     }
     fetchChracterData();
-  }, {});
+  }, []);
 
   return (
     
