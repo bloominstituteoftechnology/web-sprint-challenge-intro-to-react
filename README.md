@@ -12,10 +12,10 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Set Up
 
-- [ ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
-- [ ] Open the assignment in Canvas and click on the "Set up git" option.
-- [ ] Follow instructions to set up Codegrade's Webhook and Deploy Key.
-- [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
+- [x] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
+- [x] Open the assignment in Canvas and click on the "Set up git" option.
+- [x] Follow instructions to set up Codegrade's Webhook and Deploy Key.
+- [x] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
 - [ ] Check to see that Codegrade has accepted your git submission.
 
 For a step-by-step on setting up Codegrade see [this guide.](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374)
@@ -84,3 +84,362 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 1. Describe component state.
 1. Describe props.
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+
+-----
+
+
+# API Routes
+
+## All
+
+```
+{
+    "people": "https://swapi.dev/api/people/", 
+    "planets": "https://swapi.dev/api/planets/", 
+    "films": "https://swapi.dev/api/films/", 
+    "species": "https://swapi.dev/api/species/", 
+    "vehicles": "https://swapi.dev/api/vehicles/", 
+    "starships": "https://swapi.dev/api/starships/"
+}
+```
+
+
+-----
+
+## People (2 Example)
+
+```
+{
+    "count": 82, 
+    "next": "https://swapi.dev/api/people/?page=2", 
+    "previous": null, 
+    "results": [
+        {
+            "name": "Luke Skywalker", 
+            "height": "172", 
+            "mass": "77", 
+            "hair_color": "blond", 
+            "skin_color": "fair", 
+            "eye_color": "blue", 
+            "birth_year": "19BBY", 
+            "gender": "male", 
+            "homeworld": "https://swapi.dev/api/planets/1/", 
+            "films": [
+                "https://swapi.dev/api/films/1/", 
+                "https://swapi.dev/api/films/2/", 
+                "https://swapi.dev/api/films/3/", 
+                "https://swapi.dev/api/films/6/"
+            ], 
+            "species": [], 
+            "vehicles": [
+                "https://swapi.dev/api/vehicles/14/", 
+                "https://swapi.dev/api/vehicles/30/"
+            ], 
+            "starships": [
+                "https://swapi.dev/api/starships/12/", 
+                "https://swapi.dev/api/starships/22/"
+            ], 
+            "created": "2014-12-09T13:50:51.644000Z", 
+            "edited": "2014-12-20T21:17:56.891000Z", 
+            "url": "https://swapi.dev/api/people/1/"
+        }, 
+        {
+            "name": "C-3PO", 
+            "height": "167", 
+            "mass": "75", 
+            "hair_color": "n/a", 
+            "skin_color": "gold", 
+            "eye_color": "yellow", 
+            "birth_year": "112BBY", 
+            "gender": "n/a", 
+            "homeworld": "https://swapi.dev/api/planets/1/", 
+            "films": [
+                "https://swapi.dev/api/films/1/", 
+                "https://swapi.dev/api/films/2/", 
+                "https://swapi.dev/api/films/3/", 
+                "https://swapi.dev/api/films/4/", 
+                "https://swapi.dev/api/films/5/", 
+                "https://swapi.dev/api/films/6/"
+            ], 
+            "species": [
+                "https://swapi.dev/api/species/2/"
+            ], 
+            "vehicles": [], 
+            "starships": [], 
+            "created": "2014-12-10T15:10:51.357000Z", 
+            "edited": "2014-12-20T21:17:50.309000Z", 
+            "url": "https://swapi.dev/api/people/2/"
+        }, (...)
+}
+```
+
+
+-----
+
+
+## Planets (1 Example)
+
+```
+{
+    "count": 60, 
+    "next": "https://swapi.dev/api/planets/?page=2", 
+    "previous": null, 
+    "results": [
+        {
+            "name": "Tatooine", 
+            "rotation_period": "23", 
+            "orbital_period": "304", 
+            "diameter": "10465", 
+            "climate": "arid", 
+            "gravity": "1 standard", 
+            "terrain": "desert", 
+            "surface_water": "1", 
+            "population": "200000", 
+            "residents": [
+                "https://swapi.dev/api/people/1/", 
+                "https://swapi.dev/api/people/2/", 
+                "https://swapi.dev/api/people/4/", 
+                "https://swapi.dev/api/people/6/", 
+                "https://swapi.dev/api/people/7/", 
+                "https://swapi.dev/api/people/8/", 
+                "https://swapi.dev/api/people/9/", 
+                "https://swapi.dev/api/people/11/", 
+                "https://swapi.dev/api/people/43/", 
+                "https://swapi.dev/api/people/62/"
+            ], 
+            "films": [
+                "https://swapi.dev/api/films/1/", 
+                "https://swapi.dev/api/films/3/", 
+                "https://swapi.dev/api/films/4/", 
+                "https://swapi.dev/api/films/5/", 
+                "https://swapi.dev/api/films/6/"
+            ], 
+            "created": "2014-12-09T13:50:49.641000Z", 
+            "edited": "2014-12-20T20:58:18.411000Z", 
+            "url": "https://swapi.dev/api/planets/1/"
+        }, 
+        {
+            "name": "Alderaan", 
+            "rotation_period": "24", 
+            "orbital_period": "364", 
+            "diameter": "12500", 
+            "climate": "temperate", 
+            "gravity": "1 standard", 
+            "terrain": "grasslands, mountains", 
+            "surface_water": "40", 
+            "population": "2000000000", 
+"residents": [
+                "https://swapi.dev/api/people/5/", 
+                "https://swapi.dev/api/people/68/", 
+                "https://swapi.dev/api/people/81/"
+            ], 
+            "films": [
+                "https://swapi.dev/api/films/1/", 
+                "https://swapi.dev/api/films/6/"
+            ], 
+            "created": "2014-12-10T11:35:48.479000Z", 
+            "edited": "2014-12-20T20:58:18.420000Z", 
+            "url": "https://swapi.dev/api/planets/2/"
+        }, (...)
+}
+```
+
+
+-----
+
+
+## Films (1 Example)
+
+```
+{
+    "count": 6, 
+    "next": null, 
+    "previous": null, 
+    "results": [
+        {
+            "title": "A New Hope", 
+            "episode_id": 4, 
+            "opening_crawl": "It is a period of civil war.\r\nRebel spaceships, striking\r\nfrom a hidden base, have won\r\ntheir first victory against\r\nthe evil Galactic Empire.\r\n\r\nDuring the battle, Rebel\r\nspies managed to steal secret\r\nplans to the Empire's\r\nultimate weapon, the DEATH\r\nSTAR, an armored space\r\nstation with enough power\r\nto destroy an entire planet.\r\n\r\nPursued by the Empire's\r\nsinister agents, Princess\r\nLeia races home aboard her\r\nstarship, custodian of the\r\nstolen plans that can save her\r\npeople and restore\r\nfreedom to the galaxy....", 
+            "director": "George Lucas", 
+            "producer": "Gary Kurtz, Rick McCallum", 
+            "release_date": "1977-05-25", 
+            "characters": [
+                "https://swapi.dev/api/people/1/", 
+                "https://swapi.dev/api/people/2/", 
+                "https://swapi.dev/api/people/3/", 
+                "https://swapi.dev/api/people/4/", 
+                "https://swapi.dev/api/people/5/", 
+                "https://swapi.dev/api/people/6/", 
+                "https://swapi.dev/api/people/7/", 
+                "https://swapi.dev/api/people/8/", 
+                "https://swapi.dev/api/people/9/", 
+                "https://swapi.dev/api/people/10/", 
+                "https://swapi.dev/api/people/12/", 
+                "https://swapi.dev/api/people/13/", 
+                "https://swapi.dev/api/people/14/", 
+                "https://swapi.dev/api/people/15/", 
+                "https://swapi.dev/api/people/16/", 
+                "https://swapi.dev/api/people/18/", 
+                "https://swapi.dev/api/people/19/", 
+                "https://swapi.dev/api/people/81/"
+            ], 
+            "planets": [
+                "https://swapi.dev/api/planets/1/", 
+                "https://swapi.dev/api/planets/2/", 
+                "https://swapi.dev/api/planets/3/"
+            ], 
+            "starships": [
+                "https://swapi.dev/api/starships/2/", 
+                "https://swapi.dev/api/starships/3/", 
+                "https://swapi.dev/api/starships/5/", 
+                "https://swapi.dev/api/starships/9/", 
+                "https://swapi.dev/api/starships/10/", 
+                "https://swapi.dev/api/starships/11/", 
+                "https://swapi.dev/api/starships/12/", 
+                "https://swapi.dev/api/starships/13/"
+            ], 
+            "vehicles": [
+                "https://swapi.dev/api/vehicles/4/", 
+                "https://swapi.dev/api/vehicles/6/", 
+                "https://swapi.dev/api/vehicles/7/", 
+                "https://swapi.dev/api/vehicles/8/"
+            ], 
+            "species": [
+                "https://swapi.dev/api/species/1/", 
+                "https://swapi.dev/api/species/2/", 
+                "https://swapi.dev/api/species/3/", 
+                "https://swapi.dev/api/species/4/", 
+                "https://swapi.dev/api/species/5/"
+            ], 
+            "created": "2014-12-10T14:23:31.880000Z", 
+            "edited": "2014-12-20T19:49:45.256000Z", 
+            "url": "https://swapi.dev/api/films/1/"
+        }, (...)
+}
+```
+
+
+-----
+
+
+## Species (1 Example)
+
+```
+{
+    "count": 37, 
+    "next": "https://swapi.dev/api/species/?page=2", 
+    "previous": null, 
+    "results": [
+        {
+            "name": "Human", 
+            "classification": "mammal", 
+            "designation": "sentient", 
+            "average_height": "180", 
+            "skin_colors": "caucasian, black, asian, hispanic", 
+            "hair_colors": "blonde, brown, black, red", 
+            "eye_colors": "brown, blue, green, hazel, grey, amber", 
+            "average_lifespan": "120", 
+            "homeworld": "https://swapi.dev/api/planets/9/", 
+            "language": "Galactic Basic", 
+            "people": [
+                "https://swapi.dev/api/people/66/", 
+                "https://swapi.dev/api/people/67/", 
+                "https://swapi.dev/api/people/68/", 
+                "https://swapi.dev/api/people/74/"
+            ], 
+            "films": [
+                "https://swapi.dev/api/films/1/", 
+                "https://swapi.dev/api/films/2/", 
+                "https://swapi.dev/api/films/3/", 
+                "https://swapi.dev/api/films/4/", 
+                "https://swapi.dev/api/films/5/", 
+                "https://swapi.dev/api/films/6/"
+            ], 
+            "created": "2014-12-10T13:52:11.567000Z", 
+            "edited": "2014-12-20T21:36:42.136000Z", 
+            "url": "https://swapi.dev/api/species/1/"
+        }, (...)
+}
+```
+
+
+-----
+
+
+## Vehicles (1 Example)
+
+```
+{
+    "count": 39, 
+    "next": "https://swapi.dev/api/vehicles/?page=2", 
+    "previous": null, 
+    "results": [
+        {
+            "name": "Sand Crawler", 
+            "model": "Digger Crawler", 
+            "manufacturer": "Corellia Mining Corporation", 
+            "cost_in_credits": "150000", 
+            "length": "36.8 ", 
+            "max_atmosphering_speed": "30", 
+            "crew": "46", 
+            "passengers": "30", 
+            "cargo_capacity": "50000", 
+            "consumables": "2 months", 
+            "vehicle_class": "wheeled", 
+            "pilots": [], 
+            "films": [
+                "https://swapi.dev/api/films/1/", 
+                "https://swapi.dev/api/films/5/"
+            ], 
+            "created": "2014-12-10T15:36:25.724000Z", 
+            "edited": "2014-12-20T21:30:21.661000Z", 
+            "url": "https://swapi.dev/api/vehicles/4/"
+        }, (...)
+}
+```
+
+
+-----
+
+
+## Starships (1 Example)
+
+```
+{
+    "count": 36, 
+    "next": "https://swapi.dev/api/starships/?page=2", 
+    "previous": null, 
+    "results": [
+        {
+            "name": "CR90 corvette", 
+            "model": "CR90 corvette", 
+            "manufacturer": "Corellian Engineering Corporation", 
+            "cost_in_credits": "3500000", 
+            "length": "150", 
+            "max_atmosphering_speed": "950", 
+            "crew": "30-165", 
+            "passengers": "600", 
+            "cargo_capacity": "3000000", 
+            "consumables": "1 year", 
+            "hyperdrive_rating": "2.0", 
+            "MGLT": "60", 
+            "starship_class": "corvette", 
+            "pilots": [], 
+            "films": [
+                "https://swapi.dev/api/films/1/", 
+                "https://swapi.dev/api/films/3/", 
+                "https://swapi.dev/api/films/6/"
+            ], 
+            "created": "2014-12-10T14:20:33.369000Z", 
+            "edited": "2014-12-20T21:23:49.867000Z", 
+            "url": "https://swapi.dev/api/starships/2/"
+        }, (...)
+}
+```
+
+
+-----
+
+
+
