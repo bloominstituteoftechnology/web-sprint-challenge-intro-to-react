@@ -2,57 +2,83 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import styled from 'styled-components';
+import UrlList from './UrlList';
+import { v4 as uuid } from "uuid";
 
 export default function Character(props) {
     const { character } = props;
-    const [vehicles, setVehicles] = useState([])
-    const [starships, setStarships] = useState([])
-    const [homeworld, setHomeworld] = useState([])
+    const [visible, setVisible] = useState(false)
+    const [homeworld, setHomeworld] = useState("")
     useEffect(() => {
-        const getData = async (url, set, data) => {
+        const getHomeWorld= async (url) => {
             try {
             const response = await axios.get(url);
             const ApiData = response.data;
-            set([...data, ApiData.name])
+            setHomeworld(ApiData.name)
             } catch (err) {
                 throw err;
             }
         }
-        character.vehicles.forEach(vehicle => getData(vehicle, setVehicles, vehicles))
-        character.starships.forEach(starship => getData(starship, setStarships, starships))
-        getData(character.homeworld, setHomeworld, homeworld)
+        getHomeWorld(character.homeworld)
     }, [])
 
     const StlyedCharacter = styled.li`
         width: 90%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        border: ${props => props.theme.color} 5px solid;
+        border-radius: 1rem;
+        margin: 1rem auto;
+        padding: 2rem;
+        color: ${props => props.theme.color};
+        .character-details {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
         h2, h3, h4 {
             margin: 1rem;
         }
         h2 {
+            cursor: pointer;
             font-size: 3rem;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: ${props => props.theme.color};
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 3px;
+                transition-duration: 300ms;
+                transform: scaleX(0);
+            }
+            &:hover::after {
+                transform: scaleX(1);
+            }
+        }
+        h3 {
+            font-size: 2rem;
         }
     `
 
     return (
         <StlyedCharacter>
-            <h2>{character.name}</h2>
-            <h3>Born: {character.birth_year}</h3>
-            <ul>
-                {character.films.map(film => <li><h4>{film}</h4></li>)}
-            </ul>
-            <ul>
-                {vehicles.map(vehicle => <li><h4>{vehicle}</h4></li>)}
-            </ul>
-            <ul>
-                {starships.map(starship => <li><h4>{starship}</h4></li>)}
-            </ul>
-            <h3>Home World: {homeworld}</h3>
-            {character.gender === "n/a" ? null : <h3>Gender: {character.gender}</h3>}
-            <h3>Height: {character.height}</h3>
-            <h3>Mass: {character.mass}</h3>
+            <h2 className="btn"
+            onClick={() => setVisible(!visible)}>{character.name}</h2>
+            {visible ?
+            <div className="character-details">
+                <h3>Born: {character.birth_year}</h3>
+                <UrlList urls={character.vehicles} title="Vehicles" key={uuid()} />
+                <UrlList urls={character.starships} title="Starships" key={uuid()} />
+                <h3>Home World: {homeworld}</h3>
+                {character.gender === "n/a" ? null : <h3>Gender: {character.gender}</h3>}
+                <h3>Height: {character.height}cm</h3>
+                <h3>Mass: {character.mass}kg</h3>
+            </div> : null}
         </StlyedCharacter>
     )
 }
