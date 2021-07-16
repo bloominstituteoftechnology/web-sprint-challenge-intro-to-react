@@ -27,9 +27,9 @@ export default function Character(props){
         <div>
             {character.name}
         </div>
-        <div>
+        {/* <div>
             {character.homeworld}
-        </div>
+        </div> */}
 
         </Container>
     );
