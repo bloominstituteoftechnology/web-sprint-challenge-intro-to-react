@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Character from './components/Character';
+import { API_KEY } from './components/Key';
 
 const App = () => {
+  const [names, setNames] =useState([]);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
