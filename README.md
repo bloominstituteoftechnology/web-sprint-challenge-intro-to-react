@@ -86,3 +86,4 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
 
 ## Rick's Pull Request
+- [Pull Request Link](https://github.com/LambdaSchool/web-sprint-challenge-intro-to-react/pull/214)
