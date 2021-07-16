@@ -34,14 +34,24 @@ const App = () => {
   flex-direction:column;
   align-items:center;`
 
-  const Header = styled.h1``;
+  const Header = styled.h1`
+   color:white;
+   background-color:black;`
+
+   const CharacterDetails = styled.section`
+   background-color: black;
+   color: white;
+   `;
 
   return (
     <Container>
       <Header>STAR WARS</Header>
     <div className="App">
       <h1 className="Header">Characters</h1>
+      <CharacterDetails>
       <Character results={characters}/>
+      </CharacterDetails>
+      
     </div>
     </Container>
     
