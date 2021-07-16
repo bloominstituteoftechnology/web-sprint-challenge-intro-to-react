@@ -25,7 +25,6 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       <Character data={data}/>
-      {/* {data.map(data => <Character data={data}/>)} */}
     </div>
   );
 }
