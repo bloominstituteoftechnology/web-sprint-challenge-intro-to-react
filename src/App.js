@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 import { API_KEY } from './components/Key';
 import Character from './components/Character';
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
 const App = () => {
   const [characters, setCharacters] =useState([]);
@@ -29,12 +29,21 @@ const App = () => {
 
   console.log(`HERE IS THE RESPONSE`, characters);
 
+  const Container = styled.div`
+  display:flex;
+  flex-direction:column;
+  align-items:center;`
+
+  const Header = styled.h1``;
+
   return (
-    
+    <Container>
+      <Header>STAR WARS</Header>
     <div className="App">
       <h1 className="Header">Characters</h1>
       <Character results={characters}/>
     </div>
+    </Container>
     
     
   );
