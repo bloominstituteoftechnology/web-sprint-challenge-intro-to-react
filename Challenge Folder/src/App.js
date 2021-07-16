@@ -69,7 +69,7 @@ const App = () =>
     <PageTitle>React Wars</PageTitle>
     
     {/* Render the characters */}
-    <Character characters={ characters } key={ characters.index }/>
+    <Character characters={ characters }/>
     </div>
   );
 }

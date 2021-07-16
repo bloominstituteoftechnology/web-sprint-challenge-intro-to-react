@@ -28,9 +28,9 @@ const SagaCards = styled.div`
   border: white;
 `
 
-const TopDiv = styled.div'
+const TopDiv = styled.div`
   color: black;
-'
+`
 
 //Character function definition, pass in characters
 const Character = ({ characters }) => 
