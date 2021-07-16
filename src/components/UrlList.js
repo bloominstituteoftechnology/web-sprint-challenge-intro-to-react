@@ -7,14 +7,10 @@ export default function UrlList(props) {
     const { urls, title } = props;
     const [nameList, setNameList] = useState([])
     useEffect(() => {
-        const getData = async (url) => {
-            try {
-            const response = await axios.get(url);
-            const ApiData = response.data;
-            setNameList([...nameList, ApiData.name])
-            } catch (err) {
-                throw err;
-            }
+        const getData = url => {
+            axios.get(url)
+                .then(response => response.data)
+                .then(ApiData => setNameList([...nameList, ApiData.name]))
         }
         urls.forEach(url => getData(url));
     }, [])

@@ -10,14 +10,10 @@ export default function Character(props) {
     const [visible, setVisible] = useState(false)
     const [homeworld, setHomeworld] = useState("")
     useEffect(() => {
-        const getHomeWorld= async (url) => {
-            try {
-            const response = await axios.get(url);
-            const ApiData = response.data;
-            setHomeworld(ApiData.name)
-            } catch (err) {
-                throw err;
-            }
+        const getHomeWorld = (url) => {
+            axios.get(url)
+                .then(res => res.data)
+                .then(data => setHomeworld(data.name))
         }
         getHomeWorld(character.homeworld)
     }, [])

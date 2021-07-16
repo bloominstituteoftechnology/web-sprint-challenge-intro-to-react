@@ -13,15 +13,10 @@ const App = () => {
   const baseUrl = "https://swapi.dev/api/";
   const [people, setPeople] = useState()
   useEffect(() => {
-    const getPeople = async () => {
-      try {
-        const response = await axios.get(`${baseUrl}people/`);
-        const ApiData = response.data;
-        setPeople(ApiData)
-        console.log(ApiData)
-      } catch (err) {
-        throw err;
-      }
+    const getPeople = () => {
+      axios.get(`${baseUrl}people/`)
+        .then(response => response.data)
+        .then(ApiData => setPeople(ApiData))
     }
     getPeople();
   }, [])
