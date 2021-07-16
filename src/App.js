@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
-// import Character from './components/Character';
 import { API_KEY } from './components/Key';
+// import Character from './components/Character';
+
 // import styled from 'styled-components';
 
 const App = () => {
-  const [characters, setCharacters] =useState([]);
+  const [characters, setCharacters] =useState({});
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -24,12 +25,16 @@ const App = () => {
       });
     }
     fetchChracterData();
-  }, []);
+  }, {});
 
   return (
+    
     <div className="App">
       <h1 className="Header">Characters</h1>
+      {/* <Character name={characters.name}/> */}
     </div>
+    
+    
   );
 }
 
