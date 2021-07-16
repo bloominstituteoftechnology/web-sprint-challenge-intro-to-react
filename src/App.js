@@ -31,7 +31,7 @@ const App = () => {
     
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <Character name={characters.name}/>
+      <Character results={characters.results}/>
     </div>
     
     
