@@ -6,3 +6,87 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+
+/* 
+      REUSABLE COMPNENTS
+*/
+
+.page-slider {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+
+/* 
+      CHARACTER COMPONENT
+*/
+
+
+.character-container {
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 10px 8px 3px rgba(0, 0, 0, 0.4);
+  border-left: outset 1px lime;
+  border-right: outset 1px lime;
+  margin-bottom: 10px;
+  list-style: none;
+  min-width: 45%;
+  max-width: 45%;
+  min-height: 100px;
+
+}
+.character-container a {
+  text-decoration: none;
+}
+.character-header {
+  font-size: 1.5rem;
+}
+.character-name {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: outset 1px lime;
+}
+.character-name h5 {
+  padding: 8px;
+  margin: 0;
+  color: orangered;
+  font-weight: lighter;
+}
+
+
+
+.character-stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.character-stat {
+  padding: 8px;
+  min-width: 25%;
+  max-width: 25%;
+}
+.character-stat p {
+  color: #fff;
+  font-size: 0.7rem;
+}
+/* 
+      FILM COMPONENT
+*/
+
+
+/* 
+      PLANET COMPONENT
+*/
+

@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
-export default class CharacterList extends React.Component {
+export default class Characters extends React.Component {
   state = {
     characters: []
   }
@@ -14,18 +15,23 @@ export default class CharacterList extends React.Component {
       })
   }
 
+  componentWillUnmount() {
+
+}
+
+
   render() {
     return (
         <div className="page-slider">
             { this.state.characters.map(character => 
                 <div className="character-container">
-                    <a href={character.url}>
                         <div className="character-header">
-                            <div className="character-name">
-                                <h5>{character.name}</h5>
-                            </div>
+                            <Link exact to={'/character/' + character.url.slice('https://swapi.dev/api/people/')}>
+                                <div className="character-name">
+                                    <h5>{character.name}</h5>
+                                </div>
+                            </Link>
                         </div>
-                    </a>
                     <div className="character-body">
                         <div className="character-stats">
                             <div className="character-stat">
