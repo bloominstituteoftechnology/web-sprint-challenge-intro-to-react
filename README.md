@@ -31,12 +31,17 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+React Js is a library that simplifies UX design by chunking code by functionality rather than language. Rather than having a button in html thats is styled in css and a function in js that runs when clicked all of that is put in the same component file.
 
 1. Describe component state.
+Component state is the set of data in the component that is relevant to what the user sees and should trigger a rerender when changed.
 
 1. Describe props.
+Props are pieces of state passed from parent components that can then be used by the child component. It allows each component to only have the data that is relevaent to it.
+
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+The useEffect hook is used for detecting changes in state by passing said variable into the dependency array. before useEffect was created you would have to use the componentDidMount, componentWillUpdate, and componentWillDismount functions. They are mainly used for fetching api data and recalculating data that is based on other data.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
