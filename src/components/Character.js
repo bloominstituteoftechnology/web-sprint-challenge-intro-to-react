@@ -18,7 +18,10 @@ export default function Character(props){
     padding: 10%;
     margin:2%;
     &:hover{
-        background-color: green;
+        color:black;
+        background-color: white;
+        transform:scale(2);
+        transition: all 0.5s ease-in-out;
     }
     `;
 
