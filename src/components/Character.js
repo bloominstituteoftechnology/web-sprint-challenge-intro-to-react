@@ -17,13 +17,15 @@ export default function Character(props){
     justify-content: space-between;
     padding: 10%;
     margin:2%;
-
     `;
 
     return(
         <Container>
         <div>
             {character.name}
+        </div>
+        <div>
+            {character.homeworld}
         </div>
 
         </Container>
