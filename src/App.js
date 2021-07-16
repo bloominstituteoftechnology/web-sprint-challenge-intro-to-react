@@ -36,7 +36,8 @@ const App = () => {
 
   const Header = styled.h1`
    color:white;
-   background-color:black;`
+   background-color:black;
+   border-radius: 25%;`
 
    const CharacterDetails = styled.section`
    background-color: black;

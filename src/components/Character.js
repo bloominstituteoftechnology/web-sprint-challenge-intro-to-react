@@ -1,6 +1,6 @@
 // Write your Character component here
 import React from 'react';
-// import styled from  'styled-components';
+import styled from  'styled-components';
 export default function Character(props){
     const {results} =props;
     console.log(`HERE ARE THE RESULTS`, results);
@@ -9,9 +9,18 @@ export default function Character(props){
         return (resultsObj.name)
     })
 
-    // const Names = styled.div``;
+    const Container = styled.section`
+    
+    border-style: dashed;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10%;
+    margin:2%;
+    `;
+
     return(
-        <container>
+        <Container>
         <div>
             {names[0]}
         </div>
@@ -30,6 +39,6 @@ export default function Character(props){
         <div>
             {names[5]}
         </div>
-        </container>
+        </Container>
     );
 }
