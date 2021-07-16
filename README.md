@@ -84,3 +84,5 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 1. Describe component state.
 1. Describe props.
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+## Rick's Pull Request
