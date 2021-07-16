@@ -81,6 +81,19 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+
+  React handles scalability by allowing us to create components.  Components can be reused, and passed specific data that they need.  The re-usability of components saves us time and effort, while also reducing the amount of code we need to write to render
+  necessary elements.
+
 1. Describe component state.
+
+  Component state is essentially an object that holds data that may change, and if it does effects what the component itself renders.
+
 1. Describe props.
+
+  Props are slices of state (or data) that are passed from parent to child.  These slices of state are then used to determine how a
+  component looks, or what it renders.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+  Side effects are when a function alters anything outside of the function scope being executed.  This can be changing data outside of the function being called, an api call, etc.  We can sync effects in a react component to changes of certain state or props using the useEffect hook, and setting it's second array argument to "watch" or only run when a slice of state is updated or changed.  We do this by setting the second argument like: [sliceOfStateToWatch]
