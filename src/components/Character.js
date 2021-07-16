@@ -14,6 +14,7 @@ export default function Character(props) {
             axios.get(url)
                 .then(res => res.data)
                 .then(data => setHomeworld(data.name))
+                .catch(err => console.log(err))
         }
         getHomeWorld(character.homeworld)
     }, [])
@@ -59,6 +60,16 @@ export default function Character(props) {
         h3 {
             font-size: 2rem;
         }
+        ul {
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            li {
+                font-size: 1.5rem;
+                padding: 1rem;
+            }
+        }
     `
 
     return (
@@ -68,6 +79,10 @@ export default function Character(props) {
             {visible ?
             <div className="character-details">
                 <h3>Born: {character.birth_year}</h3>
+                    <h3>Films: </h3>
+                <ul>
+                    {character.films.map(film => <li>{film}</li>)}
+                </ul>
                 <UrlList urls={character.vehicles} title="Vehicles" key={uuid()} />
                 <UrlList urls={character.starships} title="Starships" key={uuid()} />
                 <h3>Home World: {homeworld}</h3>

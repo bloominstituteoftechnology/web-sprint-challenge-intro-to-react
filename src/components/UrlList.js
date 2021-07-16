@@ -10,6 +10,7 @@ export default function UrlList(props) {
         const getData = url => {
             return axios.get(url)
                 .then(response => response.data.name)
+                .catch(err => console.log(err))
         }
         Promise.all(urls.map(url => getData(url)))
             .then(names => setNameList(names))

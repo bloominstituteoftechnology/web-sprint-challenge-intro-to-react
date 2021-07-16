@@ -16,8 +16,12 @@ const App = () => {
     const getPeople = () => {
       axios.get(`${baseUrl}people/`)
         .then(response => response.data)
-        .then(ApiData => setPeople(ApiData))
-    }
+        .then(ApiData => {
+          console.log(ApiData)
+          setPeople(ApiData)
+        })
+        .catch(err => console.log(err))
+    };
     getPeople();
   }, [])
   return (
