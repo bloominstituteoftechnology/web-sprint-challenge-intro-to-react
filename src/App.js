@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import { API_KEY } from './components/Key';
-// import Character from './components/Character';
+import Character from './components/Character';
 
 // import styled from 'styled-components';
 
@@ -31,7 +31,7 @@ const App = () => {
     
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {/* <Character name={characters.name}/> */}
+      <Character name={characters.name}/>
     </div>
     
     
