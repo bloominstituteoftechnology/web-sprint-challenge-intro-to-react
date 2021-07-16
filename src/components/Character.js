@@ -8,7 +8,7 @@ const StyledCharacter = styled.p`
   color: ${({theme}) => theme.primaryColor};
   text-shadow: 1px 1px 5px ${({theme}) => theme.black};
   background-color: ${({theme}) => theme.secondaryColor};
-  border: 2px solid ${({theme}) => theme.primaryColor};
+  border: 1px solid ${({theme}) => theme.primaryColor};
   max-width: 30%;
   margin: 1% 35%;
   padding: 3%;
