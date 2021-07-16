@@ -81,9 +81,28 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-1. Describe component state.
-1. Describe props.
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+**Answer** 
+After reviewing [React](https://reactjs.org/) they say it's a Javascript library for building user inerfaces. In my own words, React.js is an open-source JavaScript Library. It is not a language. It's used to build out DOM from within a JS file specifically for single-page type applications giving a smooth fast user interface. It's scalable and it makes both the front end developer job and UX optimal. Let's pat Mark Zuckerburg's Jordan Walke (software engineer) on the back for making our lives easier.
+
+2. Describe component state.
+
+**Answer**
+"State is a JavaScript object holding information that affects render output and it is managed withing a component similar to variables being declared in a function. (On/off, True/false, and booleen examples.)
+
+3. Describe props.
+
+**Answer**
+Props is short for "properties" and like state is also a plain JavaScript object. It also holds information that affectst the output render but unlike state props gets passed to the component sort of like function parameters. 
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+**Answer**
+"Side Effects" are anything that affects something outside the scope of the function being executed. Examples: fetching api data, timers, logging, and manual DOM manipulations. The come in two flavors those requiring cleanup and those that don't. We sync effects in a React componenet using tools like The **Effect Hook**. Using a dependency array as the second argument in the effect hook, we can tell it with which state or props the effect should be synced. I like this handy summary
+- useEffect(fn); // all state and props
+- useEffect(fn, []); // no state or props
+- useEffect(fn, [these, states, props]);
 
 ## Rick's Pull Request
+- Pull request placed here for convenience. 
 - [Pull Request Link](https://github.com/LambdaSchool/web-sprint-challenge-intro-to-react/pull/214)
