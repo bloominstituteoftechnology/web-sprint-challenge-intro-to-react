@@ -8,11 +8,12 @@ export default function UrlList(props) {
     const [nameList, setNameList] = useState([])
     useEffect(() => {
         const getData = url => {
-            axios.get(url)
-                .then(response => response.data)
-                .then(ApiData => setNameList([...nameList, ApiData.name]))
+            return axios.get(url)
+                .then(response => response.data.name)
         }
-        urls.forEach(url => getData(url));
+        Promise.all(urls.map(url => getData(url)))
+            .then(names => setNameList(names))
+        ;
     }, [])
     const StyledList = styled.ul`
         width: 100%;
