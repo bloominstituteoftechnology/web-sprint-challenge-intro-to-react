@@ -21,7 +21,7 @@ export default class Planets extends React.Component {
     alert('The component is going to be unmounted');
 }
 
-
+/* a */
   render() {
     return (
         <div className="page-slider">
