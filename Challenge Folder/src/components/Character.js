@@ -49,7 +49,6 @@ const Character = ({ characters }) =>
             <p>Eye color: {data.eye_color}</p>
             <p>Birth year: {data.birth_year}</p>
             <p>Gender: {data.gender}</p>
-            {/* <p>homeworld: {data.homeworld}</p> */}
           </SagaCards>
         )
       })}
