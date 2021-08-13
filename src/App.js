@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
+import styled from 'styled-components';
 import Character from './components/Character';
 import Details from './components/Details';
 
@@ -51,25 +52,47 @@ export default function App()
             });
     }, []);
 
+    const HeaderContainer = styled.header`
+        background-color: transparent;
+        color: #443e3e;
+        text-shadow: 1px 1px 5px #fff;
+        text-align: center;
+        font-size: 30px;
+    `;
+
+    const Row = styled.div`
+        display: flex;
+    `;
+
+    const Column = styled.div`
+        flex: 30%;
+    `;
+
     return (
         <div className="App">
-            <h1 className="Header">Characters</h1>
+            <HeaderContainer>Characters</HeaderContainer>
             {error && <h2>{error}</h2>}
-            {
-                characters &&
-                characters.map(item => 
-                {
-                    return <Character
-                        key={item.name}
-                        info={item}
-                        openDetails={openDetails}
-                        closeDetails={closeDetails}
-                    />;
-                })
-            }
-            {
-                currentCharacter && <Details info={currentCharacter} closeDetails={closeDetails} />
-            }
+            <Row>
+                <Column>
+                    {
+                        characters && characters.map(item => 
+                        {
+                            return <Character
+                                key={item.id}
+                                info={item}
+                                openDetails={openDetails}
+                                closeDetails={closeDetails}
+                                currentCharacter={currentCharacter}
+                            />;
+                        })
+                    }
+                </Column>
+                <Column>
+                    {
+                        currentCharacter && <Details info={currentCharacter} closeDetails={closeDetails} />
+                    }
+                </Column>
+            </Row>
         </div>
     );
 };
