@@ -7,4 +7,7 @@ import App from "./App";
 import { worker } from "./mocks/browser";
 worker.start();
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import {ThemeProvider} from 'styled-components'
+import theme from './theme'
+
+ReactDOM.render(<ThemeProvider theme={theme}><App /></ThemeProvider>, document.getElementById("root"));
