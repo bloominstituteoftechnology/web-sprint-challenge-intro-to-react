@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Character = props =>
+export default function Character(props)
 {
     return (
-        null
+        <div>
+            {props.info.name}
+            <button onClick={() => props.openDetails(props.info.id)}>
+                See Details
+            </button>
+        </div>
     );
-};
-
-export default Character;
+}
