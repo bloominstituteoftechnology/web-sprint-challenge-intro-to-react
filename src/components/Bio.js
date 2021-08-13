@@ -4,32 +4,39 @@ import styled from 'styled-components'
 
 const StyledBio = styled.div`
     li {
+        display:flex;
+        justify-content: center;
         color: ${pr => pr.theme.secondaryColor}
     }
 `;
 
 function Bio(props) {
-    const {displayChar, close} = props
-    const [info, setInfo] = useState(null)
+    const { height } = props
+    const [details, setDetails] = useState(null)
+    // const {displayChar, close} = props
+    // const [info, setInfo] = useState(null)
 
     useEffect(() => {
         axios.get(`https://swapi.dev/api/people`)
             .then(res => {
-                setInfo(res.data);
+                setDetails(res.data);
             })
             .catch(err => {
                 debugger
             })
-    }, [displayChar])
+    }, [])
 
     return (
         <StyledBio>
+            <ul>
+                <li>Height: {height}</li>
+            </ul>
             
-                {info &&
+                {/* {info &&
                 <ul>
                     <li>Name: {info.name}</li>
                 </ul>
-                }
+                } */}
             
             
             
@@ -51,7 +58,7 @@ function Bio(props) {
                     <img src={info.url}></img>
                 </div> */}
             {/* </ul> */}
-            <button onClick={close}>Close</button>
+            {/* <button onClick={close}>Close</button> */}
         </StyledBio>
     )
 
