@@ -1,5 +1,5 @@
 // Write your Character component here
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -9,6 +9,8 @@ const Button = styled.button`
      color: navy;
      margin: 0.5em 1em;
      padding: 0.25em 1em;
+     cursor: grab;
+     cursor: auto;
 `;
 
 const Character = props =>
