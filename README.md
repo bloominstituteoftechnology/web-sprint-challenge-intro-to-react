@@ -13,10 +13,10 @@ You are not allowed to collaborate during the sprint challenge.
 ## Project Set Up
 
 - [X] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
-- [ ] Open the assignment in Canvas and click on the "Set up git" option.
-- [ ] Follow instructions to set up Codegrade's Webhook and Deploy Key.
-- [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
-- [ ] Check to see that Codegrade has accepted your git submission.
+- [X] Open the assignment in Canvas and click on the "Set up git" option.
+- [X] Follow instructions to set up Codegrade's Webhook and Deploy Key.
+- [X] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
+- [X] Check to see that Codegrade has accepted your git submission.
 
 For a step-by-step on setting up Codegrade see [this guide.](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374)
 
@@ -36,15 +36,15 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 Your finished project must include all of the following requirements:
 
-- [ ] Use the endpoint `[GET] https://swapi.dev/api/people` (mocked in [msw](https://github.com/mswjs/msw)) to obtain characters.
-- [ ] Set the list of characters into state.
+- [X] Use the endpoint `[GET] https://swapi.dev/api/people` (mocked in [msw](https://github.com/mswjs/msw)) to obtain characters.
+- [X] Set the list of characters into state.
 - [ ] Render your characters to the DOM:
 
   1. Build a React component named 'Character' to render an individual character.
-  1. Map over the list in state, and for each character render a Character to the page.
-  1. Each rendered character must display its name in the DOM (e.g. "Luke Skywalker").
-  1. The character's name can't be hard-coded into the HTML. This data must be obtained from the API.
-  1. The components must be styled with **styled-components**.
+  2. Map over the list in state, and for each character render a Character to the page.
+  3. Each rendered character must display its name in the DOM (e.g. "Luke Skywalker").
+  4. The character's name can't be hard-coded into the HTML. This data must be obtained from the API.
+  5. The components must be styled with **styled-components**.
 
   **Notes:**
 
