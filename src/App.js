@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
+import Character from './components/Character';
+
 const App = () => {
   const [data, setData] = useState([])
   const [error, setError] = useState(null);
@@ -25,9 +27,18 @@ const App = () => {
   // sync up with, if any.
 
   return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
-    </div>
+    <>
+      <div className="App">
+        { error && <h1>{error}</h1> }
+        { <h1>Characters</h1>}
+      </div>
+      <div>
+      { data.map(char => {
+        return <Character info={char} />
+        }) 
+      }
+      </div>
+    </>      
   );
 }
 
