@@ -2,21 +2,29 @@
 import React, { useState } from 'react';
 import Films from './Films';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import styled from 'styled-components';
 
 export default function Character(props) {
     const [isOpen, setIsOpen ] = useState(false);
     const { info } = props;
 
-    const toggle = () => setIsOpen(!isOpen);
+    const toggleInfo = () => setIsOpen(!isOpen);
+
+    const CardBody = styled.div`
+        padding: 10px;
+        color: white;
+        background-size: cover;
+        background-image: url(https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg);
+    `
 
     return (
         <>
             <div>
                 <h3>{info.name}</h3> 
                 <Button 
-                onClick={toggle} 
+                onClick={toggleInfo} 
                 style={{ margin: '1rem' }}>
-                    {isOpen ? 'Close' : 'Open'}
+                    {isOpen ? 'Close' : 'Show Info'}
                 </Button>
             </div>
             <Collapse isOpen={isOpen}>
@@ -28,12 +36,11 @@ export default function Character(props) {
                         <p>Hair Color: {info.hair_color}</p>
                         <p>Mass: {info.mass}</p>
                         <p>Height: {info.height}</p>
-                        <p>Skin Color: {info.skin_color}</p>
-                        <p>Films</p>
-                        { info.films.map(item => {
-                            return <Films films={item} />
-                        })
-                        }
+                        <p>Film Debuts:</p>
+                            { info.films.map((item, index) => {
+                                return <Films films={item} key={index} />
+                                })
+                            }
                     </CardBody>
                 </Card>
             </Collapse>

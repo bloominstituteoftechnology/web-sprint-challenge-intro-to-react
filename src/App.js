@@ -11,7 +11,6 @@ const App = () => {
   useEffect(() => {
     axios.get(`https://swapi.dev/api/people`)
       .then(res => {
-        console.log(res.data)
         setData(res.data)
       })
       .catch(err => {
@@ -30,11 +29,11 @@ const App = () => {
     <>
       <div className="App">
         { error && <h1>{error}</h1> }
-        { <h1>Characters</h1>}
+        { <h1>Star Wars Characters</h1>}
       </div>
       <div>
-      { data.map(char => {
-        return <Character info={char} />
+      { data.map((char, index) => {
+        return <Character info={char} key={index} />
         }) 
       }
       </div>
