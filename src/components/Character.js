@@ -2,11 +2,10 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import styled from 'styled-components'
+import CharCard from './CharCard';
 
 export default function Character(char) {
     
-
     const [character, setCharacter] = useState([]);
     
     useEffect(() => {
@@ -18,8 +17,23 @@ export default function Character(char) {
     }, []);
 
     return (
-        <Character>
-            
-        </Character>
+        <div>
+            {
+            character.map((char) => {
+                return (
+                    <CharCard 
+                        name={char.name}
+                        birthYear = {char.birth_year}
+                        height = {char.height}
+                        mass = {char.mass}
+                        hairColor = {char.hair_color}
+                        skinColor = {char.skin_color}
+                        eyeColor = {char.eye_color}
+                        gender = {char.gender}
+                    />
+                )
+            })
+            }
+        </div>
     );
 }

@@ -1,6 +1,17 @@
 import React from 'react';
 import './App.css';
 import Character from './components/Character'
+import styled from 'styled-components'
+
+const StyledApp = styled.div`
+    background-color: black;
+    
+    h1{
+      color: white;
+      font-size: 4rem;
+      padding: 10% 0 3% 0;
+    }
+`
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -11,10 +22,10 @@ const App = () => {
   // sync up with, if any.
 
   return (
-    <div className="App">
+    <StyledApp className="App">
       <h1 className="Header">Imperial Galactic Database</h1>
       <Character />    
-    </div>
+    </StyledApp>
   );
 }
 
