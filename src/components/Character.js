@@ -10,19 +10,14 @@ const StyledChar = styled.div`
     }
 `;
 
-function Character(props) {
-    const { name, height, mass, hairColor, skinColor, eyeColor, birthYear, gender } = props
+function Character({ info, action }) {
 
     return (
         <StyledChar>
-            <p>Name: {name}</p>
-            <p>Height: {height}</p>
-            <p>Mass: {mass}</p>
-            <p>Hair Color: {hairColor}</p>
-            <p>Skin Color: {skinColor}</p>
-            <p>Eye Color: {eyeColor}</p>
-            <p>Birth Year: {birthYear}</p>
-            <p>Gender: {gender}</p>
+            {info.name}
+            <button onClick={() => action(info.id)}>
+                Character Details
+            </button>
         </StyledChar>
     )
 
