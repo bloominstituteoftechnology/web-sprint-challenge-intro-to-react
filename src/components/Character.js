@@ -7,15 +7,19 @@ import styled from 'styled-components'
 
 const StyledChar = styled.div`
     h4 {
+        display:flex;
+        justify-content: flex-start;
+        margin-left: 40px;
         color: ${pr => pr.theme.primaryColor};
         &:hover{
-            transform: rotate(-10deg);
-            font-size: 250%;
+            color: purple;
         }
     }
     li {
         display:flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: baseline;
         color: ${pr => pr.theme.secondaryColor}
     }
 `;
@@ -45,7 +49,6 @@ function Character(props) {
                     <li>Hair Color: {info.hair_color}</li>
                     <li>Skin Color: {info.skin_color}</li>
                     <li>Eye Color: {info.eye_color}</li>
-                    <li>Birth Year: {info.birth_year}</li>
                 </ul>
                 {/* <p>{info.name}</p>
                 <button onClick={() => action(info.id)}>
@@ -53,6 +56,7 @@ function Character(props) {
                 </button> */}
             </StyledChar>
             <Bio className="Bio"
+                birthYear={info.birth_year}
                 gender={info.gender}
                 // homeworld={info.homeworld}
             />

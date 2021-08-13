@@ -4,13 +4,13 @@ import styled from 'styled-components'
 const StyledBio = styled.div`
     li {
         display:flex;
-        justify-content: center;
+        justify-content: flex-start;
         color: ${pr => pr.theme.tertiaryColor}
     }
 `;
 
 function Bio(props) {
-    const { gender } = props
+    const { birthYear, gender } = props
     // const [details, setDetails] = useState(null)
 
     // useEffect(() => {
@@ -26,6 +26,7 @@ function Bio(props) {
     return (
         <StyledBio>
             <ul>
+                <li>Birth Year: {birthYear}</li>
                 <li>Gender: {gender}</li>
                 {/* <li>Homeworld: {world.name}</li> */}
                 {/* <li>Homeworld: {world.homeworld}</li>
