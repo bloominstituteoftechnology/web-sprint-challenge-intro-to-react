@@ -12,6 +12,7 @@ const StyledChar = styled.div`
         margin-left: 40px;
         color: ${pr => pr.theme.primaryColor};
         &:hover{
+            transform: rotate(-2deg);
             color: purple;
         }
     }

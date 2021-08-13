@@ -10,7 +10,8 @@ const StyledApp = styled.div`
     h1 {
     display: flex;
     flex-direction: flex-start;
-    margin: 40px
+    margin: 40px;
+    color: white;
     }
 `;
 
