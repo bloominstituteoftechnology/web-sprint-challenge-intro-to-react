@@ -20,14 +20,18 @@ function Bio(props) {
             .catch(err => {
                 debugger
             })
-    }, [])
+    }, [displayChar])
 
     return (
         <StyledBio>
-            <ul>
-                <li>Name: {props.info.name}</li>
-            </ul>
-            {/* info && */}
+            
+                {info &&
+                <ul>
+                    <li>Name: {info.name}</li>
+                </ul>
+                }
+            
+            
             
                 {/* <li>Height: {info.height}</li>
                 <li>Mass: {info.mass}</li>
@@ -47,7 +51,7 @@ function Bio(props) {
                     <img src={info.url}></img>
                 </div> */}
             {/* </ul> */}
-            <button onClick={() => props.openChar(props.info.id)}>Close</button>
+            <button onClick={close}>Close</button>
         </StyledBio>
     )
 
