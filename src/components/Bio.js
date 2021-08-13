@@ -9,7 +9,6 @@ const StyledBio = styled.div`
 `;
 
 function Bio(props) {
-    // const { name, height, mass, hairColor, skinColor, eyeColor, birthYear, gender, homeworld, films, species, vehicles, starships, created, edited, url } = props
     const {displayChar, close} = props
     const [info, setInfo] = useState(null)
 
@@ -21,16 +20,16 @@ function Bio(props) {
             .catch(err => {
                 debugger
             })
-    }, [displayChar])
+    }, [])
 
     return (
         <StyledBio>
-            {
-            info &&
-            <>
             <ul>
-                <li>Name: {info.name}</li>
-                <li>Height: {info.height}</li>
+                <li>Name: {props.info.name}</li>
+            </ul>
+            {/* info && */}
+            
+                {/* <li>Height: {info.height}</li>
                 <li>Mass: {info.mass}</li>
                 <li>Hair Color: {info.hairColor}</li>
                 <li>Skin Color: {info.skinColor}</li>
@@ -46,25 +45,9 @@ function Bio(props) {
                 <li>Edited: {info.edited}</li>
                 <div>Picture:
                     <img src={info.url}></img>
-                </div>
-            </ul>
-            </>
-            }
-            {/* <p>name={charData.name}
-            height={charData.height}
-            mass={charData.mass}
-            hairColor={charData.hairColor}
-            skinColor={charData.skinColor}
-            eyeColor={charData.eyeColor}
-            birthYear={charData.birthYear}
-            gender={charData.gender}
-            homeworld={charData.homeworld}
-            films={charData.films}
-            species={charData.species}
-            vehicles={charData.vehicles}
-            starships={charData.starships}
-            url={charData.url}</p> */}
-            <button onClick={close}>Close</button>
+                </div> */}
+            {/* </ul> */}
+            <button onClick={() => props.openChar(props.info.id)}>Close</button>
         </StyledBio>
     )
 

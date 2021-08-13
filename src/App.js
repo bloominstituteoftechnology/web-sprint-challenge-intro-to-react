@@ -12,7 +12,7 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   const [charData, setCharData] = useState([]);
-  const [currentChar, setCurrentChar] = useState('1')
+  const [currentChar, setCurrentChar] = useState(null);
 
   const openChar = id => {
     setCurrentChar(id)
@@ -35,9 +35,11 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Star Wars Characters</h1>
+      {/* <Character className="Character" name={charData.name}/>
+      <Bio className="Bio" name={charData.name}/> */}
       {
         charData.map(cr => {
-          return <Character className="Character" key={cr.id} info={cr} action={openChar} />
+          return <Character className="Character" key={cr.id} info={cr} openChar={openChar} closeChar={closeChar} />
         })
       }
       {

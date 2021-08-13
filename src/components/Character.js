@@ -14,8 +14,7 @@ function Character({ info, action }) {
 
     return (
         <StyledChar>
-            {info.name}
-            <button onClick={() => action(info.id)}>
+            <p>{info.name}</p><button onClick={() => action(info.id)}>
                 Character Details
             </button>
         </StyledChar>
