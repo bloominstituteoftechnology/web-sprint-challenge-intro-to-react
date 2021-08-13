@@ -13,6 +13,7 @@ export default function Character(props) {
         display: flex;
         justify-content: space-between;
         margin: 50px;
+        color: black;
     `
 
     const CardBody = styled.div`
@@ -26,11 +27,22 @@ export default function Character(props) {
         text-decoration: underline;
     `
 
+    const Span = styled.span`
+        background-color: white;
+        padding: 10px;
+        border: solid black 2px;
+    `
+
+    const Button = styled.button`
+        background-color: black;
+        color: white;
+    `
+
     return (
         <>
             <StyledName>
                 <div>
-                <h3>*{info.name}</h3> 
+                <h3><Span>*{info.name}</Span></h3> 
                 </div>
                 <div>
                 <Button onClick={toggleInfo} >

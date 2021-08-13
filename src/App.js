@@ -18,6 +18,12 @@ const App = () => {
   margin: 50px;
 `
 
+  const Span = styled.span`
+    background-color: white;
+    padding: 10px;
+    border: solid black 2px;
+  `
+
   useEffect(() => {
     axios.get(`https://swapi.dev/api/people`)
       .then(res => {
@@ -32,7 +38,7 @@ const App = () => {
     <>
       <StyledHeader>
         { error && <h1>{error}</h1> }
-        { <h1>Star Wars Characters</h1>}
+        { <h1><Span>Star Wars Characters</Span></h1>}
       </StyledHeader>
       <StyledDetails>
       { data.map((char, index) => {
