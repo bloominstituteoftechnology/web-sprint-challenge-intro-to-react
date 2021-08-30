@@ -5,3 +5,7 @@ body {
   background-image: url('./images/sw-bg.jpg');
   background-size: cover;
 }
+
+p {
+  font-size: 30px;
+}

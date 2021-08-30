@@ -1,53 +1,36 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from 'react';
 
 
-function Character(props) {
-    const characterDeets = props.props;
-    console.log(characterDeets);
-    
-    const newList = characterDeets.map(i => {
-        return (
-            <MainDiv>
-            
-                <HeaderFour>My name is {i.name} </HeaderFour>
-                <HeaderFive>Check out my stats</HeaderFive>
-                <p>Gender: {i.gender}</p>
-                <p>Birth: {i.birth_year}
-                <p>Eyes: {i.eye.color}</p>
-                <p>Height in cm: {i.height}</p>
-            </MainDiv>
-        )
-});
-return newList 
-}
 
-export default Character
 
-const MaiDiv = styled.div`
-  height: 100%;
-  text-content: center;
-  background-color: #e0dcda;
-  color: #2e1e18;
-  margin: 1% 40%;
-  padding: 10px;
-  border: 1px solid #b0a9a5;
-  margin-top: none!important;
-  margin-bottom: none!important;
+const charApp = (props) => {
   
-  ;
-  const HeaderFour = styled.h4`
-  text-shadow: 1px 1px 5px #fff;d
-  
- `;
- 
- const HeaderFive = styled.h5`
-  text-shadow: 1px 1px 5px #fff;
-`;
-  
-  
-  
-  
-  
-  
-                                 
+    return(
+      <section>
+          <h1>Main Star Wars Characters:</h1>
+           {
+            props.character.map((character) => (
+               <article>
+               <p>Name: {character.name}  Birth Year:{character.birth_year}</p>
+               </article>
+               
+               ))
+             
+            }
+           <h1> Star Wars Movies:</h1>
+           {
+            props.movie.map((movie) => (
+               <article>
+               <p>Release Date:{movie.release_date}   Episode:{movie.episode_id}    {movie.title}</p>
+               </article>
+               
+               ))
+             
+            }
+
+      </section>   
+    );
+  }
+
+
+export default charApp;
