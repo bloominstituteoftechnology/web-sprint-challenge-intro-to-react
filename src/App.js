@@ -17,6 +17,9 @@ const App = () => {
   // the state properties here.
   const [URL] = useState("https://swapi.dev/api/people")
   const [char, setChar] = useState([])
+
+  const [mURL] = useState("https://swapi.dev/api/films")
+  const [movie, setMovie] = useState([])
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
@@ -29,6 +32,15 @@ const App = () => {
       })
       .catch(errors => {console.log(errors)})
   }, [])
+
+  useEffect(()=>{
+    axios.get(mURL)
+       .then((res) => {
+         console.log('RESULTSMOVIE', res.data.results)
+         setMovie(res.data.results)
+       })
+       .catch(errors => {console.log(errors)})
+   }, [])
   
   
   
@@ -36,7 +48,7 @@ const App = () => {
   return (
     <div className="App">
       <styleDiv>
-      <p className="Header"><Character  character={char} /></p>
+      <p className="Header"><Character  character={char} movie={movie}/></p>
       </styleDiv>
     </div>
   );
