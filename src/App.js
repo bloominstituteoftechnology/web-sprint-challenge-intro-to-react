@@ -30,7 +30,7 @@ const App = () => {
         console.log('RESULTS', res.data)
         setChar(res.data)
       })
-      .catch(errors => {console.log(errors)})
+      .catch(errors => {console.log(errors) debugger})
   }, [])
 
   useEffect(()=>{
@@ -39,7 +39,7 @@ const App = () => {
          console.log('RESULTSMOVIE', res.data.results)
          setMovie(res.data.results)
        })
-       .catch(errors => {console.log(errors)})
+       .catch(errors => {console.log(errors) debugger})
    }, [])
   
   
