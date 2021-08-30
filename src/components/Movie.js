@@ -3,20 +3,21 @@ import React from 'react';
 
 
 
-const charApp = (props) => {
+const movieApp = (props) => {
   
     return(
       <section>
            {
                <article>
-               <p>Name: {props.character.name}  Birth Year:{props.character.birth_year}</p>
+               <p>Release Date:{props.movie.release_date}   Episode:{props.movie.episode_id}    {props.movie.title}</p>
                </article>
                
              
             }
+
       </section>   
     );
   }
 
 
-export default charApp;
+export default movieApp;

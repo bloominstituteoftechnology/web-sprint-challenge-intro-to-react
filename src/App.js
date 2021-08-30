@@ -3,10 +3,10 @@ import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 import './App.css';
 import Character from './components/Character';
+import Movie from './components/Movie';
 
-const styleDiv = styled.div`
-   display: flex;
-   flex-wrap: wrap;
+const StyledDiv = styled.div`
+   color: gold;
 `;
 
 const App = () => {
@@ -16,10 +16,10 @@ const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
   const [URL] = useState("https://swapi.dev/api/people")
-  const [char, setChar] = useState([])
+  const [chars, setChar] = useState([])
 
   const [mURL] = useState("https://swapi.dev/api/films")
-  const [movie, setMovie] = useState([])
+  const [movies, setMovie] = useState([])
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
@@ -30,7 +30,7 @@ const App = () => {
         console.log('RESULTS', res.data)
         setChar(res.data)
       })
-      .catch(errors => {console.log(errors) debugger})
+      .catch(errors => { debugger})
   }, [])
 
   useEffect(()=>{
@@ -39,18 +39,32 @@ const App = () => {
          console.log('RESULTSMOVIE', res.data.results)
          setMovie(res.data.results)
        })
-       .catch(errors => {console.log(errors) debugger})
+       .catch(errors => { debugger})
    }, [])
   
   
   
   
   return (
-    <div className="App">
-      <styleDiv>
-      <p className="Header"><Character  character={char} movie={movie}/></p>
-      </styleDiv>
-    </div>
+    <StyledDiv className="App">
+      
+      {chars.map(char => {
+        return(
+      
+      <p><Character character={char} /></p>
+     
+        );
+      })}
+       
+      {movies.map(mov => {
+        return(
+      
+      <p><Movie movie={mov}/></p>
+      
+        );
+      })}
+      
+    </StyledDiv>
   );
 }
 
