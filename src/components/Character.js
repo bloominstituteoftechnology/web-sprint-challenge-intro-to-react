@@ -21,7 +21,7 @@ const charApp = (props) => {
            {
             props.movie.map((movie) => (
                <article>
-               <p>Release Date:{movie.release_date} Episode:{movie.episode_id} {movie.title}</p>
+               <p>Release Date:{movie.release_date}   Episode:{movie.episode_id}    {movie.title}</p>
                </article>
                
                ))
