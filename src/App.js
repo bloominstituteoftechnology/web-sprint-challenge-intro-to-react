@@ -59,7 +59,7 @@ const App = () => {
   //Define the return function
   return (
     <div class = "App">
-    <h1 class = "Header"> Star Wars Project </h1>
+    <h1 class = "Header"> Star Wars API in React</h1>
 
     {/* Render the title */}
     <PageTitle>React Wars</PageTitle>
