@@ -30,24 +30,28 @@ const PageTitle = styled.title`
 `
 
 //App function definition
-const App = () => {
+const App = () => 
+{
   //Declare the state variable and set function, init to []
   const [characters, setCharacters] = useState([]);
 
   //UseEffect() effect hook function definition
-	useEffect(() => {
+	useEffect(() => 
+  {
 		    
     //Axios gets data from the url
 		axios.get("https://swapi.dev/api/people")
 		
     //then() function
-    .then((res) => {
+    .then((res) => 
+    {
       //Invoke the setCharacter function, setting the returned data to []
 			setCharacters(res.data)
 		})
     
     //catch() if there is an error obtaining data
-		.catch(err => {
+		.catch(err => 
+    {
       //If the Falcon's engines won't fire, log the error
 			console.log("They told me they fixed it. I trusted them to fix it. It's not my fault! (Han Solo)", err)
 		});
@@ -59,13 +63,13 @@ const App = () => {
   //Define the return function
   return (
     <div class = "App">
-    <h1 class = "Header"> Star Wars API in React</h1>
+    <h1 class = "Header"> Star Wars Project </h1>
 
     {/* Render the title */}
     <PageTitle>React Wars</PageTitle>
     
     {/* Render the characters */}
-    <Character characters={ characters }/>
+    <Character characters = { characters }/>
     </div>
   );
 }
