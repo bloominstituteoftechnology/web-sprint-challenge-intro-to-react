@@ -6,7 +6,6 @@
  * 7/16/2021
  **/
 
-// Write your Character component here
 
 //Import statements
 import React from "react";
@@ -33,13 +32,11 @@ const TopDiv = styled.div`
 `
 
 //Character function definition, pass in characters
-const Character = ({ characters }) => 
-{
+const Character = ({ characters }) => {
   //Return function
   return (
     <TopDiv>
-      {characters.map(data => 
-      {
+      {characters.map(data => {
         return (
           <SagaCards>
             <h2>{ data.name }</h2>
