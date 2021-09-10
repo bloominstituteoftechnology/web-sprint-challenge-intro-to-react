@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const CharacterCard = styled.div`
@@ -8,14 +8,20 @@ const CharacterCard = styled.div`
     display: block;
     margin: 4em auto;
     padding: 10px;
-    
+    border: 10px solid red;
 `
 
 const StyledName = styled.h1`
     font-size: 2em;
+    transition: transform .7s ease-in-out;
+    &:hover {
+        transform: scale(1.5) rotate(360deg);
+    }
+    text-decoration: 5px underline lightgreen;
 `
 const StyledH2 = styled.h2`
     font-size: 1em;
+    text-decoration: 5px underline lightblue;
 `
 
 // Write your Character component here
