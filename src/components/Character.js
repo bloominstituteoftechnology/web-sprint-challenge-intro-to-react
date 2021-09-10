@@ -1,8 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 export default function Character(props)
 {
+
     const Container = styled.div` 
         width: 100%;
         display: flex;
@@ -11,7 +12,7 @@ export default function Character(props)
         padding: 8px;
         background-color: rgba(255,222,173,.3);
         color: #0077b6;
-    
+        
         span{
             display: inline-block;
             vertical-align: middle;

@@ -75,7 +75,7 @@ export default function App()
             <Row>
                 <Column>
                     {
-                        characters && characters.map(item =>
+                        characters && characters.map(item => 
                         {
                             return <Character
                                 key={item.id}
@@ -88,9 +88,11 @@ export default function App()
                     }
                 </Column>
                 <Column>
-
+                    {
+                        currentCharacter && <Details info={currentCharacter} closeDetails={closeDetails} />
+                    }
                 </Column>
             </Row>
         </div>
     );
-}
+};
