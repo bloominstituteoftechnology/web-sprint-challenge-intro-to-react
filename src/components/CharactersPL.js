@@ -13,9 +13,7 @@ export default function CharactersPL (props){
     return (
         <div className='container'> 
             {
-                name.map((name, idx) => {
-                return <Character name={name.results.idx}  />
-                })
+               //name.map(name => { return <Character name={name}/>})
             }
         </div>
     );
