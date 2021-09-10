@@ -71,18 +71,29 @@ After finishing your required elements, you can push your work further. These go
 
 ## Submission format
 
-- [ ] Submit via Codegrade by committing and pushing any new changes.
-- [ ] Create a pull request to merge `<firstName-lastName>` branch into `main`.
-- [ ] Please don't merge your own pull request and make sure **you are on your own repo**.
-- [ ] Check Codegrade for automated feedback.
-- [ ] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
-- [ ] Any changes pushed after the deadline will not receive any feedback.
+- [x] Submit via Codegrade by committing and pushing any new changes.
+- [x] Create a pull request to merge `<firstName-lastName>` branch into `main`.
+- [x] Please don't merge your own pull request and make sure **you are on your own repo**.
+- [x] Check Codegrade for automated feedback.
+- x ] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
+- [x] Any changes pushed after the deadline will not receive any feedback.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+
+- React JS is a framework that can be used to develop single-page and mobile applications. For example this sprint challenge is a single page application devloped to display characters. These single page applications consist of componenets that work together to create the application. 
+
 1. Describe component state.
+
+- State is the slice of truth and the area that holds the data in React.
+
 1. Describe props.
+
+- Props are the vehicle that carry the data to the componenets.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+- Side effects are anything that affects something outside of the scope of the function that is being executed. You sync effects in a React component to change certain state or props by calling an API and manipulating the data from that api. Like in the app.js calling setCharacters.
