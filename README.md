@@ -14,7 +14,7 @@ You are not allowed to collaborate during the sprint challenge.
 
 - [X] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
 - [X] Open the assignment in Canvas and click on the "Set up git" option (Or, depending, if you see something along the lines of 'Load Sprint Challenge Submission in a new window' click that).
-- [ ] Wire your fork to Codegrade using the "Click here for instructions on setting up Git submissions" link, select Github, authorize Github.
+- [X] Wire your fork to Codegrade using the "Click here for instructions on setting up Git submissions" link, select Github, authorize Github.
 - [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`. MAKE SURE TO PUSH TO MAIN, YOU NO LONGER NEED TO CREATE A NEW BRANCH!!
 - [ ] Make commits often! PUSH TO MAIN!!!
 - [ ] You can run tests locally by running npm run test.
@@ -43,10 +43,10 @@ Your finished project must include all of the following requirements:
 - [ ] Render your characters to the DOM:
 
   1. Build a React component named 'Character' to render an individual character.
-  1. Map over the list in state, and for each character render a Character to the page.
-  1. Each rendered character must display its name in the DOM (e.g. "Luke Skywalker").
-  1. The character's name can't be hard-coded into the HTML. This data must be obtained from the API.
-  1. The components must be styled with **styled-components**.
+  2. Map over the list in state, and for each character render a Character to the page.
+  3. Each rendered character must display its name in the DOM (e.g. "Luke Skywalker").
+  4. The character's name can't be hard-coded into the HTML. This data must be obtained from the API.
+  5. The components must be styled with **styled-components**.
 
   **Notes:**
 
@@ -83,6 +83,18 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-1. Describe component state.
-1. Describe props.
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+React JS is NOT a framework. React JS is a User Interface Component Library built by Facebook. It is a library built in JavaScript that uses components to build out user interfaces. It tries to solve the problem of managing a lot of disparate data (complex state) without slowing down the web browser. It gives web developers the ability of writing everything out in small components that will be pieced together and rendered on to the DOM (Document Object Model, a web API used to build websites).
+The website Facebook uses a lot of data on any given Facebook page. Web developers at Facebook specifically developed React JS in order to efficiently render all of this data to the DOM and subsequently to the web browser.
+
+2. Describe component state.
+
+The state of a component is an object that holds some information that may change over the lifetime of the component. React stores the component's state. It updates the component's state anytime the component changes.
+
+3. Describe props.
+
+Props stands for properties. Props is kind of a read-only global variable or object. React allows web developers to pass information held on state inside of one component to another component through props.
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+A side effect is anything that affects something outside of the scope of the function being executed. The following are some examples of side effects: making asynchronous API calls for data, timers, logging, and manually updating the DOM element. Web developers can sync effects in a react component by using the Effect hook. When using the Effect hook, web developers can specify when to synchronize a particular effect with particular state/props changes.
