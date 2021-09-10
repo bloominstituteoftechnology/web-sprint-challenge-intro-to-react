@@ -1,10 +1,16 @@
 // Write your Character component here
-import React, {useState, useEffect}  from 'react';
+import React from 'react';
 
-export default function Character (props){
-    const { name, age, something} = props
+const Character = props => {
+    const {name, info} = props;
+
+    //console.log(name);
 
     return(
-        <Character nameObj={name} ageObj={age}/>
-    )
-}
+        <div className='characterName'>{info}
+            <span>{name}</span>
+        </div>
+        );    
+};
+
+export default Character;
