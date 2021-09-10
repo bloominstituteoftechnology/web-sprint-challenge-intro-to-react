@@ -22,12 +22,14 @@ const StyledCharacter = styled.div `
         background: gray;
         cursor: pointer;
     }
-
-    .content {
-        display:none;
+    a:active{
+        display:block;
     }
+    // .content {
+    //     display:none;
+    // }
 `
- 
+
 
 
 
@@ -43,13 +45,13 @@ export default function Character(props) {
                 <h3 className='title'>{props.info.name}<span className='icon'></span></h3>
                 </div>
                 <div className='content'>
-                    <p>{props.info.gender}</p>
-                    <p>{props.info.height}</p>
-                    <p>{props.info.mass}</p>
-                    <p>{props.info.birth_year}</p>
-                    <p>{props.info.eye_color}</p>
-                    <p>{props.info.hair_color}</p>
-                    <p>{props.info.skin_color}</p>
+                    <p>Gender: {props.info.gender}</p>
+                    <p>Height: {props.info.height}</p>
+                    <p>Mass: {props.info.mass}</p>
+                    <p>BirthYear: {props.info.birth_year}</p>
+                    <p>Eye Color: {props.info.eye_color}</p>
+                    <p>Hair Color: {props.info.hair_color}</p>
+                    <p>Skin Color: {props.info.skin_color}</p>
                 </div>
             </div>
         </StyledCharacter>  
