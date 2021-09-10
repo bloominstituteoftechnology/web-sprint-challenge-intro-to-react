@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 import Search from './components/Search'
-import Characters from './components/Character'
+// import Character from './components/Character'
+import Characters from './components/Characters'
+
 const App = () => {
 
   // const [searchTerm, setSearchTerm] = useState('');
@@ -29,6 +31,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       <Search  />
+      {/* <Character /> */}
       <Characters />
     </div>
   );
