@@ -5,25 +5,26 @@ import axios from 'axios';
 
 
 export default function Characters() {
+    const [ characterList, setCharacterList ] = useState([])
     useEffect(() => {
-        axios.get(`https://swapi.dev/api/people`)
-            .then(resp => {
-                let characterData = resp.data.results;
-                {characterData.map(charObj => {
+        async function fetchCharacters() {
+            const resp = await axios.get(`https://swapi.dev/api/people`);
+            const characterData = resp.data.results;
+            setCharacterList(characterData)
+        }
+        fetchCharacters();  
+    }, [])
+
+      return (<div>  
+            {characterList ? characterList.map(charObj => {
                     // console.log(charObj)
                     return <Character
-                        // info={charObj}
+                        key={charObj.name}
+                        info={charObj}
                         name='name'
                     />
-                })}
-            }).catch(err => {
-                console.log(err)          
-            })
-    })
-    
-      return (<div> { 
-            
-        } </div>
+                }):<div>TESTTESTESTESTESTEST</div>}
+         </div>
         )
 
     // return (<div> {  useEffect(() => {<Character />}) } </div>)

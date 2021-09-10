@@ -33,26 +33,26 @@ const StyledCharacter = styled.div `
 
 
 export default function Character(props) {
-    const [ char, setChar ] = useState('')
-            console.log('something')
+   
+            console.log(props)
         useEffect(() => { console.log(props); })
         return (
         <StyledCharacter>  
             <div className='character'>
                 <div className='bar'>
-                <h3 className='title'>{char}<span className='icon'></span></h3>
+                <h3 className='title'>{props.info.name}<span className='icon'></span></h3>
                 </div>
                 <div className='content'>
-                    <p>gender</p>
-                    <p>height</p>
-                    <p>mass</p>
-                    <p>birth_year</p>
-                    <p>eye_color</p>
-                    <p>hair_color</p>
-                    <p>skin_color</p>
+                    <p>{props.info.gender}</p>
+                    <p>{props.info.height}</p>
+                    <p>{props.info.mass}</p>
+                    <p>{props.info.birth_year}</p>
+                    <p>{props.info.eye_color}</p>
+                    <p>{props.info.hair_color}</p>
+                    <p>{props.info.skin_color}</p>
                 </div>
             </div>
-    </StyledCharacter>  
+        </StyledCharacter>  
     )        
 }
 
