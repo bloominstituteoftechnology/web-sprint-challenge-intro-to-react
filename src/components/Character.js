@@ -8,7 +8,7 @@ const Character = props => {
 
     return(
         <div className='characterName'>{info}
-            <span>{name}</span>
+            <span name={name}> {name} </span>
         </div>
         );    
 };
