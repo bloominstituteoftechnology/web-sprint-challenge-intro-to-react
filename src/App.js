@@ -28,11 +28,11 @@ const App = () => {
   useEffect(() => {
     axios.get(`${BASE_URL}`)
     .then(res => {
-      console.log(res.data);
+      //console.log(res.data);
       setCharacters(res.data);
     }).catch(err => console.log(err))
   }, [])
-  console.log(characters)
+  //console.log(characters)
   return (
     <StyledBackground className="App">
       <StyledHeader className="Header">Characters</StyledHeader>

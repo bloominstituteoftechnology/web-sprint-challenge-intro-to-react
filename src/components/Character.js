@@ -28,8 +28,8 @@ const StyledH2 = styled.h2`
 const Character = (props) => {
     const {characters} = props;
     
-    console.log(characters);
-    console.log(props);
+    //console.log(characters);
+    //console.log(props);
 
 
 return (
