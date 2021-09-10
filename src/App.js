@@ -21,7 +21,7 @@ const App = () => {
       setCharacters(res.data);
     }).catch(err => console.log(err))
   }, [])
-  console.log("outside use", characters)
+  console.log(characters)
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
