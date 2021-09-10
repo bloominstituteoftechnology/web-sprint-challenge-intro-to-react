@@ -24,9 +24,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-        <p className="Charcters">
-
-        </p>
+        <Character className="Charcters" characters={characters}/>
     </div>
   );
 }
