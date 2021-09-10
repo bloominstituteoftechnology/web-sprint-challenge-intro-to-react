@@ -22,12 +22,19 @@ const StyledCharacter = styled.div `
         background: gray;
         cursor: pointer;
     }
+
     a:active{
         display:block;
     }
+
     // .content {
     //     display:none;
     // }
+
+    // .content:hover{
+    //     display:block;
+    }
+    
 `
 
 
