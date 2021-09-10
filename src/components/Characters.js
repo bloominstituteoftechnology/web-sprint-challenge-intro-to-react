@@ -23,7 +23,7 @@ export default function Characters() {
                         info={charObj}
                         name='name'
                     />
-                }):<div>TESTTESTESTESTESTEST</div>}
+                }):<div></div>}
          </div>
         )
 
