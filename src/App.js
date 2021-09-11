@@ -18,7 +18,7 @@ const StyledChar = styled.div`
   flex-flow: column wrap;
   border: 2px dashed black;
   margin: 5%;
-  padding: 5%;
+  padding: 1%;
   height: 100vh;
 
   .container{
@@ -66,7 +66,7 @@ const App = () => {
       <StyledChar className='container' > 
       {
         person.map((char, idx) => {
-          return <Character birth= {idx.birth_yr} key={char.id} info={char} /* action={openDetails} */ />
+          return <Character key={char.idx} info={char} /* action={openDetails} */ />
         })
       }
 

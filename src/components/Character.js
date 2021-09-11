@@ -1,32 +1,53 @@
 // Write your Character component here
 import React from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 
+const kf = keyframes`
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateZ(0);
+  }
+`
 const StyleNames = styled.div`
+    
+    :hover{
+        background-color: chocolate;
+        opacity: 2;
+        transform: scale(1.5); 
+        animation: ${kf} 0.1s ease-in forwards;
+    }
+
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    width: 100vh;
+    width: stretch;
     align-items: flex-start;
-    padding: 4%;
+    padding: 2.5%;
     margin: auto;
     border: 2px solid grey;
 
     .birth-year{
-        font-size: 12px;
+        font-size: 70%;
+        color: #fff;
         background-color: grey;
-        padding:0.5%;
+        padding: 1%;
+        border-radius: 20% 40%;
+
+        
+    }
+    .name{
+        font-size: 20pt;
     }
 `
 
 export default function Character(props) {
-    const { info, /* action, */ birth } = props;
+    const { info, /* action, */name, birth } = props;
 
     //console.log(name);
 
     return(
-        <StyleNames className='characterName' birthyr={birth} > 
-            {info.name}
+        <StyleNames className='characterName' birth_yr={birth} > 
+            <span className='name' name={name}> {info.name} </span>
             <span className='birth-year' /* will add action later on click */> {info.birth_year} </span>
         </StyleNames>
         );    
