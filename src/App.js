@@ -16,16 +16,10 @@ import styled from 'styled-components';
 const StyledChar = styled.div`
   display: flex;
   flex-flow: column wrap;
-  border: 2px dashed black;
+/*   border: 2px dashed black;*/ 
   margin: 5%;
   padding: 1%;
-  height: 100vh;
-
-  .container{
-    
-  }
-
-
+  height: 100%;
 `
 
 

@@ -5,16 +5,16 @@ import styled, {keyframes} from 'styled-components';
 const kf = keyframes`
   100% {
     opacity: 1;
-    transform: scale(1) rotateZ(0);
+    transform: scale(1);
   }
 `
 const StyleNames = styled.div`
     
     :hover{
         background-color: chocolate;
-        opacity: 2;
-        transform: scale(1.5); 
-        animation: ${kf} 0.1s ease-in forwards;
+        opacity: 0.4;
+        transform: scale(1.1); 
+        animation: ${kf} 0.1s ease-in-out forwards;
     }
 
     display: flex;
@@ -23,7 +23,7 @@ const StyleNames = styled.div`
     width: stretch;
     align-items: flex-start;
     padding: 2.5%;
-    margin: auto;
+    margin: 1% 0%;
     border: 2px solid grey;
 
     .birth-year{
@@ -32,7 +32,6 @@ const StyleNames = styled.div`
         background-color: grey;
         padding: 1%;
         border-radius: 20% 40%;
-
         
     }
     .name{
