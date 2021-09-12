@@ -1,14 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-//import CharactersPL from './components/CharactersPL';
-import Character from './components/Character';
-//import char_info when i have a thing to
+
 
 //import axios
 import axios from 'axios';
 
 //import API
 import {BASE_URL} from './constants';
+//import CharactersPL from './components/CharactersPL';
+import Character from './components/Character';
+//import char_info when i have a thing to
+
+//STRETCH import FilmsInfo
+import FilmsInfo from './components/FilmsInfo';
 
 //style
 import styled from 'styled-components';
@@ -29,7 +33,7 @@ const App = () => {
   const [ person, setPerson] = useState([]);
   //const {name, height, weight} = props
 
-  //const [currentStarId, setCurrentStarId] = useState()
+  const [currentStarId, setCurrentStarId] = useState();
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
@@ -40,17 +44,17 @@ const App = () => {
       //console.log(`${BASE_URL}`)
       .then(res => {
         setPerson(res.data)
-      }).catch(err => console.log(err))
-
+      }).catch(err => {console.log(err)
+    })
   }, []);
 
-  //const openDetails = id => {
-  //  setCurrentStarId(id)
-  //}
+  const openInfo = id => {
+    setCurrentStarId(id)
+  }
 
-  //const closeDetails = () => {
-  //  setCurrentStarId(null)
-  //}
+  const closeInfo = () => {
+    setCurrentStarId(null)
+  }
 
   return (
     <div className="App">
@@ -58,20 +62,17 @@ const App = () => {
       {person &&
       
       <StyledChar className='container' > 
-      {
-        person.map((char, idx) => {
-          return <Character key={char.idx} info={char} /* action={openDetails} */ />
+      { 
+      person.map((char, idx) => {
+          return <Character key={idx} info={char} action={openInfo} />
         })
       }
-
-      {/* {<Character/>name.map(name => { return  name={name}})} */}
-      {person.name}
       </StyledChar>
       
       }
-      {/* {
-        currentStarId && <CharInfo starId={currentStarId} close={closeDetails} />
-      } */}
+      {
+        currentStarId && <FilmsInfo starId={currentStarId} close={closeInfo} />
+      }
     </div>
       
   );

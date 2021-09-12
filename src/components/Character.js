@@ -9,7 +9,7 @@ const kf = keyframes`
   }
 `
 const StyleNames = styled.div`
-    
+
     :hover{
         background-color: chocolate;
         opacity: 0.4;
@@ -37,17 +37,23 @@ const StyleNames = styled.div`
     .name{
         font-size: 20pt;
     }
+   
 `
 
 export default function Character(props) {
-    const { info, /* action, */name, birth } = props;
+    const { info, action, birth } = props;
 
     //console.log(name);
 
+    function clickHandler(){
+        return (action.info);
+    }
     return(
-        <StyleNames className='characterName' birth_yr={birth} > 
-            <span className='name' name={name}> {info.name} </span>
-            <span className='birth-year' /* will add action later on click */> {info.birth_year} </span>
-        </StyleNames>
+        
+        <StyleNames className='characterName' onClick={clickHandler}/* ()=>action(info.id) */> 
+            <span className='name'> {info.name} </span>
+            <span className='birth-year' birth_yr={birth} > {info.birth_year} </span>
+            </StyleNames>
+       
         );    
 };

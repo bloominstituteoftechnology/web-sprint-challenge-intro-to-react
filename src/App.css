@@ -8,3 +8,6 @@
   height: 12vh;
 }
 /* write your parent styles in here for your App.js */
+button{
+  background-color: #ccc;
+}
