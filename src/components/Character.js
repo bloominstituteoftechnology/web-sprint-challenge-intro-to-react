@@ -2,6 +2,8 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
 
+
+
 const kf = keyframes`
   100% {
     opacity: 1;
@@ -35,25 +37,21 @@ const StyleNames = styled.div`
         
     }
     .name{
-        font-size: 20pt;
+        font-size: 30pt;
+        font-family: mono;
     }
    
 `
 
-export default function Character(props) {
-    const { info, action, birth } = props;
+export default function Character({info, action}) {
+   
 
-    //console.log(name);
-
-    function clickHandler(){
-        return (action.info);
-    }
     return(
         
-        <StyleNames className='characterName' onClick={clickHandler}/* ()=>action(info.id) */> 
+        <StyleNames className='characterName' /* ()=>action(info.id) */> 
             <span className='name'> {info.name} </span>
-            <span className='birth-year' birth_yr={birth} > {info.birth_year} </span>
-            </StyleNames>
+            <button  onClick={() => action(info.id)} className='birth-year'> click me </button>
+        </StyleNames>
        
         );    
 };

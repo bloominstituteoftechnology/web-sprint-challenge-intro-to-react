@@ -22,30 +22,32 @@ const StyledFilms = styled.div`
 // i did not read what i needed to ... this will be for STRETCH
 
 export default function FilmsInfo(props) {
-    const {movieId, close, chars} =props;
-    const[films, setFilms] = useState(null);
+    const {filmId, close, chars} =props;
+
+    const[film, setFilms] = useState(null);
 
     useEffect(() => {
         axios.get(`${MOVIE_URL}`)
           .then(res => { setFilms(res.data) })
           .catch(err => { debugger }) // eslint-disable-line
-
-          return console.log(MOVIE_URL);
-    }, [movieId]);
-    
+  
+          return console.log('THIS IS IT');
+    }, [filmId]);
 
 
     return (
-        <StyledFilms key={movieId} className="container">
+        <StyledFilms key={filmId} className="container">
           <h2>Films:</h2>
           {
-            films &&
+            film &&
             <>
-              <p>{films.title} was written in {films.release_date}</p>
-              <p>Produced by: {films.producer}</p>
+              <p>{film.title} was written in {film.release_date}</p>
+              <p>Produced by: {film.producer}</p>
               {chars} Other actors include:
               <ul>
-                {films.characters.map((movie, idx) => <li key={idx}>{movie}</li>)}
+                {
+                film.films.map((movie, idx) => <li key={idx}>{movie}</li>)
+                }
               </ul>
             </>
           }
