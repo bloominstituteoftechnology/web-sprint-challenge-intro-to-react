@@ -20,8 +20,6 @@ You are not allowed to collaborate during the sprint challenge.
 - [ ] You can run tests locally by running npm run test.
 - [ ] Check to see that Codegrade has accepted your git submission.
 
-For a step-by-step on setting up Codegrade see [this guide.](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374)
-
 ## Project Instructions
 
 ### Introduction
@@ -78,7 +76,7 @@ After finishing your required elements, you can push your work further. These go
 
 ## Interview Questions
 
-Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
+Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 1. Describe component state.
