@@ -1,18 +1,43 @@
 import React from 'react'
+import styled from 'styled-components';
+import theme from '../theme/index.js';
+
+const StyledCharacterCard = styled.div`
+width: 100%;
+border: 5px solid ${theme.primaryColor};
+padding-bottom: 5%;
+border-radius: 10%;
+`
+const StyledName = styled.h3`
+
+&:hover {
+    color: ${theme.tertiaryColor};
+      transform: scale(1.5);
+    }
+
+`
+const StyledP = styled.p`
+
+&:hover {
+    color: ${theme.primaryColor};
+      transform: scale(1.2);
+    }
+
+`
 
  const CharacterCard = ({item}) => {
      return (
-    <div className='card'>
-<h3>{item.name}</h3>
-<div> Gender: {item.gender}</div>
-<div> Height: {item.height}</div>
-<div> Mass: {item.mass}</div>
-<div> Birth Year: {item.birth_year}</div>
-<div> Eye Color: {item.eye_color}</div>
-<div> Hair Color: {item.hair_color}</div>
-<div> Mass: {item.mass}</div>
-<div> Skin Color: {item.skin_color}</div>
-     </div>
+    <StyledCharacterCard className='card'>
+<StyledName>{item.name}</StyledName>
+<StyledP> Gender: {item.gender}</StyledP>
+<StyledP> Height: {item.height}</StyledP>
+<StyledP> Mass: {item.mass}</StyledP>
+<StyledP> Birth Year: {item.birth_year}</StyledP>
+<StyledP> Eye Color: {item.eye_color}</StyledP>
+<StyledP> Hair Color: {item.hair_color}</StyledP>
+<StyledP> Mass: {item.mass}</StyledP>
+<StyledP> Skin Color: {item.skin_color}</StyledP>
+     </StyledCharacterCard>
  )}
     
  export default CharacterCard;
