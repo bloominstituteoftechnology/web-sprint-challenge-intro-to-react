@@ -7,6 +7,7 @@ width: 100%;
 border: 5px solid ${theme.primaryColor};
 padding-bottom: 5%;
 border-radius: 10%;
+margin-bottom: 5%;
 `
 const StyledName = styled.h3`
 
