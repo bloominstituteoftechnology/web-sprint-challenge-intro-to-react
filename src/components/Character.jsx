@@ -12,17 +12,19 @@ const Character = (props) => {
     )
 }
 const Container = styled.div`
-    margin-bottom: 40px;
+    margin: 40px;
 `
 const Image = styled.img`
     border: solid 8px #8AEB45;
-    border-radius: 20px;
+    border-radius: 5%;
 `
 const Nameplate = styled.p`
     display: inline-block;
     justify-content: center;
     text-align: center;
     background-color:  #8AEB45;
+    outline: solid black 2px;
+    border-radius: 3%;
     font-weight: bold;
     padding: 4px;
     margin: 0 auto;
