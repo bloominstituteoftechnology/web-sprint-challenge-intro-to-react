@@ -37,10 +37,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LambdaSchool/web-sprint-challenge-intro-to-react.git"
+    "url": "git+https://github.com/BloomInstituteOfTechnology/web-sprint-challenge-intro-to-react.git"
   },
   "bugs": {
-    "url": "https://github.com/LambdaSchool/web-sprint-challenge-intro-to-react/issues"
+    "url": "https://github.com/BloomInstituteOfTechnology/web-sprint-challenge-intro-to-react/issues"
   },
   "msw": {
     "workerDirectory": "public"
