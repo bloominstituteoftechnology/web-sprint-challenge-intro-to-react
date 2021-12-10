@@ -7,7 +7,7 @@ export const handlers = [
   }),
 ];
 
-export const data = [
+ const data = [
   {
     name: "Luke Skywalker",
     height: "172",
@@ -667,3 +667,4 @@ export const films = [
     ],
   },
 ];
+
