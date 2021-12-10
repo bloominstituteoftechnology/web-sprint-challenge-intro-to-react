@@ -12,13 +12,13 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Set Up
 
-- [ ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
-- [ ] Open the assignment in Canvas and click on the "Set up git" option (Or, depending, if you see something along the lines of 'Load Sprint Challenge Submission in a new window' click that).
-- [ ] Wire your fork to Codegrade using the "Click here for instructions on setting up Git submissions" link, select Github, authorize Github.
-- [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`. MAKE SURE TO PUSH TO MAIN, YOU NO LONGER NEED TO CREATE A NEW BRANCH!!
-- [ ] Make commits often! PUSH TO MAIN!!!
-- [ ] You can run tests locally by running npm run test.
-- [ ] Check to see that Codegrade has accepted your git submission.
+- [ X] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
+- [X ] Open the assignment in Canvas and click on the "Set up git" option (Or, depending, if you see something along the lines of 'Load Sprint Challenge Submission in a new window' click that).
+- [ X] Wire your fork to Codegrade using the "Click here for instructions on setting up Git submissions" link, select Github, authorize Github.
+- [X ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`. MAKE SURE TO PUSH TO MAIN, YOU NO LONGER NEED TO CREATE A NEW BRANCH!!
+- [ X] Make commits often! PUSH TO MAIN!!!
+- [X ] You can run tests locally by running npm run test.
+- [ X] Check to see that Codegrade has accepted your git submission.
 
 ## Project Instructions
 
@@ -79,6 +79,12 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+-We needed a way to build applications that can take care of a lot of the work for us. React interacts with the virtual DOM and renders it to the actual DOM. React provides a smooth experience for users, and developers.
+
 1. Describe component state.
+- Component is a loose term to describe a discrete chunk of your site. It is a regular JS function.
 1. Describe props.
+- When we want to pass information held on state inside one component to another, we pass them as props. We never make changes to props data, because they are read-only.
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+- Side Effects is anything that affects something outside the scope of the function being executed. Fetching data from an API, timers, logging, and manually manipulating the DOM are all examples of side effects. 
+- We  sync effects by passing in a dependency array as the second argument to the effect hook.
