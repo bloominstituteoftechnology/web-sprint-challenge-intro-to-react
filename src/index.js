@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
-// import Character from '../src/components';
+// import character from '../src/components/Character';
 
 import { worker } from "./mocks/browser";
 worker.start();
