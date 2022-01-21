@@ -79,7 +79,14 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+react is a type of super reusable code that is passed through our JS and our code to create pages.
+ it solves the problem of lack of computing power. We always need more processing power and using react it speeds up webpages and the internet
 
 1. Describe component state.
+by setting a state we can start counts and it is asyncranous inside event handlers
+
 1. Describe props.
+props are like a place holder or variable. props can take the place 
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+side effects are items affected outside of the scope of the current function being executed
