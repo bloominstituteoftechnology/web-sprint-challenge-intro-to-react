@@ -4,7 +4,10 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
+// import character from '../src/components/Character';
+
 import { worker } from "./mocks/browser";
 worker.start();
 
 ReactDOM.render(<App />, document.getElementById("root"));
+ 
