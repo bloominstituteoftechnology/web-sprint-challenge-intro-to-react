@@ -8,6 +8,11 @@ const StyledApp = styled.div`
   width: 60%;
   display: flex;
   justify-content: space-between;
+  background-color: ${pr => pr.theme.primaryColor};
+  color: ${pr => pr.theme.white};
+  @media: ${pr => pr.theme.breakPointMobile} {
+      width:initial;
+  }
 `
 
 const App = () => {
