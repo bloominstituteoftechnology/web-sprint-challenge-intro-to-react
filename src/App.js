@@ -2,6 +2,13 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import characterCard from './components/Character';
+import styled from 'styled-components';
+
+const StyledApp = styled.div`
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+`
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -41,25 +48,27 @@ const [character, setCharacter]= useState(initialCharacter)
 
 
 useEffect(()=> {
- axios("https://swapi.dev/api/people")
+ axios("https://swapi.dev/api/films")
  .then((res)=>{
    console.log(res.data)
     setCharacter(res.data)
  })
 }, [] )
-
+.catch((err) => {
+  console.log(`We're working on this`)
+})
 
 
   return (
-    <div className="App">
+    <StyledApp>
       {
-          character.map(character => {
+        character.map(character => {
         return <characterCard  key ={`App-charactermap-character{character.name}`} character={character} />
    
 
       })
 }
-    </div>
+    </StyledApp>
 
         );
   }

@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -6,3 +7,10 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+.h1{
+  font-size: 22px;
+  color:blue;
+  border-radius: 8px;
+  margin-top: 16px;
+  padding: 16px;
+}

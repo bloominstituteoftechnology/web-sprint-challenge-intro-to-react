@@ -45,5 +45,7 @@
   "msw": {
     "workerDirectory": "public"
   }
- 
+  "resolutions": {
+    "styled-components": "^5"
+  }
 }
