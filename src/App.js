@@ -41,6 +41,9 @@ const App = () => {
     .then((res) => {
       setCharacter(res.data)
     })
+    .catch((err) =>{
+      console.log('please come back soon')
+    })
   }, []
   )
 
@@ -49,20 +52,15 @@ const App = () => {
   return ( 
     <div className="App">
       <h1 className="Header">
-        {
-        characters.map(character => <article>
-        <h2>{character.name}</h2>
-        <p>{character.id}</p>
-        <p>{character.height}</p>
-        <p>{character.mass}</p>
-        <p>{character.birth_year}</p>  
-        <p>{character.gender}</p>  
-          </article>
-         )
-        }
+        
+        {characters.map((character) => {
+          return <Character key={`App-characterMap-character${character.name}`} character={character}/>; })}
+          
+        
+
       </h1>
     </div>
-          );
-}
+          
+        )}
 
 export default App;
