@@ -2,25 +2,27 @@ import React, {useState, useEffect} from 'react';
 import './App.css'
 import {data} from './mocks/handlers'
 import axios from 'axios'
+import Character from './components/Character'
 
 
 console.log('data', data)
 data.map(item =>{
-  console.log(item)
+  console.log('hello', item)
 })
 const App = () => {
-  const [characters, setCharacters] = useState(data)
-  const [character, setCharacter] = useState()
+  const [character, setCharacter] = useState(data)
+
+ 
 useEffect(() => {
   axios.get(`https://swapi.dev/api/people`)
   .then (res =>{
-    console.log(res)
-    setCharacters(res.data)
+    setCharacter(res.data)
   })
   .catch (err => console.error(err))
 }, [])
 
-console.log('final', characters)
+console.log('final', character)
+
 
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -33,12 +35,12 @@ console.log('final', characters)
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      {/* <Character character={character}/> */}
       {
-      data.map(item =>{
-      return <div>
-        <h2>{item.name}</h2>
-          <p>`hailing from {item.homeworld}, {item.name} is a  human with {item.hair_color} hair, and {item.eye_color} eyes.</p>
-          </div>
+      character.map(character =>{
+      return (
+        <Character key = {`App-characterMap-character${character.created}`} character= {character} />
+      )
     })
 }
     </div>
