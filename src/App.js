@@ -39,14 +39,14 @@ const App = () => {
   useEffect(() => {
     axios('https://swapi.dev/api/people')
     .then((res) => {
-      console.log(res.data)
+      setCharacter(res.data)
     })
   }, []
   )
 
 
 
-  return (
+  return ( 
     <div className="App">
       <h1 className="Header">
         {
