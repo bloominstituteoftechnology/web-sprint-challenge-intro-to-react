@@ -1,27 +1,35 @@
 // Write your Character component here
 import React, {useState, useEffect} from 'react'
-import style from 'styled-components'
+import styled from 'styled-components'
 import axios from 'axios'
-import {data} from '../mocks/handlers'
-// const StyledCharacter= style.div`
-// display: flex;
 
-// `
+const StyledCharacter= styled.div`
+border: 1px solid lemonchiffon;
+border-radius: 20%;
+margin: 5%
+`
+const StyledButton= styled.button`
+background-color:coral;
+color:white;
 
+`
 const CharacterItem = (props) => {
-
+    const[button, setButton]= useState(true)
+    
     const {character} = props
     
-  
-   
+
+   const buttonClick = () => {
+    setButton(!button)
+   }
 
    
     return(
-       <div >
+       <StyledCharacter >
         <h2>{character.name}</h2>
-        <button>Want To Learn More?</button>
+        <StyledButton >Want To Learn More?</StyledButton>
           {/* <p>{`hailing from ${character.homeworld}, ${character.name} is a  human with ${character.hair_color} hair, and ${character.eye_color} eyes.`}</p> */}
-      </div>
+      </StyledCharacter>
     )
 }
 

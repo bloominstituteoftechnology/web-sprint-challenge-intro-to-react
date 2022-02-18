@@ -15,7 +15,7 @@ const App = () => {
   const info= character.map(info => {
     return ( info)
   })
-
+// console.log('hello', info)
 
 useEffect(() => {
   axios.get(`https://swapi.dev/api/people`)
@@ -27,7 +27,9 @@ useEffect(() => {
 }, [])
 
 
-
+character.map(item => {
+  console.log ('waiting', item)
+})
 
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
