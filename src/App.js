@@ -5,7 +5,7 @@ import Character from './components/Character';
 // import characterData from 'https://swapi.dev/api/films/results';
  const initialCharacters = [
   {
-  name: "Luke Skywalker",
+  name: "mike",
   id:0,
   height: 172, 
   mass: 77, 
@@ -16,7 +16,7 @@ import Character from './components/Character';
   gender: "male", 
 },
 {
-  name: "Luke Skywalkerrr",
+  name: "carly",
   id:1,
   height: 172, 
   mass: 77, 
