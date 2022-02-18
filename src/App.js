@@ -2,10 +2,8 @@ import React,{ useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import Character from './components/Character';
-// import characterData from 'https://swapi.dev/api/films';
-
-const App = () => {
-  const [characters, setCharacter] = useState([
+// import characterData from 'https://swapi.dev/api/films/results';
+ const initialCharacters = [
   {
   name: "Luke Skywalker",
   id:0,
@@ -26,9 +24,11 @@ const App = () => {
   gender: "male", 
 }
 
-])
+]
+const App = () => {
+  const [characters, setCharacter] = useState(initialCharacters)
 
-console.log(characters)
+
   const [currentCharacterId, setCurrentCharacterId] = useState(null)
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -36,6 +36,15 @@ console.log(characters)
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
+  useEffect(() => {
+    axios('https://swapi.dev/api/people')
+    .then((res) => {
+      console.log(res.data)
+    })
+  }, []
+  )
+
+
 
   return (
     <div className="App">
