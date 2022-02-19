@@ -25,6 +25,9 @@ import Character from './components/Character';
 }
 
 ]
+
+
+
 const App = () => {
   const [characters, setCharacter] = useState(initialCharacters)
 
