@@ -4,21 +4,18 @@
 
 This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a concrete project. This sprint explored **introductory React**. During this sprint, you studied **React components and advanced styling**.
 
-In your challenge this week, you will demonstrate your mastery of these skills by creating **a Star Wars page** using data from an API.
+In your challenge you will demonstrate your mastery of these skills by creating **a Star Wars page** using data from an API.
 
-This is an individual assessment. All work must be your own. All projects will be submitted to Codegrade for automated review. You will also be given feedback by code reviewers. For more information on the review process [click here.](https://www.notion.so/bloomtech/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
+This is an individual assessment. All work must be your own. All projects will be submitted to Codegrade for automated review.
 
 You are not allowed to collaborate during the sprint challenge.
 
-## Project Set Up
+### Project Set Up
 
-- [ ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
-- [ ] Open the assignment in Canvas and click on the "Set up git" option (Or, depending, if you see something along the lines of 'Load Sprint Challenge Submission in a new window' click that).
-- [ ] Wire your fork to Codegrade using the "Click here for instructions on setting up Git submissions" link, select Github, authorize Github.
-- [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`. MAKE SURE TO PUSH TO MAIN, YOU NO LONGER NEED TO CREATE A NEW BRANCH!!
-- [ ] Make commits often! PUSH TO MAIN!!!
-- [ ] You can run tests locally by running npm run test.
-- [ ] Check to see that Codegrade has accepted your git submission.
+- [ ] Create a forked copy of this project
+- [ ] Clone your OWN version of the repository (Not BloomTech's by mistake!)
+- [ ] Implement the project on the main branch, committing changes regularly
+- [ ] Push commits: `git push origin main`
 
 ## Project Instructions
 
