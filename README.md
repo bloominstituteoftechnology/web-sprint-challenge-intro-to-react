@@ -25,9 +25,9 @@ In this challenge you will create a web page that presents a styled list of char
 
 In meeting the minimum viable product (MVP) specifications listed below, your project might look somewhat similar to the solution examples below:
 
-[Example](https://tk-assets.lambdaschool.com/b011a132-0916-4ed2-8955-14192de03a75_sample-screenshot.png)
+[Example](https://github.com/bloominstituteoftechnology/web-sprint-challenge-intro-to-react/blob/main/Assets/sample-screenshot.png)
 
-[Another example](https://tk-assets.lambdaschool.com/3b82c793-2352-4d4d-a81d-e55bf350f7bd_sample-screenshot2.png)
+[Another example](https://github.com/bloominstituteoftechnology/web-sprint-challenge-intro-to-react/blob/main/Assets/sample-screenshot2.png)
 
 ### Instructions
 
@@ -45,7 +45,7 @@ Your finished project must include all of the following requirements:
 
   **Notes:**
 
-- Data obtained from the endpoint using browser-run JavaScript is mocked with [msw](https://github.com/mswjs/msw).
+- Data obtained from the endpoint using browser-run JavaScript is mocked with [msw](https://github.com/mswjs/msw). It is not necessary to understand all that MSW is doing, it is only necessary to know that when you use axios to send a request to `https://swapi.dev/api/people/` you will get the necessary data back.
 - If you test the endpoint using HTTPie or Postman you will obtain different results, as msw won't intercept the request.
 - You are welcome to create additional files but **do not move or rename existing files** or folders.
 - Do not alter your `package.json` file except to install extra libraries.
@@ -68,12 +68,8 @@ After finishing your required elements, you can push your work further. These go
 
 - [ ] Submit via Codegrade by committing and pushing any new changes to the main branch.
 - [ ] Check Codegrade for automated feedback.
-- [ ] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
-- [ ] Any changes pushed after the deadline will not receive any feedback.
 
-## Interview Questions
-
-Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
+## Stretch Interview Questions
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 1. Describe component state.
