@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-//import Character from './components/Character';
+import Character from './components/Character';
 
 function App() {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -12,9 +12,16 @@ function App() {
 
   const [characters, setCharacters] = useState([]);
 
-  const [featuredCharacter, setFeaturedCharacter] = useState();
+  const [featuredCharacter, setFeaturedCharacter] = useState(null);
 
-  //const [featuredCharacter, setFeaturedCharacter] = useState();
+
+  const getFeatured = () => {
+    for( let i = 0; i < characters.length; i++) {
+      if(characters[i].id === featuredCharacter) {
+        return <Character data={characters[i]} />
+      }
+    }
+  }
 
 
   useEffect(() => {
@@ -26,15 +33,18 @@ function App() {
 
 
   return (
-    <div>
-      <h1 className='Header'>Star Wars Characters</h1>
-      { 
-        characters.map(dev => 
-          <p>{dev.name} <button onClick={() => {setFeaturedCharacter(dev.id)}}>More Info</button></p>
-        )
-      }
+    <div className='App'>  
+      <div>
+        <h1 className='Header'>Star Wars Characters</h1>
+        { 
+          characters.map(dev => 
+            <p>{dev.name} <button onClick={() => {setFeaturedCharacter(dev.id)}}>More Info</button></p>
+          )
+        }
+      </div>
     </div>
-  );
 
+  );
+    
 }
 export default App; 
