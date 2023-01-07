@@ -23,7 +23,6 @@ function App() {
     }
   }
 
-
   useEffect(() => {
     axios.get('https://swapi.dev/api/people')
       .then(res => {
@@ -39,8 +38,8 @@ function App() {
         <h1 className='Header'>Star Wars Characters</h1>
         { 
           characters.map((dev, index) => 
-            <div className='Character' key={index}>
-              <p>{dev.name}<button onClick={() => {setFeaturedCharacter(dev.name)}}>More Info</button></p>
+            <div className="Character" key={index}>
+              <p>{dev.name}</p><button onClick={() => {setFeaturedCharacter(dev.name)}}>More Info</button>
             </div>
           )
         }
