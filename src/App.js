@@ -17,7 +17,7 @@ function App() {
 
   const getFeatured = () => {
     for( let i = 0; i < characters.length; i++) {
-      if(characters[i].id === featuredCharacter) {
+      if(characters[i].name === featuredCharacter) {
         return <Character data={characters[i]} />
       }
     }
@@ -28,6 +28,7 @@ function App() {
     axios.get('https://swapi.dev/api/people')
       .then(res => {
         setCharacters(res.data.results);
+        console.log('running');
       }).catch(err => console.error(err));
   }, []);
 
@@ -38,8 +39,15 @@ function App() {
         <h1 className='Header'>Star Wars Characters</h1>
         { 
           characters.map(dev => 
-            <p>{dev.name} <button onClick={() => {setFeaturedCharacter(dev.id)}}>More Info</button></p>
+            <div className='Character list' key={dev.name}>
+              <p>{dev.name}<button onClick={() => {setFeaturedCharacter(dev.name)}}>More Info</button></p>
+            </div>
           )
+        }
+      </div>
+      <div>
+        {
+          getFeatured()
         }
       </div>
     </div>
@@ -47,4 +55,4 @@ function App() {
   );
     
 }
-export default App; 
+export default App;
