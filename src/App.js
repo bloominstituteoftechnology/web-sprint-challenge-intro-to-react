@@ -38,8 +38,8 @@ function App() {
       <div>
         <h1 className='Header'>Star Wars Characters</h1>
         { 
-          characters.map(dev => 
-            <div className='Character list' key={dev.name}>
+          characters.map((dev, index) => 
+            <div className='Character' key={index}>
               <p>{dev.name}<button onClick={() => {setFeaturedCharacter(dev.name)}}>More Info</button></p>
             </div>
           )
