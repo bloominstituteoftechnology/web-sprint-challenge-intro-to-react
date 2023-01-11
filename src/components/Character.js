@@ -1,6 +1,5 @@
 // Write your Character component here
 import React from "react";
-import App from "../App";
 
 const Character = props => {
     return (

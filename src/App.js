@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import Character from './components/Character';
+// import Character from './components/Character';
 
 function App() {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -12,16 +12,16 @@ function App() {
 
   const [characters, setCharacters] = useState([]);
 
-  const [featuredCharacter, setFeaturedCharacter] = useState(null);
+  // const [featuredCharacter, setFeaturedCharacter] = useState(null);
 
 
-  const getFeatured = () => {
-    for( let i = 0; i < characters.length; i++) {
-      if(characters[i].name === featuredCharacter) {
-        return <Character data={characters[i]} />
-      }
-    }
-  }
+  // const getFeatured = () => {
+  //   for( let i = 0; i < characters.length; i++) {
+  //     if(characters[i].name === featuredCharacter) {
+  //       return <Character data={characters[i]} />
+  //     }
+  //   }
+  // }
 
   useEffect(() => {
     axios.get('https://swapi.dev/api/people')
@@ -39,14 +39,15 @@ function App() {
         { 
           characters.map((dev, index) => 
             <div className="Character" key={index}>
-              <p>{dev.name}</p><button onClick={() => {setFeaturedCharacter(dev.name)}}>More Info</button>
+              <p>{dev.name}</p>
+              {/* <button onClick={() => {setFeaturedCharacter(dev.name)}}>More Info</button> */}
             </div>
           )
         }
       </div>
       <div>
         {
-          getFeatured()
+          // getFeatured()
         }
       </div>
     </div>
