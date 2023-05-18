@@ -5,8 +5,6 @@ function CharacterData(props) {
   const { name, height, eye_color, gender, mass, birth_year, hair_color, skin_color} = props;
   const [isOpen, setIsOpen] = useState(false);
 
-  const comment = "I hate this shit!";
-
   const toggle = () => setIsOpen(!isOpen);
 
   return (
