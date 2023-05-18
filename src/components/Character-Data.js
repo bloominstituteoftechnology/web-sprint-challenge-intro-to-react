@@ -16,9 +16,9 @@ function CharacterData(props) {
       <Collapse  isOpen={isOpen} {...props}>
         <Card>
           <CardBody className='cardbody'>
-            <li>
+            <div>
                 Name: { name }
-            </li>
+            </div>
             <li>
                 gender: {gender}
             </li>
