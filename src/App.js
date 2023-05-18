@@ -27,6 +27,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <h1 className='h1-title'>StarWars Characters</h1>
       {data && <Character data={data}></Character>}
       {console.log(data)}
     </div>

@@ -5,4 +5,10 @@
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
+
+
+.h1-title {
+  margin-top: 5rem;
+  text-shadow: 1.5px 1.5px;
+}
 /* write your parent styles in here for your App.js */

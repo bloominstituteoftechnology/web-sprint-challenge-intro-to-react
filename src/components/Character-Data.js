@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import "./Character-Data.css";
 
 function CharacterData(props) {
-  const { name, height, eye_color, gender, mass, birth_year, hair_color, skin_color} = props;
+  const { name, height, eye_color, gender, mass, birth_year, hair_color, skin_color } = props;
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <React.StrictMode>
-      <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>
+      <Button color="dark" size="lg" onClick={toggle} style={{ marginBottom: '2rem', marginLeft: "2rem", marginRight: "2rem", marginTop: "10rem"}}>
         { name }
       </Button>
-      <Collapse isOpen={isOpen} {...props}>
+      <Collapse  isOpen={isOpen} {...props}>
         <Card>
-          <CardBody>
+          <CardBody className='cardbody'>
             <li>
                 Name: { name }
             </li>
