@@ -16,10 +16,6 @@ const App = () => {
     axios.get('https://swapi.dev/api/people/')
     .then(res => {
       let tempData = res.data;
-      for (let i = 0; i < tempData.length; i++)
-      {
-        tempData[i].key = i+1;
-      }
       setData(tempData);
     }).catch(err => console.error(err))
   },[])
@@ -29,7 +25,6 @@ const App = () => {
     <div className="App">
       <h1 className='h1-title'>StarWars Characters</h1>
       {data && <Character data={data}></Character>}
-      {console.log(data)}
     </div>
   );
 }
