@@ -15,8 +15,7 @@ const App = () => {
   useEffect(() => {
     axios.get('https://swapi.dev/api/people/')
     .then(res => {
-      let tempData = res.data;
-      setData(tempData);
+      setData(res.data);
     }).catch(err => console.error(err))
   },[])
 
@@ -24,7 +23,10 @@ const App = () => {
   return (
     <div className="App">
       <h1 className='h1-title'>StarWars Characters</h1>
-      {data && <Character data={data}></Character>}
+      {data && data.map(elem => {
+        return (<Character name={elem.name} eye_color={elem.eye_color} height={elem.height} gender={elem.gender} 
+          mass={elem.mass} birth_year={elem.birth_year} hair_color={elem.hair_color} skin_color={elem.skin_color}></Character>)
+      })}
     </div>
   );
 }
