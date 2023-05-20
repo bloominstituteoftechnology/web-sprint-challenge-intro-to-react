@@ -24,7 +24,7 @@ const App = () => {
     <div className="App">
       <h1 className='h1-title'>StarWars Characters</h1>
       {data && data.map(elem => {
-        return (<Character name={elem.name} eye_color={elem.eye_color} height={elem.height} gender={elem.gender} 
+        return (<Character key={elem.name} name={elem.name} eye_color={elem.eye_color} height={elem.height} gender={elem.gender} 
           mass={elem.mass} birth_year={elem.birth_year} hair_color={elem.hair_color} skin_color={elem.skin_color}></Character>)
       })}
     </div>
