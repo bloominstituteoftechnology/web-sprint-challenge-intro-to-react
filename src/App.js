@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Character from './components/Character'
 import axios from 'axios';
-import { Button } from "reactstrap";
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -45,8 +44,7 @@ homeworld: "http://swapi.dev/api/planets/1/"
 id: 1
 mass: "77"
 name: "Luke Skywalker"
-skin_color: 
-"fair"
+skin_color: "fair"
 species: [] 
 starships: ['http://swapi.dev/api/starships/12/', 'http://swapi.dev/api/starships/22/']
 url: "http://swapi.dev/api/people/1/"
