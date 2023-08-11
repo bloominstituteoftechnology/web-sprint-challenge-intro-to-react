@@ -16,8 +16,8 @@ To succeed in this challenge, you'll need the following technical skills:
 
 1. **Promises** and the ability to deal with asynchronous code.
 1. **Making HTTP requests** with Axios or fetch.
-1. **Using React's state and effect hooks.
-1. **Creating React components and rendering them inside other components.
+1. **Using React's state and effect** hooks.
+1. **Creating React components** and rendering them inside other components.
 1. **Looping over data** passing props into React components.
 1. **Adding simple interactivity** to components using event handlers.
 
