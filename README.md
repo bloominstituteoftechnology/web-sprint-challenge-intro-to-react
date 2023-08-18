@@ -46,7 +46,7 @@ To help you complete the task, several members of your team will provide you wit
 
 This is a **full-stack web application** that comprises both back-end and front-end components. If deployed to production, the back-end part would run in the cloud (think Amazon Web Services or Azure), while the front-end -a React app- would execute inside the user's web browser (like Chrome for Android, or Firefox for desktop).
 
-As a front-end engineer, your focus is mainly on the files that load **on the user's device**. In this particular case, these files live inside the `frontent` folder. The `backend` folder contains a web server built in Node, containing the API needed for this project.
+As a front-end engineer, your focus is mainly on the files that load **on the user's device**. In this particular case, these files live inside the `frontend` folder. The `backend` folder contains a web server built in Node, containing the API needed for this project.
 
 1. You will **clone this repository** to your computer, which will allow you to run the software locally for development and testing purposes.
 
@@ -113,7 +113,7 @@ Here's the tricky thing: each character fetched using Endpoint A has a "homeworl
 
 For fetching, you can optionally use `Promise.all` to handle the requests. We do not need the data from request A in order to _start_ request B, so the requests can happen concurrently instead of back-to-back. **This will make the app feel faster** to the user!
 
-Once you have the responses from Endpoints A and B stored inside variables, check that they match what you saw in Postman, and then **use your JavaScript skills to combine the two lists into a single data structure** that is comfortable to work with. Ideally, it would look something like this:
+Once you have the responses from Endpoints A and B stored inside variables, check that they match what you saw in Postman, and then **use your JavaScript skills to combine the two lists into a single data structure** that is comfortable to work with. There may be some array methods that can help with this...Ideally, it would look something like this:
 
 ```js
 [
