@@ -6,7 +6,7 @@ function Character({ character }) {
   return (
     <div className="character-card" onClick={() => setShowHomeworld(!showHomeworld)}>
       <h2 className="character-name">{character.name}</h2>
-      {showHomeworld && <p>{character.homeworld.name}</p>}
+      {showHomeworld && <p className="character-planet">{character.homeworld.name}</p>}
     </div>
   );
 }
