@@ -1,22 +1,31 @@
-import React from 'react'
-import axios from 'axios'
-import Character from './Character'
-
-const urlPlanets = 'http://localhost:9009/api/planets'
-const urlPeople = 'http://localhost:9009/api/people'
+import React, { useEffect, useState } from 'react';
+import Character from './Character';
 
 function App() {
-  // ❗ Create state to hold the data from the API
-  // ❗ Create effects to fetch the data and put it in state
-  return (
-    <div>
-      <h2>Star Wars Characters</h2>
-      <p>See the README of the project for instructions on completing this challenge</p>
-      {/* ❗ Map over the data in state, rendering a Character at each iteration */}
-    </div>
-  )
-}
+  const [characters, setCharacters] = useState([]);
 
+  useEffect(() => {
+    Promise.all([
+      fetch('http://localhost:9009/api/people').then(res => res.json()),
+      fetch('http://localhost:9009/api/planets').then(res => res.json())
+    ]).then(([people, planets]) => {
+      const peopleWithPlanets = people.map(person => ({
+        ...person,
+        homeworld: planets.find(planet => planet.id === person.homeworld)
+      }));
+      setCharacters(peopleWithPlanets);
+    });
+  }, []);
+
+  return (
+  <div>
+    <h2>Star Wars Characters</h2>
+    {characters.map(character => (
+      <Character key={character.id} character={character} />
+    ))}
+  </div>
+);
+}
 export default App
 
 // ❗ DO NOT CHANGE THE CODE  BELOW
