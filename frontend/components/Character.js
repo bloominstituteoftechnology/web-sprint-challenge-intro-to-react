@@ -4,8 +4,8 @@ function Character({ character }) {
   const [showHomeworld, setShowHomeworld] = useState(false);
 
   return (
-    <div onClick={() => setShowHomeworld(!showHomeworld)}>
-      <h2>{character.name}</h2>
+    <div className="character-card" onClick={() => setShowHomeworld(!showHomeworld)}>
+      <h2 className="character-name">{character.name}</h2>
       {showHomeworld && <p>{character.homeworld.name}</p>}
     </div>
   );
