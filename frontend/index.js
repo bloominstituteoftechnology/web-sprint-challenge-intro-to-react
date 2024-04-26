@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react'
+=======
+import React from 'react';
+>>>>>>> 275407b (testing with zach)
 import { createRoot } from 'react-dom/client'
 import App from './components/App'
 import './styles/reset.css'
